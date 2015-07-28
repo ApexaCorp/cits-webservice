@@ -30,11 +30,12 @@ We expect minor enhancements to be made along the way (for example, the current 
 ## API Details
 - A single method that follows the standard CITS XML request/response pattern.
 - Two types of requests supported:
-  1. Request a list of advisors with updates between two dates/times.
+  1. Request a list of advisors with updates between two dates.
+    - We’re working with CLIEDIS to add time as a parameter to allow better intraday polling.
     - Responds with a list of APEXA Advisor IDs.
   2. Request all of the data associated with a list of Advisor IDs
-      - Request could be a single ID, or could just echo back the list of IDs from the first call.
-      - Request can be filtered by section to reduce volume of data.
+    - Request could be a single ID, or could just echo back the list of IDs from the first call.
+    - Request can be filtered by section to reduce volume of data.
     - Responds with the full Advisor record and all associated contracts.
       - Links embedded in the XML can be used to retrieve associated documents.
 - API will not be throttled at the start, but may be in the future depending on volumes.
