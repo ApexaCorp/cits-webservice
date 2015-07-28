@@ -26,3 +26,17 @@ We expect minor enhancements to be made along the way (for example, the current 
   - UAT endpoint available with real data
 - January 2016
   - Go-Live
+
+## API Details
+- A single method that follows the standard CITS XML request/response pattern.
+- Two types of requests supported:
+  1. Request a list of advisors with updates between two dates/times.
+    - Responds with a list of APEXA Advisor IDs.
+  2. Request all of the data associated with a list of Advisor IDs
+      - Request could be a single ID, or could just echo back the list of IDs from the first call.
+      - Request can be filtered by section to reduce volume of data.
+    - Responds with the full Advisor record and all associated contracts.
+      - Links embedded in the XML can be used to retrieve associated documents.
+- API will not be throttled at the start, but may be in the future depending on volumes.
+  - May be throttled by # of Advisor records per hour.
+  - Throttling may depend on time of day.
