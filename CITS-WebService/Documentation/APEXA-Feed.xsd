@@ -1,0 +1,822 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://ACORD.org/Standards/Life/2" elementFormDefault="unqualified" attributeFormDefault="unqualified" targetNamespace="http://ACORD.org/Standards/Life/2" version="2.33.00">
+	<!--  **************** LOOKUPS ********************** -->
+	<xsd:simpleType name="ACORD_TYPE_CODE">
+		<xsd:restriction base="xsd:nonNegativeInteger"/>
+	</xsd:simpleType>
+	<xsd:complexType name="OLI_LU_ADTYPE">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="tc" use="required" type="OLI_LU_ADTYPE_TC"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="OLI_LU_ADTYPE_TC">
+		<xsd:restriction base="ACORD_TYPE_CODE"/>
+	</xsd:simpleType>
+	<xsd:complexType name="OLI_LU_ATTACHLOCATION">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="tc" use="required" type="OLI_LU_ATTACHLOCATION_TC"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="OLI_LU_ATTACHLOCATION_TC">
+		<xsd:restriction base="ACORD_TYPE_CODE"/>
+	</xsd:simpleType>
+	<xsd:complexType name="OLI_LU_ATTACHMENTTYPE">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="tc" use="required" type="OLI_LU_ATTACHMENTTYPE_TC"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="OLI_LU_ATTACHMENTTYPE_TC">
+		<xsd:restriction base="ACORD_TYPE_CODE"/>
+	</xsd:simpleType>
+	<xsd:complexType name="OLI_LU_BASICATTACHMENTTYPE">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="tc" use="required" type="OLI_LU_BASICATTACHMENTTYPE_TC"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="OLI_LU_BASICATTACHMENTTYPE_TC">
+		<xsd:restriction base="ACORD_TYPE_CODE"/>
+	</xsd:simpleType>
+	<xsd:complexType name="OLI_LU_BOOLEAN">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="tc" use="required" type="OLI_LU_BOOLEAN_TC"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="OLI_LU_BOOLEAN_TC">
+		<xsd:restriction base="ACORD_TYPE_CODE"/>
+	</xsd:simpleType>
+	<xsd:complexType name="OLI_LU_CLIENTLANGUAGES">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="tc" use="required" type="OLI_LU_CLIENTLANGUAGES_TC"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="OLI_LU_CLIENTLANGUAGES_TC">
+		<xsd:restriction base="ACORD_TYPE_CODE"/>
+	</xsd:simpleType>
+	<xsd:complexType name="OLI_LU_DESIGNATIONTYPE">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="tc" use="required" type="OLI_LU_DESIGNATIONTYPE_TC"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="OLI_LU_DESIGNATIONTYPE_TC">
+		<xsd:restriction base="ACORD_TYPE_CODE"/>
+	</xsd:simpleType>
+	<xsd:complexType name="OLI_LU_EDULEVEL">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="tc" use="required" type="OLI_LU_EDULEVEL_TC"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="OLI_LU_EDULEVEL_TC">
+		<xsd:restriction base="ACORD_TYPE_CODE"/>
+	</xsd:simpleType>
+	<xsd:complexType name="OLI_LU_GOVTIDTC">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="tc" use="required" type="OLI_LU_GOVTIDTC_TC"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="OLI_LU_GOVTIDTC_TC">
+		<xsd:restriction base="ACORD_TYPE_CODE"/>
+	</xsd:simpleType>
+	<xsd:complexType name="OLI_LU_HOLDTYPE">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="tc" use="required" type="OLI_LU_HOLDTYPE_TC"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="OLI_LU_HOLDTYPE_TC">
+		<xsd:restriction base="ACORD_TYPE_CODE"/>
+	</xsd:simpleType>
+	<xsd:complexType name="OLI_LU_LICENSETYPE">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="tc" use="required" type="OLI_LU_LICENSETYPE_TC"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="OLI_LU_LICENSETYPE_TC">
+		<xsd:restriction base="ACORD_TYPE_CODE"/>
+	</xsd:simpleType>
+	<xsd:complexType name="OLI_LU_LOANREASON">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="tc" use="required" type="OLI_LU_LOANREASON_TC"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="OLI_LU_LOANREASON_TC">
+		<xsd:restriction base="ACORD_TYPE_CODE"/>
+	</xsd:simpleType>
+	<xsd:complexType name="OLI_LU_OBJECTTYPE">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="tc" type="OLI_LU_OBJECTTYPE_TC" use="required"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="OLI_LU_OBJECTTYPE_TC">
+		<xsd:restriction base="ACORD_TYPE_CODE"/>
+	</xsd:simpleType>
+	<xsd:complexType name="OLI_LU_ORGFORM">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="tc" use="required" type="OLI_LU_ORGFORM_TC"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="OLI_LU_ORGFORM_TC">
+		<xsd:restriction base="ACORD_TYPE_CODE"/>
+	</xsd:simpleType>
+	<xsd:complexType name="OLI_LU_NAMETYPE">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="tc" use="required" type="OLI_LU_NAMETYPE_TC"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="OLI_LU_NAMETYPE_TC">
+		<xsd:restriction base="ACORD_TYPE_CODE"/>
+	</xsd:simpleType>
+	<xsd:complexType name="OLI_LU_NATION">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="tc" use="required" type="OLI_LU_NATION_TC"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="OLI_LU_NATION_TC">
+		<xsd:restriction base="ACORD_TYPE_CODE"/>
+	</xsd:simpleType>
+	<xsd:complexType name="OLI_LU_PARTY">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="tc" type="OLI_LU_PARTY_TC" use="required"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="OLI_LU_PARTY_TC">
+		<xsd:restriction base="ACORD_TYPE_CODE"/>
+	</xsd:simpleType>
+	<xsd:complexType name="OLI_LU_PAYMENTFORM">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="tc" use="required" type="OLI_LU_PAYMENTFORM_TC"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="OLI_LU_PAYMENTFORM_TC">
+		<xsd:restriction base="ACORD_TYPE_CODE"/>
+	</xsd:simpleType>
+	<xsd:complexType name="OLI_LU_POLPROD">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="tc" use="required" type="OLI_LU_POLPROD_TC"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="OLI_LU_POLPROD_TC">
+		<xsd:restriction base="ACORD_TYPE_CODE"/>
+	</xsd:simpleType>
+	<xsd:complexType name="OLI_LU_POLSTAT">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="tc" type="OLI_LU_POLSTAT_TC" use="required"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="OLI_LU_POLSTAT_TC">
+		<xsd:restriction base="ACORD_TYPE_CODE"/>
+	</xsd:simpleType>
+	<xsd:complexType name="OLI_LU_PHONETYPE">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="tc" use="required" type="OLI_LU_PHONETYPE_TC"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="OLI_LU_PHONETYPE_TC">
+		<xsd:restriction base="ACORD_TYPE_CODE"/>
+	</xsd:simpleType>
+	<xsd:complexType name="OLI_LU_PROSTAT">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="tc" use="required" type="OLI_LU_PROSTAT_TC"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="OLI_LU_PROSTAT_TC">
+		<xsd:restriction base="ACORD_TYPE_CODE"/>
+	</xsd:simpleType>
+	<xsd:complexType name="OLI_LU_RATINGSRC">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="tc" use="required" type="OLI_LU_RATINGSRC_TC"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="OLI_LU_RATINGSRC_TC">
+		<xsd:restriction base="ACORD_TYPE_CODE"/>
+	</xsd:simpleType>
+	<xsd:complexType name="OLI_LU_REL">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="tc" type="OLI_LU_REL_TC" use="required"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="OLI_LU_REL_TC">
+		<xsd:restriction base="ACORD_TYPE_CODE"/>
+	</xsd:simpleType>
+	<xsd:complexType name="OLI_LU_STATE">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="tc" use="required" type="OLI_LU_STATE_TC"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="OLI_LU_STATE_TC">
+		<xsd:restriction base="ACORD_TYPE_CODE"/>
+	</xsd:simpleType>
+	<xsd:complexType name="OLI_LU_TRANS_TYPE_CODES">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="tc" use="required" type="OLI_LU_TRANS_TYPE_CODES_TC"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="OLI_LU_TRANS_TYPE_CODES_TC">
+		<xsd:restriction base="ACORD_TYPE_CODE"/>
+	</xsd:simpleType>
+	<xsd:complexType name="OLI_LU_VARIANT">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="tc" use="optional" type="OLI_LU_VARIANT_TC"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="OLI_LU_VARIANT_TC">
+		<xsd:restriction base="ACORD_TYPE_CODE"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="PARTIAL_DATE_TYPE">
+		<xsd:union>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:gYearMonth"/>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:gYear"/>
+			</xsd:simpleType>
+		</xsd:union>
+	</xsd:simpleType>
+	<xsd:complexType name="RESULT_CODES">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="tc" use="required" type="RESULT_CODES_TC"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="RESULT_CODES_TC">
+		<xsd:restriction base="ACORD_TYPE_CODE"/>
+	</xsd:simpleType>
+	<xsd:complexType name="RESULT_INFO_CODES">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="tc" use="required" type="RESULT_INFO_CODES_TC"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="RESULT_INFO_CODES_TC">
+		<xsd:restriction base="ACORD_TYPE_CODE"/>
+	</xsd:simpleType>
+	<xsd:complexType name="TRANS_SUBTYPE_CODES">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="tc" use="required" type="TRANS_SUBTYPE_CODES_TC"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="TRANS_SUBTYPE_CODES_TC">
+		<xsd:restriction base="ACORD_TYPE_CODE"/>
+	</xsd:simpleType>
+	<!-- **************** DocumentRoot ********************** -->
+	<xsd:element name="OLifE" type="OLifE_Type"/>
+	<xsd:complexType name="OLifE_Type">
+		<xsd:sequence>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element ref="Holding" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="Party" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="Relation" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="FormInstance" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="TXLife" type="TXLife_Type"/>
+	<xsd:complexType name="TXLife_Type">
+		<xsd:sequence>
+			<xsd:choice minOccurs="0">
+				<xsd:sequence>
+					<xsd:element ref="TXLifeRequest" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+				<xsd:sequence>
+					<xsd:element ref="TXLifeResponse" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attribute name="Version" type="xsd:string"/>
+	</xsd:complexType>
+	<!--  **************** Aggregates ********************** -->
+	<xsd:element name="Address" type="Address_Type"/>
+	<xsd:complexType name="Address_Type">
+		<xsd:sequence>
+			<xsd:element ref="AddressTypeCode" minOccurs="0"/>
+			<xsd:element ref="Line1" minOccurs="0"/>
+			<xsd:element ref="Line2" minOccurs="0"/>
+			<xsd:element ref="City" minOccurs="0"/>
+			<xsd:element ref="AddressState" minOccurs="0"/>
+			<xsd:element ref="AddressStateTC" minOccurs="0"/>
+			<xsd:element ref="Zip" minOccurs="0"/>
+			<xsd:element ref="AddressCountry" minOccurs="0"/>
+			<xsd:element ref="AddressCountryTC" minOccurs="0"/>
+			<xsd:element ref="PrefAddr" minOccurs="0"/>
+			<xsd:element ref="EndDate" minOccurs="0"/>
+			<xsd:element ref="StartDate" minOccurs="0"/>
+			<xsd:element ref="YearsAtAddress" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="Attachment" type="Attachment_Type"/>
+	<xsd:complexType name="Attachment_Type">
+		<xsd:sequence>
+			<xsd:element ref="AttachmentBasicType" minOccurs="0"/>
+			<xsd:element ref="AttachmentData" minOccurs="0"/>
+			<xsd:element ref="AttachmentType" minOccurs="0"/>
+			<xsd:element ref="AttachmentLocation" minOccurs="0"/>
+			<xsd:element ref="FileName" minOccurs="0"/>
+			<xsd:element ref="SignatureInfo" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:ID"/>
+	</xsd:complexType>
+	<xsd:element name="Banking" type="Banking_Type"/>
+	<xsd:complexType name="Banking_Type">
+		<xsd:sequence>
+			<xsd:element ref="AccountNumber" minOccurs="0"/>
+			<xsd:element ref="TransitNumber " minOccurs="0"/>
+			<xsd:element ref="InstitutionNumber" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="CarrierAppointment" type="CarrierAppointment_Type"/>
+	<xsd:complexType name="CarrierAppointment_Type">
+		<xsd:sequence>
+			<xsd:element ref="CompanyProducerID" minOccurs="0"/>
+			<xsd:element ref="EffDate" minOccurs="0"/>
+			<xsd:element ref="CarrierApptStatus" minOccurs="0"/>
+			<xsd:element ref="DistributionAgreementInfo" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="RequirementInfo" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="TermDate" minOccurs="0"/>
+			<xsd:element ref="DistributionLevel" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="ReferralInfo" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="ConsolidationInfo" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="DebtInfo" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="TransferInfo" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:ID"/>
+		<xsd:attribute name="PartyID" type="xsd:IDREF"/>
+		<xsd:attribute name="AgencyAffiliationID" type="xsd:IDREF"/>
+	</xsd:complexType>
+	<xsd:element name="ConsolidationInfo" type="ConsolidationInfo_Type"/>
+	<xsd:complexType name="ConsolidationInfo_Type">
+		<xsd:attribute name="CarrierAppointmentID" use="required" type="xsd:IDREF"/>
+	</xsd:complexType>
+	<xsd:element name="CriminalConviction" type="CriminalConviction_Type"/>
+	<xsd:complexType name="CriminalConviction_Type">
+		<xsd:sequence>
+			<xsd:element ref="CrimeDescription" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="DebtInfo" type="DebtInfo_Type"/>
+	<xsd:complexType name="DebtInfo_Type">
+		<xsd:attribute name="HoldingID" use="required" type="xsd:IDREF"/>
+	</xsd:complexType>
+	<xsd:element name="DesignationInfo" type="DesignationInfo_Type"/>
+	<xsd:complexType name="DesignationInfo_Type">
+		<xsd:sequence>
+			<xsd:element ref="DesignationType" minOccurs="0"/>
+			<xsd:element ref="DesignationYear" minOccurs="0"/>
+			<xsd:element ref="DesignationName" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="DistributionAgreementInfo" type="DistributionAgreementInfo_Type"/>
+	<xsd:complexType name="DistributionAgreementInfo_Type">
+		<xsd:sequence>
+			<xsd:element ref="PaymentForm" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="BankingInfoID" type="xsd:IDREF"/>
+	</xsd:complexType>
+	<xsd:element name="DistributionLevel" type="DistributionLevel_Type"/>
+	<xsd:complexType name="DistributionLevel_Type">
+		<xsd:sequence>
+			<xsd:element ref="DistributionLevelValue" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="PartyID" type="xsd:IDREF"/>
+	</xsd:complexType>
+	<xsd:element name="Education" type="Education_Type"/>
+	<xsd:complexType name="Education_Type">
+		<xsd:sequence>
+			<xsd:element ref="Major" minOccurs="0"/>
+			<xsd:element ref="ProviderOrSchool" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="EMailAddress" type="EMailAddress_Type"/>
+	<xsd:complexType name="EMailAddress_Type">
+		<xsd:sequence>
+			<xsd:element ref="AddrLine" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="EOCoverageInfo" type="EOCoverageInfo_Type"/>
+	<xsd:complexType name="EOCoverageInfo_Type">
+		<xsd:attribute name="EOCoverageID" type="xsd:IDREF"/>
+	</xsd:complexType>
+	<xsd:element name="Employment" type="Employment_Type"/>
+	<xsd:complexType name="Employment_Type">
+		<xsd:sequence>
+			<xsd:element ref="EmployerName" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="FormInstance" type="FormInstance_Type"/>
+	<xsd:complexType name="FormInstance_Type">
+		<xsd:sequence>
+			<xsd:element ref="RelatedObjectType" minOccurs="0"/>
+			<xsd:element ref="FormResponse" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" use="required" type="xsd:ID"/>
+		<xsd:attribute name="RelatedObjectID" type="xsd:IDREF"/>
+	</xsd:complexType>
+	<xsd:element name="FormResponse" type="FormResponse_Type"/>
+	<xsd:complexType name="FormResponse_Type">
+		<xsd:sequence>
+			<xsd:element ref="QuestionNumber" minOccurs="0"/>
+			<xsd:element ref="ResponseCode" minOccurs="0"/>
+			<xsd:element ref="ResponseData" minOccurs="0"/>
+			<xsd:element ref="ResponseText" minOccurs="0"/>
+			<xsd:element ref="SectionIdentifier" minOccurs="0"/>
+			<xsd:element ref="Attachment" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:ID"/>
+	</xsd:complexType>
+	<xsd:element name="GovtIDInfo" type="GovtIDInfo_Type"/>
+	<xsd:complexType name="GovtIDInfo_Type">
+		<xsd:sequence>
+			<xsd:element ref="GovtID" minOccurs="0"/>
+			<xsd:element ref="GovtIDTC" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="Holding" type="Holding_Type"/>
+	<xsd:complexType name="Holding_Type">
+		<xsd:sequence>
+			<xsd:element ref="HoldingTypeCode" minOccurs="0"/>
+			<xsd:element ref="Policy" minOccurs="0"/>
+			<xsd:element ref="Attachment" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Loan" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Banking" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" use="required" type="xsd:ID"/>
+	</xsd:complexType>
+	<xsd:element name="Loan" type="Loan_Type"/>
+	<xsd:complexType name="Loan_Type">
+		<xsd:sequence>
+			<xsd:element ref="LoanReason" minOccurs="0"/>
+			<xsd:element ref="LoanReasonDesc" minOccurs="0"/>
+			<xsd:element ref="LoanAmt" minOccurs="0"/>
+			<xsd:element ref="LoanDefaultDate" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="FinancialInstitutionPartyID" type="xsd:IDREF"/>
+	</xsd:complexType>
+	<xsd:element name="NationApproval" type="NationApproval_Type"/>
+	<xsd:complexType name="NationApproval_Type">
+		<xsd:sequence>
+			<xsd:element ref="Nation" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="Organization" type="Organization_Type"/>
+	<xsd:complexType name="Organization_Type">
+		<xsd:sequence>
+			<xsd:element ref="OrgForm" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="License" type="License_Type"/>
+	<xsd:complexType name="License_Type">
+		<xsd:sequence>
+			<xsd:element ref="LicenseNum" minOccurs="0"/>
+			<xsd:element ref="LicenseState" minOccurs="0"/>
+			<xsd:element ref="LicenseType" minOccurs="0"/>
+			<xsd:element ref="ExpDate" minOccurs="0"/>
+			<xsd:element ref="OriginationDate" minOccurs="0"/>
+			<xsd:element ref="LicenseInterruptedInd" minOccurs="0"/>
+			<xsd:element ref="LicenseInterruptedReason" minOccurs="0"/>
+			<xsd:element ref="LicenseLevel" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="AgencyAffiliationID" type="xsd:IDREF"/>
+	</xsd:complexType>
+	<xsd:element name="Party" type="Party_Type"/>
+	<xsd:complexType name="Party_Type">
+		<xsd:sequence>
+			<xsd:element ref="PartyTypeCode" minOccurs="0"/>
+			<xsd:element ref="FullName" minOccurs="0"/>
+			<xsd:element ref="GovtID" minOccurs="0"/>
+			<xsd:element ref="GovtIDTC" minOccurs="0"/>
+			<xsd:choice minOccurs="0">
+				<xsd:element ref="Person"/>
+				<xsd:element ref="Organization"/>
+			</xsd:choice>
+			<xsd:element ref="Address" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Phone" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Producer" minOccurs="0"/>
+			<xsd:element ref="EMailAddress" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="URL" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="PriorName" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Risk" minOccurs="0"/>
+			<xsd:element ref="Employment" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="GovtIDInfo" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="RatingAgencyInfo" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="DesignationInfo" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" use="required" type="xsd:ID"/>
+	</xsd:complexType>
+	<xsd:element name="Person" type="Person_Type"/>
+	<xsd:complexType name="Person_Type">
+		<xsd:sequence>
+			<xsd:element ref="FirstName" minOccurs="0"/>
+			<xsd:element ref="MiddleName" minOccurs="0"/>
+			<xsd:element ref="LastName" minOccurs="0"/>
+			<xsd:element ref="Prefix" minOccurs="0"/>
+			<xsd:element ref="BirthDate" minOccurs="0"/>
+			<xsd:element ref="DriversLicenseNum" minOccurs="0"/>
+			<xsd:element ref="HighestEducationLevel" minOccurs="0"/>
+			<xsd:element ref="Education" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="Phone" type="Phone_Type"/>
+	<xsd:complexType name="Phone_Type">
+		<xsd:sequence>
+			<xsd:element ref="PhoneTypeCode" minOccurs="0"/>
+			<xsd:element ref="CountryCode" minOccurs="0"/>
+			<xsd:element ref="AreaCode" minOccurs="0"/>
+			<xsd:element ref="DialNumber" minOccurs="0"/>
+			<xsd:element ref="Ext" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="Policy" type="Policy_Type"/>
+	<xsd:complexType name="Policy_Type">
+		<xsd:sequence>
+			<xsd:element ref="PolNumber" minOccurs="0"/>
+			<xsd:element ref="CertificateNo" minOccurs="0"/>
+			<xsd:element ref="ProductType" minOccurs="0"/>
+			<xsd:element ref="PolicyStatus" minOccurs="0"/>
+			<xsd:element ref="PolicyValue" minOccurs="0"/>
+			<xsd:choice minOccurs="0">
+				<xsd:element ref="EffDate" minOccurs="0"/>
+				<xsd:element ref="EffPartialDate" minOccurs="0"/>
+			</xsd:choice>
+			<xsd:element ref="TermDate" minOccurs="0"/>
+			<xsd:element ref="RenewalDate" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="CarrierPartyID" type="xsd:IDREF"/>
+	</xsd:complexType>
+	<xsd:element name="PriorName" type="PriorName_Type"/>
+	<xsd:complexType name="PriorName_Type">
+		<xsd:sequence>
+			<xsd:element ref="NameType" minOccurs="0"/>
+			<xsd:element ref="FullName" minOccurs="0"/>
+			<xsd:element ref="FirstName" minOccurs="0"/>
+			<xsd:element ref="MiddleName" minOccurs="0"/>
+			<xsd:element ref="LastName" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="Producer" type="Producer_Type"/>
+	<xsd:complexType name="Producer_Type">
+		<xsd:sequence>
+			<xsd:element ref="PrefLanguage" minOccurs="0"/>
+			<xsd:element ref="License" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="CarrierAppointment" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="DesignationInfo" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="NationApproval" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="EOCoverageInfo" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:ID"/>
+	</xsd:complexType>
+	<xsd:element name="SignatureInfo" type="SignatureInfo_Type"/>
+	<xsd:complexType name="SignatureInfo_Type">
+		<xsd:sequence>
+			<xsd:element ref="SignatureDate" minOccurs="0"/>
+			<xsd:element ref="SignatureTime" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="SignaturePartyID" type="xsd:IDREF"/>
+		<xsd:attribute name="DelegatedSignerPartyID" type="xsd:IDREF"/>
+	</xsd:complexType>
+	<xsd:element name="RatingAgencyInfo" type="RatingAgencyInfo_Type"/>
+	<xsd:complexType name="RatingAgencyInfo_Type">
+		<xsd:sequence>
+			<xsd:element ref="RatingSource" minOccurs="0"/>
+			<xsd:element ref="RatingValue" minOccurs="0"/>
+			<xsd:element ref="RatingDescription" minOccurs="0"/>
+			<xsd:element ref="EffDate" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="ReferralInfo" type="ReferralInfo_Type"/>
+	<xsd:complexType name="ReferralInfo_Type">
+		<xsd:attribute name="PartyID" use="required" type="xsd:IDREF"/>
+	</xsd:complexType>
+	<xsd:element name="Relation" type="Relation_Type"/>
+	<xsd:complexType name="Relation_Type">
+		<xsd:sequence>
+			<xsd:element ref="OriginatingObjectType" minOccurs="0"/>
+			<xsd:element ref="RelatedObjectType" minOccurs="0"/>
+			<xsd:element ref="RelationRoleCode" minOccurs="0"/>
+			<xsd:element ref="InterestPercent" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" use="required" type="xsd:ID"/>
+		<xsd:attribute name="OriginatingObjectID" use="required" type="xsd:IDREF"/>
+		<xsd:attribute name="RelatedObjectID" type="xsd:IDREF"/>
+	</xsd:complexType>
+	<xsd:element name="RequirementInfo" type="RequirementInfo_Type"/>
+	<xsd:complexType name="RequirementInfo_Type">
+		<xsd:sequence>
+			<xsd:element ref="FulfilledDate" minOccurs="0"/>
+			<xsd:element ref="FulfilledTime" minOccurs="0"/>
+			<xsd:element ref="Attachment" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="FulfillerPartyID" type="xsd:IDREF"/>
+	</xsd:complexType>
+	<xsd:element name="ResultInfo" type="ResultInfo_Type"/>
+	<xsd:complexType name="ResultInfo_Type">
+		<xsd:sequence>
+			<xsd:element ref="ResultInfoCode" minOccurs="0"/>
+			<xsd:element ref="ResultInfoDesc" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="Risk" type="Risk_Type"/>
+	<xsd:complexType name="Risk_Type">
+		<xsd:sequence>
+			<xsd:element ref="DateLastUpdated" minOccurs="0"/>
+			<xsd:element ref="CriminalConviction" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="TransferInfo" type="TransferInfo_Type"/>
+	<xsd:complexType name="TransferInfo_Type">
+		<xsd:attribute name="CarrierAppointmentID" use="required" type="xsd:IDREF"/>
+	</xsd:complexType>
+	<xsd:element name="TransResult" type="TransResult_Type"/>
+	<xsd:complexType name="TransResult_Type">
+		<xsd:sequence>
+			<xsd:element ref="ResultCode"/>
+			<xsd:element ref="ResultInfo" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="TXLifeRequest" type="TXLifeRequest_Type"/>
+	<xsd:complexType name="TXLifeRequest_Type">
+		<xsd:sequence>
+			<xsd:element ref="TransRefGUID"/>
+			<xsd:element ref="TransType"/>
+			<xsd:element ref="TransSubType" minOccurs="0"/>
+			<xsd:element ref="StartDate" minOccurs="0"/>
+			<xsd:element ref="EndDate" minOccurs="0"/>
+			<xsd:element ref="OLifE" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="TXLifeResponse" type="TXLifeResponse_Type"/>
+	<xsd:complexType name="TXLifeResponse_Type">
+		<xsd:sequence>
+			<xsd:element ref="TransRefGUID"/>
+			<xsd:element ref="TransType"/>
+			<xsd:element ref="TransExeDate"/>
+			<xsd:element ref="TransExeTime"/>
+			<xsd:element ref="TransResult"/>
+			<xsd:element ref="OLifE" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="PrimaryObjectID" type="xsd:IDREF"/>
+	</xsd:complexType>
+	<xsd:element name="URL" type="URL_Type"/>
+	<xsd:complexType name="URL_Type">
+		<xsd:sequence>
+			<xsd:element ref="URLAddr" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<!--  **************** Elements ********************** -->
+	<xsd:element name="AccountNumber" type="xsd:string"/>
+	<xsd:element name="AddressCountry" type="xsd:string"/>
+	<xsd:element name="AddressCountryTC" type="OLI_LU_NATION"/>
+	<xsd:element name="AddressState" type="xsd:string"/>
+	<xsd:element name="AddressStateTC" type="OLI_LU_STATE"/>
+	<xsd:element name="AddressTypeCode" type="OLI_LU_ADTYPE"/>
+	<xsd:element name="AddrLine" type="xsd:string"/>
+	<xsd:element name="AreaCode" type="xsd:string"/>
+	<xsd:element name="AttachmentBasicType" type="OLI_LU_BASICATTACHMENTTYPE"/>
+	<xsd:element name="AttachmentData" type="OLI_LU_VARIANT"/>
+	<xsd:element name="AttachmentLocation" type="OLI_LU_ATTACHLOCATION"/>
+	<xsd:element name="AttachmentType" type="OLI_LU_ATTACHMENTTYPE"/>
+	<xsd:element name="BirthDate" type="xsd:date"/>
+	<xsd:element name="CarrierApptStatus" type="OLI_LU_PROSTAT"/>
+	<xsd:element name="CertificateNo" type="xsd:string"/>
+	<xsd:element name="City" type="xsd:string"/>
+	<xsd:element name="CompanyProducerID" type="xsd:string"/>
+	<xsd:element name="CountryCode" type="xsd:string"/>
+	<xsd:element name="CrimeDescription" type="xsd:string"/>
+	<xsd:element name="DateLastUpdated" type="xsd:date"/>
+	<xsd:element name="DesignationName" type="xsd:string"/>
+	<xsd:element name="DesignationType" type="OLI_LU_DESIGNATIONTYPE"/>
+	<xsd:element name="DesignationYear" type="xsd:gYear"/>
+	<xsd:element name="DialNumber" type="xsd:string"/>
+	<xsd:element name="DistributionLevelValue" type="xsd:string"/>
+	<xsd:element name="DriversLicenseNum" type="xsd:string"/>
+	<xsd:element name="EffDate" type="xsd:date"/>
+	<xsd:element name="EffPartialDate" type="PARTIAL_DATE_TYPE"/>
+	<xsd:element name="EmployerName" type="xsd:string"/>
+	<xsd:element name="EndDate" type="xsd:date"/>
+	<xsd:element name="ExpDate" type="xsd:date"/>
+	<xsd:element name="Ext" type="xsd:string"/>
+	<xsd:element name="FileName" type="xsd:string"/>
+	<xsd:element name="FirstName" type="xsd:string"/>
+	<xsd:element name="FulfilledDate" type="xsd:date"/>
+	<xsd:element name="FulfilledTime" type="xsd:time"/>
+	<xsd:element name="FullName" type="xsd:string"/>
+	<xsd:element name="GovtID" type="xsd:string"/>
+	<xsd:element name="GovtIDTC" type="OLI_LU_GOVTIDTC"/>
+	<xsd:element name="HighestEducationLevel" type="OLI_LU_EDULEVEL"/>
+	<xsd:element name="HoldingTypeCode" type="OLI_LU_HOLDTYPE"/>
+	<xsd:element name="InstitutionNumber" type="xsd:string"/>
+	<xsd:element name="InterestPercent" type="xsd:double"/>
+	<xsd:element name="LastName" type="xsd:string"/>
+	<xsd:element name="LicenseInterruptedInd" type="OLI_LU_BOOLEAN"/>
+	<xsd:element name="LicenseInterruptedReason" type="xsd:string"/>
+	<xsd:element name="LicenseLevel" type="xsd:string"/>
+	<xsd:element name="LicenseNum" type="xsd:string"/>
+	<xsd:element name="LicenseState" type="OLI_LU_STATE"/>
+	<xsd:element name="LicenseType" type="OLI_LU_LICENSETYPE"/>
+	<xsd:element name="Line1" type="xsd:string"/>
+	<xsd:element name="Line2" type="xsd:string"/>
+	<xsd:element name="LoanAmt" type="xsd:decimal"/>
+	<xsd:element name="LoanDefaultDate" type="xsd:date"/>
+	<xsd:element name="LoanReason" type="OLI_LU_LOANREASON"/>
+	<xsd:element name="LoanReasonDesc" type="xsd:string"/>
+	<xsd:element name="Major" type="xsd:string"/>
+	<xsd:element name="MiddleName" type="xsd:string"/>
+	<xsd:element name="NameType" type="OLI_LU_NAMETYPE"/>
+	<xsd:element name="Nation" type="OLI_LU_NATION"/>
+	<xsd:element name="OrgForm" type="OLI_LU_ORGFORM"/>
+	<xsd:element name="OriginationDate" type="xsd:date"/>
+	<xsd:element name="OriginatingObjectType" type="OLI_LU_OBJECTTYPE"/>
+	<xsd:element name="PartyTypeCode" type="OLI_LU_PARTY"/>
+	<xsd:element name="PaymentForm" type="OLI_LU_PAYMENTFORM"/>
+	<xsd:element name="PhoneTypeCode" type="OLI_LU_PHONETYPE"/>
+	<xsd:element name="PolicyStatus" type="OLI_LU_POLSTAT"/>
+	<xsd:element name="PolicyValue" type="xsd:decimal"/>
+	<xsd:element name="PolNumber" type="xsd:string"/>
+	<xsd:element name="PrefAddr" type="OLI_LU_BOOLEAN"/>
+	<xsd:element name="Prefix" type="xsd:string"/>
+	<xsd:element name="PrefLanguage" type="OLI_LU_CLIENTLANGUAGES"/>
+	<xsd:element name="ProductType" type="OLI_LU_POLPROD"/>
+	<xsd:element name="ProviderOrSchool" type="xsd:string"/>
+	<xsd:element name="QuestionNumber" type="xsd:string"/>
+	<xsd:element name="RatingDescription" type="xsd:string"/>
+	<xsd:element name="RatingSource" type="OLI_LU_RATINGSRC"/>
+	<xsd:element name="RatingValue" type="xsd:string"/>
+	<xsd:element name="RelatedObjectType" type="OLI_LU_OBJECTTYPE"/>
+	<xsd:element name="RelationRoleCode" type="OLI_LU_REL"/>
+	<xsd:element name="RenewalDate" type="xsd:date"/>
+	<xsd:element name="ResponseCode" type="xsd:integer"/>
+	<xsd:element name="ResponseData" type="xsd:string"/>
+	<xsd:element name="ResponseText" type="xsd:string"/>
+	<xsd:element name="ResultCode" type="RESULT_CODES"/>
+	<xsd:element name="ResultInfoCode" type="RESULT_INFO_CODES"/>
+	<xsd:element name="ResultInfoDesc" type="xsd:string"/>
+	<xsd:element name="SectionIdentifier" type="xsd:string"/>
+	<xsd:element name="SignatureDate" type="xsd:date"/>
+	<xsd:element name="SignatureTime" type="xsd:time"/>
+	<xsd:element name="StartDate" type="xsd:date"/>
+	<xsd:element name="TermDate" type="xsd:date"/>
+	<xsd:element name="TransRefGUID" type="xsd:string"/>
+	<xsd:element name="TransSubType" type="TRANS_SUBTYPE_CODES"/>
+	<xsd:element name="TransType" type="OLI_LU_TRANS_TYPE_CODES"/>
+	<xsd:element name="TransExeDate" type="xsd:date"/>
+	<xsd:element name="TransExeTime" type="xsd:time"/>
+	<xsd:element name="TransitNumber" type="xsd:string"/>
+	<xsd:element name="URLAddr" type="xsd:string"/>
+	<xsd:element name="YearsAtAddress" type="xsd:double"/>
+	<xsd:element name="Zip" type="xsd:string"/>
+</xsd:schema>

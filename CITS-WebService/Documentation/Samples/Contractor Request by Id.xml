@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TXLife xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="2.34.00" xmlns="http://ACORD.org/Standards/Life/2">
+  <TXLifeRequest>
+    <TransRefGUID>60052064-40c2-4d56-9ae4-9b6f4e8b6290</TransRefGUID>
+    <TransType tc="228">Producer Inquiry</TransType>
+    <OLifE>
+      <Party id="C1" />
+    </OLifE>
+  </TXLifeRequest>
+</TXLife>
