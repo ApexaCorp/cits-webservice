@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-16"?>
 <TXLife_Type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.34.00" xmlns="CITS">
   <TXLifeRequest xmlns="http://ACORD.org/Standards/Life/2">
-    <TransRefGUID>3fa2ffbb-7d0f-4ea6-b663-cf07c5e0f0c1</TransRefGUID>
+    <TransRefGUID>5f073ab5-05a1-4dc9-9d72-9ae3d9bfe02f</TransRefGUID>
     <TransType tc="228">Producer Inquiry</TransType>
     <InquiryView>
-      <InquiryViewCode>ProducerOnly</InquiryViewCode>
+      <InquiryViewCode>ChangedProducerListing</InquiryViewCode>
     </InquiryView>
-    <OLifE>
-      <Party id="C36" />
-    </OLifE>
+    <StartDate>2015-11-03</StartDate>
+    <EndDate>2015-11-10</EndDate>
   </TXLifeRequest>
 </TXLife_Type>
