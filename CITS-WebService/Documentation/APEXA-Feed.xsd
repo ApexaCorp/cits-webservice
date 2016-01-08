@@ -416,8 +416,8 @@ enter whatever information is called for, if any, and click on "Accept".
 		</xsd:sequence>
     <xsd:attribute name="id" type="xsd:ID"/>
 	</xsd:complexType>
-  <xsd:element name="AssocCarrierAppointmentInfo" type="AssocCarrierAppointmentInfo_Type"/>
-  <xsd:complexType name="AssocCarrierAppointmentInfo_Type">
+  <xsd:element name="AssocCarrierApptInfo" type="AssocCarrierApptInfo_Type"/>
+  <xsd:complexType name="AssocCarrierApptInfo_Type">
     <xsd:sequence>
       <xsd:element ref="CompanyProducerID" minOccurs="0"/>
       <xsd:element ref="CompanyProducerIDSource" minOccurs="0"/>
@@ -454,18 +454,18 @@ enter whatever information is called for, if any, and click on "Accept".
       <xsd:element ref="CompanyProducerIDSource" minOccurs="0"/>
       <xsd:element ref="CompanyProducerIDSourceDesc" minOccurs="0"/>
       <xsd:element ref="EffDate" minOccurs="0"/>
-			<xsd:element ref="CarrierApptStatus" minOccurs="0"/>
+      <xsd:element ref="ExpDate" minOccurs="0"/>
+      <xsd:element ref="CarrierApptStatus" minOccurs="0"/>
 			<xsd:element ref="DistributionAgreementInfo" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="RequirementInfo" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="TermDate" minOccurs="0"/>
-			<xsd:element ref="DistributionLevel" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="ReferralInfo" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="ConsolidationInfo" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="DebtInfo" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="TransferInfo" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="GovtIDInfo" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="DebtInfo" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ReferralInfo" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="GovtIDInfo" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="TransferInfo" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="DistributionLevel" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="RequirementInfo" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="SupervisionLevel" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element ref="AssocCarrierAppointmentInfo" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="AssocCarrierApptInfo" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
 		<xsd:attribute name="id" type="xsd:ID"/>
 		<xsd:attribute name="PartyID" type="xsd:IDREF"/>
@@ -693,11 +693,11 @@ enter whatever information is called for, if any, and click on "Accept".
 	<xsd:complexType name="Producer_Type">
 		<xsd:sequence>
 			<xsd:element ref="PrefLanguage" minOccurs="0"/>
-			<xsd:element ref="License" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="CarrierAppointment" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="DesignationInfo" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="NationApproval" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="EOCoverageInfo" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="EOCoverageInfo" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="License" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="CarrierAppointment" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="DesignationInfo" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="NationApproval" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="SupervisionLevel" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
 		<xsd:attribute name="id" type="xsd:ID"/>

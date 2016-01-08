@@ -68,7 +68,15 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CITSService\Apexa.CITS.WCF.Test.CITSService.KeyValuePairOfstringbase64Binary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CITSService\Apexa.CITS.WCF.Test.CITSService.ProcessFileRequestsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\CITSService\Apexa.CITS.WCF.Test.CITSService.ProcessNonCITSMessageResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -94,6 +102,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\CITSService\CITSService22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CITSService\CITSService3.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\CITSService\configuration91.svcinfo" />

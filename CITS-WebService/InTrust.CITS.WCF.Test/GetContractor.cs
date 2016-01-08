@@ -24,7 +24,7 @@ namespace InTrust.CITS.WCF.Test
 		{
 			var client = new CITSServiceClient();
             client.ClientCredentials.UserName.UserName = "cits.carrier@bluesun.ca";
-            client.ClientCredentials.UserName.Password = "tPjVt6waKBQR";
+            client.ClientCredentials.UserName.Password = "password";
 			var requestMessage = new TXLife_Type() { 
 				Version = "2.34.00",
 				Items = new object[] {

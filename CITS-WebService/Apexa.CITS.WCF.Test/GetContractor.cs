@@ -141,6 +141,38 @@ namespace Apexa.CITS.WCF.Test
             List<object> responseList = new List<object>(response.ProcessNonCITSMessageResult);
             Assert.IsTrue(responseList.Contains("xyz2015"));
         }
+        
+        /// <summary>
+        /// Returns a file for a given APEXA file download url.
+        /// </summary>
+        /// <returns></returns>
+        [TestMethod]
+        public async Task RequestFiles()
+        {
+            var client = new CITSService.CITSServiceClient();
+            client.ClientCredentials.UserName.UserName = "cits.carrier@bluesun.ca";
+            client.ClientCredentials.UserName.Password = "password";
+
+            List<string> urlArray = new List<string>();
+            urlArray.Add("http://host:12345//documents/fulfillment/ABCDEFGH-1234-ABCD-1234-000000000001");
+            urlArray.Add("http://host:12345//documents/banking/ABCDEFGH-1234-ABCD-1234-000000000002");
+
+            var response = await client.ProcessFileRequestsAsync(urlArray.ToArray());
+
+            Assert.IsTrue(response.ProcessFileRequestsResult != null);
+            Assert.IsTrue(response.ProcessFileRequestsResult.Length == 2);
+            byte[] fileArray = response.ProcessFileRequestsResult[0].value;
+            Assert.IsTrue(fileArray.Length > 0);
+
+            string path = null;
+            using (var file = System.IO.File.Create(response.ProcessFileRequestsResult[0].key))
+            {
+                path = file.Name;
+                file.Write(fileArray, 0, fileArray.Length);
+            }
+
+            Assert.IsTrue(System.IO.File.Exists(path));
+        }
 
         /// <summary>
         /// Returns producer and appointments, without related advisors.

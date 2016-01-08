@@ -466,7 +466,7 @@
   <xs:complexType name="CarrierAppointment_Type">
     <xs:sequence>
       <xs:element name="agencyAffiliationIDField" nillable="true" type="xs:string" />
-      <xs:element name="assocCarrierAppointmentInfoField" nillable="true" type="tns:ArrayOfAssocCarrierAppointmentInfo_Type" />
+      <xs:element name="assocCarrierApptInfoField" nillable="true" type="tns:ArrayOfAssocCarrierApptInfo_Type" />
       <xs:element name="carrierApptStatusField" nillable="true" type="tns:OLI_LU_PROSTAT" />
       <xs:element name="companyProducerIDField" nillable="true" type="xs:string" />
       <xs:element name="companyProducerIDSourceDescField" nillable="true" type="xs:string" />
@@ -477,25 +477,25 @@
       <xs:element name="distributionLevelField" nillable="true" type="tns:ArrayOfDistributionLevel_Type" />
       <xs:element name="effDateField" type="xs:dateTime" />
       <xs:element name="effDateFieldSpecified" type="xs:boolean" />
+      <xs:element name="expDateField" type="xs:dateTime" />
+      <xs:element name="expDateFieldSpecified" type="xs:boolean" />
       <xs:element name="govtIDInfoField" nillable="true" type="tns:ArrayOfGovtIDInfo_Type" />
       <xs:element name="idField" nillable="true" type="xs:string" />
       <xs:element name="partyIDField" nillable="true" type="xs:string" />
       <xs:element name="referralInfoField" nillable="true" type="tns:ArrayOfReferralInfo_Type" />
       <xs:element name="requirementInfoField" nillable="true" type="tns:ArrayOfRequirementInfo_Type" />
       <xs:element name="supervisionLevelField" nillable="true" type="tns:ArrayOfSupervisionLevel_Type" />
-      <xs:element name="termDateField" type="xs:dateTime" />
-      <xs:element name="termDateFieldSpecified" type="xs:boolean" />
       <xs:element name="transferInfoField" nillable="true" type="tns:ArrayOfTransferInfo_Type" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="CarrierAppointment_Type" nillable="true" type="tns:CarrierAppointment_Type" />
-  <xs:complexType name="ArrayOfAssocCarrierAppointmentInfo_Type">
+  <xs:complexType name="ArrayOfAssocCarrierApptInfo_Type">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="AssocCarrierAppointmentInfo_Type" nillable="true" type="tns:AssocCarrierAppointmentInfo_Type" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AssocCarrierApptInfo_Type" nillable="true" type="tns:AssocCarrierApptInfo_Type" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfAssocCarrierAppointmentInfo_Type" nillable="true" type="tns:ArrayOfAssocCarrierAppointmentInfo_Type" />
-  <xs:complexType name="AssocCarrierAppointmentInfo_Type">
+  <xs:element name="ArrayOfAssocCarrierApptInfo_Type" nillable="true" type="tns:ArrayOfAssocCarrierApptInfo_Type" />
+  <xs:complexType name="AssocCarrierApptInfo_Type">
     <xs:sequence>
       <xs:element name="carrierAppointmentIDField" nillable="true" type="xs:string" />
       <xs:element name="carrierApptStatusField" nillable="true" type="tns:OLI_LU_PROSTAT" />
@@ -505,7 +505,7 @@
       <xs:element name="partyIDField" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="AssocCarrierAppointmentInfo_Type" nillable="true" type="tns:AssocCarrierAppointmentInfo_Type" />
+  <xs:element name="AssocCarrierApptInfo_Type" nillable="true" type="tns:AssocCarrierApptInfo_Type" />
   <xs:complexType name="OLI_LU_PROSTAT">
     <xs:sequence>
       <xs:element name="tcField" nillable="true" type="xs:string" />

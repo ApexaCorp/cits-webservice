@@ -45,10 +45,26 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessNonCITSMessage", ReplyAction="http://tempuri.org/ICITSService/ProcessNonCITSMessageResponse")]
         System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessNonCITSMessageResponse> ProcessNonCITSMessageAsync(Apexa.CITS.WCF.Test.CITSService.ProcessNonCITSMessageRequest request);
+        
+        // CODEGEN: Parameter 'ProcessFileRequestsResult' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlArrayAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessFileRequests", ReplyAction="http://tempuri.org/ICITSService/ProcessFileRequestsResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Organization_Type1))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Person_Type1))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FormInstance_Type1))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Relation_Type1))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Party_Type1))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Holding_Type1))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TXLifeResponse_Type1))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TXLifeRequest_Type1))]
+        Apexa.CITS.WCF.Test.CITSService.ProcessFileRequestsResponse ProcessFileRequests(Apexa.CITS.WCF.Test.CITSService.ProcessFileRequestsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessFileRequests", ReplyAction="http://tempuri.org/ICITSService/ProcessFileRequestsResponse")]
+        System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessFileRequestsResponse> ProcessFileRequestsAsync(Apexa.CITS.WCF.Test.CITSService.ProcessFileRequestsRequest request);
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -95,7 +111,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -295,7 +311,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -341,7 +357,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -387,7 +403,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -419,7 +435,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -465,7 +481,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -511,7 +527,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -641,7 +657,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -757,7 +773,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -873,7 +889,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -919,7 +935,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -965,7 +981,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1011,7 +1027,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1057,7 +1073,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1159,7 +1175,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1233,7 +1249,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1279,7 +1295,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1325,7 +1341,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1455,7 +1471,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1487,7 +1503,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1519,7 +1535,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1579,7 +1595,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1625,7 +1641,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1713,7 +1729,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1759,7 +1775,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1791,7 +1807,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1837,7 +1853,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1883,7 +1899,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2069,7 +2085,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2115,7 +2131,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2161,7 +2177,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2193,7 +2209,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2225,7 +2241,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2271,7 +2287,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2415,7 +2431,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2461,7 +2477,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2577,7 +2593,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2609,7 +2625,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2655,7 +2671,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2701,7 +2717,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2761,7 +2777,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2793,7 +2809,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2825,7 +2841,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2871,7 +2887,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2917,12 +2933,12 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="AssocCarrierAppointmentInfo_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class AssocCarrierAppointmentInfo_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="AssocCarrierApptInfo_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
+    public partial class AssocCarrierApptInfo_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string carrierAppointmentIDFieldField;
         
@@ -3019,7 +3035,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3028,7 +3044,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         private string agencyAffiliationIDFieldField;
         
-        private AssocCarrierAppointmentInfo_Type1[] assocCarrierAppointmentInfoFieldField;
+        private AssocCarrierApptInfo_Type1[] assocCarrierApptInfoFieldField;
         
         private OLI_LU_PROSTAT1 carrierApptStatusFieldField;
         
@@ -3050,6 +3066,10 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         private bool effDateFieldSpecified1Field;
         
+        private System.DateTime expDateFieldField;
+        
+        private bool expDateFieldSpecified1Field;
+        
         private GovtIDInfo_Type1[] govtIDInfoFieldField;
         
         private string idFieldField;
@@ -3061,10 +3081,6 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         private RequirementInfo_Type1[] requirementInfoFieldField;
         
         private SupervisionLevel_Type1[] supervisionLevelFieldField;
-        
-        private System.DateTime termDateFieldField;
-        
-        private bool termDateFieldSpecified1Field;
         
         private TransferInfo_Type1[] transferInfoFieldField;
         
@@ -3082,13 +3098,13 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=1)]
-        public AssocCarrierAppointmentInfo_Type1[] assocCarrierAppointmentInfoField {
+        public AssocCarrierApptInfo_Type1[] assocCarrierApptInfoField {
             get {
-                return this.assocCarrierAppointmentInfoFieldField;
+                return this.assocCarrierApptInfoFieldField;
             }
             set {
-                this.assocCarrierAppointmentInfoFieldField = value;
-                this.RaisePropertyChanged("assocCarrierAppointmentInfoField");
+                this.assocCarrierApptInfoFieldField = value;
+                this.RaisePropertyChanged("assocCarrierApptInfoField");
             }
         }
         
@@ -3213,7 +3229,31 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=12)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
+        public System.DateTime expDateField {
+            get {
+                return this.expDateFieldField;
+            }
+            set {
+                this.expDateFieldField = value;
+                this.RaisePropertyChanged("expDateField");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("expDateFieldSpecified", Order=13)]
+        public bool expDateFieldSpecified1 {
+            get {
+                return this.expDateFieldSpecified1Field;
+            }
+            set {
+                this.expDateFieldSpecified1Field = value;
+                this.RaisePropertyChanged("expDateFieldSpecified1");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=14)]
         public GovtIDInfo_Type1[] govtIDInfoField {
             get {
                 return this.govtIDInfoFieldField;
@@ -3225,7 +3265,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=13)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=15)]
         public string idField {
             get {
                 return this.idFieldField;
@@ -3237,7 +3277,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=14)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=16)]
         public string partyIDField {
             get {
                 return this.partyIDFieldField;
@@ -3249,7 +3289,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=15)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=17)]
         public ReferralInfo_Type1[] referralInfoField {
             get {
                 return this.referralInfoFieldField;
@@ -3261,7 +3301,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=16)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=18)]
         public RequirementInfo_Type1[] requirementInfoField {
             get {
                 return this.requirementInfoFieldField;
@@ -3273,7 +3313,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=17)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=19)]
         public SupervisionLevel_Type1[] supervisionLevelField {
             get {
                 return this.supervisionLevelFieldField;
@@ -3281,30 +3321,6 @@ namespace Apexa.CITS.WCF.Test.CITSService {
             set {
                 this.supervisionLevelFieldField = value;
                 this.RaisePropertyChanged("supervisionLevelField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=18)]
-        public System.DateTime termDateField {
-            get {
-                return this.termDateFieldField;
-            }
-            set {
-                this.termDateFieldField = value;
-                this.RaisePropertyChanged("termDateField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("termDateFieldSpecified", Order=19)]
-        public bool termDateFieldSpecified1 {
-            get {
-                return this.termDateFieldSpecified1Field;
-            }
-            set {
-                this.termDateFieldSpecified1Field = value;
-                this.RaisePropertyChanged("termDateFieldSpecified1");
             }
         }
         
@@ -3331,7 +3347,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3377,7 +3393,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3423,7 +3439,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3553,7 +3569,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3613,7 +3629,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3659,7 +3675,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3705,7 +3721,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3793,7 +3809,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3839,7 +3855,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3927,7 +3943,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3973,7 +3989,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4005,7 +4021,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4037,7 +4053,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4083,7 +4099,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4339,7 +4355,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4609,7 +4625,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4655,7 +4671,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4701,7 +4717,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4887,7 +4903,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4933,7 +4949,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5049,7 +5065,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5095,7 +5111,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5155,7 +5171,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5257,7 +5273,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5303,7 +5319,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5349,7 +5365,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5395,7 +5411,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5441,7 +5457,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5697,7 +5713,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5743,7 +5759,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5789,7 +5805,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5822,7 +5838,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5868,7 +5884,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6068,7 +6084,53 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic")]
+    public partial class KeyValuePairOfstringbase64Binary : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string keyField;
+        
+        private byte[] valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public string key {
+            get {
+                return this.keyField;
+            }
+            set {
+                this.keyField = value;
+                this.RaisePropertyChanged("key");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary", IsNullable=true, Order=1)]
+        public byte[] value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+                this.RaisePropertyChanged("value");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6114,7 +6176,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6160,7 +6222,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6206,7 +6268,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6252,7 +6314,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6508,7 +6570,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6554,7 +6616,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6600,7 +6662,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6635,7 +6697,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6709,7 +6771,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6755,7 +6817,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6871,7 +6933,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6987,7 +7049,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7033,7 +7095,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7079,7 +7141,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7125,7 +7187,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7171,7 +7233,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7273,7 +7335,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7375,7 +7437,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7421,7 +7483,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7608,7 +7670,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7654,7 +7716,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7700,7 +7762,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7816,7 +7878,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7862,7 +7924,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7922,7 +7984,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8193,7 +8255,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8239,7 +8301,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8285,7 +8347,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8317,7 +8379,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8363,7 +8425,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8493,7 +8555,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8539,7 +8601,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8585,7 +8647,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8841,7 +8903,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8887,7 +8949,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8933,7 +8995,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8979,7 +9041,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9025,7 +9087,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9113,7 +9175,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9159,7 +9221,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9168,6 +9230,8 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         private OLI_LU_CLIENTLANGUAGES prefLanguageField;
         
+        private EOCoverageInfo_Type[] eOCoverageInfoField;
+        
         private License_Type[] licenseField;
         
         private CarrierAppointment_Type[] carrierAppointmentField;
@@ -9175,8 +9239,6 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         private DesignationInfo_Type[] designationInfoField;
         
         private NationApproval_Type[] nationApprovalField;
-        
-        private EOCoverageInfo_Type[] eOCoverageInfoField;
         
         private SupervisionLevel_Type[] supervisionLevelField;
         
@@ -9195,7 +9257,19 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("License", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute("EOCoverageInfo", Order=1)]
+        public EOCoverageInfo_Type[] EOCoverageInfo {
+            get {
+                return this.eOCoverageInfoField;
+            }
+            set {
+                this.eOCoverageInfoField = value;
+                this.RaisePropertyChanged("EOCoverageInfo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("License", Order=2)]
         public License_Type[] License {
             get {
                 return this.licenseField;
@@ -9207,7 +9281,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("CarrierAppointment", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute("CarrierAppointment", Order=3)]
         public CarrierAppointment_Type[] CarrierAppointment {
             get {
                 return this.carrierAppointmentField;
@@ -9219,7 +9293,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DesignationInfo", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute("DesignationInfo", Order=4)]
         public DesignationInfo_Type[] DesignationInfo {
             get {
                 return this.designationInfoField;
@@ -9231,7 +9305,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("NationApproval", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute("NationApproval", Order=5)]
         public NationApproval_Type[] NationApproval {
             get {
                 return this.nationApprovalField;
@@ -9239,18 +9313,6 @@ namespace Apexa.CITS.WCF.Test.CITSService {
             set {
                 this.nationApprovalField = value;
                 this.RaisePropertyChanged("NationApproval");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("EOCoverageInfo", Order=5)]
-        public EOCoverageInfo_Type[] EOCoverageInfo {
-            get {
-                return this.eOCoverageInfoField;
-            }
-            set {
-                this.eOCoverageInfoField = value;
-                this.RaisePropertyChanged("EOCoverageInfo");
             }
         }
         
@@ -9289,7 +9351,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9335,7 +9397,39 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
+    public partial class EOCoverageInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string holdingIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
+        public string HoldingID {
+            get {
+                return this.holdingIDField;
+            }
+            set {
+                this.holdingIDField = value;
+                this.RaisePropertyChanged("HoldingID");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9360,9 +9454,9 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         private string licenseInterruptedReasonField;
         
-        private string levelDescField;
-        
         private string nameOnLicenseField;
+        
+        private string levelDescField;
         
         private string agencyAffiliationIDField;
         
@@ -9476,18 +9570,6 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=7)]
-        public string LevelDesc {
-            get {
-                return this.levelDescField;
-            }
-            set {
-                this.levelDescField = value;
-                this.RaisePropertyChanged("LevelDesc");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
         public string NameOnLicense {
             get {
                 return this.nameOnLicenseField;
@@ -9495,6 +9577,18 @@ namespace Apexa.CITS.WCF.Test.CITSService {
             set {
                 this.nameOnLicenseField = value;
                 this.RaisePropertyChanged("NameOnLicense");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public string LevelDesc {
+            get {
+                return this.levelDescField;
+            }
+            set {
+                this.levelDescField = value;
+                this.RaisePropertyChanged("LevelDesc");
             }
         }
         
@@ -9521,7 +9615,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9567,7 +9661,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9584,31 +9678,31 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         private bool effDateFieldSpecified;
         
+        private System.DateTime expDateField;
+        
+        private bool expDateFieldSpecified;
+        
         private OLI_LU_PROSTAT carrierApptStatusField;
         
         private DistributionAgreementInfo_Type[] distributionAgreementInfoField;
-        
-        private RequirementInfo_Type[] requirementInfoField;
-        
-        private System.DateTime termDateField;
-        
-        private bool termDateFieldSpecified;
-        
-        private DistributionLevel_Type[] distributionLevelField;
-        
-        private ReferralInfo_Type[] referralInfoField;
         
         private ConsolidationInfo_Type[] consolidationInfoField;
         
         private DebtInfo_Type[] debtInfoField;
         
-        private TransferInfo_Type[] transferInfoField;
+        private ReferralInfo_Type[] referralInfoField;
         
         private GovtIDInfo_Type[] govtIDInfoField;
         
+        private TransferInfo_Type[] transferInfoField;
+        
+        private DistributionLevel_Type[] distributionLevelField;
+        
+        private RequirementInfo_Type[] requirementInfoField;
+        
         private SupervisionLevel_Type[] supervisionLevelField;
         
-        private AssocCarrierAppointmentInfo_Type[] assocCarrierAppointmentInfoField;
+        private AssocCarrierApptInfo_Type[] assocCarrierApptInfoField;
         
         private string idField;
         
@@ -9677,7 +9771,31 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=4)]
+        public System.DateTime ExpDate {
+            get {
+                return this.expDateField;
+            }
+            set {
+                this.expDateField = value;
+                this.RaisePropertyChanged("ExpDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ExpDateSpecified {
+            get {
+                return this.expDateFieldSpecified;
+            }
+            set {
+                this.expDateFieldSpecified = value;
+                this.RaisePropertyChanged("ExpDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         public OLI_LU_PROSTAT CarrierApptStatus {
             get {
                 return this.carrierApptStatusField;
@@ -9689,7 +9807,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DistributionAgreementInfo", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute("DistributionAgreementInfo", Order=6)]
         public DistributionAgreementInfo_Type[] DistributionAgreementInfo {
             get {
                 return this.distributionAgreementInfoField;
@@ -9701,50 +9819,26 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("RequirementInfo", Order=6)]
-        public RequirementInfo_Type[] RequirementInfo {
+        [System.Xml.Serialization.XmlElementAttribute("ConsolidationInfo", Order=7)]
+        public ConsolidationInfo_Type[] ConsolidationInfo {
             get {
-                return this.requirementInfoField;
+                return this.consolidationInfoField;
             }
             set {
-                this.requirementInfoField = value;
-                this.RaisePropertyChanged("RequirementInfo");
+                this.consolidationInfoField = value;
+                this.RaisePropertyChanged("ConsolidationInfo");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=7)]
-        public System.DateTime TermDate {
+        [System.Xml.Serialization.XmlElementAttribute("DebtInfo", Order=8)]
+        public DebtInfo_Type[] DebtInfo {
             get {
-                return this.termDateField;
+                return this.debtInfoField;
             }
             set {
-                this.termDateField = value;
-                this.RaisePropertyChanged("TermDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool TermDateSpecified {
-            get {
-                return this.termDateFieldSpecified;
-            }
-            set {
-                this.termDateFieldSpecified = value;
-                this.RaisePropertyChanged("TermDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DistributionLevel", Order=8)]
-        public DistributionLevel_Type[] DistributionLevel {
-            get {
-                return this.distributionLevelField;
-            }
-            set {
-                this.distributionLevelField = value;
-                this.RaisePropertyChanged("DistributionLevel");
+                this.debtInfoField = value;
+                this.RaisePropertyChanged("DebtInfo");
             }
         }
         
@@ -9761,31 +9855,19 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ConsolidationInfo", Order=10)]
-        public ConsolidationInfo_Type[] ConsolidationInfo {
+        [System.Xml.Serialization.XmlElementAttribute("GovtIDInfo", Order=10)]
+        public GovtIDInfo_Type[] GovtIDInfo {
             get {
-                return this.consolidationInfoField;
+                return this.govtIDInfoField;
             }
             set {
-                this.consolidationInfoField = value;
-                this.RaisePropertyChanged("ConsolidationInfo");
+                this.govtIDInfoField = value;
+                this.RaisePropertyChanged("GovtIDInfo");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DebtInfo", Order=11)]
-        public DebtInfo_Type[] DebtInfo {
-            get {
-                return this.debtInfoField;
-            }
-            set {
-                this.debtInfoField = value;
-                this.RaisePropertyChanged("DebtInfo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("TransferInfo", Order=12)]
+        [System.Xml.Serialization.XmlElementAttribute("TransferInfo", Order=11)]
         public TransferInfo_Type[] TransferInfo {
             get {
                 return this.transferInfoField;
@@ -9797,14 +9879,26 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("GovtIDInfo", Order=13)]
-        public GovtIDInfo_Type[] GovtIDInfo {
+        [System.Xml.Serialization.XmlElementAttribute("DistributionLevel", Order=12)]
+        public DistributionLevel_Type[] DistributionLevel {
             get {
-                return this.govtIDInfoField;
+                return this.distributionLevelField;
             }
             set {
-                this.govtIDInfoField = value;
-                this.RaisePropertyChanged("GovtIDInfo");
+                this.distributionLevelField = value;
+                this.RaisePropertyChanged("DistributionLevel");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("RequirementInfo", Order=13)]
+        public RequirementInfo_Type[] RequirementInfo {
+            get {
+                return this.requirementInfoField;
+            }
+            set {
+                this.requirementInfoField = value;
+                this.RaisePropertyChanged("RequirementInfo");
             }
         }
         
@@ -9821,14 +9915,14 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("AssocCarrierAppointmentInfo", Order=15)]
-        public AssocCarrierAppointmentInfo_Type[] AssocCarrierAppointmentInfo {
+        [System.Xml.Serialization.XmlElementAttribute("AssocCarrierApptInfo", Order=15)]
+        public AssocCarrierApptInfo_Type[] AssocCarrierApptInfo {
             get {
-                return this.assocCarrierAppointmentInfoField;
+                return this.assocCarrierApptInfoField;
             }
             set {
-                this.assocCarrierAppointmentInfoField = value;
-                this.RaisePropertyChanged("AssocCarrierAppointmentInfo");
+                this.assocCarrierApptInfoField = value;
+                this.RaisePropertyChanged("AssocCarrierApptInfo");
             }
         }
         
@@ -9879,7 +9973,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9925,7 +10019,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9971,7 +10065,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10031,7 +10125,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10077,7 +10171,227 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
+    public partial class ConsolidationInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string carrierAppointmentIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
+        public string CarrierAppointmentID {
+            get {
+                return this.carrierAppointmentIDField;
+            }
+            set {
+                this.carrierAppointmentIDField = value;
+                this.RaisePropertyChanged("CarrierAppointmentID");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
+    public partial class DebtInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string holdingIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
+        public string HoldingID {
+            get {
+                return this.holdingIDField;
+            }
+            set {
+                this.holdingIDField = value;
+                this.RaisePropertyChanged("HoldingID");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
+    public partial class ReferralInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string partyIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
+        public string PartyID {
+            get {
+                return this.partyIDField;
+            }
+            set {
+                this.partyIDField = value;
+                this.RaisePropertyChanged("PartyID");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
+    public partial class GovtIDInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string govtIDField;
+        
+        private OLI_LU_GOVTIDTC govtIDTCField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string GovtID {
+            get {
+                return this.govtIDField;
+            }
+            set {
+                this.govtIDField = value;
+                this.RaisePropertyChanged("GovtID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public OLI_LU_GOVTIDTC GovtIDTC {
+            get {
+                return this.govtIDTCField;
+            }
+            set {
+                this.govtIDTCField = value;
+                this.RaisePropertyChanged("GovtIDTC");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
+    public partial class TransferInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string carrierAppointmentIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
+        public string CarrierAppointmentID {
+            get {
+                return this.carrierAppointmentIDField;
+            }
+            set {
+                this.carrierAppointmentIDField = value;
+                this.RaisePropertyChanged("CarrierAppointmentID");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
+    public partial class DistributionLevel_Type : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string distributionLevelValueField;
+        
+        private string partyIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string DistributionLevelValue {
+            get {
+                return this.distributionLevelValueField;
+            }
+            set {
+                this.distributionLevelValueField = value;
+                this.RaisePropertyChanged("DistributionLevelValue");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
+        public string PartyID {
+            get {
+                return this.partyIDField;
+            }
+            set {
+                this.partyIDField = value;
+                this.RaisePropertyChanged("PartyID");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10193,7 +10507,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10239,227 +10553,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
-    public partial class DistributionLevel_Type : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string distributionLevelValueField;
-        
-        private string partyIDField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string DistributionLevelValue {
-            get {
-                return this.distributionLevelValueField;
-            }
-            set {
-                this.distributionLevelValueField = value;
-                this.RaisePropertyChanged("DistributionLevelValue");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
-        public string PartyID {
-            get {
-                return this.partyIDField;
-            }
-            set {
-                this.partyIDField = value;
-                this.RaisePropertyChanged("PartyID");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
-    public partial class ReferralInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string partyIDField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
-        public string PartyID {
-            get {
-                return this.partyIDField;
-            }
-            set {
-                this.partyIDField = value;
-                this.RaisePropertyChanged("PartyID");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
-    public partial class ConsolidationInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string carrierAppointmentIDField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
-        public string CarrierAppointmentID {
-            get {
-                return this.carrierAppointmentIDField;
-            }
-            set {
-                this.carrierAppointmentIDField = value;
-                this.RaisePropertyChanged("CarrierAppointmentID");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
-    public partial class DebtInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string holdingIDField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
-        public string HoldingID {
-            get {
-                return this.holdingIDField;
-            }
-            set {
-                this.holdingIDField = value;
-                this.RaisePropertyChanged("HoldingID");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
-    public partial class TransferInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string carrierAppointmentIDField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
-        public string CarrierAppointmentID {
-            get {
-                return this.carrierAppointmentIDField;
-            }
-            set {
-                this.carrierAppointmentIDField = value;
-                this.RaisePropertyChanged("CarrierAppointmentID");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
-    public partial class GovtIDInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string govtIDField;
-        
-        private OLI_LU_GOVTIDTC govtIDTCField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string GovtID {
-            get {
-                return this.govtIDField;
-            }
-            set {
-                this.govtIDField = value;
-                this.RaisePropertyChanged("GovtID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public OLI_LU_GOVTIDTC GovtIDTC {
-            get {
-                return this.govtIDTCField;
-            }
-            set {
-                this.govtIDTCField = value;
-                this.RaisePropertyChanged("GovtIDTC");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10603,7 +10697,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10649,12 +10743,12 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
-    public partial class AssocCarrierAppointmentInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class AssocCarrierApptInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string companyProducerIDField;
         
@@ -10751,7 +10845,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10760,9 +10854,9 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         private OLI_LU_DESIGNATIONTYPE designationTypeField;
         
-        private string designationYearField;
-        
         private string designationDescField;
+        
+        private string designationYearField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -10777,19 +10871,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="gYear", Order=1)]
-        public string DesignationYear {
-            get {
-                return this.designationYearField;
-            }
-            set {
-                this.designationYearField = value;
-                this.RaisePropertyChanged("DesignationYear");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         public string DesignationDesc {
             get {
                 return this.designationDescField;
@@ -10797,6 +10879,18 @@ namespace Apexa.CITS.WCF.Test.CITSService {
             set {
                 this.designationDescField = value;
                 this.RaisePropertyChanged("DesignationDesc");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="gYear", Order=2)]
+        public string DesignationYear {
+            get {
+                return this.designationYearField;
+            }
+            set {
+                this.designationYearField = value;
+                this.RaisePropertyChanged("DesignationYear");
             }
         }
         
@@ -10811,7 +10905,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10857,7 +10951,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10889,39 +10983,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
-    public partial class EOCoverageInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string holdingIDField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
-        public string HoldingID {
-            get {
-                return this.holdingIDField;
-            }
-            set {
-                this.holdingIDField = value;
-                this.RaisePropertyChanged("HoldingID");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10953,7 +11015,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10985,7 +11047,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11073,7 +11135,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11119,7 +11181,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11179,7 +11241,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11211,7 +11273,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11243,7 +11305,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11331,7 +11393,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11377,7 +11439,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11507,7 +11569,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11594,6 +11656,44 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessFileRequests", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class ProcessFileRequestsRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays")]
+        public string[] urlArray;
+        
+        public ProcessFileRequestsRequest() {
+        }
+        
+        public ProcessFileRequestsRequest(string[] urlArray) {
+            this.urlArray = urlArray;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessFileRequestsResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class ProcessFileRequestsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic", IsNullable=false)]
+        public Apexa.CITS.WCF.Test.CITSService.KeyValuePairOfstringbase64Binary[] ProcessFileRequestsResult;
+        
+        public ProcessFileRequestsResponse() {
+        }
+        
+        public ProcessFileRequestsResponse(Apexa.CITS.WCF.Test.CITSService.KeyValuePairOfstringbase64Binary[] ProcessFileRequestsResult) {
+            this.ProcessFileRequestsResult = ProcessFileRequestsResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ICITSServiceChannel : Apexa.CITS.WCF.Test.CITSService.ICITSService, System.ServiceModel.IClientChannel {
     }
@@ -11652,6 +11752,29 @@ namespace Apexa.CITS.WCF.Test.CITSService {
             inValue.requestType = requestType;
             inValue.inputId = inputId;
             return ((Apexa.CITS.WCF.Test.CITSService.ICITSService)(this)).ProcessNonCITSMessageAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Apexa.CITS.WCF.Test.CITSService.ProcessFileRequestsResponse Apexa.CITS.WCF.Test.CITSService.ICITSService.ProcessFileRequests(Apexa.CITS.WCF.Test.CITSService.ProcessFileRequestsRequest request) {
+            return base.Channel.ProcessFileRequests(request);
+        }
+        
+        public Apexa.CITS.WCF.Test.CITSService.KeyValuePairOfstringbase64Binary[] ProcessFileRequests(string[] urlArray) {
+            Apexa.CITS.WCF.Test.CITSService.ProcessFileRequestsRequest inValue = new Apexa.CITS.WCF.Test.CITSService.ProcessFileRequestsRequest();
+            inValue.urlArray = urlArray;
+            Apexa.CITS.WCF.Test.CITSService.ProcessFileRequestsResponse retVal = ((Apexa.CITS.WCF.Test.CITSService.ICITSService)(this)).ProcessFileRequests(inValue);
+            return retVal.ProcessFileRequestsResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessFileRequestsResponse> Apexa.CITS.WCF.Test.CITSService.ICITSService.ProcessFileRequestsAsync(Apexa.CITS.WCF.Test.CITSService.ProcessFileRequestsRequest request) {
+            return base.Channel.ProcessFileRequestsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessFileRequestsResponse> ProcessFileRequestsAsync(string[] urlArray) {
+            Apexa.CITS.WCF.Test.CITSService.ProcessFileRequestsRequest inValue = new Apexa.CITS.WCF.Test.CITSService.ProcessFileRequestsRequest();
+            inValue.urlArray = urlArray;
+            return ((Apexa.CITS.WCF.Test.CITSService.ICITSService)(this)).ProcessFileRequestsAsync(inValue);
         }
     }
 }
