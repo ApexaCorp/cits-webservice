@@ -1,13 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apexa.CITS.WCF.Test", "Apexa.CITS.WCF.Test\Apexa.CITS.WCF.Test.csproj", "{E425C86E-466E-432C-BCBC-5B43510FF2A0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{6D55D20C-E993-4CCF-93BC-D6B3C10A829D}"
 	ProjectSection(SolutionItems) = preProject
 		Documentation\APEXA CITS Documentation.xlsx = Documentation\APEXA CITS Documentation.xlsx
+		Documentation\APEXA-API.docx = Documentation\APEXA-API.docx
 		Documentation\APEXA-Feed.xsd = Documentation\APEXA-Feed.xsd
 	EndProjectSection
 EndProject
