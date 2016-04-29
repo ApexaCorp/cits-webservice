@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-16"?>
-<TXLife_Type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.34.00" xmlns="CITS">
+<TXLife_Type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.35.00" xmlns="CITS">
   <TXLifeRequest xmlns="http://ACORD.org/Standards/Life/2">
-    <TransRefGUID>9e536b1f-cef4-478a-84bc-5e0ff2558c46</TransRefGUID>
+    <TransRefGUID>a8e8245b-c7c6-44c8-9202-e8e80c0a0a64</TransRefGUID>
     <TransType tc="228">Producer Inquiry</TransType>
     <InquiryView>
       <InquiryViewCode>ProducerWithAppointments</InquiryViewCode>
     </InquiryView>
     <OLifE>
-      <Party id="C25" />
+      <Party id="C21" />
     </OLifE>
   </TXLifeRequest>
 </TXLife_Type>

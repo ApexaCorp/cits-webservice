@@ -336,7 +336,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="1" name="PrefLanguage" type="tns:OLI_LU_CLIENTLANGUAGES" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="EOCoverageInfo" type="tns:EOCoverageInfo_Type" />
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="License" type="tns:License_Type" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Licence" type="tns:Licence_Type" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="CarrierAppointment" type="tns:CarrierAppointment_Type" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="DesignationInfo" type="tns:DesignationInfo_Type" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="NationApproval" type="tns:NationApproval_Type" />
@@ -354,21 +354,21 @@
   <xs:complexType name="EOCoverageInfo_Type">
     <xs:attribute name="HoldingID" type="xs:IDREF" />
   </xs:complexType>
-  <xs:complexType name="License_Type">
+  <xs:complexType name="Licence_Type">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="1" name="LicenseNum" type="xs:string" />
-      <xs:element minOccurs="0" maxOccurs="1" name="LicenseState" type="tns:OLI_LU_STATE" />
-      <xs:element minOccurs="0" maxOccurs="1" name="LicenseType" type="tns:OLI_LU_LICENSETYPE" />
+      <xs:element minOccurs="0" maxOccurs="1" name="LicenceNum" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="LicenceState" type="tns:OLI_LU_STATE" />
+      <xs:element minOccurs="0" maxOccurs="1" name="LicenceType" type="tns:OLI_LU_LICENCETYPE" />
       <xs:element minOccurs="0" maxOccurs="1" name="ExpDate" type="xs:date" />
       <xs:element minOccurs="0" maxOccurs="1" name="OriginationDate" type="xs:date" />
-      <xs:element minOccurs="0" maxOccurs="1" name="LicenseInterruptedInd" type="tns:OLI_LU_BOOLEAN" />
-      <xs:element minOccurs="0" maxOccurs="1" name="LicenseInterruptedReason" type="xs:string" />
-      <xs:element minOccurs="0" maxOccurs="1" name="NameOnLicense" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="LicenceInterruptedInd" type="tns:OLI_LU_BOOLEAN" />
+      <xs:element minOccurs="0" maxOccurs="1" name="LicenceInterruptedReason" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="NameOnLicence" type="xs:string" />
       <xs:element minOccurs="0" maxOccurs="1" name="LevelDesc" type="xs:string" />
     </xs:sequence>
     <xs:attribute name="AgencyAffiliationID" type="xs:IDREF" />
   </xs:complexType>
-  <xs:complexType name="OLI_LU_LICENSETYPE">
+  <xs:complexType name="OLI_LU_LICENCETYPE">
     <xs:simpleContent>
       <xs:extension base="xs:string">
         <xs:attribute name="tc" type="xs:nonNegativeInteger" />

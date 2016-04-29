@@ -424,6 +424,7 @@ enter whatever information is called for, if any, and click on "Accept".
       <xsd:element ref="CompanyProducerIDSourceDesc" minOccurs="0"/>
       <xsd:element ref="CarrierApptStatus" minOccurs="0"/>
     </xsd:sequence>
+    <xsd:attribute name="id" type="xsd:ID"/>
     <xsd:attribute name="CarrierAppointmentID" type="xsd:IDREF"/>
     <xsd:attribute name="PartyID" type="xsd:IDREF"/>
   </xsd:complexType>  
@@ -443,9 +444,9 @@ enter whatever information is called for, if any, and click on "Accept".
 	<xsd:complexType name="Banking_Type">
 		<xsd:sequence>
 			<xsd:element ref="AccountNumber" minOccurs="0"/>
-			<xsd:element ref="TransitNumber " minOccurs="0"/>
-			<xsd:element ref="InstitutionNumber" minOccurs="0"/>
-		</xsd:sequence>
+      <xsd:element ref="InstitutionNumber" minOccurs="0"/>
+      <xsd:element ref="TransitNumber " minOccurs="0"/>
+    </xsd:sequence>
 	</xsd:complexType>
 	<xsd:element name="CarrierAppointment" type="CarrierAppointment_Type"/>
 	<xsd:complexType name="CarrierAppointment_Type">
@@ -473,7 +474,8 @@ enter whatever information is called for, if any, and click on "Accept".
 	</xsd:complexType>
 	<xsd:element name="ConsolidationInfo" type="ConsolidationInfo_Type"/>
 	<xsd:complexType name="ConsolidationInfo_Type">
-		<xsd:attribute name="CarrierAppointmentID" use="required" type="xsd:IDREF"/>
+    <xsd:attribute name="id" type="xsd:ID"/>
+    <xsd:attribute name="CarrierAppointmentID" type="xsd:IDREF"/>
 	</xsd:complexType>
 	<xsd:element name="CriminalConviction" type="CriminalConviction_Type"/>
 	<xsd:complexType name="CriminalConviction_Type">
@@ -483,15 +485,16 @@ enter whatever information is called for, if any, and click on "Accept".
 	</xsd:complexType>
 	<xsd:element name="DebtInfo" type="DebtInfo_Type"/>
 	<xsd:complexType name="DebtInfo_Type">
-		<xsd:attribute name="HoldingID" use="required" type="xsd:IDREF"/>
+    <xsd:attribute name="id" type="xsd:ID"/>
+    <xsd:attribute name="HoldingID" type="xsd:IDREF"/>
 	</xsd:complexType>
 	<xsd:element name="DesignationInfo" type="DesignationInfo_Type"/>
 	<xsd:complexType name="DesignationInfo_Type">
 		<xsd:sequence>
 			<xsd:element ref="DesignationType" minOccurs="0"/>
-			<xsd:element ref="DesignationYear" minOccurs="0"/>
-			<xsd:element ref="DesignationDesc" minOccurs="0"/>
-		</xsd:sequence>
+      <xsd:element ref="DesignationDesc" minOccurs="0"/>
+      <xsd:element ref="DesignationYear" minOccurs="0"/>
+    </xsd:sequence>
 	</xsd:complexType>
 	<xsd:element name="DistributionAgreementInfo" type="DistributionAgreementInfo_Type"/>
 	<xsd:complexType name="DistributionAgreementInfo_Type">
@@ -506,6 +509,7 @@ enter whatever information is called for, if any, and click on "Accept".
 		<xsd:sequence>
 			<xsd:element ref="DistributionLevelValue" minOccurs="0"/>
 		</xsd:sequence>
+    <xsd:attribute name="id" type="xsd:ID"/>
 		<xsd:attribute name="PartyID" type="xsd:IDREF"/>
 	</xsd:complexType>
 	<xsd:element name="Education" type="Education_Type"/>
@@ -523,7 +527,11 @@ enter whatever information is called for, if any, and click on "Accept".
 	</xsd:complexType>
 	<xsd:element name="EOCoverageInfo" type="EOCoverageInfo_Type"/>
 	<xsd:complexType name="EOCoverageInfo_Type">
-		<xsd:attribute name="HoldingID" type="xsd:IDREF"/>
+    <xsd:sequence>
+      <xsd:element ref="PolNumber" minOccurs="0"/>
+    </xsd:sequence>
+    <xsd:attribute name="id" type="xsd:ID"/>
+    <xsd:attribute name="HoldingID" type="xsd:IDREF"/>
 	</xsd:complexType>
 	<xsd:element name="Employment" type="Employment_Type"/>
 	<xsd:complexType name="Employment_Type">
@@ -585,11 +593,11 @@ enter whatever information is called for, if any, and click on "Accept".
 			<xsd:element ref="LicenseType" minOccurs="0"/>
 			<xsd:element ref="ExpDate" minOccurs="0"/>
 			<xsd:element ref="OriginationDate" minOccurs="0"/>
-			<xsd:element ref="LicenseInterruptedInd" minOccurs="0"/>
-			<xsd:element ref="LicenseInterruptedReason" minOccurs="0"/>
-			<xsd:element ref="LevelDesc" minOccurs="0"/>
       <xsd:element ref="NameOnLicense" minOccurs="0"/>
-		</xsd:sequence>
+      <xsd:element ref="LicenseInterruptedInd" minOccurs="0"/>
+      <xsd:element ref="LicenseInterruptedReason" minOccurs="0"/>
+      <xsd:element ref="LevelDesc" minOccurs="0"/>
+    </xsd:sequence>
 		<xsd:attribute name="AgencyAffiliationID" type="xsd:IDREF"/>
 	</xsd:complexType>
 	<xsd:element name="Loan" type="Loan_Type"/>
@@ -670,10 +678,7 @@ enter whatever information is called for, if any, and click on "Accept".
 			<xsd:element ref="ProductType" minOccurs="0"/>
 			<xsd:element ref="PolicyStatus" minOccurs="0"/>
 			<xsd:element ref="PolicyValue" minOccurs="0"/>
-			<xsd:choice minOccurs="0">
-				<xsd:element ref="EffDate" minOccurs="0"/>
-				<xsd:element ref="EffPartialDate" minOccurs="0"/>
-			</xsd:choice>
+			<xsd:element ref="EffDate" minOccurs="0"/>
 			<xsd:element ref="TermDate" minOccurs="0"/>
 			<xsd:element ref="RenewalDate" minOccurs="0"/>
 		</xsd:sequence>
@@ -713,6 +718,7 @@ enter whatever information is called for, if any, and click on "Accept".
 	</xsd:complexType>
 	<xsd:element name="ReferralInfo" type="ReferralInfo_Type"/>
 	<xsd:complexType name="ReferralInfo_Type">
+    <xsd:attribute name="id" type="xsd:ID"/>
 		<xsd:attribute name="PartyID" use="required" type="xsd:IDREF"/>
 	</xsd:complexType>
 	<xsd:element name="Relation" type="Relation_Type"/>
@@ -763,12 +769,13 @@ enter whatever information is called for, if any, and click on "Accept".
   <xsd:element name="SupervisionLevel" type="SupervisionLevel_Type"/>
   <xsd:complexType name="SupervisionLevel_Type">
     <xsd:sequence>
-      <xsd:element ref="SupervisionLevelTC" minOccurs="0" />
-      <xsd:element ref="SupervisionLevelDesc" minOccurs="0" />
-      <xsd:element ref="EffDate" minOccurs="0" />
-      <xsd:element ref="ExpDate" minOccurs="0" />
-      <xsd:element ref="FollowUpDate" minOccurs="0" />
+      <xsd:element ref="SupervisionLevelTC" minOccurs="0"/>
+      <xsd:element ref="SupervisionLevelDesc" minOccurs="0"/>
+      <xsd:element ref="EffDate" minOccurs="0"/>
+      <xsd:element ref="ExpDate" minOccurs="0"/>
+      <xsd:element ref="FollowUpDate" minOccurs="0"/>
     </xsd:sequence>
+    <xsd:attribute name="id" type="xsd:ID"/>
     <xsd:attribute name="IssuingPartyID" type="xsd:IDREF"/>
   </xsd:complexType>
   <xsd:element name="TransferInfo" type="TransferInfo_Type"/>

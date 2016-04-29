@@ -109,6 +109,8 @@
       <xsd:import schemaLocation="https://localhost:44300/v1/CITSService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/CITS" />
       <xsd:import schemaLocation="https://localhost:44300/v1/CITSService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
       <xsd:import schemaLocation="https://localhost:44300/v1/CITSService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+      <xsd:import schemaLocation="https://localhost:44300/v1/CITSService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.DataContracts" />
+      <xsd:import schemaLocation="https://localhost:44300/v1/CITSService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.Inbound" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="ICITSService_ProcessMessage_InputMessage">
@@ -129,6 +131,30 @@
   <wsdl:message name="ICITSService_ProcessFileRequests_OutputMessage">
     <wsdl:part name="parameters" element="tns:ProcessFileRequestsResponse" />
   </wsdl:message>
+  <wsdl:message name="ICITSService_ProcessContractCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessContractCode" />
+  </wsdl:message>
+  <wsdl:message name="ICITSService_ProcessContractCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessContractCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICITSService_ProcessDebt_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessDebt" />
+  </wsdl:message>
+  <wsdl:message name="ICITSService_ProcessDebt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessDebtResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICITSService_ProcessSupervision_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessSupervision" />
+  </wsdl:message>
+  <wsdl:message name="ICITSService_ProcessSupervision_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessSupervisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICITSService_ProcessTag_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessTag" />
+  </wsdl:message>
+  <wsdl:message name="ICITSService_ProcessTag_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessTagResponse" />
+  </wsdl:message>
   <wsdl:portType name="ICITSService">
     <wsdl:operation name="ProcessMessage">
       <wsdl:input wsaw:Action="http://tempuri.org/ICITSService/ProcessMessage" message="tns:ICITSService_ProcessMessage_InputMessage" />
@@ -141,6 +167,22 @@
     <wsdl:operation name="ProcessFileRequests">
       <wsdl:input wsaw:Action="http://tempuri.org/ICITSService/ProcessFileRequests" message="tns:ICITSService_ProcessFileRequests_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICITSService/ProcessFileRequestsResponse" message="tns:ICITSService_ProcessFileRequests_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessContractCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICITSService/ProcessContractCode" message="tns:ICITSService_ProcessContractCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICITSService/ProcessContractCodeResponse" message="tns:ICITSService_ProcessContractCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessDebt">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICITSService/ProcessDebt" message="tns:ICITSService_ProcessDebt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICITSService/ProcessDebtResponse" message="tns:ICITSService_ProcessDebt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessSupervision">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICITSService/ProcessSupervision" message="tns:ICITSService_ProcessSupervision_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICITSService/ProcessSupervisionResponse" message="tns:ICITSService_ProcessSupervision_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessTag">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICITSService/ProcessTag" message="tns:ICITSService_ProcessTag_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICITSService/ProcessTagResponse" message="tns:ICITSService_ProcessTag_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WSHttpBinding_ICITSService" type="tns:ICITSService">
@@ -166,6 +208,42 @@
     </wsdl:operation>
     <wsdl:operation name="ProcessFileRequests">
       <soap12:operation soapAction="http://tempuri.org/ICITSService/ProcessFileRequests" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessContractCode">
+      <soap12:operation soapAction="http://tempuri.org/ICITSService/ProcessContractCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessDebt">
+      <soap12:operation soapAction="http://tempuri.org/ICITSService/ProcessDebt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessSupervision">
+      <soap12:operation soapAction="http://tempuri.org/ICITSService/ProcessSupervision" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessTag">
+      <soap12:operation soapAction="http://tempuri.org/ICITSService/ProcessTag" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

@@ -27,7 +27,7 @@ namespace Apexa.CITS.WCF.Test
                 errors.AddRange(Debts(response, response.Items.OfType<Holding_Type>().Where(p => p.id.StartsWith("DEBT")).ToArray(), "Advisor"));
                 errors.AddRange(EOCoverage(response, advisor));
                 errors.AddRange(Education(advisor));
-                errors.AddRange(License(response, advisor));
+                errors.AddRange(Licence(response, advisor));
                 errors.AddRange(Phones(advisor.Phone, "Advisor"));
                 errors.AddRange(Reference(response));
                 errors.AddRange(Supervision(advisor));
@@ -42,7 +42,7 @@ namespace Apexa.CITS.WCF.Test
                 errors.AddRange(Addresses(org.Address, "Organization"));
                 errors.AddRange(Debts(response, response.Items.OfType<Holding_Type>().Where(p => p.id.StartsWith("DEBT")).ToArray(), "Organization"));
                 errors.AddRange(EOCoverage(response, org));
-                errors.AddRange(License(response, org));
+                errors.AddRange(Licence(response, org));
                 errors.AddRange(Phones(org.Phone, "Organization"));
                 errors.AddRange(Shareholder(response, org));
                 errors.AddRange(Supervision(org));
@@ -113,7 +113,7 @@ namespace Apexa.CITS.WCF.Test
                 {
                     if (LUObjNotValid(govId)) { errors.Add("Appointment GovtIDInfo"); }
                 }
-                foreach (var assocInfo in app.AssocCarrierAppointmentInfo)
+                foreach (var assocInfo in app.AssocCarrierApptInfo)
                 {
                     if (string.IsNullOrWhiteSpace(assocInfo.CompanyProducerID)) { errors.Add("Appointment CompanyProducerID"); }
                     if (LUObjNotValid(assocInfo.CarrierApptStatus)) { errors.Add("Appointment CarrierApptStatus"); }
@@ -530,30 +530,30 @@ namespace Apexa.CITS.WCF.Test
             return errors;
         }
 
-        internal static IEnumerable<string> License(TXLife_Type response, Party_Type contractor)
+        internal static IEnumerable<string> Licence(TXLife_Type response, Party_Type contractor)
         {
             List<string> errors = new List<string>();
 
-            if (contractor.Producer.License != null)
+            if (contractor.Producer.Licence != null)
             {
-                foreach (var license in contractor.Producer.License)
+                foreach (var licence in contractor.Producer.Licence)
                 {
-                    if (string.IsNullOrWhiteSpace(license.AgencyAffiliationID)) { errors.Add("contractor license AgencyAffiliationID"); }
+                    if (string.IsNullOrWhiteSpace(licence.AgencyAffiliationID)) { errors.Add("contractor licence AgencyAffiliationID"); }
                     else
                     {
-                        var sponsor = response.Items.OfType<Party_Type>().FirstOrDefault(p => p.id == license.AgencyAffiliationID);
-                        if (sponsor == null) { errors.Add("contractor license sponsor"); }
+                        var sponsor = response.Items.OfType<Party_Type>().FirstOrDefault(p => p.id == licence.AgencyAffiliationID);
+                        if (sponsor == null) { errors.Add("contractor licence sponsor"); }
                         else
                         {
-                            if (LUObjNotValid(sponsor.PartyTypeCode)) { errors.Add("contractor license sponsor PartyTypeCode"); }
-                            if (!(sponsor.Item is Organization_Type)) { errors.Add("contractor license sponsor Item"); }
-                            if (string.IsNullOrWhiteSpace(sponsor.FullName)) { errors.Add("contractor license sponsor Item"); }
+                            if (LUObjNotValid(sponsor.PartyTypeCode)) { errors.Add("contractor licence sponsor PartyTypeCode"); }
+                            if (!(sponsor.Item is Organization_Type)) { errors.Add("contractor licence sponsor Item"); }
+                            if (string.IsNullOrWhiteSpace(sponsor.FullName)) { errors.Add("contractor licence sponsor Item"); }
                         }
                     }
-                    if (string.IsNullOrWhiteSpace(license.LicenseNum)) { errors.Add("contractor license LicenseNum"); }
-                    if (LUObjNotValid(license.LicenseType)) { errors.Add("contractor license LicenseType"); }
-                    if (LUObjNotValid(license.LicenseState)) { errors.Add("contractor license LicenseState"); }
-                    if (string.IsNullOrWhiteSpace(license.LevelDesc)) { errors.Add("contractor license LevelDesc"); }
+                    if (string.IsNullOrWhiteSpace(licence.LicenceNum)) { errors.Add("contractor licence LicenceNum"); }
+                    if (LUObjNotValid(licence.LicenceType)) { errors.Add("contractor licence LicenceType"); }
+                    if (LUObjNotValid(licence.LicenceState)) { errors.Add("contractor licence LicenceState"); }
+                    if (string.IsNullOrWhiteSpace(licence.LevelDesc)) { errors.Add("contractor licence LevelDesc"); }
                 }
             }
             

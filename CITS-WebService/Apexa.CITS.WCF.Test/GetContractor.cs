@@ -55,55 +55,7 @@ namespace Apexa.CITS.WCF.Test
 			CITSHelper.SerializeMessage(requestMessage);
 			CITSHelper.SerializeMessage(responseMessage);
 		}
-
-        /// <summary>
-        /// Returns producer, appointments, and related advisors, by Broker (Selling) Code.
-        /// </summary>
-        /// <returns></returns>
-        [TestMethod]
-		public async Task RequestFullBySellingCode()
-		{
-			var client = new CITSService.CITSServiceClient();
-			client.ClientCredentials.UserName.UserName = "cits.carrier@bluesun.ca";
-			client.ClientCredentials.UserName.Password = "password";
-			var requestMessage = new TXLife_Type()
-			{
-				Version = "2.34.00",
-				Items = new object[] {
-					new TXLifeRequest_Type() {
-						TransRefGUID = Guid.NewGuid().ToString(),
-						TransType = new OLI_LU_TRANS_TYPE_CODES() { tc = "228", Value = "Producer Inquiry" },
-                        InquiryView = new InquiryView_Type() { InquiryViewCode = "FullProducerWithAppointments" },
-                        OLifE = new OLifE_Type() {
-							Items = new object[] {
-								new Party_Type() {
-									Producer =  new Producer_Type() {
-										CarrierAppointment = new CarrierAppointment_Type[] {
-											new CarrierAppointment_Type() {
-												CompanyProducerID = "123"
-											}
-										}
-									}
-								}
-							}
-						},
-					}
-				},
-			};
-			var responseMessage = await client.ProcessMessageAsync(requestMessage);
-
-            // Feed errors
-            var errorList = Validate.GetFeedErrors(responseMessage);
-            if (errorList.Count > 0)
-            {
-                Assert.Fail(Validate.DumpErrors(errorList));
-            }
-
-            /* Serialize */
-            CITSHelper.SerializeMessage(requestMessage);
-			CITSHelper.SerializeMessage(responseMessage);
-		}
-
+        
         /// <summary>
         /// Returns producer APEXA Ids for a given internal Id.
         /// </summary>
@@ -114,16 +66,21 @@ namespace Apexa.CITS.WCF.Test
             var client = new CITSService.CITSServiceClient();
             client.ClientCredentials.UserName.UserName = "cits.carrier@bluesun.ca";
             client.ClientCredentials.UserName.Password = "password";
-            var response = await client.ProcessNonCITSMessageAsync("RequestContractorApexaIds", "xyz2015");
 
-            List<object> responseList = new List<object>(response.ProcessNonCITSMessageResult);
-            if (responseList.Count == 0)
+            var request = new NonCITSRequest()
             {
-                Assert.Fail("No Apexa Ids returned.");
-            }
+                requestType = "RequestContractorApexaIds",
+                id = "xyz2015"
+            };
 
-            long? contractorEntityId = responseList[0] as long?;
-            Assert.IsTrue(contractorEntityId == 62);
+            var response = await client.ProcessNonCITSMessageAsync(request);
+
+            List<Result> results = new List<Result>(response.ProcessNonCITSMessageResult.items);
+            Assert.IsTrue(results.Find(n => n.id == "C21") != null);
+
+            /* Serialize */
+            CITSHelper.SerializeMessage(request);
+            CITSHelper.SerializeMessage(response);
         }
 
         /// <summary>
@@ -136,12 +93,50 @@ namespace Apexa.CITS.WCF.Test
             var client = new CITSService.CITSServiceClient();
             client.ClientCredentials.UserName.UserName = "cits.carrier@bluesun.ca";
             client.ClientCredentials.UserName.Password = "password";
-            var response = await client.ProcessNonCITSMessageAsync("RequestContractorInternalIds", 62);
 
-            List<object> responseList = new List<object>(response.ProcessNonCITSMessageResult);
-            Assert.IsTrue(responseList.Contains("xyz2015"));
+            var request = new NonCITSRequest()
+            {
+                requestType = "RequestContractorInternalIds",
+                id = "21"
+            };
+
+            var response = await client.ProcessNonCITSMessageAsync(request);
+
+            List<Result> results = new List<Result>(response.ProcessNonCITSMessageResult.items);
+            Assert.IsTrue(results.Find(n => n.id == "xyz2015") != null);
+
+            /* Serialize */
+            CITSHelper.SerializeMessage(request);
+            CITSHelper.SerializeMessage(response);
         }
-        
+
+        /// <summary>
+        /// Returns producer, appointments, and related advisors, by Broker (Selling) Code.
+        /// </summary>
+        /// <returns></returns>
+        [TestMethod]
+        public async Task RequestApexaIdsBySellingCode()
+        {
+            var client = new CITSService.CITSServiceClient();
+            client.ClientCredentials.UserName.UserName = "cits.carrier@bluesun.ca";
+            client.ClientCredentials.UserName.Password = "password";
+
+            var request = new NonCITSRequest()
+            {
+                requestType = "RequestContractorApexaIdsBySellingCode",
+                id = "123"
+            };
+
+            var response = await client.ProcessNonCITSMessageAsync(request);
+
+            List<Result> results = new List<Result>(response.ProcessNonCITSMessageResult.items);
+            Assert.IsTrue(results.Find(n => n.id == "C21") != null);
+
+            /* Serialize */
+            CITSHelper.SerializeMessage(request);
+            CITSHelper.SerializeMessage(response);
+        }
+
         /// <summary>
         /// Returns a file for a given APEXA file download url.
         /// </summary>
@@ -153,25 +148,34 @@ namespace Apexa.CITS.WCF.Test
             client.ClientCredentials.UserName.UserName = "cits.carrier@bluesun.ca";
             client.ClientCredentials.UserName.Password = "password";
 
-            List<string> urlArray = new List<string>();
-            urlArray.Add("http://host:12345//documents/fulfillment/ABCDEFGH-1234-ABCD-1234-000000000001");
-            urlArray.Add("http://host:12345//documents/banking/ABCDEFGH-1234-ABCD-1234-000000000002");
+            var requestMessage = new FileRequest()
+            {
+                items = new FileURL[]
+                {
+                    new FileURL() { url = "http://host:12345//documents/fulfillment/ABCDEFGH-1234-ABCD-1234-000000000001" },
+                    new FileURL() { url = "http://host:12345//documents/banking/ABCDEFGH-1234-ABCD-1234-000000000002" }
+                }
+            };
 
-            var response = await client.ProcessFileRequestsAsync(urlArray.ToArray());
+            var response = await client.ProcessFileRequestsAsync(requestMessage);
 
             Assert.IsTrue(response.ProcessFileRequestsResult != null);
-            Assert.IsTrue(response.ProcessFileRequestsResult.Length == 2);
-            byte[] fileArray = response.ProcessFileRequestsResult[0].value;
+            Assert.IsTrue(response.ProcessFileRequestsResult.itemsField.Length == 2);
+            byte[] fileArray = response.ProcessFileRequestsResult.itemsField[0].byteArray;
             Assert.IsTrue(fileArray.Length > 0);
 
             string path = null;
-            using (var file = System.IO.File.Create(response.ProcessFileRequestsResult[0].key))
+            using (var file = System.IO.File.Create(response.ProcessFileRequestsResult.itemsField[0].filename))
             {
                 path = file.Name;
                 file.Write(fileArray, 0, fileArray.Length);
             }
 
             Assert.IsTrue(System.IO.File.Exists(path));
+
+            /* Serialize */
+            CITSHelper.SerializeMessage(requestMessage);
+            CITSHelper.SerializeMessage(response.ProcessFileRequestsResult);
         }
 
         /// <summary>
@@ -184,22 +188,23 @@ namespace Apexa.CITS.WCF.Test
 			var client = new CITSService.CITSServiceClient();
 			client.ClientCredentials.UserName.UserName = "cits.carrier@bluesun.ca";
 			client.ClientCredentials.UserName.Password = "password";
-			var requestMessage = new TXLife_Type()
-			{
-				Version = "2.34.00",
-				Items = new object[] {
-					new TXLifeRequest_Type() {
-						TransRefGUID = Guid.NewGuid().ToString(),
-						StartDate = DateTime.Now.Date.AddDays(-6),
-						StartDateSpecified = true,
-						EndDate = DateTime.Now.Date.AddDays(1),
-						EndDateSpecified = true,
-						TransType = new OLI_LU_TRANS_TYPE_CODES() { tc = "228", Value = "Producer Inquiry" },
+
+            var requestMessage = new TXLife_Type()
+            {
+                Version = "2.35.00",
+                Items = new object[] {
+                    new TXLifeRequest_Type() {
+                        TransRefGUID = Guid.NewGuid().ToString(),
+                        StartDate = DateTime.Now.Date.AddDays(-6),
+                        StartDateSpecified = true,
+                        EndDate = DateTime.Now.Date.AddDays(1),
+                        EndDateSpecified = true,
+                        TransType = new OLI_LU_TRANS_TYPE_CODES() { tc = "228", Value = "Producer Inquiry" },
                         InquiryView = new InquiryView_Type() { InquiryViewCode = "ChangedProducerListing" }
-					}
-				},
-			};
-			var responseMessage = await client.ProcessMessageAsync(requestMessage);
+                    }
+                },
+            };
+            var responseMessage = await client.ProcessMessageAsync(requestMessage);
 
             // Feed errors
             var errorList = Validate.GetFeedErrors(responseMessage);
@@ -210,8 +215,8 @@ namespace Apexa.CITS.WCF.Test
 
             /* Serialize */
             CITSHelper.SerializeMessage(requestMessage);
-			CITSHelper.SerializeMessage(responseMessage);
-		}
+            CITSHelper.SerializeMessage(responseMessage);
+        }
 
         /// <summary>
         /// Returns producer and appointments, without related advisors.
@@ -223,9 +228,10 @@ namespace Apexa.CITS.WCF.Test
             var client = new CITSService.CITSServiceClient();
             client.ClientCredentials.UserName.UserName = "cits.carrier@bluesun.ca";
             client.ClientCredentials.UserName.Password = "password";
+
             var requestMessage = new TXLife_Type()
             {
-                Version = "2.34.00",
+                Version = "2.35.00",
                 Items = new object[] {
                     new TXLifeRequest_Type() {
                         TransRefGUID = Guid.NewGuid().ToString(),
@@ -234,8 +240,8 @@ namespace Apexa.CITS.WCF.Test
                         OLifE = new OLifE_Type() {
                             Items = new object[] {
                                 new Party_Type() {
-                                    id = "C35",
-								}
+                                    id = "C22",
+                                }
                             }
                         },
                     }
@@ -265,9 +271,10 @@ namespace Apexa.CITS.WCF.Test
             var client = new CITSService.CITSServiceClient();
             client.ClientCredentials.UserName.UserName = "cits.carrier@bluesun.ca";
             client.ClientCredentials.UserName.Password = "password";
+
             var requestMessage = new TXLife_Type()
             {
-                Version = "2.34.00",
+                Version = "2.35.00",
                 Items = new object[] {
                     new TXLifeRequest_Type() {
                         TransRefGUID = Guid.NewGuid().ToString(),
@@ -276,8 +283,8 @@ namespace Apexa.CITS.WCF.Test
                         OLifE = new OLifE_Type() {
                             Items = new object[] {
                                 new Party_Type() {
-                                    id = "C35",
-								}
+                                    id = "C21",
+                                }
                             }
                         },
                     }
@@ -307,9 +314,10 @@ namespace Apexa.CITS.WCF.Test
             var client = new CITSService.CITSServiceClient();
             client.ClientCredentials.UserName.UserName = "cits.carrier@bluesun.ca";
             client.ClientCredentials.UserName.Password = "password";
+
             var requestMessage = new TXLife_Type()
             {
-                Version = "2.34.00",
+                Version = "2.35.00",
                 Items = new object[] {
                     new TXLifeRequest_Type() {
                         TransRefGUID = Guid.NewGuid().ToString(),
@@ -318,8 +326,8 @@ namespace Apexa.CITS.WCF.Test
                         OLifE = new OLifE_Type() {
                             Items = new object[] {
                                 new Party_Type() {
-                                    id = "C35",
-								}
+                                    id = "C22",
+                                }
                             }
                         },
                     }
@@ -345,9 +353,10 @@ namespace Apexa.CITS.WCF.Test
 			var client = new CITSService.CITSServiceClient();
 			client.ClientCredentials.UserName.UserName = "carrier@bluesun.ca";
 			client.ClientCredentials.UserName.Password = "wrongpassword";
+
 			var requestMessage = new TXLife_Type()
 			{
-				Version = "2.34.00",
+				Version = "2.35.00",
 				Items = new object[] {
 					new TXLifeRequest_Type() {
 						TransRefGUID = Guid.NewGuid().ToString(),

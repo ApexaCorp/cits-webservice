@@ -26,7 +26,7 @@ namespace InTrust.CITS.WCF.Test
             client.ClientCredentials.UserName.UserName = "cits.carrier@bluesun.ca";
             client.ClientCredentials.UserName.Password = "password";
 			var requestMessage = new TXLife_Type() { 
-				Version = "2.34.00",
+				Version = "2.35.00",
 				Items = new object[] {
 					new TXLifeRequest_Type() {
 						TransRefGUID = Guid.NewGuid().ToString(),
@@ -76,7 +76,7 @@ namespace InTrust.CITS.WCF.Test
 			client.ClientCredentials.UserName.Password = "password";
 			var requestMessage = new TXLife_Type()
 			{
-				Version = "2.34.00",
+				Version = "2.35.00",
 				Items = new object[] {
 					new TXLifeRequest_Type() {
 						TransRefGUID = Guid.NewGuid().ToString(),
@@ -124,7 +124,7 @@ namespace InTrust.CITS.WCF.Test
 			client.ClientCredentials.UserName.Password = "password";
 			var requestMessage = new TXLife_Type()
 			{
-				Version = "2.34.00",
+				Version = "2.35.00",
 				Items = new object[] {
 					new TXLifeRequest_Type() {
 						TransRefGUID = Guid.NewGuid().ToString(),
@@ -163,7 +163,7 @@ namespace InTrust.CITS.WCF.Test
             client.ClientCredentials.UserName.Password = "password";
             var requestMessage = new TXLife_Type()
             {
-                Version = "2.34.00",
+                Version = "2.35.00",
                 Items = new object[] {
                     new TXLifeRequest_Type() {
                         TransRefGUID = Guid.NewGuid().ToString(),
@@ -205,7 +205,7 @@ namespace InTrust.CITS.WCF.Test
             client.ClientCredentials.UserName.Password = "password";
             var requestMessage = new TXLife_Type()
             {
-                Version = "2.34.00",
+                Version = "2.35.00",
                 Items = new object[] {
                     new TXLifeRequest_Type() {
                         TransRefGUID = Guid.NewGuid().ToString(),
@@ -247,7 +247,7 @@ namespace InTrust.CITS.WCF.Test
             client.ClientCredentials.UserName.Password = "password";
             var requestMessage = new TXLife_Type()
             {
-                Version = "2.34.00",
+                Version = "2.35.00",
                 Items = new object[] {
                     new TXLifeRequest_Type() {
                         TransRefGUID = Guid.NewGuid().ToString(),
@@ -286,7 +286,7 @@ namespace InTrust.CITS.WCF.Test
 			client.ClientCredentials.UserName.Password = "wrongpassword";
 			var requestMessage = new TXLife_Type()
 			{
-				Version = "2.34.00",
+				Version = "2.35.00",
 				Items = new object[] {
 					new TXLifeRequest_Type() {
 						TransRefGUID = Guid.NewGuid().ToString(),

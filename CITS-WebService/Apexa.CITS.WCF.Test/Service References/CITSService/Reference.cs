@@ -17,54 +17,62 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessMessage", ReplyAction="http://tempuri.org/ICITSService/ProcessMessageResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Organization_Type1))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Person_Type1))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FormInstance_Type1))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Relation_Type1))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Party_Type1))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Holding_Type1))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TXLifeResponse_Type1))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TXLifeRequest_Type1))]
         Apexa.CITS.WCF.Test.CITSService.TXLife_Type ProcessMessage(Apexa.CITS.WCF.Test.CITSService.TXLife_Type TXLife);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessMessage", ReplyAction="http://tempuri.org/ICITSService/ProcessMessageResponse")]
         System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.TXLife_Type> ProcessMessageAsync(Apexa.CITS.WCF.Test.CITSService.TXLife_Type TXLife);
         
-        // CODEGEN: Parameter 'ProcessNonCITSMessageResult' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlArrayAttribute'.
+        // CODEGEN: Parameter 'ProcessNonCITSMessageResult' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessNonCITSMessage", ReplyAction="http://tempuri.org/ICITSService/ProcessNonCITSMessageResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Organization_Type1))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Person_Type1))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FormInstance_Type1))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Relation_Type1))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Party_Type1))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Holding_Type1))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TXLifeResponse_Type1))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TXLifeRequest_Type1))]
         Apexa.CITS.WCF.Test.CITSService.ProcessNonCITSMessageResponse ProcessNonCITSMessage(Apexa.CITS.WCF.Test.CITSService.ProcessNonCITSMessageRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessNonCITSMessage", ReplyAction="http://tempuri.org/ICITSService/ProcessNonCITSMessageResponse")]
         System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessNonCITSMessageResponse> ProcessNonCITSMessageAsync(Apexa.CITS.WCF.Test.CITSService.ProcessNonCITSMessageRequest request);
         
-        // CODEGEN: Parameter 'ProcessFileRequestsResult' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlArrayAttribute'.
+        // CODEGEN: Parameter 'ProcessFileRequestsResult' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessFileRequests", ReplyAction="http://tempuri.org/ICITSService/ProcessFileRequestsResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Organization_Type1))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Person_Type1))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FormInstance_Type1))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Relation_Type1))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Party_Type1))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Holding_Type1))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TXLifeResponse_Type1))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TXLifeRequest_Type1))]
         Apexa.CITS.WCF.Test.CITSService.ProcessFileRequestsResponse ProcessFileRequests(Apexa.CITS.WCF.Test.CITSService.ProcessFileRequestsRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessFileRequests", ReplyAction="http://tempuri.org/ICITSService/ProcessFileRequestsResponse")]
         System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessFileRequestsResponse> ProcessFileRequestsAsync(Apexa.CITS.WCF.Test.CITSService.ProcessFileRequestsRequest request);
+        
+        // CODEGEN: Parameter 'code' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessContractCode", ReplyAction="http://tempuri.org/ICITSService/ProcessContractCodeResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        Apexa.CITS.WCF.Test.CITSService.ProcessContractCodeResponse ProcessContractCode(Apexa.CITS.WCF.Test.CITSService.ProcessContractCodeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessContractCode", ReplyAction="http://tempuri.org/ICITSService/ProcessContractCodeResponse")]
+        System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessContractCodeResponse> ProcessContractCodeAsync(Apexa.CITS.WCF.Test.CITSService.ProcessContractCodeRequest request);
+        
+        // CODEGEN: Parameter 'debt' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessDebt", ReplyAction="http://tempuri.org/ICITSService/ProcessDebtResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        Apexa.CITS.WCF.Test.CITSService.ProcessDebtResponse ProcessDebt(Apexa.CITS.WCF.Test.CITSService.ProcessDebtRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessDebt", ReplyAction="http://tempuri.org/ICITSService/ProcessDebtResponse")]
+        System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessDebtResponse> ProcessDebtAsync(Apexa.CITS.WCF.Test.CITSService.ProcessDebtRequest request);
+        
+        // CODEGEN: Parameter 'supervision' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessSupervision", ReplyAction="http://tempuri.org/ICITSService/ProcessSupervisionResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        Apexa.CITS.WCF.Test.CITSService.ProcessSupervisionResponse ProcessSupervision(Apexa.CITS.WCF.Test.CITSService.ProcessSupervisionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessSupervision", ReplyAction="http://tempuri.org/ICITSService/ProcessSupervisionResponse")]
+        System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessSupervisionResponse> ProcessSupervisionAsync(Apexa.CITS.WCF.Test.CITSService.ProcessSupervisionRequest request);
+        
+        // CODEGEN: Parameter 'tag' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessTag", ReplyAction="http://tempuri.org/ICITSService/ProcessTagResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        Apexa.CITS.WCF.Test.CITSService.ProcessTagResponse ProcessTag(Apexa.CITS.WCF.Test.CITSService.ProcessTagRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessTag", ReplyAction="http://tempuri.org/ICITSService/ProcessTagResponse")]
+        System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessTagResponse> ProcessTagAsync(Apexa.CITS.WCF.Test.CITSService.ProcessTagRequest request);
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -111,7 +119,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -311,7 +319,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -357,408 +365,52 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="OLI_LU_ORGFORM", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class OLI_LU_ORGFORM1 : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.Inbound")]
+    public partial class Tag : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string tcFieldField;
+        private string contractApexaIdField;
         
-        private string valueFieldField;
+        private string entityTypeField;
+        
+        private string valueField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string tcField {
+        public string ContractApexaId {
             get {
-                return this.tcFieldField;
+                return this.contractApexaIdField;
             }
             set {
-                this.tcFieldField = value;
-                this.RaisePropertyChanged("tcField");
+                this.contractApexaIdField = value;
+                this.RaisePropertyChanged("ContractApexaId");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string valueField {
+        public string EntityType {
             get {
-                return this.valueFieldField;
+                return this.entityTypeField;
             }
             set {
-                this.valueFieldField = value;
-                this.RaisePropertyChanged("valueField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="Organization_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class Organization_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private OLI_LU_ORGFORM1 orgFormFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public OLI_LU_ORGFORM1 orgFormField {
-            get {
-                return this.orgFormFieldField;
-            }
-            set {
-                this.orgFormFieldField = value;
-                this.RaisePropertyChanged("orgFormField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="OLI_LU_EDULEVEL", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class OLI_LU_EDULEVEL1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string tcFieldField;
-        
-        private string valueFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string tcField {
-            get {
-                return this.tcFieldField;
-            }
-            set {
-                this.tcFieldField = value;
-                this.RaisePropertyChanged("tcField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string valueField {
-            get {
-                return this.valueFieldField;
-            }
-            set {
-                this.valueFieldField = value;
-                this.RaisePropertyChanged("valueField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="Education_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class Education_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string majorFieldField;
-        
-        private string providerOrSchoolFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string majorField {
-            get {
-                return this.majorFieldField;
-            }
-            set {
-                this.majorFieldField = value;
-                this.RaisePropertyChanged("majorField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string providerOrSchoolField {
-            get {
-                return this.providerOrSchoolFieldField;
-            }
-            set {
-                this.providerOrSchoolFieldField = value;
-                this.RaisePropertyChanged("providerOrSchoolField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="Person_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class Person_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private System.DateTime birthDateFieldField;
-        
-        private bool birthDateFieldSpecified1Field;
-        
-        private Education_Type1[] educationFieldField;
-        
-        private string firstNameFieldField;
-        
-        private OLI_LU_EDULEVEL1 highestEducationLevelFieldField;
-        
-        private string lastNameFieldField;
-        
-        private string middleNameFieldField;
-        
-        private string prefixFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public System.DateTime birthDateField {
-            get {
-                return this.birthDateFieldField;
-            }
-            set {
-                this.birthDateFieldField = value;
-                this.RaisePropertyChanged("birthDateField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("birthDateFieldSpecified", Order=1)]
-        public bool birthDateFieldSpecified1 {
-            get {
-                return this.birthDateFieldSpecified1Field;
-            }
-            set {
-                this.birthDateFieldSpecified1Field = value;
-                this.RaisePropertyChanged("birthDateFieldSpecified1");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=2)]
-        public Education_Type1[] educationField {
-            get {
-                return this.educationFieldField;
-            }
-            set {
-                this.educationFieldField = value;
-                this.RaisePropertyChanged("educationField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
-        public string firstNameField {
-            get {
-                return this.firstNameFieldField;
-            }
-            set {
-                this.firstNameFieldField = value;
-                this.RaisePropertyChanged("firstNameField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
-        public OLI_LU_EDULEVEL1 highestEducationLevelField {
-            get {
-                return this.highestEducationLevelFieldField;
-            }
-            set {
-                this.highestEducationLevelFieldField = value;
-                this.RaisePropertyChanged("highestEducationLevelField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
-        public string lastNameField {
-            get {
-                return this.lastNameFieldField;
-            }
-            set {
-                this.lastNameFieldField = value;
-                this.RaisePropertyChanged("lastNameField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
-        public string middleNameField {
-            get {
-                return this.middleNameFieldField;
-            }
-            set {
-                this.middleNameFieldField = value;
-                this.RaisePropertyChanged("middleNameField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
-        public string prefixField {
-            get {
-                return this.prefixFieldField;
-            }
-            set {
-                this.prefixFieldField = value;
-                this.RaisePropertyChanged("prefixField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="FormResponse_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class FormResponse_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private Attachment_Type1[] attachmentFieldField;
-        
-        private string idFieldField;
-        
-        private string questionNumberFieldField;
-        
-        private string responseCodeFieldField;
-        
-        private string responseDataFieldField;
-        
-        private string responseTextFieldField;
-        
-        private string sectionIdentifierFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=0)]
-        public Attachment_Type1[] attachmentField {
-            get {
-                return this.attachmentFieldField;
-            }
-            set {
-                this.attachmentFieldField = value;
-                this.RaisePropertyChanged("attachmentField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string idField {
-            get {
-                return this.idFieldField;
-            }
-            set {
-                this.idFieldField = value;
-                this.RaisePropertyChanged("idField");
+                this.entityTypeField = value;
+                this.RaisePropertyChanged("EntityType");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
-        public string questionNumberField {
+        public string Value {
             get {
-                return this.questionNumberFieldField;
+                return this.valueField;
             }
             set {
-                this.questionNumberFieldField = value;
-                this.RaisePropertyChanged("questionNumberField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
-        public string responseCodeField {
-            get {
-                return this.responseCodeFieldField;
-            }
-            set {
-                this.responseCodeFieldField = value;
-                this.RaisePropertyChanged("responseCodeField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
-        public string responseDataField {
-            get {
-                return this.responseDataFieldField;
-            }
-            set {
-                this.responseDataFieldField = value;
-                this.RaisePropertyChanged("responseDataField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
-        public string responseTextField {
-            get {
-                return this.responseTextFieldField;
-            }
-            set {
-                this.responseTextFieldField = value;
-                this.RaisePropertyChanged("responseTextField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
-        public string sectionIdentifierField {
-            get {
-                return this.sectionIdentifierFieldField;
-            }
-            set {
-                this.sectionIdentifierFieldField = value;
-                this.RaisePropertyChanged("sectionIdentifierField");
+                this.valueField = value;
+                this.RaisePropertyChanged("Value");
             }
         }
         
@@ -773,1650 +425,122 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="Attachment_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class Attachment_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.Inbound")]
+    public partial class Supervision : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private OLI_LU_BASICATTACHMENTTYPE1 attachmentBasicTypeFieldField;
+        private string contractApexaIdField;
         
-        private OLI_LU_VARIANT1 attachmentDataFieldField;
+        private System.DateTime effectiveDateField;
         
-        private OLI_LU_ATTACHLOCATION1 attachmentLocationFieldField;
+        private bool effectiveDateFieldSpecified;
         
-        private OLI_LU_ATTACHMENTTYPE1 attachmentTypeFieldField;
+        private bool isDeletedField;
         
-        private string fileNameFieldField;
+        private bool isDeletedFieldSpecified;
         
-        private string idFieldField;
+        private string reasonField;
         
-        private SignatureInfo_Type1[] signatureInfoFieldField;
+        private System.DateTime reminderDateField;
         
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public OLI_LU_BASICATTACHMENTTYPE1 attachmentBasicTypeField {
-            get {
-                return this.attachmentBasicTypeFieldField;
-            }
-            set {
-                this.attachmentBasicTypeFieldField = value;
-                this.RaisePropertyChanged("attachmentBasicTypeField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public OLI_LU_VARIANT1 attachmentDataField {
-            get {
-                return this.attachmentDataFieldField;
-            }
-            set {
-                this.attachmentDataFieldField = value;
-                this.RaisePropertyChanged("attachmentDataField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
-        public OLI_LU_ATTACHLOCATION1 attachmentLocationField {
-            get {
-                return this.attachmentLocationFieldField;
-            }
-            set {
-                this.attachmentLocationFieldField = value;
-                this.RaisePropertyChanged("attachmentLocationField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
-        public OLI_LU_ATTACHMENTTYPE1 attachmentTypeField {
-            get {
-                return this.attachmentTypeFieldField;
-            }
-            set {
-                this.attachmentTypeFieldField = value;
-                this.RaisePropertyChanged("attachmentTypeField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
-        public string fileNameField {
-            get {
-                return this.fileNameFieldField;
-            }
-            set {
-                this.fileNameFieldField = value;
-                this.RaisePropertyChanged("fileNameField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
-        public string idField {
-            get {
-                return this.idFieldField;
-            }
-            set {
-                this.idFieldField = value;
-                this.RaisePropertyChanged("idField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=6)]
-        public SignatureInfo_Type1[] signatureInfoField {
-            get {
-                return this.signatureInfoFieldField;
-            }
-            set {
-                this.signatureInfoFieldField = value;
-                this.RaisePropertyChanged("signatureInfoField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="OLI_LU_BASICATTACHMENTTYPE", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class OLI_LU_BASICATTACHMENTTYPE1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string tcFieldField;
-        
-        private string valueFieldField;
+        private bool reminderDateFieldSpecified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string tcField {
+        public string ContractApexaId {
             get {
-                return this.tcFieldField;
+                return this.contractApexaIdField;
             }
             set {
-                this.tcFieldField = value;
-                this.RaisePropertyChanged("tcField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string valueField {
-            get {
-                return this.valueFieldField;
-            }
-            set {
-                this.valueFieldField = value;
-                this.RaisePropertyChanged("valueField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="OLI_LU_VARIANT", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class OLI_LU_VARIANT1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string tcFieldField;
-        
-        private string valueFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string tcField {
-            get {
-                return this.tcFieldField;
-            }
-            set {
-                this.tcFieldField = value;
-                this.RaisePropertyChanged("tcField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string valueField {
-            get {
-                return this.valueFieldField;
-            }
-            set {
-                this.valueFieldField = value;
-                this.RaisePropertyChanged("valueField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="OLI_LU_ATTACHLOCATION", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class OLI_LU_ATTACHLOCATION1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string tcFieldField;
-        
-        private string valueFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string tcField {
-            get {
-                return this.tcFieldField;
-            }
-            set {
-                this.tcFieldField = value;
-                this.RaisePropertyChanged("tcField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string valueField {
-            get {
-                return this.valueFieldField;
-            }
-            set {
-                this.valueFieldField = value;
-                this.RaisePropertyChanged("valueField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="OLI_LU_ATTACHMENTTYPE", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class OLI_LU_ATTACHMENTTYPE1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string tcFieldField;
-        
-        private string valueFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string tcField {
-            get {
-                return this.tcFieldField;
-            }
-            set {
-                this.tcFieldField = value;
-                this.RaisePropertyChanged("tcField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string valueField {
-            get {
-                return this.valueFieldField;
-            }
-            set {
-                this.valueFieldField = value;
-                this.RaisePropertyChanged("valueField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="SignatureInfo_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class SignatureInfo_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string delegatedSignerPartyIDFieldField;
-        
-        private System.DateTime signatureDateFieldField;
-        
-        private bool signatureDateFieldSpecified1Field;
-        
-        private string signaturePartyIDFieldField;
-        
-        private System.DateTime signatureTimeFieldField;
-        
-        private bool signatureTimeFieldSpecified1Field;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string delegatedSignerPartyIDField {
-            get {
-                return this.delegatedSignerPartyIDFieldField;
-            }
-            set {
-                this.delegatedSignerPartyIDFieldField = value;
-                this.RaisePropertyChanged("delegatedSignerPartyIDField");
+                this.contractApexaIdField = value;
+                this.RaisePropertyChanged("ContractApexaId");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public System.DateTime signatureDateField {
+        public System.DateTime EffectiveDate {
             get {
-                return this.signatureDateFieldField;
+                return this.effectiveDateField;
             }
             set {
-                this.signatureDateFieldField = value;
-                this.RaisePropertyChanged("signatureDateField");
+                this.effectiveDateField = value;
+                this.RaisePropertyChanged("EffectiveDate");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("signatureDateFieldSpecified", Order=2)]
-        public bool signatureDateFieldSpecified1 {
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool EffectiveDateSpecified {
             get {
-                return this.signatureDateFieldSpecified1Field;
+                return this.effectiveDateFieldSpecified;
             }
             set {
-                this.signatureDateFieldSpecified1Field = value;
-                this.RaisePropertyChanged("signatureDateFieldSpecified1");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
-        public string signaturePartyIDField {
-            get {
-                return this.signaturePartyIDFieldField;
-            }
-            set {
-                this.signaturePartyIDFieldField = value;
-                this.RaisePropertyChanged("signaturePartyIDField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public System.DateTime signatureTimeField {
-            get {
-                return this.signatureTimeFieldField;
-            }
-            set {
-                this.signatureTimeFieldField = value;
-                this.RaisePropertyChanged("signatureTimeField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("signatureTimeFieldSpecified", Order=5)]
-        public bool signatureTimeFieldSpecified1 {
-            get {
-                return this.signatureTimeFieldSpecified1Field;
-            }
-            set {
-                this.signatureTimeFieldSpecified1Field = value;
-                this.RaisePropertyChanged("signatureTimeFieldSpecified1");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="FormInstance_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class FormInstance_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private FormResponse_Type1[] formResponseFieldField;
-        
-        private string idFieldField;
-        
-        private string relatedObjectIDFieldField;
-        
-        private OLI_LU_OBJECTTYPE1 relatedObjectTypeFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=0)]
-        public FormResponse_Type1[] formResponseField {
-            get {
-                return this.formResponseFieldField;
-            }
-            set {
-                this.formResponseFieldField = value;
-                this.RaisePropertyChanged("formResponseField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string idField {
-            get {
-                return this.idFieldField;
-            }
-            set {
-                this.idFieldField = value;
-                this.RaisePropertyChanged("idField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
-        public string relatedObjectIDField {
-            get {
-                return this.relatedObjectIDFieldField;
-            }
-            set {
-                this.relatedObjectIDFieldField = value;
-                this.RaisePropertyChanged("relatedObjectIDField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
-        public OLI_LU_OBJECTTYPE1 relatedObjectTypeField {
-            get {
-                return this.relatedObjectTypeFieldField;
-            }
-            set {
-                this.relatedObjectTypeFieldField = value;
-                this.RaisePropertyChanged("relatedObjectTypeField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="OLI_LU_OBJECTTYPE", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class OLI_LU_OBJECTTYPE1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string tcFieldField;
-        
-        private string valueFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string tcField {
-            get {
-                return this.tcFieldField;
-            }
-            set {
-                this.tcFieldField = value;
-                this.RaisePropertyChanged("tcField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string valueField {
-            get {
-                return this.valueFieldField;
-            }
-            set {
-                this.valueFieldField = value;
-                this.RaisePropertyChanged("valueField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="OLI_LU_REL", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class OLI_LU_REL1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string tcFieldField;
-        
-        private string valueFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string tcField {
-            get {
-                return this.tcFieldField;
-            }
-            set {
-                this.tcFieldField = value;
-                this.RaisePropertyChanged("tcField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string valueField {
-            get {
-                return this.valueFieldField;
-            }
-            set {
-                this.valueFieldField = value;
-                this.RaisePropertyChanged("valueField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="Relation_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class Relation_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string idFieldField;
-        
-        private double interestPercentFieldField;
-        
-        private bool interestPercentFieldSpecified1Field;
-        
-        private string originatingObjectIDFieldField;
-        
-        private OLI_LU_OBJECTTYPE1 originatingObjectTypeFieldField;
-        
-        private string relatedObjectIDFieldField;
-        
-        private OLI_LU_OBJECTTYPE1 relatedObjectTypeFieldField;
-        
-        private OLI_LU_REL1 relationRoleCodeFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string idField {
-            get {
-                return this.idFieldField;
-            }
-            set {
-                this.idFieldField = value;
-                this.RaisePropertyChanged("idField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public double interestPercentField {
-            get {
-                return this.interestPercentFieldField;
-            }
-            set {
-                this.interestPercentFieldField = value;
-                this.RaisePropertyChanged("interestPercentField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("interestPercentFieldSpecified", Order=2)]
-        public bool interestPercentFieldSpecified1 {
-            get {
-                return this.interestPercentFieldSpecified1Field;
-            }
-            set {
-                this.interestPercentFieldSpecified1Field = value;
-                this.RaisePropertyChanged("interestPercentFieldSpecified1");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
-        public string originatingObjectIDField {
-            get {
-                return this.originatingObjectIDFieldField;
-            }
-            set {
-                this.originatingObjectIDFieldField = value;
-                this.RaisePropertyChanged("originatingObjectIDField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
-        public OLI_LU_OBJECTTYPE1 originatingObjectTypeField {
-            get {
-                return this.originatingObjectTypeFieldField;
-            }
-            set {
-                this.originatingObjectTypeFieldField = value;
-                this.RaisePropertyChanged("originatingObjectTypeField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
-        public string relatedObjectIDField {
-            get {
-                return this.relatedObjectIDFieldField;
-            }
-            set {
-                this.relatedObjectIDFieldField = value;
-                this.RaisePropertyChanged("relatedObjectIDField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
-        public OLI_LU_OBJECTTYPE1 relatedObjectTypeField {
-            get {
-                return this.relatedObjectTypeFieldField;
-            }
-            set {
-                this.relatedObjectTypeFieldField = value;
-                this.RaisePropertyChanged("relatedObjectTypeField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
-        public OLI_LU_REL1 relationRoleCodeField {
-            get {
-                return this.relationRoleCodeFieldField;
-            }
-            set {
-                this.relationRoleCodeFieldField = value;
-                this.RaisePropertyChanged("relationRoleCodeField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="URL_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class URL_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string uRLAddrFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string uRLAddrField {
-            get {
-                return this.uRLAddrFieldField;
-            }
-            set {
-                this.uRLAddrFieldField = value;
-                this.RaisePropertyChanged("uRLAddrField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="CriminalConviction_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class CriminalConviction_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string crimeDescriptionFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string crimeDescriptionField {
-            get {
-                return this.crimeDescriptionFieldField;
-            }
-            set {
-                this.crimeDescriptionFieldField = value;
-                this.RaisePropertyChanged("crimeDescriptionField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="Risk_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class Risk_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private CriminalConviction_Type1[] criminalConvictionFieldField;
-        
-        private System.DateTime dateLastUpdatedFieldField;
-        
-        private bool dateLastUpdatedFieldSpecified1Field;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=0)]
-        public CriminalConviction_Type1[] criminalConvictionField {
-            get {
-                return this.criminalConvictionFieldField;
-            }
-            set {
-                this.criminalConvictionFieldField = value;
-                this.RaisePropertyChanged("criminalConvictionField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public System.DateTime dateLastUpdatedField {
-            get {
-                return this.dateLastUpdatedFieldField;
-            }
-            set {
-                this.dateLastUpdatedFieldField = value;
-                this.RaisePropertyChanged("dateLastUpdatedField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("dateLastUpdatedFieldSpecified", Order=2)]
-        public bool dateLastUpdatedFieldSpecified1 {
-            get {
-                return this.dateLastUpdatedFieldSpecified1Field;
-            }
-            set {
-                this.dateLastUpdatedFieldSpecified1Field = value;
-                this.RaisePropertyChanged("dateLastUpdatedFieldSpecified1");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="OLI_LU_RATINGSRC", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class OLI_LU_RATINGSRC1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string tcFieldField;
-        
-        private string valueFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string tcField {
-            get {
-                return this.tcFieldField;
-            }
-            set {
-                this.tcFieldField = value;
-                this.RaisePropertyChanged("tcField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string valueField {
-            get {
-                return this.valueFieldField;
-            }
-            set {
-                this.valueFieldField = value;
-                this.RaisePropertyChanged("valueField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RatingAgencyInfo_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class RatingAgencyInfo_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private System.DateTime effDateFieldField;
-        
-        private bool effDateFieldSpecified1Field;
-        
-        private string ratingDescriptionFieldField;
-        
-        private OLI_LU_RATINGSRC1 ratingSourceFieldField;
-        
-        private string ratingValueFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public System.DateTime effDateField {
-            get {
-                return this.effDateFieldField;
-            }
-            set {
-                this.effDateFieldField = value;
-                this.RaisePropertyChanged("effDateField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("effDateFieldSpecified", Order=1)]
-        public bool effDateFieldSpecified1 {
-            get {
-                return this.effDateFieldSpecified1Field;
-            }
-            set {
-                this.effDateFieldSpecified1Field = value;
-                this.RaisePropertyChanged("effDateFieldSpecified1");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
-        public string ratingDescriptionField {
-            get {
-                return this.ratingDescriptionFieldField;
-            }
-            set {
-                this.ratingDescriptionFieldField = value;
-                this.RaisePropertyChanged("ratingDescriptionField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
-        public OLI_LU_RATINGSRC1 ratingSourceField {
-            get {
-                return this.ratingSourceFieldField;
-            }
-            set {
-                this.ratingSourceFieldField = value;
-                this.RaisePropertyChanged("ratingSourceField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
-        public string ratingValueField {
-            get {
-                return this.ratingValueFieldField;
-            }
-            set {
-                this.ratingValueFieldField = value;
-                this.RaisePropertyChanged("ratingValueField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="OLI_LU_CLIENTLANGUAGES", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class OLI_LU_CLIENTLANGUAGES1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string tcFieldField;
-        
-        private string valueFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string tcField {
-            get {
-                return this.tcFieldField;
-            }
-            set {
-                this.tcFieldField = value;
-                this.RaisePropertyChanged("tcField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string valueField {
-            get {
-                return this.valueFieldField;
-            }
-            set {
-                this.valueFieldField = value;
-                this.RaisePropertyChanged("valueField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="NationApproval_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class NationApproval_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private OLI_LU_NATION1 nationFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public OLI_LU_NATION1 nationField {
-            get {
-                return this.nationFieldField;
-            }
-            set {
-                this.nationFieldField = value;
-                this.RaisePropertyChanged("nationField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="OLI_LU_NATION", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class OLI_LU_NATION1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string tcFieldField;
-        
-        private string valueFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string tcField {
-            get {
-                return this.tcFieldField;
-            }
-            set {
-                this.tcFieldField = value;
-                this.RaisePropertyChanged("tcField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string valueField {
-            get {
-                return this.valueFieldField;
-            }
-            set {
-                this.valueFieldField = value;
-                this.RaisePropertyChanged("valueField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="OLI_LU_LICENSETYPE", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class OLI_LU_LICENSETYPE1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string tcFieldField;
-        
-        private string valueFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string tcField {
-            get {
-                return this.tcFieldField;
-            }
-            set {
-                this.tcFieldField = value;
-                this.RaisePropertyChanged("tcField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string valueField {
-            get {
-                return this.valueFieldField;
-            }
-            set {
-                this.valueFieldField = value;
-                this.RaisePropertyChanged("valueField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="License_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class License_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string agencyAffiliationIDFieldField;
-        
-        private System.DateTime expDateFieldField;
-        
-        private bool expDateFieldSpecified1Field;
-        
-        private string levelDescFieldField;
-        
-        private OLI_LU_BOOLEAN1 licenseInterruptedIndFieldField;
-        
-        private string licenseInterruptedReasonFieldField;
-        
-        private string licenseNumFieldField;
-        
-        private OLI_LU_STATE1 licenseStateFieldField;
-        
-        private OLI_LU_LICENSETYPE1 licenseTypeFieldField;
-        
-        private string nameOnLicenseFieldField;
-        
-        private System.DateTime originationDateFieldField;
-        
-        private bool originationDateFieldSpecified1Field;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string agencyAffiliationIDField {
-            get {
-                return this.agencyAffiliationIDFieldField;
-            }
-            set {
-                this.agencyAffiliationIDFieldField = value;
-                this.RaisePropertyChanged("agencyAffiliationIDField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public System.DateTime expDateField {
-            get {
-                return this.expDateFieldField;
-            }
-            set {
-                this.expDateFieldField = value;
-                this.RaisePropertyChanged("expDateField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("expDateFieldSpecified", Order=2)]
-        public bool expDateFieldSpecified1 {
-            get {
-                return this.expDateFieldSpecified1Field;
-            }
-            set {
-                this.expDateFieldSpecified1Field = value;
-                this.RaisePropertyChanged("expDateFieldSpecified1");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
-        public string levelDescField {
-            get {
-                return this.levelDescFieldField;
-            }
-            set {
-                this.levelDescFieldField = value;
-                this.RaisePropertyChanged("levelDescField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
-        public OLI_LU_BOOLEAN1 licenseInterruptedIndField {
-            get {
-                return this.licenseInterruptedIndFieldField;
-            }
-            set {
-                this.licenseInterruptedIndFieldField = value;
-                this.RaisePropertyChanged("licenseInterruptedIndField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
-        public string licenseInterruptedReasonField {
-            get {
-                return this.licenseInterruptedReasonFieldField;
-            }
-            set {
-                this.licenseInterruptedReasonFieldField = value;
-                this.RaisePropertyChanged("licenseInterruptedReasonField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
-        public string licenseNumField {
-            get {
-                return this.licenseNumFieldField;
-            }
-            set {
-                this.licenseNumFieldField = value;
-                this.RaisePropertyChanged("licenseNumField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
-        public OLI_LU_STATE1 licenseStateField {
-            get {
-                return this.licenseStateFieldField;
-            }
-            set {
-                this.licenseStateFieldField = value;
-                this.RaisePropertyChanged("licenseStateField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=8)]
-        public OLI_LU_LICENSETYPE1 licenseTypeField {
-            get {
-                return this.licenseTypeFieldField;
-            }
-            set {
-                this.licenseTypeFieldField = value;
-                this.RaisePropertyChanged("licenseTypeField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=9)]
-        public string nameOnLicenseField {
-            get {
-                return this.nameOnLicenseFieldField;
-            }
-            set {
-                this.nameOnLicenseFieldField = value;
-                this.RaisePropertyChanged("nameOnLicenseField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
-        public System.DateTime originationDateField {
-            get {
-                return this.originationDateFieldField;
-            }
-            set {
-                this.originationDateFieldField = value;
-                this.RaisePropertyChanged("originationDateField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("originationDateFieldSpecified", Order=11)]
-        public bool originationDateFieldSpecified1 {
-            get {
-                return this.originationDateFieldSpecified1Field;
-            }
-            set {
-                this.originationDateFieldSpecified1Field = value;
-                this.RaisePropertyChanged("originationDateFieldSpecified1");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="OLI_LU_BOOLEAN", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class OLI_LU_BOOLEAN1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string tcFieldField;
-        
-        private string valueFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string tcField {
-            get {
-                return this.tcFieldField;
-            }
-            set {
-                this.tcFieldField = value;
-                this.RaisePropertyChanged("tcField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string valueField {
-            get {
-                return this.valueFieldField;
-            }
-            set {
-                this.valueFieldField = value;
-                this.RaisePropertyChanged("valueField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="OLI_LU_STATE", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class OLI_LU_STATE1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string tcFieldField;
-        
-        private string valueFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string tcField {
-            get {
-                return this.tcFieldField;
-            }
-            set {
-                this.tcFieldField = value;
-                this.RaisePropertyChanged("tcField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string valueField {
-            get {
-                return this.valueFieldField;
-            }
-            set {
-                this.valueFieldField = value;
-                this.RaisePropertyChanged("valueField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="EOCoverageInfo_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class EOCoverageInfo_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string holdingIDFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string holdingIDField {
-            get {
-                return this.holdingIDFieldField;
-            }
-            set {
-                this.holdingIDFieldField = value;
-                this.RaisePropertyChanged("holdingIDField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TransferInfo_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class TransferInfo_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string carrierAppointmentIDFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string carrierAppointmentIDField {
-            get {
-                return this.carrierAppointmentIDFieldField;
-            }
-            set {
-                this.carrierAppointmentIDFieldField = value;
-                this.RaisePropertyChanged("carrierAppointmentIDField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="OLI_LU_SUPERVISIONLEVEL", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class OLI_LU_SUPERVISIONLEVEL1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string tcFieldField;
-        
-        private string valueFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string tcField {
-            get {
-                return this.tcFieldField;
-            }
-            set {
-                this.tcFieldField = value;
-                this.RaisePropertyChanged("tcField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string valueField {
-            get {
-                return this.valueFieldField;
-            }
-            set {
-                this.valueFieldField = value;
-                this.RaisePropertyChanged("valueField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="SupervisionLevel_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class SupervisionLevel_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private System.DateTime effDateFieldField;
-        
-        private bool effDateFieldSpecified1Field;
-        
-        private System.DateTime expDateFieldField;
-        
-        private bool expDateFieldSpecified1Field;
-        
-        private System.DateTime followUpDateFieldField;
-        
-        private bool followUpDateFieldSpecified1Field;
-        
-        private string issuingPartyIDFieldField;
-        
-        private string supervisionLevelDescFieldField;
-        
-        private OLI_LU_SUPERVISIONLEVEL1 supervisionLevelTCFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public System.DateTime effDateField {
-            get {
-                return this.effDateFieldField;
-            }
-            set {
-                this.effDateFieldField = value;
-                this.RaisePropertyChanged("effDateField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("effDateFieldSpecified", Order=1)]
-        public bool effDateFieldSpecified1 {
-            get {
-                return this.effDateFieldSpecified1Field;
-            }
-            set {
-                this.effDateFieldSpecified1Field = value;
-                this.RaisePropertyChanged("effDateFieldSpecified1");
+                this.effectiveDateFieldSpecified = value;
+                this.RaisePropertyChanged("EffectiveDateSpecified");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public System.DateTime expDateField {
+        public bool IsDeleted {
             get {
-                return this.expDateFieldField;
+                return this.isDeletedField;
             }
             set {
-                this.expDateFieldField = value;
-                this.RaisePropertyChanged("expDateField");
+                this.isDeletedField = value;
+                this.RaisePropertyChanged("IsDeleted");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("expDateFieldSpecified", Order=3)]
-        public bool expDateFieldSpecified1 {
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool IsDeletedSpecified {
             get {
-                return this.expDateFieldSpecified1Field;
+                return this.isDeletedFieldSpecified;
             }
             set {
-                this.expDateFieldSpecified1Field = value;
-                this.RaisePropertyChanged("expDateFieldSpecified1");
+                this.isDeletedFieldSpecified = value;
+                this.RaisePropertyChanged("IsDeletedSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
+        public string Reason {
+            get {
+                return this.reasonField;
+            }
+            set {
+                this.reasonField = value;
+                this.RaisePropertyChanged("Reason");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public System.DateTime followUpDateField {
+        public System.DateTime ReminderDate {
             get {
-                return this.followUpDateFieldField;
+                return this.reminderDateField;
             }
             set {
-                this.followUpDateFieldField = value;
-                this.RaisePropertyChanged("followUpDateField");
+                this.reminderDateField = value;
+                this.RaisePropertyChanged("ReminderDate");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("followUpDateFieldSpecified", Order=5)]
-        public bool followUpDateFieldSpecified1 {
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ReminderDateSpecified {
             get {
-                return this.followUpDateFieldSpecified1Field;
+                return this.reminderDateFieldSpecified;
             }
             set {
-                this.followUpDateFieldSpecified1Field = value;
-                this.RaisePropertyChanged("followUpDateFieldSpecified1");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
-        public string issuingPartyIDField {
-            get {
-                return this.issuingPartyIDFieldField;
-            }
-            set {
-                this.issuingPartyIDFieldField = value;
-                this.RaisePropertyChanged("issuingPartyIDField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
-        public string supervisionLevelDescField {
-            get {
-                return this.supervisionLevelDescFieldField;
-            }
-            set {
-                this.supervisionLevelDescFieldField = value;
-                this.RaisePropertyChanged("supervisionLevelDescField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=8)]
-        public OLI_LU_SUPERVISIONLEVEL1 supervisionLevelTCField {
-            get {
-                return this.supervisionLevelTCFieldField;
-            }
-            set {
-                this.supervisionLevelTCFieldField = value;
-                this.RaisePropertyChanged("supervisionLevelTCField");
+                this.reminderDateFieldSpecified = value;
+                this.RaisePropertyChanged("ReminderDateSpecified");
             }
         }
         
@@ -2431,2464 +555,290 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="OLI_LU_REQCODE", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class OLI_LU_REQCODE1 : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.Inbound")]
+    public partial class Debt : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string tcFieldField;
+        private decimal amountField;
         
-        private string valueFieldField;
+        private bool amountFieldSpecified;
+        
+        private string contractApexaIdField;
+        
+        private string debtApexaIdField;
+        
+        private string descriptionField;
+        
+        private System.DateTime effectiveDateField;
+        
+        private bool effectiveDateFieldSpecified;
+        
+        private bool isPublicField;
+        
+        private bool isPublicFieldSpecified;
+        
+        private decimal lastPaymentAmountField;
+        
+        private bool lastPaymentAmountFieldSpecified;
+        
+        private System.Nullable<System.DateTime> lastPaymentDateField;
+        
+        private bool lastPaymentDateFieldSpecified;
+        
+        private System.Nullable<System.DateTime> publicDateField;
+        
+        private bool publicDateFieldSpecified;
+        
+        private System.DateTime reminderDateField;
+        
+        private bool reminderDateFieldSpecified;
+        
+        private string statusField;
+        
+        private System.DateTime statusDateField;
+        
+        private bool statusDateFieldSpecified;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string tcField {
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public decimal Amount {
             get {
-                return this.tcFieldField;
+                return this.amountField;
             }
             set {
-                this.tcFieldField = value;
-                this.RaisePropertyChanged("tcField");
+                this.amountField = value;
+                this.RaisePropertyChanged("Amount");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool AmountSpecified {
+            get {
+                return this.amountFieldSpecified;
+            }
+            set {
+                this.amountFieldSpecified = value;
+                this.RaisePropertyChanged("AmountSpecified");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string valueField {
+        public string ContractApexaId {
             get {
-                return this.valueFieldField;
+                return this.contractApexaIdField;
             }
             set {
-                this.valueFieldField = value;
-                this.RaisePropertyChanged("valueField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RequirementInfo_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class RequirementInfo_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private Attachment_Type1[] attachmentFieldField;
-        
-        private System.DateTime fulfilledDateFieldField;
-        
-        private bool fulfilledDateFieldSpecified1Field;
-        
-        private System.DateTime fulfilledTimeFieldField;
-        
-        private bool fulfilledTimeFieldSpecified1Field;
-        
-        private string fulfillerPartyIDFieldField;
-        
-        private OLI_LU_REQCODE1 reqCodeFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=0)]
-        public Attachment_Type1[] attachmentField {
-            get {
-                return this.attachmentFieldField;
-            }
-            set {
-                this.attachmentFieldField = value;
-                this.RaisePropertyChanged("attachmentField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public System.DateTime fulfilledDateField {
-            get {
-                return this.fulfilledDateFieldField;
-            }
-            set {
-                this.fulfilledDateFieldField = value;
-                this.RaisePropertyChanged("fulfilledDateField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("fulfilledDateFieldSpecified", Order=2)]
-        public bool fulfilledDateFieldSpecified1 {
-            get {
-                return this.fulfilledDateFieldSpecified1Field;
-            }
-            set {
-                this.fulfilledDateFieldSpecified1Field = value;
-                this.RaisePropertyChanged("fulfilledDateFieldSpecified1");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public System.DateTime fulfilledTimeField {
-            get {
-                return this.fulfilledTimeFieldField;
-            }
-            set {
-                this.fulfilledTimeFieldField = value;
-                this.RaisePropertyChanged("fulfilledTimeField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("fulfilledTimeFieldSpecified", Order=4)]
-        public bool fulfilledTimeFieldSpecified1 {
-            get {
-                return this.fulfilledTimeFieldSpecified1Field;
-            }
-            set {
-                this.fulfilledTimeFieldSpecified1Field = value;
-                this.RaisePropertyChanged("fulfilledTimeFieldSpecified1");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
-        public string fulfillerPartyIDField {
-            get {
-                return this.fulfillerPartyIDFieldField;
-            }
-            set {
-                this.fulfillerPartyIDFieldField = value;
-                this.RaisePropertyChanged("fulfillerPartyIDField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
-        public OLI_LU_REQCODE1 reqCodeField {
-            get {
-                return this.reqCodeFieldField;
-            }
-            set {
-                this.reqCodeFieldField = value;
-                this.RaisePropertyChanged("reqCodeField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ReferralInfo_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class ReferralInfo_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string partyIDFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string partyIDField {
-            get {
-                return this.partyIDFieldField;
-            }
-            set {
-                this.partyIDFieldField = value;
-                this.RaisePropertyChanged("partyIDField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="DistributionLevel_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class DistributionLevel_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string distributionLevelValueFieldField;
-        
-        private string partyIDFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string distributionLevelValueField {
-            get {
-                return this.distributionLevelValueFieldField;
-            }
-            set {
-                this.distributionLevelValueFieldField = value;
-                this.RaisePropertyChanged("distributionLevelValueField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string partyIDField {
-            get {
-                return this.partyIDFieldField;
-            }
-            set {
-                this.partyIDFieldField = value;
-                this.RaisePropertyChanged("partyIDField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="OLI_LU_PAYMENTFORM", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class OLI_LU_PAYMENTFORM1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string tcFieldField;
-        
-        private string valueFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string tcField {
-            get {
-                return this.tcFieldField;
-            }
-            set {
-                this.tcFieldField = value;
-                this.RaisePropertyChanged("tcField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string valueField {
-            get {
-                return this.valueFieldField;
-            }
-            set {
-                this.valueFieldField = value;
-                this.RaisePropertyChanged("valueField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="DistributionAgreementInfo_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class DistributionAgreementInfo_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string bankingInfoIDFieldField;
-        
-        private string checkMailingIDFieldField;
-        
-        private OLI_LU_PAYMENTFORM1 paymentFormFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string bankingInfoIDField {
-            get {
-                return this.bankingInfoIDFieldField;
-            }
-            set {
-                this.bankingInfoIDFieldField = value;
-                this.RaisePropertyChanged("bankingInfoIDField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string checkMailingIDField {
-            get {
-                return this.checkMailingIDFieldField;
-            }
-            set {
-                this.checkMailingIDFieldField = value;
-                this.RaisePropertyChanged("checkMailingIDField");
+                this.contractApexaIdField = value;
+                this.RaisePropertyChanged("ContractApexaId");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
-        public OLI_LU_PAYMENTFORM1 paymentFormField {
+        public string DebtApexaId {
             get {
-                return this.paymentFormFieldField;
+                return this.debtApexaIdField;
             }
             set {
-                this.paymentFormFieldField = value;
-                this.RaisePropertyChanged("paymentFormField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="DebtInfo_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class DebtInfo_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string holdingIDFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string holdingIDField {
-            get {
-                return this.holdingIDFieldField;
-            }
-            set {
-                this.holdingIDFieldField = value;
-                this.RaisePropertyChanged("holdingIDField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ConsolidationInfo_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class ConsolidationInfo_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string carrierAppointmentIDFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string carrierAppointmentIDField {
-            get {
-                return this.carrierAppointmentIDFieldField;
-            }
-            set {
-                this.carrierAppointmentIDFieldField = value;
-                this.RaisePropertyChanged("carrierAppointmentIDField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="OLI_LU_PRODUCERIDSOURCE", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class OLI_LU_PRODUCERIDSOURCE1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string tcFieldField;
-        
-        private string valueFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string tcField {
-            get {
-                return this.tcFieldField;
-            }
-            set {
-                this.tcFieldField = value;
-                this.RaisePropertyChanged("tcField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string valueField {
-            get {
-                return this.valueFieldField;
-            }
-            set {
-                this.valueFieldField = value;
-                this.RaisePropertyChanged("valueField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="OLI_LU_PROSTAT", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class OLI_LU_PROSTAT1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string tcFieldField;
-        
-        private string valueFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string tcField {
-            get {
-                return this.tcFieldField;
-            }
-            set {
-                this.tcFieldField = value;
-                this.RaisePropertyChanged("tcField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string valueField {
-            get {
-                return this.valueFieldField;
-            }
-            set {
-                this.valueFieldField = value;
-                this.RaisePropertyChanged("valueField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="AssocCarrierApptInfo_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class AssocCarrierApptInfo_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string carrierAppointmentIDFieldField;
-        
-        private OLI_LU_PROSTAT1 carrierApptStatusFieldField;
-        
-        private string companyProducerIDFieldField;
-        
-        private string companyProducerIDSourceDescFieldField;
-        
-        private OLI_LU_PRODUCERIDSOURCE1 companyProducerIDSourceFieldField;
-        
-        private string partyIDFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string carrierAppointmentIDField {
-            get {
-                return this.carrierAppointmentIDFieldField;
-            }
-            set {
-                this.carrierAppointmentIDFieldField = value;
-                this.RaisePropertyChanged("carrierAppointmentIDField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public OLI_LU_PROSTAT1 carrierApptStatusField {
-            get {
-                return this.carrierApptStatusFieldField;
-            }
-            set {
-                this.carrierApptStatusFieldField = value;
-                this.RaisePropertyChanged("carrierApptStatusField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
-        public string companyProducerIDField {
-            get {
-                return this.companyProducerIDFieldField;
-            }
-            set {
-                this.companyProducerIDFieldField = value;
-                this.RaisePropertyChanged("companyProducerIDField");
+                this.debtApexaIdField = value;
+                this.RaisePropertyChanged("DebtApexaId");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
-        public string companyProducerIDSourceDescField {
+        public string Description {
             get {
-                return this.companyProducerIDSourceDescFieldField;
+                return this.descriptionField;
             }
             set {
-                this.companyProducerIDSourceDescFieldField = value;
-                this.RaisePropertyChanged("companyProducerIDSourceDescField");
+                this.descriptionField = value;
+                this.RaisePropertyChanged("Description");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
-        public OLI_LU_PRODUCERIDSOURCE1 companyProducerIDSourceField {
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public System.DateTime EffectiveDate {
             get {
-                return this.companyProducerIDSourceFieldField;
+                return this.effectiveDateField;
             }
             set {
-                this.companyProducerIDSourceFieldField = value;
-                this.RaisePropertyChanged("companyProducerIDSourceField");
+                this.effectiveDateField = value;
+                this.RaisePropertyChanged("EffectiveDate");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
-        public string partyIDField {
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool EffectiveDateSpecified {
             get {
-                return this.partyIDFieldField;
+                return this.effectiveDateFieldSpecified;
             }
             set {
-                this.partyIDFieldField = value;
-                this.RaisePropertyChanged("partyIDField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="CarrierAppointment_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class CarrierAppointment_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string agencyAffiliationIDFieldField;
-        
-        private AssocCarrierApptInfo_Type1[] assocCarrierApptInfoFieldField;
-        
-        private OLI_LU_PROSTAT1 carrierApptStatusFieldField;
-        
-        private string companyProducerIDFieldField;
-        
-        private string companyProducerIDSourceDescFieldField;
-        
-        private OLI_LU_PRODUCERIDSOURCE1 companyProducerIDSourceFieldField;
-        
-        private ConsolidationInfo_Type1[] consolidationInfoFieldField;
-        
-        private DebtInfo_Type1[] debtInfoFieldField;
-        
-        private DistributionAgreementInfo_Type1[] distributionAgreementInfoFieldField;
-        
-        private DistributionLevel_Type1[] distributionLevelFieldField;
-        
-        private System.DateTime effDateFieldField;
-        
-        private bool effDateFieldSpecified1Field;
-        
-        private System.DateTime expDateFieldField;
-        
-        private bool expDateFieldSpecified1Field;
-        
-        private GovtIDInfo_Type1[] govtIDInfoFieldField;
-        
-        private string idFieldField;
-        
-        private string partyIDFieldField;
-        
-        private ReferralInfo_Type1[] referralInfoFieldField;
-        
-        private RequirementInfo_Type1[] requirementInfoFieldField;
-        
-        private SupervisionLevel_Type1[] supervisionLevelFieldField;
-        
-        private TransferInfo_Type1[] transferInfoFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string agencyAffiliationIDField {
-            get {
-                return this.agencyAffiliationIDFieldField;
-            }
-            set {
-                this.agencyAffiliationIDFieldField = value;
-                this.RaisePropertyChanged("agencyAffiliationIDField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=1)]
-        public AssocCarrierApptInfo_Type1[] assocCarrierApptInfoField {
-            get {
-                return this.assocCarrierApptInfoFieldField;
-            }
-            set {
-                this.assocCarrierApptInfoFieldField = value;
-                this.RaisePropertyChanged("assocCarrierApptInfoField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
-        public OLI_LU_PROSTAT1 carrierApptStatusField {
-            get {
-                return this.carrierApptStatusFieldField;
-            }
-            set {
-                this.carrierApptStatusFieldField = value;
-                this.RaisePropertyChanged("carrierApptStatusField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
-        public string companyProducerIDField {
-            get {
-                return this.companyProducerIDFieldField;
-            }
-            set {
-                this.companyProducerIDFieldField = value;
-                this.RaisePropertyChanged("companyProducerIDField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
-        public string companyProducerIDSourceDescField {
-            get {
-                return this.companyProducerIDSourceDescFieldField;
-            }
-            set {
-                this.companyProducerIDSourceDescFieldField = value;
-                this.RaisePropertyChanged("companyProducerIDSourceDescField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
-        public OLI_LU_PRODUCERIDSOURCE1 companyProducerIDSourceField {
-            get {
-                return this.companyProducerIDSourceFieldField;
-            }
-            set {
-                this.companyProducerIDSourceFieldField = value;
-                this.RaisePropertyChanged("companyProducerIDSourceField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=6)]
-        public ConsolidationInfo_Type1[] consolidationInfoField {
-            get {
-                return this.consolidationInfoFieldField;
-            }
-            set {
-                this.consolidationInfoFieldField = value;
-                this.RaisePropertyChanged("consolidationInfoField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=7)]
-        public DebtInfo_Type1[] debtInfoField {
-            get {
-                return this.debtInfoFieldField;
-            }
-            set {
-                this.debtInfoFieldField = value;
-                this.RaisePropertyChanged("debtInfoField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=8)]
-        public DistributionAgreementInfo_Type1[] distributionAgreementInfoField {
-            get {
-                return this.distributionAgreementInfoFieldField;
-            }
-            set {
-                this.distributionAgreementInfoFieldField = value;
-                this.RaisePropertyChanged("distributionAgreementInfoField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=9)]
-        public DistributionLevel_Type1[] distributionLevelField {
-            get {
-                return this.distributionLevelFieldField;
-            }
-            set {
-                this.distributionLevelFieldField = value;
-                this.RaisePropertyChanged("distributionLevelField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
-        public System.DateTime effDateField {
-            get {
-                return this.effDateFieldField;
-            }
-            set {
-                this.effDateFieldField = value;
-                this.RaisePropertyChanged("effDateField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("effDateFieldSpecified", Order=11)]
-        public bool effDateFieldSpecified1 {
-            get {
-                return this.effDateFieldSpecified1Field;
-            }
-            set {
-                this.effDateFieldSpecified1Field = value;
-                this.RaisePropertyChanged("effDateFieldSpecified1");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
-        public System.DateTime expDateField {
-            get {
-                return this.expDateFieldField;
-            }
-            set {
-                this.expDateFieldField = value;
-                this.RaisePropertyChanged("expDateField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("expDateFieldSpecified", Order=13)]
-        public bool expDateFieldSpecified1 {
-            get {
-                return this.expDateFieldSpecified1Field;
-            }
-            set {
-                this.expDateFieldSpecified1Field = value;
-                this.RaisePropertyChanged("expDateFieldSpecified1");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=14)]
-        public GovtIDInfo_Type1[] govtIDInfoField {
-            get {
-                return this.govtIDInfoFieldField;
-            }
-            set {
-                this.govtIDInfoFieldField = value;
-                this.RaisePropertyChanged("govtIDInfoField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=15)]
-        public string idField {
-            get {
-                return this.idFieldField;
-            }
-            set {
-                this.idFieldField = value;
-                this.RaisePropertyChanged("idField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=16)]
-        public string partyIDField {
-            get {
-                return this.partyIDFieldField;
-            }
-            set {
-                this.partyIDFieldField = value;
-                this.RaisePropertyChanged("partyIDField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=17)]
-        public ReferralInfo_Type1[] referralInfoField {
-            get {
-                return this.referralInfoFieldField;
-            }
-            set {
-                this.referralInfoFieldField = value;
-                this.RaisePropertyChanged("referralInfoField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=18)]
-        public RequirementInfo_Type1[] requirementInfoField {
-            get {
-                return this.requirementInfoFieldField;
-            }
-            set {
-                this.requirementInfoFieldField = value;
-                this.RaisePropertyChanged("requirementInfoField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=19)]
-        public SupervisionLevel_Type1[] supervisionLevelField {
-            get {
-                return this.supervisionLevelFieldField;
-            }
-            set {
-                this.supervisionLevelFieldField = value;
-                this.RaisePropertyChanged("supervisionLevelField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=20)]
-        public TransferInfo_Type1[] transferInfoField {
-            get {
-                return this.transferInfoFieldField;
-            }
-            set {
-                this.transferInfoFieldField = value;
-                this.RaisePropertyChanged("transferInfoField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="GovtIDInfo_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class GovtIDInfo_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string govtIDFieldField;
-        
-        private OLI_LU_GOVTIDTC1 govtIDTCFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string govtIDField {
-            get {
-                return this.govtIDFieldField;
-            }
-            set {
-                this.govtIDFieldField = value;
-                this.RaisePropertyChanged("govtIDField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public OLI_LU_GOVTIDTC1 govtIDTCField {
-            get {
-                return this.govtIDTCFieldField;
-            }
-            set {
-                this.govtIDTCFieldField = value;
-                this.RaisePropertyChanged("govtIDTCField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="OLI_LU_GOVTIDTC", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class OLI_LU_GOVTIDTC1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string tcFieldField;
-        
-        private string valueFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string tcField {
-            get {
-                return this.tcFieldField;
-            }
-            set {
-                this.tcFieldField = value;
-                this.RaisePropertyChanged("tcField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string valueField {
-            get {
-                return this.valueFieldField;
-            }
-            set {
-                this.valueFieldField = value;
-                this.RaisePropertyChanged("valueField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="Producer_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class Producer_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private CarrierAppointment_Type1[] carrierAppointmentFieldField;
-        
-        private DesignationInfo_Type1[] designationInfoFieldField;
-        
-        private EOCoverageInfo_Type1[] eOCoverageInfoFieldField;
-        
-        private string idFieldField;
-        
-        private License_Type1[] licenseFieldField;
-        
-        private NationApproval_Type1[] nationApprovalFieldField;
-        
-        private OLI_LU_CLIENTLANGUAGES1 prefLanguageFieldField;
-        
-        private SupervisionLevel_Type1[] supervisionLevelFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=0)]
-        public CarrierAppointment_Type1[] carrierAppointmentField {
-            get {
-                return this.carrierAppointmentFieldField;
-            }
-            set {
-                this.carrierAppointmentFieldField = value;
-                this.RaisePropertyChanged("carrierAppointmentField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=1)]
-        public DesignationInfo_Type1[] designationInfoField {
-            get {
-                return this.designationInfoFieldField;
-            }
-            set {
-                this.designationInfoFieldField = value;
-                this.RaisePropertyChanged("designationInfoField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=2)]
-        public EOCoverageInfo_Type1[] eOCoverageInfoField {
-            get {
-                return this.eOCoverageInfoFieldField;
-            }
-            set {
-                this.eOCoverageInfoFieldField = value;
-                this.RaisePropertyChanged("eOCoverageInfoField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
-        public string idField {
-            get {
-                return this.idFieldField;
-            }
-            set {
-                this.idFieldField = value;
-                this.RaisePropertyChanged("idField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=4)]
-        public License_Type1[] licenseField {
-            get {
-                return this.licenseFieldField;
-            }
-            set {
-                this.licenseFieldField = value;
-                this.RaisePropertyChanged("licenseField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=5)]
-        public NationApproval_Type1[] nationApprovalField {
-            get {
-                return this.nationApprovalFieldField;
-            }
-            set {
-                this.nationApprovalFieldField = value;
-                this.RaisePropertyChanged("nationApprovalField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
-        public OLI_LU_CLIENTLANGUAGES1 prefLanguageField {
-            get {
-                return this.prefLanguageFieldField;
-            }
-            set {
-                this.prefLanguageFieldField = value;
-                this.RaisePropertyChanged("prefLanguageField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=7)]
-        public SupervisionLevel_Type1[] supervisionLevelField {
-            get {
-                return this.supervisionLevelFieldField;
-            }
-            set {
-                this.supervisionLevelFieldField = value;
-                this.RaisePropertyChanged("supervisionLevelField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="DesignationInfo_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class DesignationInfo_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string designationDescFieldField;
-        
-        private OLI_LU_DESIGNATIONTYPE1 designationTypeFieldField;
-        
-        private string designationYearFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string designationDescField {
-            get {
-                return this.designationDescFieldField;
-            }
-            set {
-                this.designationDescFieldField = value;
-                this.RaisePropertyChanged("designationDescField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public OLI_LU_DESIGNATIONTYPE1 designationTypeField {
-            get {
-                return this.designationTypeFieldField;
-            }
-            set {
-                this.designationTypeFieldField = value;
-                this.RaisePropertyChanged("designationTypeField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
-        public string designationYearField {
-            get {
-                return this.designationYearFieldField;
-            }
-            set {
-                this.designationYearFieldField = value;
-                this.RaisePropertyChanged("designationYearField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="OLI_LU_DESIGNATIONTYPE", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class OLI_LU_DESIGNATIONTYPE1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string tcFieldField;
-        
-        private string valueFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string tcField {
-            get {
-                return this.tcFieldField;
-            }
-            set {
-                this.tcFieldField = value;
-                this.RaisePropertyChanged("tcField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string valueField {
-            get {
-                return this.valueFieldField;
-            }
-            set {
-                this.valueFieldField = value;
-                this.RaisePropertyChanged("valueField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="OLI_LU_NAMETYPE", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class OLI_LU_NAMETYPE1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string tcFieldField;
-        
-        private string valueFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string tcField {
-            get {
-                return this.tcFieldField;
-            }
-            set {
-                this.tcFieldField = value;
-                this.RaisePropertyChanged("tcField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string valueField {
-            get {
-                return this.valueFieldField;
-            }
-            set {
-                this.valueFieldField = value;
-                this.RaisePropertyChanged("valueField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="PriorName_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class PriorName_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string firstNameFieldField;
-        
-        private string fullNameFieldField;
-        
-        private string lastNameFieldField;
-        
-        private string middleNameFieldField;
-        
-        private OLI_LU_NAMETYPE1 nameTypeFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string firstNameField {
-            get {
-                return this.firstNameFieldField;
-            }
-            set {
-                this.firstNameFieldField = value;
-                this.RaisePropertyChanged("firstNameField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string fullNameField {
-            get {
-                return this.fullNameFieldField;
-            }
-            set {
-                this.fullNameFieldField = value;
-                this.RaisePropertyChanged("fullNameField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
-        public string lastNameField {
-            get {
-                return this.lastNameFieldField;
-            }
-            set {
-                this.lastNameFieldField = value;
-                this.RaisePropertyChanged("lastNameField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
-        public string middleNameField {
-            get {
-                return this.middleNameFieldField;
-            }
-            set {
-                this.middleNameFieldField = value;
-                this.RaisePropertyChanged("middleNameField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
-        public OLI_LU_NAMETYPE1 nameTypeField {
-            get {
-                return this.nameTypeFieldField;
-            }
-            set {
-                this.nameTypeFieldField = value;
-                this.RaisePropertyChanged("nameTypeField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="OLI_LU_PHONETYPE", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class OLI_LU_PHONETYPE1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string tcFieldField;
-        
-        private string valueFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string tcField {
-            get {
-                return this.tcFieldField;
-            }
-            set {
-                this.tcFieldField = value;
-                this.RaisePropertyChanged("tcField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string valueField {
-            get {
-                return this.valueFieldField;
-            }
-            set {
-                this.valueFieldField = value;
-                this.RaisePropertyChanged("valueField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="Phone_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class Phone_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string areaCodeFieldField;
-        
-        private string countryCodeFieldField;
-        
-        private string dialNumberFieldField;
-        
-        private string extFieldField;
-        
-        private OLI_LU_PHONETYPE1 phoneTypeCodeFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string areaCodeField {
-            get {
-                return this.areaCodeFieldField;
-            }
-            set {
-                this.areaCodeFieldField = value;
-                this.RaisePropertyChanged("areaCodeField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string countryCodeField {
-            get {
-                return this.countryCodeFieldField;
-            }
-            set {
-                this.countryCodeFieldField = value;
-                this.RaisePropertyChanged("countryCodeField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
-        public string dialNumberField {
-            get {
-                return this.dialNumberFieldField;
-            }
-            set {
-                this.dialNumberFieldField = value;
-                this.RaisePropertyChanged("dialNumberField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
-        public string extField {
-            get {
-                return this.extFieldField;
-            }
-            set {
-                this.extFieldField = value;
-                this.RaisePropertyChanged("extField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
-        public OLI_LU_PHONETYPE1 phoneTypeCodeField {
-            get {
-                return this.phoneTypeCodeFieldField;
-            }
-            set {
-                this.phoneTypeCodeFieldField = value;
-                this.RaisePropertyChanged("phoneTypeCodeField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="OLI_LU_PARTY", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class OLI_LU_PARTY1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string tcFieldField;
-        
-        private string valueFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string tcField {
-            get {
-                return this.tcFieldField;
-            }
-            set {
-                this.tcFieldField = value;
-                this.RaisePropertyChanged("tcField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string valueField {
-            get {
-                return this.valueFieldField;
-            }
-            set {
-                this.valueFieldField = value;
-                this.RaisePropertyChanged("valueField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="Employment_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class Employment_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string employerNameFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string employerNameField {
-            get {
-                return this.employerNameFieldField;
-            }
-            set {
-                this.employerNameFieldField = value;
-                this.RaisePropertyChanged("employerNameField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="EMailAddress_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class EMailAddress_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string addrLineFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string addrLineField {
-            get {
-                return this.addrLineFieldField;
-            }
-            set {
-                this.addrLineFieldField = value;
-                this.RaisePropertyChanged("addrLineField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="OLI_LU_ADTYPE", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class OLI_LU_ADTYPE1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string tcFieldField;
-        
-        private string valueFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string tcField {
-            get {
-                return this.tcFieldField;
-            }
-            set {
-                this.tcFieldField = value;
-                this.RaisePropertyChanged("tcField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string valueField {
-            get {
-                return this.valueFieldField;
-            }
-            set {
-                this.valueFieldField = value;
-                this.RaisePropertyChanged("valueField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="Address_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class Address_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string addressCountryFieldField;
-        
-        private OLI_LU_NATION1 addressCountryTCFieldField;
-        
-        private string addressStateFieldField;
-        
-        private OLI_LU_STATE1 addressStateTCFieldField;
-        
-        private OLI_LU_ADTYPE1 addressTypeCodeFieldField;
-        
-        private string cityFieldField;
-        
-        private System.DateTime endDateFieldField;
-        
-        private bool endDateFieldSpecified1Field;
-        
-        private string idFieldField;
-        
-        private string line1FieldField;
-        
-        private string line2FieldField;
-        
-        private OLI_LU_BOOLEAN1 prefAddrFieldField;
-        
-        private System.DateTime startDateFieldField;
-        
-        private bool startDateFieldSpecified1Field;
-        
-        private double yearsAtAddressFieldField;
-        
-        private bool yearsAtAddressFieldSpecified1Field;
-        
-        private string zipFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string addressCountryField {
-            get {
-                return this.addressCountryFieldField;
-            }
-            set {
-                this.addressCountryFieldField = value;
-                this.RaisePropertyChanged("addressCountryField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public OLI_LU_NATION1 addressCountryTCField {
-            get {
-                return this.addressCountryTCFieldField;
-            }
-            set {
-                this.addressCountryTCFieldField = value;
-                this.RaisePropertyChanged("addressCountryTCField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
-        public string addressStateField {
-            get {
-                return this.addressStateFieldField;
-            }
-            set {
-                this.addressStateFieldField = value;
-                this.RaisePropertyChanged("addressStateField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
-        public OLI_LU_STATE1 addressStateTCField {
-            get {
-                return this.addressStateTCFieldField;
-            }
-            set {
-                this.addressStateTCFieldField = value;
-                this.RaisePropertyChanged("addressStateTCField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
-        public OLI_LU_ADTYPE1 addressTypeCodeField {
-            get {
-                return this.addressTypeCodeFieldField;
-            }
-            set {
-                this.addressTypeCodeFieldField = value;
-                this.RaisePropertyChanged("addressTypeCodeField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
-        public string cityField {
-            get {
-                return this.cityFieldField;
-            }
-            set {
-                this.cityFieldField = value;
-                this.RaisePropertyChanged("cityField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
-        public System.DateTime endDateField {
-            get {
-                return this.endDateFieldField;
-            }
-            set {
-                this.endDateFieldField = value;
-                this.RaisePropertyChanged("endDateField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("endDateFieldSpecified", Order=7)]
-        public bool endDateFieldSpecified1 {
-            get {
-                return this.endDateFieldSpecified1Field;
-            }
-            set {
-                this.endDateFieldSpecified1Field = value;
-                this.RaisePropertyChanged("endDateFieldSpecified1");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=8)]
-        public string idField {
-            get {
-                return this.idFieldField;
-            }
-            set {
-                this.idFieldField = value;
-                this.RaisePropertyChanged("idField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=9)]
-        public string line1Field {
-            get {
-                return this.line1FieldField;
-            }
-            set {
-                this.line1FieldField = value;
-                this.RaisePropertyChanged("line1Field");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=10)]
-        public string line2Field {
-            get {
-                return this.line2FieldField;
-            }
-            set {
-                this.line2FieldField = value;
-                this.RaisePropertyChanged("line2Field");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=11)]
-        public OLI_LU_BOOLEAN1 prefAddrField {
-            get {
-                return this.prefAddrFieldField;
-            }
-            set {
-                this.prefAddrFieldField = value;
-                this.RaisePropertyChanged("prefAddrField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
-        public System.DateTime startDateField {
-            get {
-                return this.startDateFieldField;
-            }
-            set {
-                this.startDateFieldField = value;
-                this.RaisePropertyChanged("startDateField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("startDateFieldSpecified", Order=13)]
-        public bool startDateFieldSpecified1 {
-            get {
-                return this.startDateFieldSpecified1Field;
-            }
-            set {
-                this.startDateFieldSpecified1Field = value;
-                this.RaisePropertyChanged("startDateFieldSpecified1");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
-        public double yearsAtAddressField {
-            get {
-                return this.yearsAtAddressFieldField;
-            }
-            set {
-                this.yearsAtAddressFieldField = value;
-                this.RaisePropertyChanged("yearsAtAddressField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("yearsAtAddressFieldSpecified", Order=15)]
-        public bool yearsAtAddressFieldSpecified1 {
-            get {
-                return this.yearsAtAddressFieldSpecified1Field;
-            }
-            set {
-                this.yearsAtAddressFieldSpecified1Field = value;
-                this.RaisePropertyChanged("yearsAtAddressFieldSpecified1");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=16)]
-        public string zipField {
-            get {
-                return this.zipFieldField;
-            }
-            set {
-                this.zipFieldField = value;
-                this.RaisePropertyChanged("zipField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="Party_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class Party_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private Address_Type1[] addressFieldField;
-        
-        private Attachment_Type1[] attachmentFieldField;
-        
-        private DesignationInfo_Type1[] designationInfoFieldField;
-        
-        private EMailAddress_Type1[] eMailAddressFieldField;
-        
-        private Employment_Type1[] employmentFieldField;
-        
-        private string fullNameFieldField;
-        
-        private string govtIDFieldField;
-        
-        private GovtIDInfo_Type1[] govtIDInfoFieldField;
-        
-        private OLI_LU_GOVTIDTC1 govtIDTCFieldField;
-        
-        private string idFieldField;
-        
-        private object itemFieldField;
-        
-        private OLI_LU_PARTY1 partyTypeCodeFieldField;
-        
-        private Phone_Type1[] phoneFieldField;
-        
-        private PriorName_Type1[] priorNameFieldField;
-        
-        private Producer_Type1 producerFieldField;
-        
-        private RatingAgencyInfo_Type1[] ratingAgencyInfoFieldField;
-        
-        private Risk_Type1 riskFieldField;
-        
-        private URL_Type1[] uRLFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=0)]
-        public Address_Type1[] addressField {
-            get {
-                return this.addressFieldField;
-            }
-            set {
-                this.addressFieldField = value;
-                this.RaisePropertyChanged("addressField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=1)]
-        public Attachment_Type1[] attachmentField {
-            get {
-                return this.attachmentFieldField;
-            }
-            set {
-                this.attachmentFieldField = value;
-                this.RaisePropertyChanged("attachmentField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=2)]
-        public DesignationInfo_Type1[] designationInfoField {
-            get {
-                return this.designationInfoFieldField;
-            }
-            set {
-                this.designationInfoFieldField = value;
-                this.RaisePropertyChanged("designationInfoField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=3)]
-        public EMailAddress_Type1[] eMailAddressField {
-            get {
-                return this.eMailAddressFieldField;
-            }
-            set {
-                this.eMailAddressFieldField = value;
-                this.RaisePropertyChanged("eMailAddressField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=4)]
-        public Employment_Type1[] employmentField {
-            get {
-                return this.employmentFieldField;
-            }
-            set {
-                this.employmentFieldField = value;
-                this.RaisePropertyChanged("employmentField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
-        public string fullNameField {
-            get {
-                return this.fullNameFieldField;
-            }
-            set {
-                this.fullNameFieldField = value;
-                this.RaisePropertyChanged("fullNameField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
-        public string govtIDField {
-            get {
-                return this.govtIDFieldField;
-            }
-            set {
-                this.govtIDFieldField = value;
-                this.RaisePropertyChanged("govtIDField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=7)]
-        public GovtIDInfo_Type1[] govtIDInfoField {
-            get {
-                return this.govtIDInfoFieldField;
-            }
-            set {
-                this.govtIDInfoFieldField = value;
-                this.RaisePropertyChanged("govtIDInfoField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=8)]
-        public OLI_LU_GOVTIDTC1 govtIDTCField {
-            get {
-                return this.govtIDTCFieldField;
-            }
-            set {
-                this.govtIDTCFieldField = value;
-                this.RaisePropertyChanged("govtIDTCField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=9)]
-        public string idField {
-            get {
-                return this.idFieldField;
-            }
-            set {
-                this.idFieldField = value;
-                this.RaisePropertyChanged("idField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=10)]
-        public object itemField {
-            get {
-                return this.itemFieldField;
-            }
-            set {
-                this.itemFieldField = value;
-                this.RaisePropertyChanged("itemField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=11)]
-        public OLI_LU_PARTY1 partyTypeCodeField {
-            get {
-                return this.partyTypeCodeFieldField;
-            }
-            set {
-                this.partyTypeCodeFieldField = value;
-                this.RaisePropertyChanged("partyTypeCodeField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=12)]
-        public Phone_Type1[] phoneField {
-            get {
-                return this.phoneFieldField;
-            }
-            set {
-                this.phoneFieldField = value;
-                this.RaisePropertyChanged("phoneField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=13)]
-        public PriorName_Type1[] priorNameField {
-            get {
-                return this.priorNameFieldField;
-            }
-            set {
-                this.priorNameFieldField = value;
-                this.RaisePropertyChanged("priorNameField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=14)]
-        public Producer_Type1 producerField {
-            get {
-                return this.producerFieldField;
-            }
-            set {
-                this.producerFieldField = value;
-                this.RaisePropertyChanged("producerField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=15)]
-        public RatingAgencyInfo_Type1[] ratingAgencyInfoField {
-            get {
-                return this.ratingAgencyInfoFieldField;
-            }
-            set {
-                this.ratingAgencyInfoFieldField = value;
-                this.RaisePropertyChanged("ratingAgencyInfoField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=16)]
-        public Risk_Type1 riskField {
-            get {
-                return this.riskFieldField;
-            }
-            set {
-                this.riskFieldField = value;
-                this.RaisePropertyChanged("riskField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=17)]
-        public URL_Type1[] uRLField {
-            get {
-                return this.uRLFieldField;
-            }
-            set {
-                this.uRLFieldField = value;
-                this.RaisePropertyChanged("uRLField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="OLI_LU_POLPROD", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class OLI_LU_POLPROD1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string tcFieldField;
-        
-        private string valueFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string tcField {
-            get {
-                return this.tcFieldField;
-            }
-            set {
-                this.tcFieldField = value;
-                this.RaisePropertyChanged("tcField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string valueField {
-            get {
-                return this.valueFieldField;
-            }
-            set {
-                this.valueFieldField = value;
-                this.RaisePropertyChanged("valueField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="OLI_LU_POLSTAT", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class OLI_LU_POLSTAT1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string tcFieldField;
-        
-        private string valueFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string tcField {
-            get {
-                return this.tcFieldField;
-            }
-            set {
-                this.tcFieldField = value;
-                this.RaisePropertyChanged("tcField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string valueField {
-            get {
-                return this.valueFieldField;
-            }
-            set {
-                this.valueFieldField = value;
-                this.RaisePropertyChanged("valueField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="Policy_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class Policy_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string carrierPartyIDFieldField;
-        
-        private string certificateNoFieldField;
-        
-        private object itemFieldField;
-        
-        private string polNumberFieldField;
-        
-        private OLI_LU_POLSTAT1 policyStatusFieldField;
-        
-        private decimal policyValueFieldField;
-        
-        private bool policyValueFieldSpecified1Field;
-        
-        private OLI_LU_POLPROD1 productTypeFieldField;
-        
-        private System.DateTime renewalDateFieldField;
-        
-        private bool renewalDateFieldSpecified1Field;
-        
-        private System.DateTime termDateFieldField;
-        
-        private bool termDateFieldSpecified1Field;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string carrierPartyIDField {
-            get {
-                return this.carrierPartyIDFieldField;
-            }
-            set {
-                this.carrierPartyIDFieldField = value;
-                this.RaisePropertyChanged("carrierPartyIDField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string certificateNoField {
-            get {
-                return this.certificateNoFieldField;
-            }
-            set {
-                this.certificateNoFieldField = value;
-                this.RaisePropertyChanged("certificateNoField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
-        public object itemField {
-            get {
-                return this.itemFieldField;
-            }
-            set {
-                this.itemFieldField = value;
-                this.RaisePropertyChanged("itemField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
-        public string polNumberField {
-            get {
-                return this.polNumberFieldField;
-            }
-            set {
-                this.polNumberFieldField = value;
-                this.RaisePropertyChanged("polNumberField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
-        public OLI_LU_POLSTAT1 policyStatusField {
-            get {
-                return this.policyStatusFieldField;
-            }
-            set {
-                this.policyStatusFieldField = value;
-                this.RaisePropertyChanged("policyStatusField");
+                this.effectiveDateFieldSpecified = value;
+                this.RaisePropertyChanged("EffectiveDateSpecified");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=5)]
-        public decimal policyValueField {
+        public bool IsPublic {
             get {
-                return this.policyValueFieldField;
+                return this.isPublicField;
             }
             set {
-                this.policyValueFieldField = value;
-                this.RaisePropertyChanged("policyValueField");
+                this.isPublicField = value;
+                this.RaisePropertyChanged("IsPublic");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("policyValueFieldSpecified", Order=6)]
-        public bool policyValueFieldSpecified1 {
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool IsPublicSpecified {
             get {
-                return this.policyValueFieldSpecified1Field;
+                return this.isPublicFieldSpecified;
             }
             set {
-                this.policyValueFieldSpecified1Field = value;
-                this.RaisePropertyChanged("policyValueFieldSpecified1");
+                this.isPublicFieldSpecified = value;
+                this.RaisePropertyChanged("IsPublicSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public decimal LastPaymentAmount {
+            get {
+                return this.lastPaymentAmountField;
+            }
+            set {
+                this.lastPaymentAmountField = value;
+                this.RaisePropertyChanged("LastPaymentAmount");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool LastPaymentAmountSpecified {
+            get {
+                return this.lastPaymentAmountFieldSpecified;
+            }
+            set {
+                this.lastPaymentAmountFieldSpecified = value;
+                this.RaisePropertyChanged("LastPaymentAmountSpecified");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
-        public OLI_LU_POLPROD1 productTypeField {
+        public System.Nullable<System.DateTime> LastPaymentDate {
             get {
-                return this.productTypeFieldField;
+                return this.lastPaymentDateField;
             }
             set {
-                this.productTypeFieldField = value;
-                this.RaisePropertyChanged("productTypeField");
+                this.lastPaymentDateField = value;
+                this.RaisePropertyChanged("LastPaymentDate");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
-        public System.DateTime renewalDateField {
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool LastPaymentDateSpecified {
             get {
-                return this.renewalDateFieldField;
+                return this.lastPaymentDateFieldSpecified;
             }
             set {
-                this.renewalDateFieldField = value;
-                this.RaisePropertyChanged("renewalDateField");
+                this.lastPaymentDateFieldSpecified = value;
+                this.RaisePropertyChanged("LastPaymentDateSpecified");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("renewalDateFieldSpecified", Order=9)]
-        public bool renewalDateFieldSpecified1 {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=8)]
+        public System.Nullable<System.DateTime> PublicDate {
             get {
-                return this.renewalDateFieldSpecified1Field;
+                return this.publicDateField;
             }
             set {
-                this.renewalDateFieldSpecified1Field = value;
-                this.RaisePropertyChanged("renewalDateFieldSpecified1");
+                this.publicDateField = value;
+                this.RaisePropertyChanged("PublicDate");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
-        public System.DateTime termDateField {
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool PublicDateSpecified {
             get {
-                return this.termDateFieldField;
+                return this.publicDateFieldSpecified;
             }
             set {
-                this.termDateFieldField = value;
-                this.RaisePropertyChanged("termDateField");
+                this.publicDateFieldSpecified = value;
+                this.RaisePropertyChanged("PublicDateSpecified");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("termDateFieldSpecified", Order=11)]
-        public bool termDateFieldSpecified1 {
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public System.DateTime ReminderDate {
             get {
-                return this.termDateFieldSpecified1Field;
+                return this.reminderDateField;
             }
             set {
-                this.termDateFieldSpecified1Field = value;
-                this.RaisePropertyChanged("termDateFieldSpecified1");
+                this.reminderDateField = value;
+                this.RaisePropertyChanged("ReminderDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ReminderDateSpecified {
+            get {
+                return this.reminderDateFieldSpecified;
+            }
+            set {
+                this.reminderDateFieldSpecified = value;
+                this.RaisePropertyChanged("ReminderDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=10)]
+        public string Status {
+            get {
+                return this.statusField;
+            }
+            set {
+                this.statusField = value;
+                this.RaisePropertyChanged("Status");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        public System.DateTime StatusDate {
+            get {
+                return this.statusDateField;
+            }
+            set {
+                this.statusDateField = value;
+                this.RaisePropertyChanged("StatusDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool StatusDateSpecified {
+            get {
+                return this.statusDateFieldSpecified;
+            }
+            set {
+                this.statusDateFieldSpecified = value;
+                this.RaisePropertyChanged("StatusDateSpecified");
             }
         }
         
@@ -4903,154 +853,136 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="OLI_LU_LOANREASON", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class OLI_LU_LOANREASON1 : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.Inbound")]
+    public partial class ContractCode : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string tcFieldField;
+        private string codeField;
         
-        private string valueFieldField;
+        private string contractApexaIdField;
+        
+        private string descriptionField;
+        
+        private bool isDeletedField;
+        
+        private bool isDeletedFieldSpecified;
+        
+        private bool notApplicableField;
+        
+        private bool notApplicableFieldSpecified;
+        
+        private string statusField;
+        
+        private string typeField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string tcField {
+        public string Code {
             get {
-                return this.tcFieldField;
+                return this.codeField;
             }
             set {
-                this.tcFieldField = value;
-                this.RaisePropertyChanged("tcField");
+                this.codeField = value;
+                this.RaisePropertyChanged("Code");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string valueField {
+        public string ContractApexaId {
             get {
-                return this.valueFieldField;
+                return this.contractApexaIdField;
             }
             set {
-                this.valueFieldField = value;
-                this.RaisePropertyChanged("valueField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="Loan_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class Loan_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string financialInstitutionPartyIDFieldField;
-        
-        private decimal loanAmtFieldField;
-        
-        private bool loanAmtFieldSpecified1Field;
-        
-        private System.DateTime loanDefaultDateFieldField;
-        
-        private bool loanDefaultDateFieldSpecified1Field;
-        
-        private string loanReasonDescFieldField;
-        
-        private OLI_LU_LOANREASON1 loanReasonFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string financialInstitutionPartyIDField {
-            get {
-                return this.financialInstitutionPartyIDFieldField;
-            }
-            set {
-                this.financialInstitutionPartyIDFieldField = value;
-                this.RaisePropertyChanged("financialInstitutionPartyIDField");
+                this.contractApexaIdField = value;
+                this.RaisePropertyChanged("ContractApexaId");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public decimal loanAmtField {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        public string Description {
             get {
-                return this.loanAmtFieldField;
+                return this.descriptionField;
             }
             set {
-                this.loanAmtFieldField = value;
-                this.RaisePropertyChanged("loanAmtField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("loanAmtFieldSpecified", Order=2)]
-        public bool loanAmtFieldSpecified1 {
-            get {
-                return this.loanAmtFieldSpecified1Field;
-            }
-            set {
-                this.loanAmtFieldSpecified1Field = value;
-                this.RaisePropertyChanged("loanAmtFieldSpecified1");
+                this.descriptionField = value;
+                this.RaisePropertyChanged("Description");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public System.DateTime loanDefaultDateField {
+        public bool IsDeleted {
             get {
-                return this.loanDefaultDateFieldField;
+                return this.isDeletedField;
             }
             set {
-                this.loanDefaultDateFieldField = value;
-                this.RaisePropertyChanged("loanDefaultDateField");
+                this.isDeletedField = value;
+                this.RaisePropertyChanged("IsDeleted");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("loanDefaultDateFieldSpecified", Order=4)]
-        public bool loanDefaultDateFieldSpecified1 {
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool IsDeletedSpecified {
             get {
-                return this.loanDefaultDateFieldSpecified1Field;
+                return this.isDeletedFieldSpecified;
             }
             set {
-                this.loanDefaultDateFieldSpecified1Field = value;
-                this.RaisePropertyChanged("loanDefaultDateFieldSpecified1");
+                this.isDeletedFieldSpecified = value;
+                this.RaisePropertyChanged("IsDeletedSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public bool NotApplicable {
+            get {
+                return this.notApplicableField;
+            }
+            set {
+                this.notApplicableField = value;
+                this.RaisePropertyChanged("NotApplicable");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool NotApplicableSpecified {
+            get {
+                return this.notApplicableFieldSpecified;
+            }
+            set {
+                this.notApplicableFieldSpecified = value;
+                this.RaisePropertyChanged("NotApplicableSpecified");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
-        public string loanReasonDescField {
+        public string Status {
             get {
-                return this.loanReasonDescFieldField;
+                return this.statusField;
             }
             set {
-                this.loanReasonDescFieldField = value;
-                this.RaisePropertyChanged("loanReasonDescField");
+                this.statusField = value;
+                this.RaisePropertyChanged("Status");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
-        public OLI_LU_LOANREASON1 loanReasonField {
+        public string Type {
             get {
-                return this.loanReasonFieldField;
+                return this.typeField;
             }
             set {
-                this.loanReasonFieldField = value;
-                this.RaisePropertyChanged("loanReasonField");
+                this.typeField = value;
+                this.RaisePropertyChanged("Type");
             }
         }
         
@@ -5065,38 +997,38 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="OLI_LU_HOLDTYPE", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class OLI_LU_HOLDTYPE1 : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.DataContracts")]
+    public partial class File_Type : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string tcFieldField;
+        private byte[] byteArrayField;
         
-        private string valueFieldField;
+        private string filenameField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string tcField {
+        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary", IsNullable=true, Order=0)]
+        public byte[] byteArray {
             get {
-                return this.tcFieldField;
+                return this.byteArrayField;
             }
             set {
-                this.tcFieldField = value;
-                this.RaisePropertyChanged("tcField");
+                this.byteArrayField = value;
+                this.RaisePropertyChanged("byteArray");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string valueField {
+        public string filename {
             get {
-                return this.valueFieldField;
+                return this.filenameField;
             }
             set {
-                this.valueFieldField = value;
-                this.RaisePropertyChanged("valueField");
+                this.filenameField = value;
+                this.RaisePropertyChanged("filename");
             }
         }
         
@@ -5111,713 +1043,18 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="Banking_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class Banking_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.DataContracts")]
+    public partial class FileResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string accountNumberFieldField;
-        
-        private string institutionNumberFieldField;
-        
-        private string transitNumberFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string accountNumberField {
-            get {
-                return this.accountNumberFieldField;
-            }
-            set {
-                this.accountNumberFieldField = value;
-                this.RaisePropertyChanged("accountNumberField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string institutionNumberField {
-            get {
-                return this.institutionNumberFieldField;
-            }
-            set {
-                this.institutionNumberFieldField = value;
-                this.RaisePropertyChanged("institutionNumberField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
-        public string transitNumberField {
-            get {
-                return this.transitNumberFieldField;
-            }
-            set {
-                this.transitNumberFieldField = value;
-                this.RaisePropertyChanged("transitNumberField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="Holding_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class Holding_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private Attachment_Type1[] attachmentFieldField;
-        
-        private Banking_Type1 bankingFieldField;
-        
-        private OLI_LU_HOLDTYPE1 holdingTypeCodeFieldField;
-        
-        private string idFieldField;
-        
-        private Loan_Type1[] loanFieldField;
-        
-        private Policy_Type1 policyFieldField;
+        private File_Type[] itemsFieldField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=0)]
-        public Attachment_Type1[] attachmentField {
-            get {
-                return this.attachmentFieldField;
-            }
-            set {
-                this.attachmentFieldField = value;
-                this.RaisePropertyChanged("attachmentField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public Banking_Type1 bankingField {
-            get {
-                return this.bankingFieldField;
-            }
-            set {
-                this.bankingFieldField = value;
-                this.RaisePropertyChanged("bankingField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
-        public OLI_LU_HOLDTYPE1 holdingTypeCodeField {
-            get {
-                return this.holdingTypeCodeFieldField;
-            }
-            set {
-                this.holdingTypeCodeFieldField = value;
-                this.RaisePropertyChanged("holdingTypeCodeField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
-        public string idField {
-            get {
-                return this.idFieldField;
-            }
-            set {
-                this.idFieldField = value;
-                this.RaisePropertyChanged("idField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=4)]
-        public Loan_Type1[] loanField {
-            get {
-                return this.loanFieldField;
-            }
-            set {
-                this.loanFieldField = value;
-                this.RaisePropertyChanged("loanField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
-        public Policy_Type1 policyField {
-            get {
-                return this.policyFieldField;
-            }
-            set {
-                this.policyFieldField = value;
-                this.RaisePropertyChanged("policyField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RESULT_INFO_CODES", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class RESULT_INFO_CODES1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string tcFieldField;
-        
-        private string valueFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string tcField {
-            get {
-                return this.tcFieldField;
-            }
-            set {
-                this.tcFieldField = value;
-                this.RaisePropertyChanged("tcField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string valueField {
-            get {
-                return this.valueFieldField;
-            }
-            set {
-                this.valueFieldField = value;
-                this.RaisePropertyChanged("valueField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ResultInfo_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class ResultInfo_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private RESULT_INFO_CODES1 resultInfoCodeFieldField;
-        
-        private string resultInfoDescFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public RESULT_INFO_CODES1 resultInfoCodeField {
-            get {
-                return this.resultInfoCodeFieldField;
-            }
-            set {
-                this.resultInfoCodeFieldField = value;
-                this.RaisePropertyChanged("resultInfoCodeField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string resultInfoDescField {
-            get {
-                return this.resultInfoDescFieldField;
-            }
-            set {
-                this.resultInfoDescFieldField = value;
-                this.RaisePropertyChanged("resultInfoDescField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RESULT_CODES", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class RESULT_CODES1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string tcFieldField;
-        
-        private string valueFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string tcField {
-            get {
-                return this.tcFieldField;
-            }
-            set {
-                this.tcFieldField = value;
-                this.RaisePropertyChanged("tcField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string valueField {
-            get {
-                return this.valueFieldField;
-            }
-            set {
-                this.valueFieldField = value;
-                this.RaisePropertyChanged("valueField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TransResult_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class TransResult_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private RESULT_CODES1 resultCodeFieldField;
-        
-        private ResultInfo_Type1[] resultInfoFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public RESULT_CODES1 resultCodeField {
-            get {
-                return this.resultCodeFieldField;
-            }
-            set {
-                this.resultCodeFieldField = value;
-                this.RaisePropertyChanged("resultCodeField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=1)]
-        public ResultInfo_Type1[] resultInfoField {
-            get {
-                return this.resultInfoFieldField;
-            }
-            set {
-                this.resultInfoFieldField = value;
-                this.RaisePropertyChanged("resultInfoField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TXLifeResponse_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class TXLifeResponse_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private System.DateTime endDateFieldField;
-        
-        private bool endDateFieldSpecified1Field;
-        
-        private System.DateTime endTimeFieldField;
-        
-        private bool endTimeFieldSpecified1Field;
-        
-        private INQUIRY_LEVEL_CODES1 inquiryLevelFieldField;
-        
-        private InquiryView_Type1 inquiryViewFieldField;
-        
-        private OLifE_Type1 oLifEFieldField;
-        
-        private string primaryObjectIDFieldField;
-        
-        private System.DateTime startDateFieldField;
-        
-        private bool startDateFieldSpecified1Field;
-        
-        private System.DateTime startTimeFieldField;
-        
-        private bool startTimeFieldSpecified1Field;
-        
-        private System.DateTime transExeDateFieldField;
-        
-        private System.DateTime transExeTimeFieldField;
-        
-        private string transRefGUIDFieldField;
-        
-        private TransResult_Type1 transResultFieldField;
-        
-        private OLI_LU_TRANS_TYPE_CODES1 transTypeFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public System.DateTime endDateField {
-            get {
-                return this.endDateFieldField;
-            }
-            set {
-                this.endDateFieldField = value;
-                this.RaisePropertyChanged("endDateField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("endDateFieldSpecified", Order=1)]
-        public bool endDateFieldSpecified1 {
-            get {
-                return this.endDateFieldSpecified1Field;
-            }
-            set {
-                this.endDateFieldSpecified1Field = value;
-                this.RaisePropertyChanged("endDateFieldSpecified1");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public System.DateTime endTimeField {
-            get {
-                return this.endTimeFieldField;
-            }
-            set {
-                this.endTimeFieldField = value;
-                this.RaisePropertyChanged("endTimeField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("endTimeFieldSpecified", Order=3)]
-        public bool endTimeFieldSpecified1 {
-            get {
-                return this.endTimeFieldSpecified1Field;
-            }
-            set {
-                this.endTimeFieldSpecified1Field = value;
-                this.RaisePropertyChanged("endTimeFieldSpecified1");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
-        public INQUIRY_LEVEL_CODES1 inquiryLevelField {
-            get {
-                return this.inquiryLevelFieldField;
-            }
-            set {
-                this.inquiryLevelFieldField = value;
-                this.RaisePropertyChanged("inquiryLevelField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
-        public InquiryView_Type1 inquiryViewField {
-            get {
-                return this.inquiryViewFieldField;
-            }
-            set {
-                this.inquiryViewFieldField = value;
-                this.RaisePropertyChanged("inquiryViewField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
-        public OLifE_Type1 oLifEField {
-            get {
-                return this.oLifEFieldField;
-            }
-            set {
-                this.oLifEFieldField = value;
-                this.RaisePropertyChanged("oLifEField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
-        public string primaryObjectIDField {
-            get {
-                return this.primaryObjectIDFieldField;
-            }
-            set {
-                this.primaryObjectIDFieldField = value;
-                this.RaisePropertyChanged("primaryObjectIDField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
-        public System.DateTime startDateField {
-            get {
-                return this.startDateFieldField;
-            }
-            set {
-                this.startDateFieldField = value;
-                this.RaisePropertyChanged("startDateField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("startDateFieldSpecified", Order=9)]
-        public bool startDateFieldSpecified1 {
-            get {
-                return this.startDateFieldSpecified1Field;
-            }
-            set {
-                this.startDateFieldSpecified1Field = value;
-                this.RaisePropertyChanged("startDateFieldSpecified1");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
-        public System.DateTime startTimeField {
-            get {
-                return this.startTimeFieldField;
-            }
-            set {
-                this.startTimeFieldField = value;
-                this.RaisePropertyChanged("startTimeField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("startTimeFieldSpecified", Order=11)]
-        public bool startTimeFieldSpecified1 {
-            get {
-                return this.startTimeFieldSpecified1Field;
-            }
-            set {
-                this.startTimeFieldSpecified1Field = value;
-                this.RaisePropertyChanged("startTimeFieldSpecified1");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
-        public System.DateTime transExeDateField {
-            get {
-                return this.transExeDateFieldField;
-            }
-            set {
-                this.transExeDateFieldField = value;
-                this.RaisePropertyChanged("transExeDateField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
-        public System.DateTime transExeTimeField {
-            get {
-                return this.transExeTimeFieldField;
-            }
-            set {
-                this.transExeTimeFieldField = value;
-                this.RaisePropertyChanged("transExeTimeField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=14)]
-        public string transRefGUIDField {
-            get {
-                return this.transRefGUIDFieldField;
-            }
-            set {
-                this.transRefGUIDFieldField = value;
-                this.RaisePropertyChanged("transRefGUIDField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=15)]
-        public TransResult_Type1 transResultField {
-            get {
-                return this.transResultFieldField;
-            }
-            set {
-                this.transResultFieldField = value;
-                this.RaisePropertyChanged("transResultField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=16)]
-        public OLI_LU_TRANS_TYPE_CODES1 transTypeField {
-            get {
-                return this.transTypeFieldField;
-            }
-            set {
-                this.transTypeFieldField = value;
-                this.RaisePropertyChanged("transTypeField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="INQUIRY_LEVEL_CODES", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class INQUIRY_LEVEL_CODES1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string tcFieldField;
-        
-        private string valueFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string tcField {
-            get {
-                return this.tcFieldField;
-            }
-            set {
-                this.tcFieldField = value;
-                this.RaisePropertyChanged("tcField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string valueField {
-            get {
-                return this.valueFieldField;
-            }
-            set {
-                this.valueFieldField = value;
-                this.RaisePropertyChanged("valueField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="InquiryView_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class InquiryView_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string idFieldField;
-        
-        private string inquiryViewCodeFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string idField {
-            get {
-                return this.idFieldField;
-            }
-            set {
-                this.idFieldField = value;
-                this.RaisePropertyChanged("idField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string inquiryViewCodeField {
-            get {
-                return this.inquiryViewCodeFieldField;
-            }
-            set {
-                this.inquiryViewCodeFieldField = value;
-                this.RaisePropertyChanged("inquiryViewCodeField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="OLifE_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class OLifE_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private object[] itemsFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=0)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays")]
-        public object[] itemsField {
+        public File_Type[] itemsField {
             get {
                 return this.itemsFieldField;
             }
@@ -5838,38 +1075,166 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="OLI_LU_TRANS_TYPE_CODES", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class OLI_LU_TRANS_TYPE_CODES1 : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.DataContracts")]
+    public partial class FileURL : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string tcFieldField;
-        
-        private string valueFieldField;
+        private string urlField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string tcField {
+        public string url {
             get {
-                return this.tcFieldField;
+                return this.urlField;
             }
             set {
-                this.tcFieldField = value;
-                this.RaisePropertyChanged("tcField");
+                this.urlField = value;
+                this.RaisePropertyChanged("url");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.DataContracts")]
+    public partial class FileRequest : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private FileURL[] itemsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=0)]
+        public FileURL[] items {
+            get {
+                return this.itemsField;
+            }
+            set {
+                this.itemsField = value;
+                this.RaisePropertyChanged("items");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.DataContracts")]
+    public partial class Result : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string idField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public string id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.DataContracts")]
+    public partial class NonCITSResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private Result[] itemsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=0)]
+        public Result[] items {
+            get {
+                return this.itemsField;
+            }
+            set {
+                this.itemsField = value;
+                this.RaisePropertyChanged("items");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.DataContracts")]
+    public partial class NonCITSRequest : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string idField;
+        
+        private string requestTypeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public string id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string valueField {
+        public string requestType {
             get {
-                return this.valueFieldField;
+                return this.requestTypeField;
             }
             set {
-                this.valueFieldField = value;
-                this.RaisePropertyChanged("valueField");
+                this.requestTypeField = value;
+                this.RaisePropertyChanged("requestType");
             }
         }
         
@@ -5884,253 +1249,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TXLifeRequest_Type", Namespace="http://schemas.datacontract.org/2004/07/CITS")]
-    public partial class TXLifeRequest_Type1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private System.DateTime endDateFieldField;
-        
-        private bool endDateFieldSpecified1Field;
-        
-        private System.DateTime endTimeFieldField;
-        
-        private bool endTimeFieldSpecified1Field;
-        
-        private INQUIRY_LEVEL_CODES1 inquiryLevelFieldField;
-        
-        private InquiryView_Type1 inquiryViewFieldField;
-        
-        private OLifE_Type1 oLifEFieldField;
-        
-        private System.DateTime startDateFieldField;
-        
-        private bool startDateFieldSpecified1Field;
-        
-        private System.DateTime startTimeFieldField;
-        
-        private bool startTimeFieldSpecified1Field;
-        
-        private string transRefGUIDFieldField;
-        
-        private OLI_LU_TRANS_TYPE_CODES1 transTypeFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public System.DateTime endDateField {
-            get {
-                return this.endDateFieldField;
-            }
-            set {
-                this.endDateFieldField = value;
-                this.RaisePropertyChanged("endDateField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("endDateFieldSpecified", Order=1)]
-        public bool endDateFieldSpecified1 {
-            get {
-                return this.endDateFieldSpecified1Field;
-            }
-            set {
-                this.endDateFieldSpecified1Field = value;
-                this.RaisePropertyChanged("endDateFieldSpecified1");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public System.DateTime endTimeField {
-            get {
-                return this.endTimeFieldField;
-            }
-            set {
-                this.endTimeFieldField = value;
-                this.RaisePropertyChanged("endTimeField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("endTimeFieldSpecified", Order=3)]
-        public bool endTimeFieldSpecified1 {
-            get {
-                return this.endTimeFieldSpecified1Field;
-            }
-            set {
-                this.endTimeFieldSpecified1Field = value;
-                this.RaisePropertyChanged("endTimeFieldSpecified1");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
-        public INQUIRY_LEVEL_CODES1 inquiryLevelField {
-            get {
-                return this.inquiryLevelFieldField;
-            }
-            set {
-                this.inquiryLevelFieldField = value;
-                this.RaisePropertyChanged("inquiryLevelField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
-        public InquiryView_Type1 inquiryViewField {
-            get {
-                return this.inquiryViewFieldField;
-            }
-            set {
-                this.inquiryViewFieldField = value;
-                this.RaisePropertyChanged("inquiryViewField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
-        public OLifE_Type1 oLifEField {
-            get {
-                return this.oLifEFieldField;
-            }
-            set {
-                this.oLifEFieldField = value;
-                this.RaisePropertyChanged("oLifEField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
-        public System.DateTime startDateField {
-            get {
-                return this.startDateFieldField;
-            }
-            set {
-                this.startDateFieldField = value;
-                this.RaisePropertyChanged("startDateField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("startDateFieldSpecified", Order=8)]
-        public bool startDateFieldSpecified1 {
-            get {
-                return this.startDateFieldSpecified1Field;
-            }
-            set {
-                this.startDateFieldSpecified1Field = value;
-                this.RaisePropertyChanged("startDateFieldSpecified1");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
-        public System.DateTime startTimeField {
-            get {
-                return this.startTimeFieldField;
-            }
-            set {
-                this.startTimeFieldField = value;
-                this.RaisePropertyChanged("startTimeField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("startTimeFieldSpecified", Order=10)]
-        public bool startTimeFieldSpecified1 {
-            get {
-                return this.startTimeFieldSpecified1Field;
-            }
-            set {
-                this.startTimeFieldSpecified1Field = value;
-                this.RaisePropertyChanged("startTimeFieldSpecified1");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=11)]
-        public string transRefGUIDField {
-            get {
-                return this.transRefGUIDFieldField;
-            }
-            set {
-                this.transRefGUIDFieldField = value;
-                this.RaisePropertyChanged("transRefGUIDField");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=12)]
-        public OLI_LU_TRANS_TYPE_CODES1 transTypeField {
-            get {
-                return this.transTypeFieldField;
-            }
-            set {
-                this.transTypeFieldField = value;
-                this.RaisePropertyChanged("transTypeField");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic")]
-    public partial class KeyValuePairOfstringbase64Binary : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string keyField;
-        
-        private byte[] valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string key {
-            get {
-                return this.keyField;
-            }
-            set {
-                this.keyField = value;
-                this.RaisePropertyChanged("key");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary", IsNullable=true, Order=1)]
-        public byte[] value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-                this.RaisePropertyChanged("value");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6176,7 +1295,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6222,7 +1341,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6268,7 +1387,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6314,7 +1433,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6570,7 +1689,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6616,7 +1735,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6662,7 +1781,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6697,7 +1816,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6771,7 +1890,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6817,7 +1936,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6933,7 +2052,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7049,7 +2168,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7095,7 +2214,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7141,7 +2260,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7187,7 +2306,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7233,7 +2352,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7335,7 +2454,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7437,7 +2556,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7483,7 +2602,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7670,7 +2789,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7716,7 +2835,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7762,7 +2881,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7878,7 +2997,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7924,7 +3043,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7984,7 +3103,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8255,7 +3374,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8301,7 +3420,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8347,7 +3466,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8379,7 +3498,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8425,7 +3544,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8555,7 +3674,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8601,7 +3720,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8647,7 +3766,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8903,7 +4022,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8949,7 +4068,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8995,7 +4114,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9041,7 +4160,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9087,7 +4206,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9175,7 +4294,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9221,7 +4340,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9232,7 +4351,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         private EOCoverageInfo_Type[] eOCoverageInfoField;
         
-        private License_Type[] licenseField;
+        private Licence_Type[] licenceField;
         
         private CarrierAppointment_Type[] carrierAppointmentField;
         
@@ -9269,14 +4388,14 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("License", Order=2)]
-        public License_Type[] License {
+        [System.Xml.Serialization.XmlElementAttribute("Licence", Order=2)]
+        public Licence_Type[] Licence {
             get {
-                return this.licenseField;
+                return this.licenceField;
             }
             set {
-                this.licenseField = value;
-                this.RaisePropertyChanged("License");
+                this.licenceField = value;
+                this.RaisePropertyChanged("Licence");
             }
         }
         
@@ -9351,7 +4470,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9397,7 +4516,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9429,18 +4548,18 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
-    public partial class License_Type : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class Licence_Type : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string licenseNumField;
+        private string licenceNumField;
         
-        private OLI_LU_STATE licenseStateField;
+        private OLI_LU_STATE licenceStateField;
         
-        private OLI_LU_LICENSETYPE licenseTypeField;
+        private OLI_LU_LICENCETYPE licenceTypeField;
         
         private System.DateTime expDateField;
         
@@ -9450,11 +4569,11 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         private bool originationDateFieldSpecified;
         
-        private OLI_LU_BOOLEAN licenseInterruptedIndField;
+        private OLI_LU_BOOLEAN licenceInterruptedIndField;
         
-        private string licenseInterruptedReasonField;
+        private string licenceInterruptedReasonField;
         
-        private string nameOnLicenseField;
+        private string nameOnLicenceField;
         
         private string levelDescField;
         
@@ -9462,37 +4581,37 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string LicenseNum {
+        public string LicenceNum {
             get {
-                return this.licenseNumField;
+                return this.licenceNumField;
             }
             set {
-                this.licenseNumField = value;
-                this.RaisePropertyChanged("LicenseNum");
+                this.licenceNumField = value;
+                this.RaisePropertyChanged("LicenceNum");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public OLI_LU_STATE LicenseState {
+        public OLI_LU_STATE LicenceState {
             get {
-                return this.licenseStateField;
+                return this.licenceStateField;
             }
             set {
-                this.licenseStateField = value;
-                this.RaisePropertyChanged("LicenseState");
+                this.licenceStateField = value;
+                this.RaisePropertyChanged("LicenceState");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public OLI_LU_LICENSETYPE LicenseType {
+        public OLI_LU_LICENCETYPE LicenceType {
             get {
-                return this.licenseTypeField;
+                return this.licenceTypeField;
             }
             set {
-                this.licenseTypeField = value;
-                this.RaisePropertyChanged("LicenseType");
+                this.licenceTypeField = value;
+                this.RaisePropertyChanged("LicenceType");
             }
         }
         
@@ -9546,37 +4665,37 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=5)]
-        public OLI_LU_BOOLEAN LicenseInterruptedInd {
+        public OLI_LU_BOOLEAN LicenceInterruptedInd {
             get {
-                return this.licenseInterruptedIndField;
+                return this.licenceInterruptedIndField;
             }
             set {
-                this.licenseInterruptedIndField = value;
-                this.RaisePropertyChanged("LicenseInterruptedInd");
+                this.licenceInterruptedIndField = value;
+                this.RaisePropertyChanged("LicenceInterruptedInd");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=6)]
-        public string LicenseInterruptedReason {
+        public string LicenceInterruptedReason {
             get {
-                return this.licenseInterruptedReasonField;
+                return this.licenceInterruptedReasonField;
             }
             set {
-                this.licenseInterruptedReasonField = value;
-                this.RaisePropertyChanged("LicenseInterruptedReason");
+                this.licenceInterruptedReasonField = value;
+                this.RaisePropertyChanged("LicenceInterruptedReason");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=7)]
-        public string NameOnLicense {
+        public string NameOnLicence {
             get {
-                return this.nameOnLicenseField;
+                return this.nameOnLicenceField;
             }
             set {
-                this.nameOnLicenseField = value;
-                this.RaisePropertyChanged("NameOnLicense");
+                this.nameOnLicenceField = value;
+                this.RaisePropertyChanged("NameOnLicence");
             }
         }
         
@@ -9615,12 +4734,12 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
-    public partial class OLI_LU_LICENSETYPE : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class OLI_LU_LICENCETYPE : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string tcField;
         
@@ -9661,7 +4780,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9973,7 +5092,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10019,7 +5138,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10065,7 +5184,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10125,7 +5244,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10171,7 +5290,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10203,7 +5322,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10235,7 +5354,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10267,7 +5386,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10313,7 +5432,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10345,7 +5464,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10391,7 +5510,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10507,7 +5626,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10553,7 +5672,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10697,7 +5816,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10743,7 +5862,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10845,7 +5964,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10905,7 +6024,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10951,7 +6070,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10983,7 +6102,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11015,7 +6134,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11047,7 +6166,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11135,7 +6254,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11181,7 +6300,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11241,7 +6360,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11273,7 +6392,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11305,7 +6424,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11393,7 +6512,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11439,7 +6558,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11569,7 +6688,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11622,18 +6741,13 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string requestType;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public object inputId;
+        public Apexa.CITS.WCF.Test.CITSService.NonCITSRequest request;
         
         public ProcessNonCITSMessageRequest() {
         }
         
-        public ProcessNonCITSMessageRequest(string requestType, object inputId) {
-            this.requestType = requestType;
-            this.inputId = inputId;
+        public ProcessNonCITSMessageRequest(Apexa.CITS.WCF.Test.CITSService.NonCITSRequest request) {
+            this.request = request;
         }
     }
     
@@ -11644,14 +6758,13 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     public partial class ProcessNonCITSMessageResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays")]
-        public object[] ProcessNonCITSMessageResult;
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public Apexa.CITS.WCF.Test.CITSService.NonCITSResponse ProcessNonCITSMessageResult;
         
         public ProcessNonCITSMessageResponse() {
         }
         
-        public ProcessNonCITSMessageResponse(object[] ProcessNonCITSMessageResult) {
+        public ProcessNonCITSMessageResponse(Apexa.CITS.WCF.Test.CITSService.NonCITSResponse ProcessNonCITSMessageResult) {
             this.ProcessNonCITSMessageResult = ProcessNonCITSMessageResult;
         }
     }
@@ -11663,15 +6776,14 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     public partial class ProcessFileRequestsRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays")]
-        public string[] urlArray;
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public Apexa.CITS.WCF.Test.CITSService.FileRequest request;
         
         public ProcessFileRequestsRequest() {
         }
         
-        public ProcessFileRequestsRequest(string[] urlArray) {
-            this.urlArray = urlArray;
+        public ProcessFileRequestsRequest(Apexa.CITS.WCF.Test.CITSService.FileRequest request) {
+            this.request = request;
         }
     }
     
@@ -11682,15 +6794,174 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     public partial class ProcessFileRequestsResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic", IsNullable=false)]
-        public Apexa.CITS.WCF.Test.CITSService.KeyValuePairOfstringbase64Binary[] ProcessFileRequestsResult;
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public Apexa.CITS.WCF.Test.CITSService.FileResponse ProcessFileRequestsResult;
         
         public ProcessFileRequestsResponse() {
         }
         
-        public ProcessFileRequestsResponse(Apexa.CITS.WCF.Test.CITSService.KeyValuePairOfstringbase64Binary[] ProcessFileRequestsResult) {
+        public ProcessFileRequestsResponse(Apexa.CITS.WCF.Test.CITSService.FileResponse ProcessFileRequestsResult) {
             this.ProcessFileRequestsResult = ProcessFileRequestsResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessContractCode", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class ProcessContractCodeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public Apexa.CITS.WCF.Test.CITSService.ContractCode code;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string action;
+        
+        public ProcessContractCodeRequest() {
+        }
+        
+        public ProcessContractCodeRequest(Apexa.CITS.WCF.Test.CITSService.ContractCode code, string action) {
+            this.code = code;
+            this.action = action;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessContractCodeResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class ProcessContractCodeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public bool ProcessContractCodeResult;
+        
+        public ProcessContractCodeResponse() {
+        }
+        
+        public ProcessContractCodeResponse(bool ProcessContractCodeResult) {
+            this.ProcessContractCodeResult = ProcessContractCodeResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessDebt", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class ProcessDebtRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public Apexa.CITS.WCF.Test.CITSService.Debt debt;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string action;
+        
+        public ProcessDebtRequest() {
+        }
+        
+        public ProcessDebtRequest(Apexa.CITS.WCF.Test.CITSService.Debt debt, string action) {
+            this.debt = debt;
+            this.action = action;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessDebtResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class ProcessDebtResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public bool ProcessDebtResult;
+        
+        public ProcessDebtResponse() {
+        }
+        
+        public ProcessDebtResponse(bool ProcessDebtResult) {
+            this.ProcessDebtResult = ProcessDebtResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessSupervision", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class ProcessSupervisionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public Apexa.CITS.WCF.Test.CITSService.Supervision supervision;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string action;
+        
+        public ProcessSupervisionRequest() {
+        }
+        
+        public ProcessSupervisionRequest(Apexa.CITS.WCF.Test.CITSService.Supervision supervision, string action) {
+            this.supervision = supervision;
+            this.action = action;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessSupervisionResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class ProcessSupervisionResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public bool ProcessSupervisionResult;
+        
+        public ProcessSupervisionResponse() {
+        }
+        
+        public ProcessSupervisionResponse(bool ProcessSupervisionResult) {
+            this.ProcessSupervisionResult = ProcessSupervisionResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessTag", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class ProcessTagRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public Apexa.CITS.WCF.Test.CITSService.Tag tag;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string action;
+        
+        public ProcessTagRequest() {
+        }
+        
+        public ProcessTagRequest(Apexa.CITS.WCF.Test.CITSService.Tag tag, string action) {
+            this.tag = tag;
+            this.action = action;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessTagResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class ProcessTagResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public bool ProcessTagResult;
+        
+        public ProcessTagResponse() {
+        }
+        
+        public ProcessTagResponse(bool ProcessTagResult) {
+            this.ProcessTagResult = ProcessTagResult;
         }
     }
     
@@ -11734,10 +7005,9 @@ namespace Apexa.CITS.WCF.Test.CITSService {
             return base.Channel.ProcessNonCITSMessage(request);
         }
         
-        public object[] ProcessNonCITSMessage(string requestType, object inputId) {
+        public Apexa.CITS.WCF.Test.CITSService.NonCITSResponse ProcessNonCITSMessage(Apexa.CITS.WCF.Test.CITSService.NonCITSRequest request) {
             Apexa.CITS.WCF.Test.CITSService.ProcessNonCITSMessageRequest inValue = new Apexa.CITS.WCF.Test.CITSService.ProcessNonCITSMessageRequest();
-            inValue.requestType = requestType;
-            inValue.inputId = inputId;
+            inValue.request = request;
             Apexa.CITS.WCF.Test.CITSService.ProcessNonCITSMessageResponse retVal = ((Apexa.CITS.WCF.Test.CITSService.ICITSService)(this)).ProcessNonCITSMessage(inValue);
             return retVal.ProcessNonCITSMessageResult;
         }
@@ -11747,10 +7017,9 @@ namespace Apexa.CITS.WCF.Test.CITSService {
             return base.Channel.ProcessNonCITSMessageAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessNonCITSMessageResponse> ProcessNonCITSMessageAsync(string requestType, object inputId) {
+        public System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessNonCITSMessageResponse> ProcessNonCITSMessageAsync(Apexa.CITS.WCF.Test.CITSService.NonCITSRequest request) {
             Apexa.CITS.WCF.Test.CITSService.ProcessNonCITSMessageRequest inValue = new Apexa.CITS.WCF.Test.CITSService.ProcessNonCITSMessageRequest();
-            inValue.requestType = requestType;
-            inValue.inputId = inputId;
+            inValue.request = request;
             return ((Apexa.CITS.WCF.Test.CITSService.ICITSService)(this)).ProcessNonCITSMessageAsync(inValue);
         }
         
@@ -11759,9 +7028,9 @@ namespace Apexa.CITS.WCF.Test.CITSService {
             return base.Channel.ProcessFileRequests(request);
         }
         
-        public Apexa.CITS.WCF.Test.CITSService.KeyValuePairOfstringbase64Binary[] ProcessFileRequests(string[] urlArray) {
+        public Apexa.CITS.WCF.Test.CITSService.FileResponse ProcessFileRequests(Apexa.CITS.WCF.Test.CITSService.FileRequest request) {
             Apexa.CITS.WCF.Test.CITSService.ProcessFileRequestsRequest inValue = new Apexa.CITS.WCF.Test.CITSService.ProcessFileRequestsRequest();
-            inValue.urlArray = urlArray;
+            inValue.request = request;
             Apexa.CITS.WCF.Test.CITSService.ProcessFileRequestsResponse retVal = ((Apexa.CITS.WCF.Test.CITSService.ICITSService)(this)).ProcessFileRequests(inValue);
             return retVal.ProcessFileRequestsResult;
         }
@@ -11771,10 +7040,110 @@ namespace Apexa.CITS.WCF.Test.CITSService {
             return base.Channel.ProcessFileRequestsAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessFileRequestsResponse> ProcessFileRequestsAsync(string[] urlArray) {
+        public System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessFileRequestsResponse> ProcessFileRequestsAsync(Apexa.CITS.WCF.Test.CITSService.FileRequest request) {
             Apexa.CITS.WCF.Test.CITSService.ProcessFileRequestsRequest inValue = new Apexa.CITS.WCF.Test.CITSService.ProcessFileRequestsRequest();
-            inValue.urlArray = urlArray;
+            inValue.request = request;
             return ((Apexa.CITS.WCF.Test.CITSService.ICITSService)(this)).ProcessFileRequestsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Apexa.CITS.WCF.Test.CITSService.ProcessContractCodeResponse Apexa.CITS.WCF.Test.CITSService.ICITSService.ProcessContractCode(Apexa.CITS.WCF.Test.CITSService.ProcessContractCodeRequest request) {
+            return base.Channel.ProcessContractCode(request);
+        }
+        
+        public bool ProcessContractCode(Apexa.CITS.WCF.Test.CITSService.ContractCode code, string action) {
+            Apexa.CITS.WCF.Test.CITSService.ProcessContractCodeRequest inValue = new Apexa.CITS.WCF.Test.CITSService.ProcessContractCodeRequest();
+            inValue.code = code;
+            inValue.action = action;
+            Apexa.CITS.WCF.Test.CITSService.ProcessContractCodeResponse retVal = ((Apexa.CITS.WCF.Test.CITSService.ICITSService)(this)).ProcessContractCode(inValue);
+            return retVal.ProcessContractCodeResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessContractCodeResponse> Apexa.CITS.WCF.Test.CITSService.ICITSService.ProcessContractCodeAsync(Apexa.CITS.WCF.Test.CITSService.ProcessContractCodeRequest request) {
+            return base.Channel.ProcessContractCodeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessContractCodeResponse> ProcessContractCodeAsync(Apexa.CITS.WCF.Test.CITSService.ContractCode code, string action) {
+            Apexa.CITS.WCF.Test.CITSService.ProcessContractCodeRequest inValue = new Apexa.CITS.WCF.Test.CITSService.ProcessContractCodeRequest();
+            inValue.code = code;
+            inValue.action = action;
+            return ((Apexa.CITS.WCF.Test.CITSService.ICITSService)(this)).ProcessContractCodeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Apexa.CITS.WCF.Test.CITSService.ProcessDebtResponse Apexa.CITS.WCF.Test.CITSService.ICITSService.ProcessDebt(Apexa.CITS.WCF.Test.CITSService.ProcessDebtRequest request) {
+            return base.Channel.ProcessDebt(request);
+        }
+        
+        public bool ProcessDebt(Apexa.CITS.WCF.Test.CITSService.Debt debt, string action) {
+            Apexa.CITS.WCF.Test.CITSService.ProcessDebtRequest inValue = new Apexa.CITS.WCF.Test.CITSService.ProcessDebtRequest();
+            inValue.debt = debt;
+            inValue.action = action;
+            Apexa.CITS.WCF.Test.CITSService.ProcessDebtResponse retVal = ((Apexa.CITS.WCF.Test.CITSService.ICITSService)(this)).ProcessDebt(inValue);
+            return retVal.ProcessDebtResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessDebtResponse> Apexa.CITS.WCF.Test.CITSService.ICITSService.ProcessDebtAsync(Apexa.CITS.WCF.Test.CITSService.ProcessDebtRequest request) {
+            return base.Channel.ProcessDebtAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessDebtResponse> ProcessDebtAsync(Apexa.CITS.WCF.Test.CITSService.Debt debt, string action) {
+            Apexa.CITS.WCF.Test.CITSService.ProcessDebtRequest inValue = new Apexa.CITS.WCF.Test.CITSService.ProcessDebtRequest();
+            inValue.debt = debt;
+            inValue.action = action;
+            return ((Apexa.CITS.WCF.Test.CITSService.ICITSService)(this)).ProcessDebtAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Apexa.CITS.WCF.Test.CITSService.ProcessSupervisionResponse Apexa.CITS.WCF.Test.CITSService.ICITSService.ProcessSupervision(Apexa.CITS.WCF.Test.CITSService.ProcessSupervisionRequest request) {
+            return base.Channel.ProcessSupervision(request);
+        }
+        
+        public bool ProcessSupervision(Apexa.CITS.WCF.Test.CITSService.Supervision supervision, string action) {
+            Apexa.CITS.WCF.Test.CITSService.ProcessSupervisionRequest inValue = new Apexa.CITS.WCF.Test.CITSService.ProcessSupervisionRequest();
+            inValue.supervision = supervision;
+            inValue.action = action;
+            Apexa.CITS.WCF.Test.CITSService.ProcessSupervisionResponse retVal = ((Apexa.CITS.WCF.Test.CITSService.ICITSService)(this)).ProcessSupervision(inValue);
+            return retVal.ProcessSupervisionResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessSupervisionResponse> Apexa.CITS.WCF.Test.CITSService.ICITSService.ProcessSupervisionAsync(Apexa.CITS.WCF.Test.CITSService.ProcessSupervisionRequest request) {
+            return base.Channel.ProcessSupervisionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessSupervisionResponse> ProcessSupervisionAsync(Apexa.CITS.WCF.Test.CITSService.Supervision supervision, string action) {
+            Apexa.CITS.WCF.Test.CITSService.ProcessSupervisionRequest inValue = new Apexa.CITS.WCF.Test.CITSService.ProcessSupervisionRequest();
+            inValue.supervision = supervision;
+            inValue.action = action;
+            return ((Apexa.CITS.WCF.Test.CITSService.ICITSService)(this)).ProcessSupervisionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Apexa.CITS.WCF.Test.CITSService.ProcessTagResponse Apexa.CITS.WCF.Test.CITSService.ICITSService.ProcessTag(Apexa.CITS.WCF.Test.CITSService.ProcessTagRequest request) {
+            return base.Channel.ProcessTag(request);
+        }
+        
+        public bool ProcessTag(Apexa.CITS.WCF.Test.CITSService.Tag tag, string action) {
+            Apexa.CITS.WCF.Test.CITSService.ProcessTagRequest inValue = new Apexa.CITS.WCF.Test.CITSService.ProcessTagRequest();
+            inValue.tag = tag;
+            inValue.action = action;
+            Apexa.CITS.WCF.Test.CITSService.ProcessTagResponse retVal = ((Apexa.CITS.WCF.Test.CITSService.ICITSService)(this)).ProcessTag(inValue);
+            return retVal.ProcessTagResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessTagResponse> Apexa.CITS.WCF.Test.CITSService.ICITSService.ProcessTagAsync(Apexa.CITS.WCF.Test.CITSService.ProcessTagRequest request) {
+            return base.Channel.ProcessTagAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessTagResponse> ProcessTagAsync(Apexa.CITS.WCF.Test.CITSService.Tag tag, string action) {
+            Apexa.CITS.WCF.Test.CITSService.ProcessTagRequest inValue = new Apexa.CITS.WCF.Test.CITSService.ProcessTagRequest();
+            inValue.tag = tag;
+            inValue.action = action;
+            return ((Apexa.CITS.WCF.Test.CITSService.ICITSService)(this)).ProcessTagAsync(inValue);
         }
     }
 }

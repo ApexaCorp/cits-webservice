@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-16"?>
+<FileRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="GenericType">
+  <items xmlns="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.DataContracts">
+    <FileURL>
+      <url>http://host:12345//documents/fulfillment/ABCDEFGH-1234-ABCD-1234-000000000001</url>
+    </FileURL>
+    <FileURL>
+      <url>http://host:12345//documents/eocoverage/ABCDEFGH-1234-ABCD-1234-000000000001</url>
+    </FileURL>
+  </items>
+</FileRequest>

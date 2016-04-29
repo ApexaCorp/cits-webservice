@@ -450,7 +450,7 @@
       <xs:element name="designationInfoField" nillable="true" type="tns:ArrayOfDesignationInfo_Type" />
       <xs:element name="eOCoverageInfoField" nillable="true" type="tns:ArrayOfEOCoverageInfo_Type" />
       <xs:element name="idField" nillable="true" type="xs:string" />
-      <xs:element name="licenseField" nillable="true" type="tns:ArrayOfLicense_Type" />
+      <xs:element name="licenceField" nillable="true" type="tns:ArrayOfLicence_Type" />
       <xs:element name="nationApprovalField" nillable="true" type="tns:ArrayOfNationApproval_Type" />
       <xs:element name="prefLanguageField" nillable="true" type="tns:OLI_LU_CLIENTLANGUAGES" />
       <xs:element name="supervisionLevelField" nillable="true" type="tns:ArrayOfSupervisionLevel_Type" />
@@ -666,36 +666,36 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="EOCoverageInfo_Type" nillable="true" type="tns:EOCoverageInfo_Type" />
-  <xs:complexType name="ArrayOfLicense_Type">
+  <xs:complexType name="ArrayOfLicence_Type">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="License_Type" nillable="true" type="tns:License_Type" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Licence_Type" nillable="true" type="tns:Licence_Type" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfLicense_Type" nillable="true" type="tns:ArrayOfLicense_Type" />
-  <xs:complexType name="License_Type">
+  <xs:element name="ArrayOfLicence_Type" nillable="true" type="tns:ArrayOfLicence_Type" />
+  <xs:complexType name="Licence_Type">
     <xs:sequence>
       <xs:element name="agencyAffiliationIDField" nillable="true" type="xs:string" />
       <xs:element name="expDateField" type="xs:dateTime" />
       <xs:element name="expDateFieldSpecified" type="xs:boolean" />
       <xs:element name="levelDescField" nillable="true" type="xs:string" />
-      <xs:element name="licenseInterruptedIndField" nillable="true" type="tns:OLI_LU_BOOLEAN" />
-      <xs:element name="licenseInterruptedReasonField" nillable="true" type="xs:string" />
-      <xs:element name="licenseNumField" nillable="true" type="xs:string" />
-      <xs:element name="licenseStateField" nillable="true" type="tns:OLI_LU_STATE" />
-      <xs:element name="licenseTypeField" nillable="true" type="tns:OLI_LU_LICENSETYPE" />
-      <xs:element name="nameOnLicenseField" nillable="true" type="xs:string" />
+      <xs:element name="licenceInterruptedIndField" nillable="true" type="tns:OLI_LU_BOOLEAN" />
+      <xs:element name="licenceInterruptedReasonField" nillable="true" type="xs:string" />
+      <xs:element name="licenceNumField" nillable="true" type="xs:string" />
+      <xs:element name="licenceStateField" nillable="true" type="tns:OLI_LU_STATE" />
+      <xs:element name="licenceTypeField" nillable="true" type="tns:OLI_LU_LICENCETYPE" />
+      <xs:element name="nameOnLicenceField" nillable="true" type="xs:string" />
       <xs:element name="originationDateField" type="xs:dateTime" />
       <xs:element name="originationDateFieldSpecified" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="License_Type" nillable="true" type="tns:License_Type" />
-  <xs:complexType name="OLI_LU_LICENSETYPE">
+  <xs:element name="Licence_Type" nillable="true" type="tns:Licence_Type" />
+  <xs:complexType name="OLI_LU_LICENCETYPE">
     <xs:sequence>
       <xs:element name="tcField" nillable="true" type="xs:string" />
       <xs:element name="valueField" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="OLI_LU_LICENSETYPE" nillable="true" type="tns:OLI_LU_LICENSETYPE" />
+  <xs:element name="OLI_LU_LICENCETYPE" nillable="true" type="tns:OLI_LU_LICENCETYPE" />
   <xs:complexType name="ArrayOfNationApproval_Type">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="NationApproval_Type" nillable="true" type="tns:NationApproval_Type" />

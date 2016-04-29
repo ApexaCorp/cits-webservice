@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-16"?>
-<TXLife_Type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.34.00" xmlns="CITS">
+<TXLife_Type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.35.00" xmlns="CITS">
   <TXLifeRequest xmlns="http://ACORD.org/Standards/Life/2">
-    <TransRefGUID>7c42b4dc-89f1-4fdf-a82d-f3750df048b2</TransRefGUID>
+    <TransRefGUID>79abdf2b-bc0d-4ff7-95f9-bd67b80c3765</TransRefGUID>
     <TransType tc="228">Producer Inquiry</TransType>
     <InquiryView>
       <InquiryViewCode>ProducerAndRelated</InquiryViewCode>
     </InquiryView>
     <OLifE>
-      <Party id="C36" />
+      <Party id="C22" />
     </OLifE>
   </TXLifeRequest>
 </TXLife_Type>

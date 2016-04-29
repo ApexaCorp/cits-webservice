@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="https://localhost:44300/v1/CITSService.svc?xsd=xsd1" namespace="http://ACORD.org/Standards/Life/2" />
-  <xs:import schemaLocation="https://localhost:44300/v1/CITSService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
-  <xs:import schemaLocation="https://localhost:44300/v1/CITSService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+  <xs:import schemaLocation="https://localhost:44300/v1/CITSService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.DataContracts" />
+  <xs:import schemaLocation="https://localhost:44300/v1/CITSService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.Inbound" />
   <xs:element name="ProcessMessage">
     <xs:complexType>
       <xs:sequence>
@@ -20,29 +20,88 @@
   <xs:element name="ProcessNonCITSMessage">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="requestType" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="inputId" nillable="true" type="xs:anyType" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.DataContracts" minOccurs="0" name="request" nillable="true" type="q3:NonCITSRequest" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="ProcessNonCITSMessageResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ProcessNonCITSMessageResult" nillable="true" type="q3:ArrayOfanyType" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.DataContracts" minOccurs="0" name="ProcessNonCITSMessageResult" nillable="true" type="q4:NonCITSResponse" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="ProcessFileRequests">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="urlArray" nillable="true" type="q4:ArrayOfstring" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.DataContracts" minOccurs="0" name="request" nillable="true" type="q5:FileRequest" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="ProcessFileRequestsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="ProcessFileRequestsResult" nillable="true" type="q5:ArrayOfKeyValuePairOfstringbase64Binary" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.DataContracts" minOccurs="0" name="ProcessFileRequestsResult" nillable="true" type="q6:FileResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessContractCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.Inbound" minOccurs="0" name="code" nillable="true" type="q7:ContractCode" />
+        <xs:element minOccurs="0" name="action" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessContractCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessContractCodeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessDebt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.Inbound" minOccurs="0" name="debt" nillable="true" type="q8:Debt" />
+        <xs:element minOccurs="0" name="action" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessDebtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessDebtResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessSupervision">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.Inbound" minOccurs="0" name="supervision" nillable="true" type="q9:Supervision" />
+        <xs:element minOccurs="0" name="action" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessSupervisionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessSupervisionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessTag">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.Inbound" minOccurs="0" name="tag" nillable="true" type="q10:Tag" />
+        <xs:element minOccurs="0" name="action" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessTagResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessTagResult" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

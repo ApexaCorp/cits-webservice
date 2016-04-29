@@ -27,6 +27,8 @@
     <MetadataFile FileName="CITSService1.xsd" MetadataType="Schema" ID="804ed504-528a-429f-9170-914b7d2eb284" SourceId="1" SourceUrl="https://localhost:44300/v1/CITSService.svc?xsd=xsd0" />
     <MetadataFile FileName="CITSService.wsdl" MetadataType="Wsdl" ID="ffd8a815-1272-4f6a-8ee8-15a01ec4ffdc" SourceId="1" SourceUrl="https://localhost:44300/v1/CITSService.svc?wsdl" />
     <MetadataFile FileName="CITSService3.xsd" MetadataType="Schema" ID="b0959639-e2da-42f9-8129-c41451fe585c" SourceId="1" SourceUrl="https://localhost:44300/v1/CITSService.svc?xsd=xsd5" />
+    <MetadataFile FileName="CITSService4.xsd" MetadataType="Schema" ID="1571b599-5ad7-4b79-8cb9-4f0684045145" SourceId="1" SourceUrl="https://localhost:44300/v1/CITSService.svc?xsd=xsd7" />
+    <MetadataFile FileName="CITSService41.xsd" MetadataType="Schema" ID="3904d5c3-0aa8-42e8-806b-33798bb8d2c9" SourceId="1" SourceUrl="https://localhost:44300/v1/CITSService.svc?xsd=xsd6" />
     <MetadataFile FileName="CITSService2.xsd" MetadataType="Schema" ID="6c369500-a7d2-4999-8400-67f1e177f1fd" SourceId="1" SourceUrl="https://localhost:44300/v1/CITSService.svc?xsd=xsd4" />
     <MetadataFile FileName="CITSService21.xsd" MetadataType="Schema" ID="b24c2bad-3c37-4324-a704-f627e86e67d0" SourceId="1" SourceUrl="https://localhost:44300/v1/CITSService.svc?xsd=xsd2" />
     <MetadataFile FileName="CITSService.xsd" MetadataType="Schema" ID="8c6e5a59-460f-48fc-be29-c50fb7edfb44" SourceId="1" SourceUrl="https://localhost:44300/v1/CITSService.svc?xsd=xsd1" />

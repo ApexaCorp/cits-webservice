@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-16"?>
-<TXLife_Type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.34.00" xmlns="CITS">
+<TXLife_Type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.35.00" xmlns="CITS">
   <TXLifeRequest xmlns="http://ACORD.org/Standards/Life/2">
     <TransRefGUID>63f933ec-c514-4c6e-9522-273281c12976</TransRefGUID>
     <TransType tc="228">Producer Inquiry</TransType>
