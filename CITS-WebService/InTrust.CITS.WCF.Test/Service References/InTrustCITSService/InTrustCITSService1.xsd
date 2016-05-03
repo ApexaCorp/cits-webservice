@@ -335,11 +335,11 @@
   <xs:complexType name="Producer_Type">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="1" name="PrefLanguage" type="tns:OLI_LU_CLIENTLANGUAGES" />
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="License" type="tns:License_Type" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EOCoverageInfo" type="tns:EOCoverageInfo_Type" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Licence" type="tns:Licence_Type" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="CarrierAppointment" type="tns:CarrierAppointment_Type" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="DesignationInfo" type="tns:DesignationInfo_Type" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="NationApproval" type="tns:NationApproval_Type" />
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="EOCoverageInfo" type="tns:EOCoverageInfo_Type" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="SupervisionLevel" type="tns:SupervisionLevel_Type" />
     </xs:sequence>
     <xs:attribute name="id" type="xs:ID" />
@@ -351,21 +351,24 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
-  <xs:complexType name="License_Type">
+  <xs:complexType name="EOCoverageInfo_Type">
+    <xs:attribute name="HoldingID" type="xs:IDREF" />
+  </xs:complexType>
+  <xs:complexType name="Licence_Type">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="1" name="LicenseNum" type="xs:string" />
-      <xs:element minOccurs="0" maxOccurs="1" name="LicenseState" type="tns:OLI_LU_STATE" />
-      <xs:element minOccurs="0" maxOccurs="1" name="LicenseType" type="tns:OLI_LU_LICENSETYPE" />
+      <xs:element minOccurs="0" maxOccurs="1" name="LicenceNum" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="LicenceState" type="tns:OLI_LU_STATE" />
+      <xs:element minOccurs="0" maxOccurs="1" name="LicenceType" type="tns:OLI_LU_LICENCETYPE" />
       <xs:element minOccurs="0" maxOccurs="1" name="ExpDate" type="xs:date" />
       <xs:element minOccurs="0" maxOccurs="1" name="OriginationDate" type="xs:date" />
-      <xs:element minOccurs="0" maxOccurs="1" name="LicenseInterruptedInd" type="tns:OLI_LU_BOOLEAN" />
-      <xs:element minOccurs="0" maxOccurs="1" name="LicenseInterruptedReason" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="LicenceInterruptedInd" type="tns:OLI_LU_BOOLEAN" />
+      <xs:element minOccurs="0" maxOccurs="1" name="LicenceInterruptedReason" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="NameOnLicence" type="xs:string" />
       <xs:element minOccurs="0" maxOccurs="1" name="LevelDesc" type="xs:string" />
-      <xs:element minOccurs="0" maxOccurs="1" name="NameOnLicense" type="xs:string" />
     </xs:sequence>
     <xs:attribute name="AgencyAffiliationID" type="xs:IDREF" />
   </xs:complexType>
-  <xs:complexType name="OLI_LU_LICENSETYPE">
+  <xs:complexType name="OLI_LU_LICENCETYPE">
     <xs:simpleContent>
       <xs:extension base="xs:string">
         <xs:attribute name="tc" type="xs:nonNegativeInteger" />
@@ -378,18 +381,18 @@
       <xs:element minOccurs="0" maxOccurs="1" name="CompanyProducerIDSource" type="tns:OLI_LU_PRODUCERIDSOURCE" />
       <xs:element minOccurs="0" maxOccurs="1" name="CompanyProducerIDSourceDesc" type="xs:string" />
       <xs:element minOccurs="0" maxOccurs="1" name="EffDate" type="xs:date" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ExpDate" type="xs:date" />
       <xs:element minOccurs="0" maxOccurs="1" name="CarrierApptStatus" type="tns:OLI_LU_PROSTAT" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="DistributionAgreementInfo" type="tns:DistributionAgreementInfo_Type" />
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="RequirementInfo" type="tns:RequirementInfo_Type" />
-      <xs:element minOccurs="0" maxOccurs="1" name="TermDate" type="xs:date" />
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="DistributionLevel" type="tns:DistributionLevel_Type" />
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReferralInfo" type="tns:ReferralInfo_Type" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="ConsolidationInfo" type="tns:ConsolidationInfo_Type" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="DebtInfo" type="tns:DebtInfo_Type" />
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="TransferInfo" type="tns:TransferInfo_Type" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReferralInfo" type="tns:ReferralInfo_Type" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="GovtIDInfo" type="tns:GovtIDInfo_Type" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TransferInfo" type="tns:TransferInfo_Type" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DistributionLevel" type="tns:DistributionLevel_Type" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RequirementInfo" type="tns:RequirementInfo_Type" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="SupervisionLevel" type="tns:SupervisionLevel_Type" />
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="AssocCarrierAppointmentInfo" type="tns:AssocCarrierAppointmentInfo_Type" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AssocCarrierApptInfo" type="tns:AssocCarrierApptInfo_Type" />
     </xs:sequence>
     <xs:attribute name="id" type="xs:ID" />
     <xs:attribute name="PartyID" type="xs:IDREF" />
@@ -423,6 +426,30 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+  <xs:complexType name="ConsolidationInfo_Type">
+    <xs:attribute name="CarrierAppointmentID" type="xs:IDREF" />
+  </xs:complexType>
+  <xs:complexType name="DebtInfo_Type">
+    <xs:attribute name="HoldingID" type="xs:IDREF" />
+  </xs:complexType>
+  <xs:complexType name="ReferralInfo_Type">
+    <xs:attribute name="PartyID" type="xs:IDREF" />
+  </xs:complexType>
+  <xs:complexType name="GovtIDInfo_Type">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="GovtID" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="GovtIDTC" type="tns:OLI_LU_GOVTIDTC" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TransferInfo_Type">
+    <xs:attribute name="CarrierAppointmentID" type="xs:IDREF" />
+  </xs:complexType>
+  <xs:complexType name="DistributionLevel_Type">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="DistributionLevelValue" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute name="PartyID" type="xs:IDREF" />
+  </xs:complexType>
   <xs:complexType name="RequirementInfo_Type">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="1" name="ReqCode" type="tns:OLI_LU_REQCODE" />
@@ -438,30 +465,6 @@
         <xs:attribute name="tc" type="xs:nonNegativeInteger" />
       </xs:extension>
     </xs:simpleContent>
-  </xs:complexType>
-  <xs:complexType name="DistributionLevel_Type">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="1" name="DistributionLevelValue" type="xs:string" />
-    </xs:sequence>
-    <xs:attribute name="PartyID" type="xs:IDREF" />
-  </xs:complexType>
-  <xs:complexType name="ReferralInfo_Type">
-    <xs:attribute name="PartyID" type="xs:IDREF" />
-  </xs:complexType>
-  <xs:complexType name="ConsolidationInfo_Type">
-    <xs:attribute name="CarrierAppointmentID" type="xs:IDREF" />
-  </xs:complexType>
-  <xs:complexType name="DebtInfo_Type">
-    <xs:attribute name="HoldingID" type="xs:IDREF" />
-  </xs:complexType>
-  <xs:complexType name="TransferInfo_Type">
-    <xs:attribute name="CarrierAppointmentID" type="xs:IDREF" />
-  </xs:complexType>
-  <xs:complexType name="GovtIDInfo_Type">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="1" name="GovtID" type="xs:string" />
-      <xs:element minOccurs="0" maxOccurs="1" name="GovtIDTC" type="tns:OLI_LU_GOVTIDTC" />
-    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="SupervisionLevel_Type">
     <xs:sequence>
@@ -480,7 +483,7 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
-  <xs:complexType name="AssocCarrierAppointmentInfo_Type">
+  <xs:complexType name="AssocCarrierApptInfo_Type">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="1" name="CompanyProducerID" type="xs:string" />
       <xs:element minOccurs="0" maxOccurs="1" name="CompanyProducerIDSource" type="tns:OLI_LU_PRODUCERIDSOURCE" />
@@ -493,8 +496,8 @@
   <xs:complexType name="DesignationInfo_Type">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="1" name="DesignationType" type="tns:OLI_LU_DESIGNATIONTYPE" />
-      <xs:element minOccurs="0" maxOccurs="1" name="DesignationYear" type="xs:gYear" />
       <xs:element minOccurs="0" maxOccurs="1" name="DesignationDesc" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DesignationYear" type="xs:gYear" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="OLI_LU_DESIGNATIONTYPE">
@@ -508,9 +511,6 @@
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="1" name="Nation" type="tns:OLI_LU_NATION" />
     </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="EOCoverageInfo_Type">
-    <xs:attribute name="HoldingID" type="xs:IDREF" />
   </xs:complexType>
   <xs:complexType name="EMailAddress_Type">
     <xs:sequence>

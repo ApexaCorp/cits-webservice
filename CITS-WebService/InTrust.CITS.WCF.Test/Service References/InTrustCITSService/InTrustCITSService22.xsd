@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/InTrust.CITS.WCF.DataContracts" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/InTrust.CITS.WCF.DataContracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="NonCITSRequest">
+    <xs:sequence>
+      <xs:element name="id" nillable="true" type="xs:string" />
+      <xs:element name="requestType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NonCITSRequest" nillable="true" type="tns:NonCITSRequest" />
+  <xs:complexType name="NonCITSResponse">
+    <xs:sequence>
+      <xs:element name="items" nillable="true" type="tns:ArrayOfResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NonCITSResponse" nillable="true" type="tns:NonCITSResponse" />
+  <xs:complexType name="ArrayOfResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Result" nillable="true" type="tns:Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfResult" nillable="true" type="tns:ArrayOfResult" />
+  <xs:complexType name="Result">
+    <xs:sequence>
+      <xs:element name="id" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Result" nillable="true" type="tns:Result" />
+</xs:schema>

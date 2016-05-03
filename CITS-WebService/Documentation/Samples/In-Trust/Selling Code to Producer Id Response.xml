@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ProcessNonCITSMessageResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="GenericType">
+  <ProcessNonCITSMessageResult>
+    <items xmlns="http://schemas.datacontract.org/2004/07/InTrust.CITS.WCF.DataContracts">
+      <Result>
+        <id>C7</id>
+      </Result>
+      <Result>
+        <id>C8</id>
+      </Result>
+      <Result>
+        <id>C9</id>
+      </Result>
+      <Result>
+        <id>C11</id>
+      </Result>
+    </items>
+  </ProcessNonCITSMessageResult>
+</ProcessNonCITSMessageResponse>

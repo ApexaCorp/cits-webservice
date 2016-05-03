@@ -105,6 +105,10 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="https://localhost:44301/v1/InTrustCITSService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="https://localhost:44301/v1/InTrustCITSService.svc?xsd=xsd1" namespace="http://ACORD.org/Standards/Life/2" />
+      <xsd:import schemaLocation="https://localhost:44301/v1/InTrustCITSService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://localhost:44301/v1/InTrustCITSService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/CITS" />
+      <xsd:import schemaLocation="https://localhost:44301/v1/InTrustCITSService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="https://localhost:44301/v1/InTrustCITSService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/InTrust.CITS.WCF.DataContracts" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="ICITSService_ProcessMessage_InputMessage">
@@ -113,10 +117,20 @@
   <wsdl:message name="ICITSService_ProcessMessage_OutputMessage">
     <wsdl:part name="parameters" element="tns:ProcessMessageResponse" />
   </wsdl:message>
+  <wsdl:message name="ICITSService_ProcessNonCITSMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessNonCITSMessage" />
+  </wsdl:message>
+  <wsdl:message name="ICITSService_ProcessNonCITSMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessNonCITSMessageResponse" />
+  </wsdl:message>
   <wsdl:portType name="ICITSService">
     <wsdl:operation name="ProcessMessage">
       <wsdl:input wsaw:Action="http://tempuri.org/ICITSService/ProcessMessage" message="tns:ICITSService_ProcessMessage_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICITSService/ProcessMessageResponse" message="tns:ICITSService_ProcessMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessNonCITSMessage">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICITSService/ProcessNonCITSMessage" message="tns:ICITSService_ProcessNonCITSMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICITSService/ProcessNonCITSMessageResponse" message="tns:ICITSService_ProcessNonCITSMessage_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WSHttpBinding_ICITSService" type="tns:ICITSService">
@@ -124,6 +138,15 @@
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="ProcessMessage">
       <soap12:operation soapAction="http://tempuri.org/ICITSService/ProcessMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessNonCITSMessage">
+      <soap12:operation soapAction="http://tempuri.org/ICITSService/ProcessNonCITSMessage" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

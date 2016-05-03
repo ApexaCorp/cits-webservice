@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="https://localhost:44301/v1/InTrustCITSService.svc?xsd=xsd1" namespace="http://ACORD.org/Standards/Life/2" />
+  <xs:import schemaLocation="https://localhost:44301/v1/InTrustCITSService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/InTrust.CITS.WCF.DataContracts" />
   <xs:element name="ProcessMessage">
     <xs:complexType>
       <xs:sequence>
@@ -12,6 +13,20 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q2="http://ACORD.org/Standards/Life/2" minOccurs="0" maxOccurs="1" name="ProcessMessageResult" type="q2:TXLife_Type" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessNonCITSMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/InTrust.CITS.WCF.DataContracts" minOccurs="0" name="request" nillable="true" type="q3:NonCITSRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessNonCITSMessageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/InTrust.CITS.WCF.DataContracts" minOccurs="0" name="ProcessNonCITSMessageResult" nillable="true" type="q4:NonCITSResponse" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

@@ -21,10 +21,18 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessMessage", ReplyAction="http://tempuri.org/ICITSService/ProcessMessageResponse")]
         System.Threading.Tasks.Task<InTrust.CITS.WCF.Test.InTrustCITSService.TXLife_Type> ProcessMessageAsync(InTrust.CITS.WCF.Test.InTrustCITSService.TXLife_Type TXLife);
+        
+        // CODEGEN: Parameter 'ProcessNonCITSMessageResult' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessNonCITSMessage", ReplyAction="http://tempuri.org/ICITSService/ProcessNonCITSMessageResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        InTrust.CITS.WCF.Test.InTrustCITSService.ProcessNonCITSMessageResponse ProcessNonCITSMessage(InTrust.CITS.WCF.Test.InTrustCITSService.ProcessNonCITSMessageRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessNonCITSMessage", ReplyAction="http://tempuri.org/ICITSService/ProcessNonCITSMessageResponse")]
+        System.Threading.Tasks.Task<InTrust.CITS.WCF.Test.InTrustCITSService.ProcessNonCITSMessageResponse> ProcessNonCITSMessageAsync(InTrust.CITS.WCF.Test.InTrustCITSService.ProcessNonCITSMessageRequest request);
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -71,7 +79,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -271,7 +279,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -317,7 +325,117 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/InTrust.CITS.WCF.DataContracts")]
+    public partial class Result : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string idField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public string id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/InTrust.CITS.WCF.DataContracts")]
+    public partial class NonCITSResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private Result[] itemsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true, Order=0)]
+        public Result[] items {
+            get {
+                return this.itemsField;
+            }
+            set {
+                this.itemsField = value;
+                this.RaisePropertyChanged("items");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/InTrust.CITS.WCF.DataContracts")]
+    public partial class NonCITSRequest : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string idField;
+        
+        private string requestTypeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public string id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public string requestType {
+            get {
+                return this.requestTypeField;
+            }
+            set {
+                this.requestTypeField = value;
+                this.RaisePropertyChanged("requestType");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -363,7 +481,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -409,7 +527,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -455,7 +573,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -501,7 +619,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -757,7 +875,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -803,7 +921,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -849,7 +967,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -884,7 +1002,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -958,7 +1076,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1004,7 +1122,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1120,7 +1238,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1236,7 +1354,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1282,7 +1400,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1328,7 +1446,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1374,7 +1492,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1420,7 +1538,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1522,7 +1640,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1624,7 +1742,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1670,7 +1788,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1857,7 +1975,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1903,7 +2021,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1949,7 +2067,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2065,7 +2183,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2111,7 +2229,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2171,7 +2289,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2442,7 +2560,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2488,7 +2606,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2534,7 +2652,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2566,7 +2684,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2612,7 +2730,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2742,7 +2860,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2788,7 +2906,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2834,7 +2952,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3090,7 +3208,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3136,7 +3254,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3182,7 +3300,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3228,7 +3346,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3274,7 +3392,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3362,7 +3480,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3408,7 +3526,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3417,15 +3535,15 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
         
         private OLI_LU_CLIENTLANGUAGES prefLanguageField;
         
-        private License_Type[] licenseField;
+        private EOCoverageInfo_Type[] eOCoverageInfoField;
+        
+        private Licence_Type[] licenceField;
         
         private CarrierAppointment_Type[] carrierAppointmentField;
         
         private DesignationInfo_Type[] designationInfoField;
         
         private NationApproval_Type[] nationApprovalField;
-        
-        private EOCoverageInfo_Type[] eOCoverageInfoField;
         
         private SupervisionLevel_Type[] supervisionLevelField;
         
@@ -3444,19 +3562,31 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("License", Order=1)]
-        public License_Type[] License {
+        [System.Xml.Serialization.XmlElementAttribute("EOCoverageInfo", Order=1)]
+        public EOCoverageInfo_Type[] EOCoverageInfo {
             get {
-                return this.licenseField;
+                return this.eOCoverageInfoField;
             }
             set {
-                this.licenseField = value;
-                this.RaisePropertyChanged("License");
+                this.eOCoverageInfoField = value;
+                this.RaisePropertyChanged("EOCoverageInfo");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("CarrierAppointment", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute("Licence", Order=2)]
+        public Licence_Type[] Licence {
+            get {
+                return this.licenceField;
+            }
+            set {
+                this.licenceField = value;
+                this.RaisePropertyChanged("Licence");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("CarrierAppointment", Order=3)]
         public CarrierAppointment_Type[] CarrierAppointment {
             get {
                 return this.carrierAppointmentField;
@@ -3468,7 +3598,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DesignationInfo", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute("DesignationInfo", Order=4)]
         public DesignationInfo_Type[] DesignationInfo {
             get {
                 return this.designationInfoField;
@@ -3480,7 +3610,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("NationApproval", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute("NationApproval", Order=5)]
         public NationApproval_Type[] NationApproval {
             get {
                 return this.nationApprovalField;
@@ -3488,18 +3618,6 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
             set {
                 this.nationApprovalField = value;
                 this.RaisePropertyChanged("NationApproval");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("EOCoverageInfo", Order=5)]
-        public EOCoverageInfo_Type[] EOCoverageInfo {
-            get {
-                return this.eOCoverageInfoField;
-            }
-            set {
-                this.eOCoverageInfoField = value;
-                this.RaisePropertyChanged("EOCoverageInfo");
             }
         }
         
@@ -3538,7 +3656,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3584,18 +3702,50 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
-    public partial class License_Type : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class EOCoverageInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string licenseNumField;
+        private string holdingIDField;
         
-        private OLI_LU_STATE licenseStateField;
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
+        public string HoldingID {
+            get {
+                return this.holdingIDField;
+            }
+            set {
+                this.holdingIDField = value;
+                this.RaisePropertyChanged("HoldingID");
+            }
+        }
         
-        private OLI_LU_LICENSETYPE licenseTypeField;
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
+    public partial class Licence_Type : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string licenceNumField;
+        
+        private OLI_LU_STATE licenceStateField;
+        
+        private OLI_LU_LICENCETYPE licenceTypeField;
         
         private System.DateTime expDateField;
         
@@ -3605,49 +3755,49 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
         
         private bool originationDateFieldSpecified;
         
-        private OLI_LU_BOOLEAN licenseInterruptedIndField;
+        private OLI_LU_BOOLEAN licenceInterruptedIndField;
         
-        private string licenseInterruptedReasonField;
+        private string licenceInterruptedReasonField;
+        
+        private string nameOnLicenceField;
         
         private string levelDescField;
-        
-        private string nameOnLicenseField;
         
         private string agencyAffiliationIDField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string LicenseNum {
+        public string LicenceNum {
             get {
-                return this.licenseNumField;
+                return this.licenceNumField;
             }
             set {
-                this.licenseNumField = value;
-                this.RaisePropertyChanged("LicenseNum");
+                this.licenceNumField = value;
+                this.RaisePropertyChanged("LicenceNum");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public OLI_LU_STATE LicenseState {
+        public OLI_LU_STATE LicenceState {
             get {
-                return this.licenseStateField;
+                return this.licenceStateField;
             }
             set {
-                this.licenseStateField = value;
-                this.RaisePropertyChanged("LicenseState");
+                this.licenceStateField = value;
+                this.RaisePropertyChanged("LicenceState");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public OLI_LU_LICENSETYPE LicenseType {
+        public OLI_LU_LICENCETYPE LicenceType {
             get {
-                return this.licenseTypeField;
+                return this.licenceTypeField;
             }
             set {
-                this.licenseTypeField = value;
-                this.RaisePropertyChanged("LicenseType");
+                this.licenceTypeField = value;
+                this.RaisePropertyChanged("LicenceType");
             }
         }
         
@@ -3701,30 +3851,42 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=5)]
-        public OLI_LU_BOOLEAN LicenseInterruptedInd {
+        public OLI_LU_BOOLEAN LicenceInterruptedInd {
             get {
-                return this.licenseInterruptedIndField;
+                return this.licenceInterruptedIndField;
             }
             set {
-                this.licenseInterruptedIndField = value;
-                this.RaisePropertyChanged("LicenseInterruptedInd");
+                this.licenceInterruptedIndField = value;
+                this.RaisePropertyChanged("LicenceInterruptedInd");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=6)]
-        public string LicenseInterruptedReason {
+        public string LicenceInterruptedReason {
             get {
-                return this.licenseInterruptedReasonField;
+                return this.licenceInterruptedReasonField;
             }
             set {
-                this.licenseInterruptedReasonField = value;
-                this.RaisePropertyChanged("LicenseInterruptedReason");
+                this.licenceInterruptedReasonField = value;
+                this.RaisePropertyChanged("LicenceInterruptedReason");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public string NameOnLicence {
+            get {
+                return this.nameOnLicenceField;
+            }
+            set {
+                this.nameOnLicenceField = value;
+                this.RaisePropertyChanged("NameOnLicence");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
         public string LevelDesc {
             get {
                 return this.levelDescField;
@@ -3732,18 +3894,6 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
             set {
                 this.levelDescField = value;
                 this.RaisePropertyChanged("LevelDesc");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
-        public string NameOnLicense {
-            get {
-                return this.nameOnLicenseField;
-            }
-            set {
-                this.nameOnLicenseField = value;
-                this.RaisePropertyChanged("NameOnLicense");
             }
         }
         
@@ -3770,12 +3920,12 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
-    public partial class OLI_LU_LICENSETYPE : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class OLI_LU_LICENCETYPE : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string tcField;
         
@@ -3816,7 +3966,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3833,31 +3983,31 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
         
         private bool effDateFieldSpecified;
         
+        private System.DateTime expDateField;
+        
+        private bool expDateFieldSpecified;
+        
         private OLI_LU_PROSTAT carrierApptStatusField;
         
         private DistributionAgreementInfo_Type[] distributionAgreementInfoField;
-        
-        private RequirementInfo_Type[] requirementInfoField;
-        
-        private System.DateTime termDateField;
-        
-        private bool termDateFieldSpecified;
-        
-        private DistributionLevel_Type[] distributionLevelField;
-        
-        private ReferralInfo_Type[] referralInfoField;
         
         private ConsolidationInfo_Type[] consolidationInfoField;
         
         private DebtInfo_Type[] debtInfoField;
         
-        private TransferInfo_Type[] transferInfoField;
+        private ReferralInfo_Type[] referralInfoField;
         
         private GovtIDInfo_Type[] govtIDInfoField;
         
+        private TransferInfo_Type[] transferInfoField;
+        
+        private DistributionLevel_Type[] distributionLevelField;
+        
+        private RequirementInfo_Type[] requirementInfoField;
+        
         private SupervisionLevel_Type[] supervisionLevelField;
         
-        private AssocCarrierAppointmentInfo_Type[] assocCarrierAppointmentInfoField;
+        private AssocCarrierApptInfo_Type[] assocCarrierApptInfoField;
         
         private string idField;
         
@@ -3926,7 +4076,31 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=4)]
+        public System.DateTime ExpDate {
+            get {
+                return this.expDateField;
+            }
+            set {
+                this.expDateField = value;
+                this.RaisePropertyChanged("ExpDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ExpDateSpecified {
+            get {
+                return this.expDateFieldSpecified;
+            }
+            set {
+                this.expDateFieldSpecified = value;
+                this.RaisePropertyChanged("ExpDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         public OLI_LU_PROSTAT CarrierApptStatus {
             get {
                 return this.carrierApptStatusField;
@@ -3938,7 +4112,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DistributionAgreementInfo", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute("DistributionAgreementInfo", Order=6)]
         public DistributionAgreementInfo_Type[] DistributionAgreementInfo {
             get {
                 return this.distributionAgreementInfoField;
@@ -3950,50 +4124,26 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("RequirementInfo", Order=6)]
-        public RequirementInfo_Type[] RequirementInfo {
+        [System.Xml.Serialization.XmlElementAttribute("ConsolidationInfo", Order=7)]
+        public ConsolidationInfo_Type[] ConsolidationInfo {
             get {
-                return this.requirementInfoField;
+                return this.consolidationInfoField;
             }
             set {
-                this.requirementInfoField = value;
-                this.RaisePropertyChanged("RequirementInfo");
+                this.consolidationInfoField = value;
+                this.RaisePropertyChanged("ConsolidationInfo");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=7)]
-        public System.DateTime TermDate {
+        [System.Xml.Serialization.XmlElementAttribute("DebtInfo", Order=8)]
+        public DebtInfo_Type[] DebtInfo {
             get {
-                return this.termDateField;
+                return this.debtInfoField;
             }
             set {
-                this.termDateField = value;
-                this.RaisePropertyChanged("TermDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool TermDateSpecified {
-            get {
-                return this.termDateFieldSpecified;
-            }
-            set {
-                this.termDateFieldSpecified = value;
-                this.RaisePropertyChanged("TermDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DistributionLevel", Order=8)]
-        public DistributionLevel_Type[] DistributionLevel {
-            get {
-                return this.distributionLevelField;
-            }
-            set {
-                this.distributionLevelField = value;
-                this.RaisePropertyChanged("DistributionLevel");
+                this.debtInfoField = value;
+                this.RaisePropertyChanged("DebtInfo");
             }
         }
         
@@ -4010,31 +4160,19 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ConsolidationInfo", Order=10)]
-        public ConsolidationInfo_Type[] ConsolidationInfo {
+        [System.Xml.Serialization.XmlElementAttribute("GovtIDInfo", Order=10)]
+        public GovtIDInfo_Type[] GovtIDInfo {
             get {
-                return this.consolidationInfoField;
+                return this.govtIDInfoField;
             }
             set {
-                this.consolidationInfoField = value;
-                this.RaisePropertyChanged("ConsolidationInfo");
+                this.govtIDInfoField = value;
+                this.RaisePropertyChanged("GovtIDInfo");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DebtInfo", Order=11)]
-        public DebtInfo_Type[] DebtInfo {
-            get {
-                return this.debtInfoField;
-            }
-            set {
-                this.debtInfoField = value;
-                this.RaisePropertyChanged("DebtInfo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("TransferInfo", Order=12)]
+        [System.Xml.Serialization.XmlElementAttribute("TransferInfo", Order=11)]
         public TransferInfo_Type[] TransferInfo {
             get {
                 return this.transferInfoField;
@@ -4046,14 +4184,26 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("GovtIDInfo", Order=13)]
-        public GovtIDInfo_Type[] GovtIDInfo {
+        [System.Xml.Serialization.XmlElementAttribute("DistributionLevel", Order=12)]
+        public DistributionLevel_Type[] DistributionLevel {
             get {
-                return this.govtIDInfoField;
+                return this.distributionLevelField;
             }
             set {
-                this.govtIDInfoField = value;
-                this.RaisePropertyChanged("GovtIDInfo");
+                this.distributionLevelField = value;
+                this.RaisePropertyChanged("DistributionLevel");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("RequirementInfo", Order=13)]
+        public RequirementInfo_Type[] RequirementInfo {
+            get {
+                return this.requirementInfoField;
+            }
+            set {
+                this.requirementInfoField = value;
+                this.RaisePropertyChanged("RequirementInfo");
             }
         }
         
@@ -4070,14 +4220,14 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("AssocCarrierAppointmentInfo", Order=15)]
-        public AssocCarrierAppointmentInfo_Type[] AssocCarrierAppointmentInfo {
+        [System.Xml.Serialization.XmlElementAttribute("AssocCarrierApptInfo", Order=15)]
+        public AssocCarrierApptInfo_Type[] AssocCarrierApptInfo {
             get {
-                return this.assocCarrierAppointmentInfoField;
+                return this.assocCarrierApptInfoField;
             }
             set {
-                this.assocCarrierAppointmentInfoField = value;
-                this.RaisePropertyChanged("AssocCarrierAppointmentInfo");
+                this.assocCarrierApptInfoField = value;
+                this.RaisePropertyChanged("AssocCarrierApptInfo");
             }
         }
         
@@ -4128,7 +4278,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4174,7 +4324,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4220,7 +4370,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4280,7 +4430,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4326,7 +4476,227 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
+    public partial class ConsolidationInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string carrierAppointmentIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
+        public string CarrierAppointmentID {
+            get {
+                return this.carrierAppointmentIDField;
+            }
+            set {
+                this.carrierAppointmentIDField = value;
+                this.RaisePropertyChanged("CarrierAppointmentID");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
+    public partial class DebtInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string holdingIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
+        public string HoldingID {
+            get {
+                return this.holdingIDField;
+            }
+            set {
+                this.holdingIDField = value;
+                this.RaisePropertyChanged("HoldingID");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
+    public partial class ReferralInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string partyIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
+        public string PartyID {
+            get {
+                return this.partyIDField;
+            }
+            set {
+                this.partyIDField = value;
+                this.RaisePropertyChanged("PartyID");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
+    public partial class GovtIDInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string govtIDField;
+        
+        private OLI_LU_GOVTIDTC govtIDTCField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string GovtID {
+            get {
+                return this.govtIDField;
+            }
+            set {
+                this.govtIDField = value;
+                this.RaisePropertyChanged("GovtID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public OLI_LU_GOVTIDTC GovtIDTC {
+            get {
+                return this.govtIDTCField;
+            }
+            set {
+                this.govtIDTCField = value;
+                this.RaisePropertyChanged("GovtIDTC");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
+    public partial class TransferInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string carrierAppointmentIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
+        public string CarrierAppointmentID {
+            get {
+                return this.carrierAppointmentIDField;
+            }
+            set {
+                this.carrierAppointmentIDField = value;
+                this.RaisePropertyChanged("CarrierAppointmentID");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
+    public partial class DistributionLevel_Type : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string distributionLevelValueField;
+        
+        private string partyIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string DistributionLevelValue {
+            get {
+                return this.distributionLevelValueField;
+            }
+            set {
+                this.distributionLevelValueField = value;
+                this.RaisePropertyChanged("DistributionLevelValue");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
+        public string PartyID {
+            get {
+                return this.partyIDField;
+            }
+            set {
+                this.partyIDField = value;
+                this.RaisePropertyChanged("PartyID");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4442,7 +4812,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4488,227 +4858,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
-    public partial class DistributionLevel_Type : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string distributionLevelValueField;
-        
-        private string partyIDField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string DistributionLevelValue {
-            get {
-                return this.distributionLevelValueField;
-            }
-            set {
-                this.distributionLevelValueField = value;
-                this.RaisePropertyChanged("DistributionLevelValue");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
-        public string PartyID {
-            get {
-                return this.partyIDField;
-            }
-            set {
-                this.partyIDField = value;
-                this.RaisePropertyChanged("PartyID");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
-    public partial class ReferralInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string partyIDField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
-        public string PartyID {
-            get {
-                return this.partyIDField;
-            }
-            set {
-                this.partyIDField = value;
-                this.RaisePropertyChanged("PartyID");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
-    public partial class ConsolidationInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string carrierAppointmentIDField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
-        public string CarrierAppointmentID {
-            get {
-                return this.carrierAppointmentIDField;
-            }
-            set {
-                this.carrierAppointmentIDField = value;
-                this.RaisePropertyChanged("CarrierAppointmentID");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
-    public partial class DebtInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string holdingIDField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
-        public string HoldingID {
-            get {
-                return this.holdingIDField;
-            }
-            set {
-                this.holdingIDField = value;
-                this.RaisePropertyChanged("HoldingID");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
-    public partial class TransferInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string carrierAppointmentIDField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
-        public string CarrierAppointmentID {
-            get {
-                return this.carrierAppointmentIDField;
-            }
-            set {
-                this.carrierAppointmentIDField = value;
-                this.RaisePropertyChanged("CarrierAppointmentID");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
-    public partial class GovtIDInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string govtIDField;
-        
-        private OLI_LU_GOVTIDTC govtIDTCField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string GovtID {
-            get {
-                return this.govtIDField;
-            }
-            set {
-                this.govtIDField = value;
-                this.RaisePropertyChanged("GovtID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public OLI_LU_GOVTIDTC GovtIDTC {
-            get {
-                return this.govtIDTCField;
-            }
-            set {
-                this.govtIDTCField = value;
-                this.RaisePropertyChanged("GovtIDTC");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4852,7 +5002,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4898,12 +5048,12 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
-    public partial class AssocCarrierAppointmentInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class AssocCarrierApptInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string companyProducerIDField;
         
@@ -5000,7 +5150,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5009,9 +5159,9 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
         
         private OLI_LU_DESIGNATIONTYPE designationTypeField;
         
-        private string designationYearField;
-        
         private string designationDescField;
+        
+        private string designationYearField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -5026,19 +5176,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="gYear", Order=1)]
-        public string DesignationYear {
-            get {
-                return this.designationYearField;
-            }
-            set {
-                this.designationYearField = value;
-                this.RaisePropertyChanged("DesignationYear");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         public string DesignationDesc {
             get {
                 return this.designationDescField;
@@ -5046,6 +5184,18 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
             set {
                 this.designationDescField = value;
                 this.RaisePropertyChanged("DesignationDesc");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="gYear", Order=2)]
+        public string DesignationYear {
+            get {
+                return this.designationYearField;
+            }
+            set {
+                this.designationYearField = value;
+                this.RaisePropertyChanged("DesignationYear");
             }
         }
         
@@ -5060,7 +5210,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5106,7 +5256,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5138,39 +5288,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
-    public partial class EOCoverageInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string holdingIDField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
-        public string HoldingID {
-            get {
-                return this.holdingIDField;
-            }
-            set {
-                this.holdingIDField = value;
-                this.RaisePropertyChanged("HoldingID");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5202,7 +5320,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5234,7 +5352,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5322,7 +5440,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5368,7 +5486,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5428,7 +5546,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5460,7 +5578,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5492,7 +5610,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5580,7 +5698,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5626,7 +5744,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5756,7 +5874,7 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5801,6 +5919,42 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessNonCITSMessage", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class ProcessNonCITSMessageRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public InTrust.CITS.WCF.Test.InTrustCITSService.NonCITSRequest request;
+        
+        public ProcessNonCITSMessageRequest() {
+        }
+        
+        public ProcessNonCITSMessageRequest(InTrust.CITS.WCF.Test.InTrustCITSService.NonCITSRequest request) {
+            this.request = request;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessNonCITSMessageResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class ProcessNonCITSMessageResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public InTrust.CITS.WCF.Test.InTrustCITSService.NonCITSResponse ProcessNonCITSMessageResult;
+        
+        public ProcessNonCITSMessageResponse() {
+        }
+        
+        public ProcessNonCITSMessageResponse(InTrust.CITS.WCF.Test.InTrustCITSService.NonCITSResponse ProcessNonCITSMessageResult) {
+            this.ProcessNonCITSMessageResult = ProcessNonCITSMessageResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ICITSServiceChannel : InTrust.CITS.WCF.Test.InTrustCITSService.ICITSService, System.ServiceModel.IClientChannel {
     }
@@ -5834,6 +5988,29 @@ namespace InTrust.CITS.WCF.Test.InTrustCITSService {
         
         public System.Threading.Tasks.Task<InTrust.CITS.WCF.Test.InTrustCITSService.TXLife_Type> ProcessMessageAsync(InTrust.CITS.WCF.Test.InTrustCITSService.TXLife_Type TXLife) {
             return base.Channel.ProcessMessageAsync(TXLife);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        InTrust.CITS.WCF.Test.InTrustCITSService.ProcessNonCITSMessageResponse InTrust.CITS.WCF.Test.InTrustCITSService.ICITSService.ProcessNonCITSMessage(InTrust.CITS.WCF.Test.InTrustCITSService.ProcessNonCITSMessageRequest request) {
+            return base.Channel.ProcessNonCITSMessage(request);
+        }
+        
+        public InTrust.CITS.WCF.Test.InTrustCITSService.NonCITSResponse ProcessNonCITSMessage(InTrust.CITS.WCF.Test.InTrustCITSService.NonCITSRequest request) {
+            InTrust.CITS.WCF.Test.InTrustCITSService.ProcessNonCITSMessageRequest inValue = new InTrust.CITS.WCF.Test.InTrustCITSService.ProcessNonCITSMessageRequest();
+            inValue.request = request;
+            InTrust.CITS.WCF.Test.InTrustCITSService.ProcessNonCITSMessageResponse retVal = ((InTrust.CITS.WCF.Test.InTrustCITSService.ICITSService)(this)).ProcessNonCITSMessage(inValue);
+            return retVal.ProcessNonCITSMessageResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<InTrust.CITS.WCF.Test.InTrustCITSService.ProcessNonCITSMessageResponse> InTrust.CITS.WCF.Test.InTrustCITSService.ICITSService.ProcessNonCITSMessageAsync(InTrust.CITS.WCF.Test.InTrustCITSService.ProcessNonCITSMessageRequest request) {
+            return base.Channel.ProcessNonCITSMessageAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<InTrust.CITS.WCF.Test.InTrustCITSService.ProcessNonCITSMessageResponse> ProcessNonCITSMessageAsync(InTrust.CITS.WCF.Test.InTrustCITSService.NonCITSRequest request) {
+            InTrust.CITS.WCF.Test.InTrustCITSService.ProcessNonCITSMessageRequest inValue = new InTrust.CITS.WCF.Test.InTrustCITSService.ProcessNonCITSMessageRequest();
+            inValue.request = request;
+            return ((InTrust.CITS.WCF.Test.InTrustCITSService.ICITSService)(this)).ProcessNonCITSMessageAsync(inValue);
         }
     }
 }

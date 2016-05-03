@@ -113,7 +113,7 @@ namespace InTrust.CITS.WCF.Test
                 {
                     if (LUObjNotValid(govId)) { errors.Add("Appointment GovtIDInfo"); }
                 }
-                foreach (var assocInfo in app.AssocCarrierAppointmentInfo)
+                foreach (var assocInfo in app.AssocCarrierApptInfo)
                 {
                     if (string.IsNullOrWhiteSpace(assocInfo.CompanyProducerID)) { errors.Add("Appointment CompanyProducerID"); }
                     if (LUObjNotValid(assocInfo.CarrierApptStatus)) { errors.Add("Appointment CarrierApptStatus"); }
@@ -534,9 +534,9 @@ namespace InTrust.CITS.WCF.Test
         {
             List<string> errors = new List<string>();
 
-            if (contractor.Producer.License != null)
+            if (contractor.Producer.Licence != null)
             {
-                foreach (var license in contractor.Producer.License)
+                foreach (var license in contractor.Producer.Licence)
                 {
                     if (string.IsNullOrWhiteSpace(license.AgencyAffiliationID)) { errors.Add("contractor license AgencyAffiliationID"); }
                     else
@@ -550,9 +550,9 @@ namespace InTrust.CITS.WCF.Test
                             if (string.IsNullOrWhiteSpace(sponsor.FullName)) { errors.Add("contractor license sponsor Item"); }
                         }
                     }
-                    if (string.IsNullOrWhiteSpace(license.LicenseNum)) { errors.Add("contractor license LicenseNum"); }
-                    if (LUObjNotValid(license.LicenseType)) { errors.Add("contractor license LicenseType"); }
-                    if (LUObjNotValid(license.LicenseState)) { errors.Add("contractor license LicenseState"); }
+                    if (string.IsNullOrWhiteSpace(license.LicenceNum)) { errors.Add("contractor license LicenseNum"); }
+                    if (LUObjNotValid(license.LicenceType)) { errors.Add("contractor license LicenseType"); }
+                    if (LUObjNotValid(license.LicenceState)) { errors.Add("contractor license LicenseState"); }
                     if (string.IsNullOrWhiteSpace(license.LevelDesc)) { errors.Add("contractor license LevelDesc"); }
                 }
             }

@@ -16,101 +16,31 @@ namespace InTrust.CITS.WCF.Test
 		}
 
         /// <summary>
-        /// Returns producer, appointments, and related advisors, by Id.
-        /// </summary>
-        /// <returns></returns>
-        [TestMethod]
-		public async Task RequestFullById()
-		{
-			var client = new CITSServiceClient();
-            client.ClientCredentials.UserName.UserName = "cits.carrier@bluesun.ca";
-            client.ClientCredentials.UserName.Password = "password";
-			var requestMessage = new TXLife_Type() { 
-				Version = "2.35.00",
-				Items = new object[] {
-					new TXLifeRequest_Type() {
-						TransRefGUID = Guid.NewGuid().ToString(),
-						TransType = new OLI_LU_TRANS_TYPE_CODES() { tc = "228", Value = "Producer Inquiry" },
-                        InquiryView = new InquiryView_Type() { InquiryViewCode = "FullProducerWithAppointments" },
-                        OLifE = new OLifE_Type() {
-							Items = new object[] {
-								new Party_Type() {
-									id = "C32",
-								}
-							}
-						},
-					}
-				},
-			};
-
-            // Debug
-            TXLife_Type responseMessage = null;
-            try {
-                responseMessage = await client.ProcessMessageAsync(requestMessage);
-            } catch (Exception)
-            {
-                throw;
-            }
-            
-            // Feed errors
-            var errorList = Validate.GetFeedErrors(responseMessage);
-            if (errorList.Count > 0)
-            {
-                Assert.Fail(Validate.DumpErrors(errorList));
-            }
-
-            /* Serialize */
-            CITSHelper.SerializeMessage(requestMessage);
-			CITSHelper.SerializeMessage(responseMessage);
-		}
-
-        /// <summary>
         /// Returns producer, appointments, and related advisors, by Broker (Selling) Code.
         /// </summary>
         /// <returns></returns>
         [TestMethod]
-		public async Task RequestFullBySellingCode()
-		{
-			var client = new CITSServiceClient();
-			client.ClientCredentials.UserName.UserName = "cits.carrier@bluesun.ca";
-			client.ClientCredentials.UserName.Password = "password";
-			var requestMessage = new TXLife_Type()
-			{
-				Version = "2.35.00",
-				Items = new object[] {
-					new TXLifeRequest_Type() {
-						TransRefGUID = Guid.NewGuid().ToString(),
-						TransType = new OLI_LU_TRANS_TYPE_CODES() { tc = "228", Value = "Producer Inquiry" },
-                        InquiryView = new InquiryView_Type() { InquiryViewCode = "FullProducerWithAppointments" },
-                        OLifE = new OLifE_Type() {
-							Items = new object[] {
-								new Party_Type() {
-									Producer =  new Producer_Type() {
-										CarrierAppointment = new CarrierAppointment_Type[] {
-											new CarrierAppointment_Type() {
-												CompanyProducerID = "2"
-											}
-										}
-									}
-								}
-							}
-						},
-					}
-				},
-			};
-			var responseMessage = await client.ProcessMessageAsync(requestMessage);
+        public async Task RequestContractorIdsBySellingCode()
+        {
+            var client = new InTrustCITSService.CITSServiceClient();
+            client.ClientCredentials.UserName.UserName = "cits.carrier@bluesun.ca";
+            client.ClientCredentials.UserName.Password = "password";
 
-            // Feed errors
-            var errorList = Validate.GetFeedErrors(responseMessage);
-            if (errorList.Count > 0)
+            var request = new NonCITSRequest()
             {
-                Assert.Fail(Validate.DumpErrors(errorList));
-            }
+                requestType = "RequestContractorIdsBySellingCode",
+                id = "SELLING_CODE"
+            };
+
+            var response = await client.ProcessNonCITSMessageAsync(request);
+
+            List<Result> results = new List<Result>(response.ProcessNonCITSMessageResult.items);
+            Assert.IsTrue(results.Find(n => n.id == "Producer_ID") != null);
 
             /* Serialize */
-            CITSHelper.SerializeMessage(requestMessage);
-			CITSHelper.SerializeMessage(responseMessage);
-		}
+            CITSHelper.SerializeMessage(request);
+            CITSHelper.SerializeMessage(response);
+        }
 
         /// <summary>
         /// Returns producer and appointments, without related advisors.
@@ -172,7 +102,7 @@ namespace InTrust.CITS.WCF.Test
                         OLifE = new OLifE_Type() {
                             Items = new object[] {
                                 new Party_Type() {
-                                    id = "C32",
+                                    id = "Producer_ID",
 								}
                             }
                         },
@@ -214,7 +144,7 @@ namespace InTrust.CITS.WCF.Test
                         OLifE = new OLifE_Type() {
                             Items = new object[] {
                                 new Party_Type() {
-                                    id = "C32",
+                                    id = "Producer_ID",
 								}
                             }
                         },
@@ -234,49 +164,6 @@ namespace InTrust.CITS.WCF.Test
             CITSHelper.SerializeMessage(requestMessage);
             CITSHelper.SerializeMessage(responseMessage);
         }
-
-        /// <summary>
-        /// Returns producer and related advisors, without appointments.
-        /// </summary>
-        /// <returns></returns>
-        [TestMethod]
-        public async Task RequestProducerAndRelatedById()
-        {
-            var client = new CITSServiceClient();
-            client.ClientCredentials.UserName.UserName = "cits.carrier@bluesun.ca";
-            client.ClientCredentials.UserName.Password = "password";
-            var requestMessage = new TXLife_Type()
-            {
-                Version = "2.35.00",
-                Items = new object[] {
-                    new TXLifeRequest_Type() {
-                        TransRefGUID = Guid.NewGuid().ToString(),
-                        TransType = new OLI_LU_TRANS_TYPE_CODES() { tc = "228", Value = "Producer Inquiry" },
-                        InquiryView = new InquiryView_Type() { InquiryViewCode = "ProducerAndRelated" },
-                        OLifE = new OLifE_Type() {
-                            Items = new object[] {
-                                new Party_Type() {
-                                    id = "C32",
-								}
-                            }
-                        },
-                    }
-                },
-            };
-            var responseMessage = await client.ProcessMessageAsync(requestMessage);
-
-            // Feed errors
-            var errorList = Validate.GetFeedErrors(responseMessage);
-            if (errorList.Count > 0)
-            {
-                Assert.Fail(Validate.DumpErrors(errorList));
-            }
-
-            /* Serialize */
-            CITSHelper.SerializeMessage(requestMessage);
-            CITSHelper.SerializeMessage(responseMessage);
-        }
-
 
         [TestMethod]
 		public async Task UnauthorizedRequest()

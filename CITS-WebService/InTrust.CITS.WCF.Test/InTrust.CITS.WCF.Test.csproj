@@ -70,6 +70,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Service References\InTrustCITSService\InTrust.CITS.WCF.Test.InTrustCITSService.NonCITSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InTrustCITSService\InTrust.CITS.WCF.Test.InTrustCITSService.ProcessNonCITSMessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\InTrustCITSService\InTrust.CITS.WCF.Test.InTrustCITSService.TXLife_Type.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -94,6 +100,18 @@
     <None Include="Service References\InTrustCITSService\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Service References\InTrustCITSService\InTrustCITSService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InTrustCITSService\InTrustCITSService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InTrustCITSService\InTrustCITSService22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InTrustCITSService\InTrustCITSService23.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\InTrustCITSService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>

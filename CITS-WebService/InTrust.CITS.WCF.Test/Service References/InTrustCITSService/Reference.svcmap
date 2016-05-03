@@ -23,9 +23,13 @@
   </MetadataSources>
   <Metadata>
     <MetadataFile FileName="InTrustCITSService.xsd" MetadataType="Schema" ID="cc797f40-69df-4f1c-b562-1e2c8833cf96" SourceId="1" SourceUrl="https://localhost:44301/v1/InTrustCITSService.svc?xsd=xsd0" />
-    <MetadataFile FileName="InTrustCITSService1.xsd" MetadataType="Schema" ID="86f6fb5a-9fe2-4a11-b870-ecde8b274f36" SourceId="1" SourceUrl="https://localhost:44301/v1/InTrustCITSService.svc?xsd=xsd1" />
+    <MetadataFile FileName="InTrustCITSService2.xsd" MetadataType="Schema" ID="3d12916c-cdb1-4229-90a4-31a47da355cf" SourceId="1" SourceUrl="https://localhost:44301/v1/InTrustCITSService.svc?xsd=xsd3" />
+    <MetadataFile FileName="InTrustCITSService21.xsd" MetadataType="Schema" ID="799ae8b1-c1ef-409b-abf7-04f9368790d5" SourceId="1" SourceUrl="https://localhost:44301/v1/InTrustCITSService.svc?xsd=xsd2" />
     <MetadataFile FileName="InTrustCITSService.disco" MetadataType="Disco" ID="1a977b9c-9e1d-4252-89bc-7ace46603ec4" SourceId="1" SourceUrl="https://localhost:44301/v1/InTrustCITSService.svc?disco" />
+    <MetadataFile FileName="InTrustCITSService22.xsd" MetadataType="Schema" ID="7ffb0e84-97c8-4113-bc4f-38b718340ba8" SourceId="1" SourceUrl="https://localhost:44301/v1/InTrustCITSService.svc?xsd=xsd5" />
+    <MetadataFile FileName="InTrustCITSService23.xsd" MetadataType="Schema" ID="e3cb399d-3c54-45d6-aa08-a380fb44744c" SourceId="1" SourceUrl="https://localhost:44301/v1/InTrustCITSService.svc?xsd=xsd4" />
     <MetadataFile FileName="InTrustCITSService.wsdl" MetadataType="Wsdl" ID="da7567f6-0306-45c5-8999-52cca3100268" SourceId="1" SourceUrl="https://localhost:44301/v1/InTrustCITSService.svc?wsdl" />
+    <MetadataFile FileName="InTrustCITSService1.xsd" MetadataType="Schema" ID="86f6fb5a-9fe2-4a11-b870-ecde8b274f36" SourceId="1" SourceUrl="https://localhost:44301/v1/InTrustCITSService.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
