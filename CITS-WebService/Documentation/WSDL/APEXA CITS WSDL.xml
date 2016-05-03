@@ -1,0 +1,1885 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions name="CITSService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<wsp:Policy wsu:Id="WSHttpBinding_ICITSService_policy">
+		<wsp:ExactlyOne>
+			<wsp:All>
+				<sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+					<wsp:Policy>
+						<sp:TransportToken>
+							<wsp:Policy>
+								<sp:HttpsToken RequireClientCertificate="false"/>
+							</wsp:Policy>
+						</sp:TransportToken>
+						<sp:AlgorithmSuite>
+							<wsp:Policy>
+								<sp:Basic256/>
+							</wsp:Policy>
+						</sp:AlgorithmSuite>
+						<sp:Layout>
+							<wsp:Policy>
+								<sp:Strict/>
+							</wsp:Policy>
+						</sp:Layout>
+						<sp:IncludeTimestamp/>
+					</wsp:Policy>
+				</sp:TransportBinding>
+				<sp:EndorsingSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+					<wsp:Policy>
+						<sp:SecureConversationToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+							<wsp:Policy>
+								<sp:BootstrapPolicy>
+									<wsp:Policy>
+										<sp:SignedParts>
+											<sp:Body/>
+											<sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+											<sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+											<sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+											<sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+											<sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+											<sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+											<sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+										</sp:SignedParts>
+										<sp:EncryptedParts>
+											<sp:Body/>
+										</sp:EncryptedParts>
+										<sp:TransportBinding>
+											<wsp:Policy>
+												<sp:TransportToken>
+													<wsp:Policy>
+														<sp:HttpsToken RequireClientCertificate="false"/>
+													</wsp:Policy>
+												</sp:TransportToken>
+												<sp:AlgorithmSuite>
+													<wsp:Policy>
+														<sp:Basic256/>
+													</wsp:Policy>
+												</sp:AlgorithmSuite>
+												<sp:Layout>
+													<wsp:Policy>
+														<sp:Strict/>
+													</wsp:Policy>
+												</sp:Layout>
+												<sp:IncludeTimestamp/>
+											</wsp:Policy>
+										</sp:TransportBinding>
+										<sp:SignedSupportingTokens>
+											<wsp:Policy>
+												<sp:UsernameToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+													<wsp:Policy>
+														<sp:WssUsernameToken10/>
+													</wsp:Policy>
+												</sp:UsernameToken>
+											</wsp:Policy>
+										</sp:SignedSupportingTokens>
+										<sp:Wss11>
+											<wsp:Policy/>
+										</sp:Wss11>
+										<sp:Trust10>
+											<wsp:Policy>
+												<sp:MustSupportIssuedTokens/>
+												<sp:RequireClientEntropy/>
+												<sp:RequireServerEntropy/>
+											</wsp:Policy>
+										</sp:Trust10>
+									</wsp:Policy>
+								</sp:BootstrapPolicy>
+							</wsp:Policy>
+						</sp:SecureConversationToken>
+					</wsp:Policy>
+				</sp:EndorsingSupportingTokens>
+				<sp:Wss11 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+					<wsp:Policy/>
+				</sp:Wss11>
+				<sp:Trust10 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+					<wsp:Policy>
+						<sp:MustSupportIssuedTokens/>
+						<sp:RequireClientEntropy/>
+						<sp:RequireServerEntropy/>
+					</wsp:Policy>
+				</sp:Trust10>
+				<wsaw:UsingAddressing/>
+			</wsp:All>
+		</wsp:ExactlyOne>
+	</wsp:Policy>
+	<wsdl:types>
+		<xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+			<xs:import namespace="http://ACORD.org/Standards/Life/2"/>
+			<xs:import namespace="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.DataContracts"/>
+			<xs:element name="ProcessMessage">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" maxOccurs="1" name="TXLife" type="q1:TXLife_Type" xmlns:q1="http://ACORD.org/Standards/Life/2"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ProcessMessageResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" maxOccurs="1" name="ProcessMessageResult" type="q2:TXLife_Type" xmlns:q2="http://ACORD.org/Standards/Life/2"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ProcessNonCITSMessage">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="request" nillable="true" type="q3:NonCITSRequest" xmlns:q3="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.DataContracts"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ProcessNonCITSMessageResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="ProcessNonCITSMessageResult" nillable="true" type="q4:NonCITSResponse" xmlns:q4="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.DataContracts"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ProcessFileRequests">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="request" nillable="true" type="q5:FileRequest" xmlns:q5="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.DataContracts"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ProcessFileRequestsResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="ProcessFileRequestsResult" nillable="true" type="q6:FileResponse" xmlns:q6="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.DataContracts"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ProcessContractCode">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="request" nillable="true" type="q7:ContractCodeRequest" xmlns:q7="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.DataContracts"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ProcessContractCodeResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="ProcessContractCodeResult" type="xs:boolean"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+		<xs:schema elementFormDefault="qualified" targetNamespace="http://ACORD.org/Standards/Life/2" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ACORD.org/Standards/Life/2">
+			<xs:complexType name="TXLife_Type">
+				<xs:sequence>
+					<xs:choice minOccurs="0" maxOccurs="unbounded">
+						<xs:element minOccurs="0" maxOccurs="1" name="TXLifeRequest" type="tns:TXLifeRequest_Type"/>
+						<xs:element minOccurs="0" maxOccurs="1" name="TXLifeResponse" type="tns:TXLifeResponse_Type"/>
+					</xs:choice>
+				</xs:sequence>
+				<xs:attribute name="Version" type="xs:string"/>
+			</xs:complexType>
+			<xs:complexType name="TXLifeRequest_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="TransRefGUID" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="TransType" type="tns:OLI_LU_TRANS_TYPE_CODES"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="InquiryLevel" type="tns:INQUIRY_LEVEL_CODES"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="InquiryView" type="tns:InquiryView_Type"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="StartDate" type="xs:date"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="StartTime" type="xs:time"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="EndDate" type="xs:date"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="EndTime" type="xs:time"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="OLifE" type="tns:OLifE_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="OLI_LU_TRANS_TYPE_CODES">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+			<xs:complexType name="INQUIRY_LEVEL_CODES">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+			<xs:complexType name="InquiryView_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="InquiryViewCode" type="xs:string"/>
+				</xs:sequence>
+				<xs:attribute name="id" type="xs:ID"/>
+			</xs:complexType>
+			<xs:complexType name="OLifE_Type">
+				<xs:sequence>
+					<xs:choice minOccurs="0" maxOccurs="unbounded">
+						<xs:element minOccurs="0" maxOccurs="1" name="FormInstance" type="tns:FormInstance_Type"/>
+						<xs:element minOccurs="0" maxOccurs="1" name="Holding" type="tns:Holding_Type"/>
+						<xs:element minOccurs="0" maxOccurs="1" name="Party" type="tns:Party_Type"/>
+						<xs:element minOccurs="0" maxOccurs="1" name="Relation" type="tns:Relation_Type"/>
+					</xs:choice>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="FormInstance_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="RelatedObjectType" type="tns:OLI_LU_OBJECTTYPE"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="FormResponse" type="tns:FormResponse_Type"/>
+				</xs:sequence>
+				<xs:attribute name="id" type="xs:ID"/>
+				<xs:attribute name="RelatedObjectID" type="xs:IDREF"/>
+			</xs:complexType>
+			<xs:complexType name="OLI_LU_OBJECTTYPE">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+			<xs:complexType name="FormResponse_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="QuestionNumber" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="ResponseCode" type="xs:integer"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="ResponseData" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="ResponseText" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="SectionIdentifier" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="Attachment" type="tns:Attachment_Type"/>
+				</xs:sequence>
+				<xs:attribute name="id" type="xs:ID"/>
+			</xs:complexType>
+			<xs:complexType name="Attachment_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="AttachmentBasicType" type="tns:OLI_LU_BASICATTACHMENTTYPE"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="AttachmentData" type="tns:OLI_LU_VARIANT"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="AttachmentType" type="tns:OLI_LU_ATTACHMENTTYPE"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="AttachmentLocation" type="tns:OLI_LU_ATTACHLOCATION"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="FileName" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="SignatureInfo" type="tns:SignatureInfo_Type"/>
+				</xs:sequence>
+				<xs:attribute name="id" type="xs:ID"/>
+			</xs:complexType>
+			<xs:complexType name="OLI_LU_BASICATTACHMENTTYPE">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+			<xs:complexType name="OLI_LU_VARIANT">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+			<xs:complexType name="OLI_LU_ATTACHMENTTYPE">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+			<xs:complexType name="OLI_LU_ATTACHLOCATION">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+			<xs:complexType name="SignatureInfo_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="SignatureDate" type="xs:date"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="SignatureTime" type="xs:time"/>
+				</xs:sequence>
+				<xs:attribute name="SignaturePartyID" type="xs:IDREF"/>
+				<xs:attribute name="DelegatedSignerPartyID" type="xs:IDREF"/>
+			</xs:complexType>
+			<xs:complexType name="Holding_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="HoldingTypeCode" type="tns:OLI_LU_HOLDTYPE"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="Policy" type="tns:Policy_Type"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="Attachment" type="tns:Attachment_Type"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="Loan" type="tns:Loan_Type"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="Banking" type="tns:Banking_Type"/>
+				</xs:sequence>
+				<xs:attribute name="id" type="xs:ID"/>
+			</xs:complexType>
+			<xs:complexType name="OLI_LU_HOLDTYPE">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+			<xs:complexType name="Policy_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="PolNumber" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="CertificateNo" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="ProductType" type="tns:OLI_LU_POLPROD"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="PolicyStatus" type="tns:OLI_LU_POLSTAT"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="PolicyValue" type="xs:decimal"/>
+					<xs:choice minOccurs="1" maxOccurs="1">
+						<xs:element minOccurs="1" maxOccurs="1" name="EffDate" type="xs:date"/>
+						<xs:element minOccurs="0" maxOccurs="1" name="EffPartialDate" type="xs:string"/>
+					</xs:choice>
+					<xs:element minOccurs="0" maxOccurs="1" name="TermDate" type="xs:date"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="RenewalDate" type="xs:date"/>
+				</xs:sequence>
+				<xs:attribute name="CarrierPartyID" type="xs:IDREF"/>
+			</xs:complexType>
+			<xs:complexType name="OLI_LU_POLPROD">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+			<xs:complexType name="OLI_LU_POLSTAT">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+			<xs:complexType name="Loan_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="LoanReason" type="tns:OLI_LU_LOANREASON"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="LoanReasonDesc" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="LoanAmt" type="xs:decimal"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="LoanDefaultDate" type="xs:date"/>
+				</xs:sequence>
+				<xs:attribute name="FinancialInstitutionPartyID" type="xs:IDREF"/>
+			</xs:complexType>
+			<xs:complexType name="OLI_LU_LOANREASON">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+			<xs:complexType name="Banking_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="AccountNumber" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="TransitNumber" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="InstitutionNumber" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Party_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="PartyTypeCode" type="tns:OLI_LU_PARTY"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="FullName" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="GovtID" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="GovtIDTC" type="tns:OLI_LU_GOVTIDTC"/>
+					<xs:choice minOccurs="1" maxOccurs="1">
+						<xs:element minOccurs="0" maxOccurs="1" name="Organization" type="tns:Organization_Type"/>
+						<xs:element minOccurs="0" maxOccurs="1" name="Person" type="tns:Person_Type"/>
+					</xs:choice>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="Address" type="tns:Address_Type"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="Phone" type="tns:Phone_Type"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="Attachment" type="tns:Attachment_Type"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="Producer" type="tns:Producer_Type"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="EMailAddress" type="tns:EMailAddress_Type"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="URL" type="tns:URL_Type"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="PriorName" type="tns:PriorName_Type"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="Risk" type="tns:Risk_Type"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="Employment" type="tns:Employment_Type"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="GovtIDInfo" type="tns:GovtIDInfo_Type"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="RatingAgencyInfo" type="tns:RatingAgencyInfo_Type"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="DesignationInfo" type="tns:DesignationInfo_Type"/>
+				</xs:sequence>
+				<xs:attribute name="id" type="xs:ID"/>
+			</xs:complexType>
+			<xs:complexType name="OLI_LU_PARTY">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+			<xs:complexType name="OLI_LU_GOVTIDTC">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+			<xs:complexType name="Organization_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="OrgForm" type="tns:OLI_LU_ORGFORM"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="OLI_LU_ORGFORM">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+			<xs:complexType name="Person_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="FirstName" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="MiddleName" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="LastName" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="Prefix" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="BirthDate" type="xs:date"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="HighestEducationLevel" type="tns:OLI_LU_EDULEVEL"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="Education" type="tns:Education_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="OLI_LU_EDULEVEL">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+			<xs:complexType name="Education_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="Major" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="ProviderOrSchool" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Address_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="AddressTypeCode" type="tns:OLI_LU_ADTYPE"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="Line1" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="Line2" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="City" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="AddressState" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="AddressStateTC" type="tns:OLI_LU_STATE"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="Zip" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="AddressCountry" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="AddressCountryTC" type="tns:OLI_LU_NATION"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="PrefAddr" type="tns:OLI_LU_BOOLEAN"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="EndDate" type="xs:date"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="StartDate" type="xs:date"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="YearsAtAddress" type="xs:double"/>
+				</xs:sequence>
+				<xs:attribute name="id" type="xs:ID"/>
+			</xs:complexType>
+			<xs:complexType name="OLI_LU_ADTYPE">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+			<xs:complexType name="OLI_LU_STATE">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+			<xs:complexType name="OLI_LU_NATION">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+			<xs:complexType name="OLI_LU_BOOLEAN">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+			<xs:complexType name="Phone_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="PhoneTypeCode" type="tns:OLI_LU_PHONETYPE"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="CountryCode" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="AreaCode" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="DialNumber" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="Ext" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="OLI_LU_PHONETYPE">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+			<xs:complexType name="Producer_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="PrefLanguage" type="tns:OLI_LU_CLIENTLANGUAGES"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="EOCoverageInfo" type="tns:EOCoverageInfo_Type"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="Licence" type="tns:Licence_Type"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="CarrierAppointment" type="tns:CarrierAppointment_Type"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="DesignationInfo" type="tns:DesignationInfo_Type"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="NationApproval" type="tns:NationApproval_Type"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="SupervisionLevel" type="tns:SupervisionLevel_Type"/>
+				</xs:sequence>
+				<xs:attribute name="id" type="xs:ID"/>
+			</xs:complexType>
+			<xs:complexType name="OLI_LU_CLIENTLANGUAGES">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+			<xs:complexType name="EOCoverageInfo_Type">
+				<xs:attribute name="HoldingID" type="xs:IDREF"/>
+			</xs:complexType>
+			<xs:complexType name="Licence_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="LicenceNum" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="LicenceState" type="tns:OLI_LU_STATE"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="LicenceType" type="tns:OLI_LU_LICENCETYPE"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="ExpDate" type="xs:date"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="OriginationDate" type="xs:date"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="LicenceInterruptedInd" type="tns:OLI_LU_BOOLEAN"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="LicenceInterruptedReason" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="NameOnLicence" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="LevelDesc" type="xs:string"/>
+				</xs:sequence>
+				<xs:attribute name="AgencyAffiliationID" type="xs:IDREF"/>
+			</xs:complexType>
+			<xs:complexType name="OLI_LU_LICENCETYPE">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+			<xs:complexType name="CarrierAppointment_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="CompanyProducerID" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="CompanyProducerIDSource" type="tns:OLI_LU_PRODUCERIDSOURCE"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="CompanyProducerIDSourceDesc" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="EffDate" type="xs:date"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="ExpDate" type="xs:date"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="CarrierApptStatus" type="tns:OLI_LU_PROSTAT"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="DistributionAgreementInfo" type="tns:DistributionAgreementInfo_Type"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="ConsolidationInfo" type="tns:ConsolidationInfo_Type"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="DebtInfo" type="tns:DebtInfo_Type"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="ReferralInfo" type="tns:ReferralInfo_Type"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="GovtIDInfo" type="tns:GovtIDInfo_Type"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="TransferInfo" type="tns:TransferInfo_Type"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="DistributionLevel" type="tns:DistributionLevel_Type"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="RequirementInfo" type="tns:RequirementInfo_Type"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="SupervisionLevel" type="tns:SupervisionLevel_Type"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="AssocCarrierApptInfo" type="tns:AssocCarrierApptInfo_Type"/>
+				</xs:sequence>
+				<xs:attribute name="id" type="xs:ID"/>
+				<xs:attribute name="PartyID" type="xs:IDREF"/>
+				<xs:attribute name="AgencyAffiliationID" type="xs:IDREF"/>
+			</xs:complexType>
+			<xs:complexType name="OLI_LU_PRODUCERIDSOURCE">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+			<xs:complexType name="OLI_LU_PROSTAT">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+			<xs:complexType name="DistributionAgreementInfo_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="PaymentForm" type="tns:OLI_LU_PAYMENTFORM"/>
+				</xs:sequence>
+				<xs:attribute name="BankingInfoID" type="xs:IDREF"/>
+				<xs:attribute name="CheckMailingID" type="xs:IDREF"/>
+			</xs:complexType>
+			<xs:complexType name="OLI_LU_PAYMENTFORM">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+			<xs:complexType name="ConsolidationInfo_Type">
+				<xs:attribute name="CarrierAppointmentID" type="xs:IDREF"/>
+			</xs:complexType>
+			<xs:complexType name="DebtInfo_Type">
+				<xs:attribute name="HoldingID" type="xs:IDREF"/>
+			</xs:complexType>
+			<xs:complexType name="ReferralInfo_Type">
+				<xs:attribute name="PartyID" type="xs:IDREF"/>
+			</xs:complexType>
+			<xs:complexType name="GovtIDInfo_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="GovtID" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="GovtIDTC" type="tns:OLI_LU_GOVTIDTC"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="TransferInfo_Type">
+				<xs:attribute name="CarrierAppointmentID" type="xs:IDREF"/>
+			</xs:complexType>
+			<xs:complexType name="DistributionLevel_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="DistributionLevelValue" type="xs:string"/>
+				</xs:sequence>
+				<xs:attribute name="PartyID" type="xs:IDREF"/>
+			</xs:complexType>
+			<xs:complexType name="RequirementInfo_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="ReqCode" type="tns:OLI_LU_REQCODE"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="FulfilledDate" type="xs:date"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="FulfilledTime" type="xs:time"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="Attachment" type="tns:Attachment_Type"/>
+				</xs:sequence>
+				<xs:attribute name="FulfillerPartyID" type="xs:IDREF"/>
+			</xs:complexType>
+			<xs:complexType name="OLI_LU_REQCODE">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+			<xs:complexType name="SupervisionLevel_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="SupervisionLevelTC" type="tns:OLI_LU_SUPERVISIONLEVEL"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="SupervisionLevelDesc" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="EffDate" type="xs:date"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="ExpDate" type="xs:date"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="FollowUpDate" type="xs:date"/>
+				</xs:sequence>
+				<xs:attribute name="IssuingPartyID" type="xs:IDREF"/>
+			</xs:complexType>
+			<xs:complexType name="OLI_LU_SUPERVISIONLEVEL">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+			<xs:complexType name="AssocCarrierApptInfo_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="CompanyProducerID" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="CompanyProducerIDSource" type="tns:OLI_LU_PRODUCERIDSOURCE"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="CompanyProducerIDSourceDesc" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="CarrierApptStatus" type="tns:OLI_LU_PROSTAT"/>
+				</xs:sequence>
+				<xs:attribute name="CarrierAppointmentID" type="xs:IDREF"/>
+				<xs:attribute name="PartyID" type="xs:IDREF"/>
+			</xs:complexType>
+			<xs:complexType name="DesignationInfo_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="DesignationType" type="tns:OLI_LU_DESIGNATIONTYPE"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="DesignationDesc" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="DesignationYear" type="xs:gYear"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="OLI_LU_DESIGNATIONTYPE">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+			<xs:complexType name="NationApproval_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="Nation" type="tns:OLI_LU_NATION"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="EMailAddress_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="AddrLine" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="URL_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="URLAddr" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="PriorName_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="NameType" type="tns:OLI_LU_NAMETYPE"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="FullName" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="FirstName" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="MiddleName" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="LastName" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="OLI_LU_NAMETYPE">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+			<xs:complexType name="Risk_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="DateLastUpdated" type="xs:date"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="CriminalConviction" type="tns:CriminalConviction_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="CriminalConviction_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="CrimeDescription" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Employment_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="EmployerName" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="RatingAgencyInfo_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="RatingSource" type="tns:OLI_LU_RATINGSRC"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="RatingValue" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="RatingDescription" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="EffDate" type="xs:date"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="OLI_LU_RATINGSRC">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+			<xs:complexType name="Relation_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="OriginatingObjectType" type="tns:OLI_LU_OBJECTTYPE"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="RelatedObjectType" type="tns:OLI_LU_OBJECTTYPE"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="RelationRoleCode" type="tns:OLI_LU_REL"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="InterestPercent" type="xs:double"/>
+				</xs:sequence>
+				<xs:attribute name="id" type="xs:ID"/>
+				<xs:attribute name="OriginatingObjectID" type="xs:IDREF"/>
+				<xs:attribute name="RelatedObjectID" type="xs:IDREF"/>
+			</xs:complexType>
+			<xs:complexType name="OLI_LU_REL">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+			<xs:complexType name="TXLifeResponse_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="TransRefGUID" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="TransType" type="tns:OLI_LU_TRANS_TYPE_CODES"/>
+					<xs:element minOccurs="1" maxOccurs="1" name="TransExeDate" type="xs:date"/>
+					<xs:element minOccurs="1" maxOccurs="1" name="TransExeTime" type="xs:time"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="InquiryLevel" type="tns:INQUIRY_LEVEL_CODES"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="InquiryView" type="tns:InquiryView_Type"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="StartDate" type="xs:date"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="StartTime" type="xs:time"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="EndDate" type="xs:date"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="EndTime" type="xs:time"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="TransResult" type="tns:TransResult_Type"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="OLifE" type="tns:OLifE_Type"/>
+				</xs:sequence>
+				<xs:attribute name="PrimaryObjectID" type="xs:IDREF"/>
+			</xs:complexType>
+			<xs:complexType name="TransResult_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="ResultCode" type="tns:RESULT_CODES"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="ResultInfo" type="tns:ResultInfo_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="RESULT_CODES">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+			<xs:complexType name="ResultInfo_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="ResultInfoCode" type="tns:RESULT_INFO_CODES"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="ResultInfoDesc" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="RESULT_INFO_CODES">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+		</xs:schema>
+		<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+			<xs:element name="anyType" nillable="true" type="xs:anyType"/>
+			<xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+			<xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+			<xs:element name="boolean" nillable="true" type="xs:boolean"/>
+			<xs:element name="byte" nillable="true" type="xs:byte"/>
+			<xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+			<xs:element name="decimal" nillable="true" type="xs:decimal"/>
+			<xs:element name="double" nillable="true" type="xs:double"/>
+			<xs:element name="float" nillable="true" type="xs:float"/>
+			<xs:element name="int" nillable="true" type="xs:int"/>
+			<xs:element name="long" nillable="true" type="xs:long"/>
+			<xs:element name="QName" nillable="true" type="xs:QName"/>
+			<xs:element name="short" nillable="true" type="xs:short"/>
+			<xs:element name="string" nillable="true" type="xs:string"/>
+			<xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+			<xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+			<xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+			<xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+			<xs:element name="char" nillable="true" type="tns:char"/>
+			<xs:simpleType name="char">
+				<xs:restriction base="xs:int"/>
+			</xs:simpleType>
+			<xs:element name="duration" nillable="true" type="tns:duration"/>
+			<xs:simpleType name="duration">
+				<xs:restriction base="xs:duration">
+					<xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+					<xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+					<xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:element name="guid" nillable="true" type="tns:guid"/>
+			<xs:simpleType name="guid">
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:attribute name="FactoryType" type="xs:QName"/>
+			<xs:attribute name="Id" type="xs:ID"/>
+			<xs:attribute name="Ref" type="xs:IDREF"/>
+		</xs:schema>
+		<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CITS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/CITS">
+			<xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+			<xs:complexType name="TXLifeRequest_Type">
+				<xs:sequence>
+					<xs:element name="endDateField" type="xs:dateTime"/>
+					<xs:element name="endDateFieldSpecified" type="xs:boolean"/>
+					<xs:element name="endTimeField" type="xs:dateTime"/>
+					<xs:element name="endTimeFieldSpecified" type="xs:boolean"/>
+					<xs:element name="inquiryLevelField" nillable="true" type="tns:INQUIRY_LEVEL_CODES"/>
+					<xs:element name="inquiryViewField" nillable="true" type="tns:InquiryView_Type"/>
+					<xs:element name="oLifEField" nillable="true" type="tns:OLifE_Type"/>
+					<xs:element name="startDateField" type="xs:dateTime"/>
+					<xs:element name="startDateFieldSpecified" type="xs:boolean"/>
+					<xs:element name="startTimeField" type="xs:dateTime"/>
+					<xs:element name="startTimeFieldSpecified" type="xs:boolean"/>
+					<xs:element name="transRefGUIDField" nillable="true" type="xs:string"/>
+					<xs:element name="transTypeField" nillable="true" type="tns:OLI_LU_TRANS_TYPE_CODES"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="TXLifeRequest_Type" nillable="true" type="tns:TXLifeRequest_Type"/>
+			<xs:complexType name="INQUIRY_LEVEL_CODES">
+				<xs:sequence>
+					<xs:element name="tcField" nillable="true" type="xs:string"/>
+					<xs:element name="valueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="INQUIRY_LEVEL_CODES" nillable="true" type="tns:INQUIRY_LEVEL_CODES"/>
+			<xs:complexType name="InquiryView_Type">
+				<xs:sequence>
+					<xs:element name="idField" nillable="true" type="xs:string"/>
+					<xs:element name="inquiryViewCodeField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="InquiryView_Type" nillable="true" type="tns:InquiryView_Type"/>
+			<xs:complexType name="OLifE_Type">
+				<xs:sequence>
+					<xs:element name="itemsField" nillable="true" type="q1:ArrayOfanyType" xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OLifE_Type" nillable="true" type="tns:OLifE_Type"/>
+			<xs:complexType name="OLI_LU_TRANS_TYPE_CODES">
+				<xs:sequence>
+					<xs:element name="tcField" nillable="true" type="xs:string"/>
+					<xs:element name="valueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OLI_LU_TRANS_TYPE_CODES" nillable="true" type="tns:OLI_LU_TRANS_TYPE_CODES"/>
+			<xs:complexType name="TXLifeResponse_Type">
+				<xs:sequence>
+					<xs:element name="endDateField" type="xs:dateTime"/>
+					<xs:element name="endDateFieldSpecified" type="xs:boolean"/>
+					<xs:element name="endTimeField" type="xs:dateTime"/>
+					<xs:element name="endTimeFieldSpecified" type="xs:boolean"/>
+					<xs:element name="inquiryLevelField" nillable="true" type="tns:INQUIRY_LEVEL_CODES"/>
+					<xs:element name="inquiryViewField" nillable="true" type="tns:InquiryView_Type"/>
+					<xs:element name="oLifEField" nillable="true" type="tns:OLifE_Type"/>
+					<xs:element name="primaryObjectIDField" nillable="true" type="xs:string"/>
+					<xs:element name="startDateField" type="xs:dateTime"/>
+					<xs:element name="startDateFieldSpecified" type="xs:boolean"/>
+					<xs:element name="startTimeField" type="xs:dateTime"/>
+					<xs:element name="startTimeFieldSpecified" type="xs:boolean"/>
+					<xs:element name="transExeDateField" type="xs:dateTime"/>
+					<xs:element name="transExeTimeField" type="xs:dateTime"/>
+					<xs:element name="transRefGUIDField" nillable="true" type="xs:string"/>
+					<xs:element name="transResultField" nillable="true" type="tns:TransResult_Type"/>
+					<xs:element name="transTypeField" nillable="true" type="tns:OLI_LU_TRANS_TYPE_CODES"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="TXLifeResponse_Type" nillable="true" type="tns:TXLifeResponse_Type"/>
+			<xs:complexType name="TransResult_Type">
+				<xs:sequence>
+					<xs:element name="resultCodeField" nillable="true" type="tns:RESULT_CODES"/>
+					<xs:element name="resultInfoField" nillable="true" type="tns:ArrayOfResultInfo_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="TransResult_Type" nillable="true" type="tns:TransResult_Type"/>
+			<xs:complexType name="RESULT_CODES">
+				<xs:sequence>
+					<xs:element name="tcField" nillable="true" type="xs:string"/>
+					<xs:element name="valueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="RESULT_CODES" nillable="true" type="tns:RESULT_CODES"/>
+			<xs:complexType name="ArrayOfResultInfo_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="ResultInfo_Type" nillable="true" type="tns:ResultInfo_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfResultInfo_Type" nillable="true" type="tns:ArrayOfResultInfo_Type"/>
+			<xs:complexType name="ResultInfo_Type">
+				<xs:sequence>
+					<xs:element name="resultInfoCodeField" nillable="true" type="tns:RESULT_INFO_CODES"/>
+					<xs:element name="resultInfoDescField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ResultInfo_Type" nillable="true" type="tns:ResultInfo_Type"/>
+			<xs:complexType name="RESULT_INFO_CODES">
+				<xs:sequence>
+					<xs:element name="tcField" nillable="true" type="xs:string"/>
+					<xs:element name="valueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="RESULT_INFO_CODES" nillable="true" type="tns:RESULT_INFO_CODES"/>
+			<xs:complexType name="Holding_Type">
+				<xs:sequence>
+					<xs:element name="attachmentField" nillable="true" type="tns:ArrayOfAttachment_Type"/>
+					<xs:element name="bankingField" nillable="true" type="tns:Banking_Type"/>
+					<xs:element name="holdingTypeCodeField" nillable="true" type="tns:OLI_LU_HOLDTYPE"/>
+					<xs:element name="idField" nillable="true" type="xs:string"/>
+					<xs:element name="loanField" nillable="true" type="tns:ArrayOfLoan_Type"/>
+					<xs:element name="policyField" nillable="true" type="tns:Policy_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="Holding_Type" nillable="true" type="tns:Holding_Type"/>
+			<xs:complexType name="ArrayOfAttachment_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="Attachment_Type" nillable="true" type="tns:Attachment_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfAttachment_Type" nillable="true" type="tns:ArrayOfAttachment_Type"/>
+			<xs:complexType name="Attachment_Type">
+				<xs:sequence>
+					<xs:element name="attachmentBasicTypeField" nillable="true" type="tns:OLI_LU_BASICATTACHMENTTYPE"/>
+					<xs:element name="attachmentDataField" nillable="true" type="tns:OLI_LU_VARIANT"/>
+					<xs:element name="attachmentLocationField" nillable="true" type="tns:OLI_LU_ATTACHLOCATION"/>
+					<xs:element name="attachmentTypeField" nillable="true" type="tns:OLI_LU_ATTACHMENTTYPE"/>
+					<xs:element name="fileNameField" nillable="true" type="xs:string"/>
+					<xs:element name="idField" nillable="true" type="xs:string"/>
+					<xs:element name="signatureInfoField" nillable="true" type="tns:ArrayOfSignatureInfo_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="Attachment_Type" nillable="true" type="tns:Attachment_Type"/>
+			<xs:complexType name="OLI_LU_BASICATTACHMENTTYPE">
+				<xs:sequence>
+					<xs:element name="tcField" nillable="true" type="xs:string"/>
+					<xs:element name="valueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OLI_LU_BASICATTACHMENTTYPE" nillable="true" type="tns:OLI_LU_BASICATTACHMENTTYPE"/>
+			<xs:complexType name="OLI_LU_VARIANT">
+				<xs:sequence>
+					<xs:element name="tcField" nillable="true" type="xs:string"/>
+					<xs:element name="valueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OLI_LU_VARIANT" nillable="true" type="tns:OLI_LU_VARIANT"/>
+			<xs:complexType name="OLI_LU_ATTACHLOCATION">
+				<xs:sequence>
+					<xs:element name="tcField" nillable="true" type="xs:string"/>
+					<xs:element name="valueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OLI_LU_ATTACHLOCATION" nillable="true" type="tns:OLI_LU_ATTACHLOCATION"/>
+			<xs:complexType name="OLI_LU_ATTACHMENTTYPE">
+				<xs:sequence>
+					<xs:element name="tcField" nillable="true" type="xs:string"/>
+					<xs:element name="valueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OLI_LU_ATTACHMENTTYPE" nillable="true" type="tns:OLI_LU_ATTACHMENTTYPE"/>
+			<xs:complexType name="ArrayOfSignatureInfo_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="SignatureInfo_Type" nillable="true" type="tns:SignatureInfo_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfSignatureInfo_Type" nillable="true" type="tns:ArrayOfSignatureInfo_Type"/>
+			<xs:complexType name="SignatureInfo_Type">
+				<xs:sequence>
+					<xs:element name="delegatedSignerPartyIDField" nillable="true" type="xs:string"/>
+					<xs:element name="signatureDateField" type="xs:dateTime"/>
+					<xs:element name="signatureDateFieldSpecified" type="xs:boolean"/>
+					<xs:element name="signaturePartyIDField" nillable="true" type="xs:string"/>
+					<xs:element name="signatureTimeField" type="xs:dateTime"/>
+					<xs:element name="signatureTimeFieldSpecified" type="xs:boolean"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="SignatureInfo_Type" nillable="true" type="tns:SignatureInfo_Type"/>
+			<xs:complexType name="Banking_Type">
+				<xs:sequence>
+					<xs:element name="accountNumberField" nillable="true" type="xs:string"/>
+					<xs:element name="institutionNumberField" nillable="true" type="xs:string"/>
+					<xs:element name="transitNumberField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="Banking_Type" nillable="true" type="tns:Banking_Type"/>
+			<xs:complexType name="OLI_LU_HOLDTYPE">
+				<xs:sequence>
+					<xs:element name="tcField" nillable="true" type="xs:string"/>
+					<xs:element name="valueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OLI_LU_HOLDTYPE" nillable="true" type="tns:OLI_LU_HOLDTYPE"/>
+			<xs:complexType name="ArrayOfLoan_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="Loan_Type" nillable="true" type="tns:Loan_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfLoan_Type" nillable="true" type="tns:ArrayOfLoan_Type"/>
+			<xs:complexType name="Loan_Type">
+				<xs:sequence>
+					<xs:element name="financialInstitutionPartyIDField" nillable="true" type="xs:string"/>
+					<xs:element name="loanAmtField" type="xs:decimal"/>
+					<xs:element name="loanAmtFieldSpecified" type="xs:boolean"/>
+					<xs:element name="loanDefaultDateField" type="xs:dateTime"/>
+					<xs:element name="loanDefaultDateFieldSpecified" type="xs:boolean"/>
+					<xs:element name="loanReasonDescField" nillable="true" type="xs:string"/>
+					<xs:element name="loanReasonField" nillable="true" type="tns:OLI_LU_LOANREASON"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="Loan_Type" nillable="true" type="tns:Loan_Type"/>
+			<xs:complexType name="OLI_LU_LOANREASON">
+				<xs:sequence>
+					<xs:element name="tcField" nillable="true" type="xs:string"/>
+					<xs:element name="valueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OLI_LU_LOANREASON" nillable="true" type="tns:OLI_LU_LOANREASON"/>
+			<xs:complexType name="Policy_Type">
+				<xs:sequence>
+					<xs:element name="carrierPartyIDField" nillable="true" type="xs:string"/>
+					<xs:element name="certificateNoField" nillable="true" type="xs:string"/>
+					<xs:element name="itemField" nillable="true" type="xs:anyType"/>
+					<xs:element name="polNumberField" nillable="true" type="xs:string"/>
+					<xs:element name="policyStatusField" nillable="true" type="tns:OLI_LU_POLSTAT"/>
+					<xs:element name="policyValueField" type="xs:decimal"/>
+					<xs:element name="policyValueFieldSpecified" type="xs:boolean"/>
+					<xs:element name="productTypeField" nillable="true" type="tns:OLI_LU_POLPROD"/>
+					<xs:element name="renewalDateField" type="xs:dateTime"/>
+					<xs:element name="renewalDateFieldSpecified" type="xs:boolean"/>
+					<xs:element name="termDateField" type="xs:dateTime"/>
+					<xs:element name="termDateFieldSpecified" type="xs:boolean"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="Policy_Type" nillable="true" type="tns:Policy_Type"/>
+			<xs:complexType name="OLI_LU_POLSTAT">
+				<xs:sequence>
+					<xs:element name="tcField" nillable="true" type="xs:string"/>
+					<xs:element name="valueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OLI_LU_POLSTAT" nillable="true" type="tns:OLI_LU_POLSTAT"/>
+			<xs:complexType name="OLI_LU_POLPROD">
+				<xs:sequence>
+					<xs:element name="tcField" nillable="true" type="xs:string"/>
+					<xs:element name="valueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OLI_LU_POLPROD" nillable="true" type="tns:OLI_LU_POLPROD"/>
+			<xs:complexType name="Party_Type">
+				<xs:sequence>
+					<xs:element name="addressField" nillable="true" type="tns:ArrayOfAddress_Type"/>
+					<xs:element name="attachmentField" nillable="true" type="tns:ArrayOfAttachment_Type"/>
+					<xs:element name="designationInfoField" nillable="true" type="tns:ArrayOfDesignationInfo_Type"/>
+					<xs:element name="eMailAddressField" nillable="true" type="tns:ArrayOfEMailAddress_Type"/>
+					<xs:element name="employmentField" nillable="true" type="tns:ArrayOfEmployment_Type"/>
+					<xs:element name="fullNameField" nillable="true" type="xs:string"/>
+					<xs:element name="govtIDField" nillable="true" type="xs:string"/>
+					<xs:element name="govtIDInfoField" nillable="true" type="tns:ArrayOfGovtIDInfo_Type"/>
+					<xs:element name="govtIDTCField" nillable="true" type="tns:OLI_LU_GOVTIDTC"/>
+					<xs:element name="idField" nillable="true" type="xs:string"/>
+					<xs:element name="itemField" nillable="true" type="xs:anyType"/>
+					<xs:element name="partyTypeCodeField" nillable="true" type="tns:OLI_LU_PARTY"/>
+					<xs:element name="phoneField" nillable="true" type="tns:ArrayOfPhone_Type"/>
+					<xs:element name="priorNameField" nillable="true" type="tns:ArrayOfPriorName_Type"/>
+					<xs:element name="producerField" nillable="true" type="tns:Producer_Type"/>
+					<xs:element name="ratingAgencyInfoField" nillable="true" type="tns:ArrayOfRatingAgencyInfo_Type"/>
+					<xs:element name="riskField" nillable="true" type="tns:Risk_Type"/>
+					<xs:element name="uRLField" nillable="true" type="tns:ArrayOfURL_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="Party_Type" nillable="true" type="tns:Party_Type"/>
+			<xs:complexType name="ArrayOfAddress_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="Address_Type" nillable="true" type="tns:Address_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfAddress_Type" nillable="true" type="tns:ArrayOfAddress_Type"/>
+			<xs:complexType name="Address_Type">
+				<xs:sequence>
+					<xs:element name="addressCountryField" nillable="true" type="xs:string"/>
+					<xs:element name="addressCountryTCField" nillable="true" type="tns:OLI_LU_NATION"/>
+					<xs:element name="addressStateField" nillable="true" type="xs:string"/>
+					<xs:element name="addressStateTCField" nillable="true" type="tns:OLI_LU_STATE"/>
+					<xs:element name="addressTypeCodeField" nillable="true" type="tns:OLI_LU_ADTYPE"/>
+					<xs:element name="cityField" nillable="true" type="xs:string"/>
+					<xs:element name="endDateField" type="xs:dateTime"/>
+					<xs:element name="endDateFieldSpecified" type="xs:boolean"/>
+					<xs:element name="idField" nillable="true" type="xs:string"/>
+					<xs:element name="line1Field" nillable="true" type="xs:string"/>
+					<xs:element name="line2Field" nillable="true" type="xs:string"/>
+					<xs:element name="prefAddrField" nillable="true" type="tns:OLI_LU_BOOLEAN"/>
+					<xs:element name="startDateField" type="xs:dateTime"/>
+					<xs:element name="startDateFieldSpecified" type="xs:boolean"/>
+					<xs:element name="yearsAtAddressField" type="xs:double"/>
+					<xs:element name="yearsAtAddressFieldSpecified" type="xs:boolean"/>
+					<xs:element name="zipField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="Address_Type" nillable="true" type="tns:Address_Type"/>
+			<xs:complexType name="OLI_LU_NATION">
+				<xs:sequence>
+					<xs:element name="tcField" nillable="true" type="xs:string"/>
+					<xs:element name="valueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OLI_LU_NATION" nillable="true" type="tns:OLI_LU_NATION"/>
+			<xs:complexType name="OLI_LU_STATE">
+				<xs:sequence>
+					<xs:element name="tcField" nillable="true" type="xs:string"/>
+					<xs:element name="valueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OLI_LU_STATE" nillable="true" type="tns:OLI_LU_STATE"/>
+			<xs:complexType name="OLI_LU_ADTYPE">
+				<xs:sequence>
+					<xs:element name="tcField" nillable="true" type="xs:string"/>
+					<xs:element name="valueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OLI_LU_ADTYPE" nillable="true" type="tns:OLI_LU_ADTYPE"/>
+			<xs:complexType name="OLI_LU_BOOLEAN">
+				<xs:sequence>
+					<xs:element name="tcField" nillable="true" type="xs:string"/>
+					<xs:element name="valueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OLI_LU_BOOLEAN" nillable="true" type="tns:OLI_LU_BOOLEAN"/>
+			<xs:complexType name="ArrayOfDesignationInfo_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="DesignationInfo_Type" nillable="true" type="tns:DesignationInfo_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfDesignationInfo_Type" nillable="true" type="tns:ArrayOfDesignationInfo_Type"/>
+			<xs:complexType name="DesignationInfo_Type">
+				<xs:sequence>
+					<xs:element name="designationDescField" nillable="true" type="xs:string"/>
+					<xs:element name="designationTypeField" nillable="true" type="tns:OLI_LU_DESIGNATIONTYPE"/>
+					<xs:element name="designationYearField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="DesignationInfo_Type" nillable="true" type="tns:DesignationInfo_Type"/>
+			<xs:complexType name="OLI_LU_DESIGNATIONTYPE">
+				<xs:sequence>
+					<xs:element name="tcField" nillable="true" type="xs:string"/>
+					<xs:element name="valueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OLI_LU_DESIGNATIONTYPE" nillable="true" type="tns:OLI_LU_DESIGNATIONTYPE"/>
+			<xs:complexType name="ArrayOfEMailAddress_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="EMailAddress_Type" nillable="true" type="tns:EMailAddress_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfEMailAddress_Type" nillable="true" type="tns:ArrayOfEMailAddress_Type"/>
+			<xs:complexType name="EMailAddress_Type">
+				<xs:sequence>
+					<xs:element name="addrLineField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="EMailAddress_Type" nillable="true" type="tns:EMailAddress_Type"/>
+			<xs:complexType name="ArrayOfEmployment_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="Employment_Type" nillable="true" type="tns:Employment_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfEmployment_Type" nillable="true" type="tns:ArrayOfEmployment_Type"/>
+			<xs:complexType name="Employment_Type">
+				<xs:sequence>
+					<xs:element name="employerNameField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="Employment_Type" nillable="true" type="tns:Employment_Type"/>
+			<xs:complexType name="ArrayOfGovtIDInfo_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="GovtIDInfo_Type" nillable="true" type="tns:GovtIDInfo_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfGovtIDInfo_Type" nillable="true" type="tns:ArrayOfGovtIDInfo_Type"/>
+			<xs:complexType name="GovtIDInfo_Type">
+				<xs:sequence>
+					<xs:element name="govtIDField" nillable="true" type="xs:string"/>
+					<xs:element name="govtIDTCField" nillable="true" type="tns:OLI_LU_GOVTIDTC"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="GovtIDInfo_Type" nillable="true" type="tns:GovtIDInfo_Type"/>
+			<xs:complexType name="OLI_LU_GOVTIDTC">
+				<xs:sequence>
+					<xs:element name="tcField" nillable="true" type="xs:string"/>
+					<xs:element name="valueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OLI_LU_GOVTIDTC" nillable="true" type="tns:OLI_LU_GOVTIDTC"/>
+			<xs:complexType name="OLI_LU_PARTY">
+				<xs:sequence>
+					<xs:element name="tcField" nillable="true" type="xs:string"/>
+					<xs:element name="valueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OLI_LU_PARTY" nillable="true" type="tns:OLI_LU_PARTY"/>
+			<xs:complexType name="ArrayOfPhone_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="Phone_Type" nillable="true" type="tns:Phone_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfPhone_Type" nillable="true" type="tns:ArrayOfPhone_Type"/>
+			<xs:complexType name="Phone_Type">
+				<xs:sequence>
+					<xs:element name="areaCodeField" nillable="true" type="xs:string"/>
+					<xs:element name="countryCodeField" nillable="true" type="xs:string"/>
+					<xs:element name="dialNumberField" nillable="true" type="xs:string"/>
+					<xs:element name="extField" nillable="true" type="xs:string"/>
+					<xs:element name="phoneTypeCodeField" nillable="true" type="tns:OLI_LU_PHONETYPE"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="Phone_Type" nillable="true" type="tns:Phone_Type"/>
+			<xs:complexType name="OLI_LU_PHONETYPE">
+				<xs:sequence>
+					<xs:element name="tcField" nillable="true" type="xs:string"/>
+					<xs:element name="valueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OLI_LU_PHONETYPE" nillable="true" type="tns:OLI_LU_PHONETYPE"/>
+			<xs:complexType name="ArrayOfPriorName_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="PriorName_Type" nillable="true" type="tns:PriorName_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfPriorName_Type" nillable="true" type="tns:ArrayOfPriorName_Type"/>
+			<xs:complexType name="PriorName_Type">
+				<xs:sequence>
+					<xs:element name="firstNameField" nillable="true" type="xs:string"/>
+					<xs:element name="fullNameField" nillable="true" type="xs:string"/>
+					<xs:element name="lastNameField" nillable="true" type="xs:string"/>
+					<xs:element name="middleNameField" nillable="true" type="xs:string"/>
+					<xs:element name="nameTypeField" nillable="true" type="tns:OLI_LU_NAMETYPE"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="PriorName_Type" nillable="true" type="tns:PriorName_Type"/>
+			<xs:complexType name="OLI_LU_NAMETYPE">
+				<xs:sequence>
+					<xs:element name="tcField" nillable="true" type="xs:string"/>
+					<xs:element name="valueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OLI_LU_NAMETYPE" nillable="true" type="tns:OLI_LU_NAMETYPE"/>
+			<xs:complexType name="Producer_Type">
+				<xs:sequence>
+					<xs:element name="carrierAppointmentField" nillable="true" type="tns:ArrayOfCarrierAppointment_Type"/>
+					<xs:element name="designationInfoField" nillable="true" type="tns:ArrayOfDesignationInfo_Type"/>
+					<xs:element name="eOCoverageInfoField" nillable="true" type="tns:ArrayOfEOCoverageInfo_Type"/>
+					<xs:element name="idField" nillable="true" type="xs:string"/>
+					<xs:element name="licenceField" nillable="true" type="tns:ArrayOfLicence_Type"/>
+					<xs:element name="nationApprovalField" nillable="true" type="tns:ArrayOfNationApproval_Type"/>
+					<xs:element name="prefLanguageField" nillable="true" type="tns:OLI_LU_CLIENTLANGUAGES"/>
+					<xs:element name="supervisionLevelField" nillable="true" type="tns:ArrayOfSupervisionLevel_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="Producer_Type" nillable="true" type="tns:Producer_Type"/>
+			<xs:complexType name="ArrayOfCarrierAppointment_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="CarrierAppointment_Type" nillable="true" type="tns:CarrierAppointment_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfCarrierAppointment_Type" nillable="true" type="tns:ArrayOfCarrierAppointment_Type"/>
+			<xs:complexType name="CarrierAppointment_Type">
+				<xs:sequence>
+					<xs:element name="agencyAffiliationIDField" nillable="true" type="xs:string"/>
+					<xs:element name="assocCarrierApptInfoField" nillable="true" type="tns:ArrayOfAssocCarrierApptInfo_Type"/>
+					<xs:element name="carrierApptStatusField" nillable="true" type="tns:OLI_LU_PROSTAT"/>
+					<xs:element name="companyProducerIDField" nillable="true" type="xs:string"/>
+					<xs:element name="companyProducerIDSourceDescField" nillable="true" type="xs:string"/>
+					<xs:element name="companyProducerIDSourceField" nillable="true" type="tns:OLI_LU_PRODUCERIDSOURCE"/>
+					<xs:element name="consolidationInfoField" nillable="true" type="tns:ArrayOfConsolidationInfo_Type"/>
+					<xs:element name="debtInfoField" nillable="true" type="tns:ArrayOfDebtInfo_Type"/>
+					<xs:element name="distributionAgreementInfoField" nillable="true" type="tns:ArrayOfDistributionAgreementInfo_Type"/>
+					<xs:element name="distributionLevelField" nillable="true" type="tns:ArrayOfDistributionLevel_Type"/>
+					<xs:element name="effDateField" type="xs:dateTime"/>
+					<xs:element name="effDateFieldSpecified" type="xs:boolean"/>
+					<xs:element name="expDateField" type="xs:dateTime"/>
+					<xs:element name="expDateFieldSpecified" type="xs:boolean"/>
+					<xs:element name="govtIDInfoField" nillable="true" type="tns:ArrayOfGovtIDInfo_Type"/>
+					<xs:element name="idField" nillable="true" type="xs:string"/>
+					<xs:element name="partyIDField" nillable="true" type="xs:string"/>
+					<xs:element name="referralInfoField" nillable="true" type="tns:ArrayOfReferralInfo_Type"/>
+					<xs:element name="requirementInfoField" nillable="true" type="tns:ArrayOfRequirementInfo_Type"/>
+					<xs:element name="supervisionLevelField" nillable="true" type="tns:ArrayOfSupervisionLevel_Type"/>
+					<xs:element name="transferInfoField" nillable="true" type="tns:ArrayOfTransferInfo_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="CarrierAppointment_Type" nillable="true" type="tns:CarrierAppointment_Type"/>
+			<xs:complexType name="ArrayOfAssocCarrierApptInfo_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="AssocCarrierApptInfo_Type" nillable="true" type="tns:AssocCarrierApptInfo_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfAssocCarrierApptInfo_Type" nillable="true" type="tns:ArrayOfAssocCarrierApptInfo_Type"/>
+			<xs:complexType name="AssocCarrierApptInfo_Type">
+				<xs:sequence>
+					<xs:element name="carrierAppointmentIDField" nillable="true" type="xs:string"/>
+					<xs:element name="carrierApptStatusField" nillable="true" type="tns:OLI_LU_PROSTAT"/>
+					<xs:element name="companyProducerIDField" nillable="true" type="xs:string"/>
+					<xs:element name="companyProducerIDSourceDescField" nillable="true" type="xs:string"/>
+					<xs:element name="companyProducerIDSourceField" nillable="true" type="tns:OLI_LU_PRODUCERIDSOURCE"/>
+					<xs:element name="partyIDField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="AssocCarrierApptInfo_Type" nillable="true" type="tns:AssocCarrierApptInfo_Type"/>
+			<xs:complexType name="OLI_LU_PROSTAT">
+				<xs:sequence>
+					<xs:element name="tcField" nillable="true" type="xs:string"/>
+					<xs:element name="valueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OLI_LU_PROSTAT" nillable="true" type="tns:OLI_LU_PROSTAT"/>
+			<xs:complexType name="OLI_LU_PRODUCERIDSOURCE">
+				<xs:sequence>
+					<xs:element name="tcField" nillable="true" type="xs:string"/>
+					<xs:element name="valueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OLI_LU_PRODUCERIDSOURCE" nillable="true" type="tns:OLI_LU_PRODUCERIDSOURCE"/>
+			<xs:complexType name="ArrayOfConsolidationInfo_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="ConsolidationInfo_Type" nillable="true" type="tns:ConsolidationInfo_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfConsolidationInfo_Type" nillable="true" type="tns:ArrayOfConsolidationInfo_Type"/>
+			<xs:complexType name="ConsolidationInfo_Type">
+				<xs:sequence>
+					<xs:element name="carrierAppointmentIDField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ConsolidationInfo_Type" nillable="true" type="tns:ConsolidationInfo_Type"/>
+			<xs:complexType name="ArrayOfDebtInfo_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="DebtInfo_Type" nillable="true" type="tns:DebtInfo_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfDebtInfo_Type" nillable="true" type="tns:ArrayOfDebtInfo_Type"/>
+			<xs:complexType name="DebtInfo_Type">
+				<xs:sequence>
+					<xs:element name="holdingIDField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="DebtInfo_Type" nillable="true" type="tns:DebtInfo_Type"/>
+			<xs:complexType name="ArrayOfDistributionAgreementInfo_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="DistributionAgreementInfo_Type" nillable="true" type="tns:DistributionAgreementInfo_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfDistributionAgreementInfo_Type" nillable="true" type="tns:ArrayOfDistributionAgreementInfo_Type"/>
+			<xs:complexType name="DistributionAgreementInfo_Type">
+				<xs:sequence>
+					<xs:element name="bankingInfoIDField" nillable="true" type="xs:string"/>
+					<xs:element name="checkMailingIDField" nillable="true" type="xs:string"/>
+					<xs:element name="paymentFormField" nillable="true" type="tns:OLI_LU_PAYMENTFORM"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="DistributionAgreementInfo_Type" nillable="true" type="tns:DistributionAgreementInfo_Type"/>
+			<xs:complexType name="OLI_LU_PAYMENTFORM">
+				<xs:sequence>
+					<xs:element name="tcField" nillable="true" type="xs:string"/>
+					<xs:element name="valueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OLI_LU_PAYMENTFORM" nillable="true" type="tns:OLI_LU_PAYMENTFORM"/>
+			<xs:complexType name="ArrayOfDistributionLevel_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="DistributionLevel_Type" nillable="true" type="tns:DistributionLevel_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfDistributionLevel_Type" nillable="true" type="tns:ArrayOfDistributionLevel_Type"/>
+			<xs:complexType name="DistributionLevel_Type">
+				<xs:sequence>
+					<xs:element name="distributionLevelValueField" nillable="true" type="xs:string"/>
+					<xs:element name="partyIDField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="DistributionLevel_Type" nillable="true" type="tns:DistributionLevel_Type"/>
+			<xs:complexType name="ArrayOfReferralInfo_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="ReferralInfo_Type" nillable="true" type="tns:ReferralInfo_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfReferralInfo_Type" nillable="true" type="tns:ArrayOfReferralInfo_Type"/>
+			<xs:complexType name="ReferralInfo_Type">
+				<xs:sequence>
+					<xs:element name="partyIDField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ReferralInfo_Type" nillable="true" type="tns:ReferralInfo_Type"/>
+			<xs:complexType name="ArrayOfRequirementInfo_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="RequirementInfo_Type" nillable="true" type="tns:RequirementInfo_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfRequirementInfo_Type" nillable="true" type="tns:ArrayOfRequirementInfo_Type"/>
+			<xs:complexType name="RequirementInfo_Type">
+				<xs:sequence>
+					<xs:element name="attachmentField" nillable="true" type="tns:ArrayOfAttachment_Type"/>
+					<xs:element name="fulfilledDateField" type="xs:dateTime"/>
+					<xs:element name="fulfilledDateFieldSpecified" type="xs:boolean"/>
+					<xs:element name="fulfilledTimeField" type="xs:dateTime"/>
+					<xs:element name="fulfilledTimeFieldSpecified" type="xs:boolean"/>
+					<xs:element name="fulfillerPartyIDField" nillable="true" type="xs:string"/>
+					<xs:element name="reqCodeField" nillable="true" type="tns:OLI_LU_REQCODE"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="RequirementInfo_Type" nillable="true" type="tns:RequirementInfo_Type"/>
+			<xs:complexType name="OLI_LU_REQCODE">
+				<xs:sequence>
+					<xs:element name="tcField" nillable="true" type="xs:string"/>
+					<xs:element name="valueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OLI_LU_REQCODE" nillable="true" type="tns:OLI_LU_REQCODE"/>
+			<xs:complexType name="ArrayOfSupervisionLevel_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="SupervisionLevel_Type" nillable="true" type="tns:SupervisionLevel_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfSupervisionLevel_Type" nillable="true" type="tns:ArrayOfSupervisionLevel_Type"/>
+			<xs:complexType name="SupervisionLevel_Type">
+				<xs:sequence>
+					<xs:element name="effDateField" type="xs:dateTime"/>
+					<xs:element name="effDateFieldSpecified" type="xs:boolean"/>
+					<xs:element name="expDateField" type="xs:dateTime"/>
+					<xs:element name="expDateFieldSpecified" type="xs:boolean"/>
+					<xs:element name="followUpDateField" type="xs:dateTime"/>
+					<xs:element name="followUpDateFieldSpecified" type="xs:boolean"/>
+					<xs:element name="issuingPartyIDField" nillable="true" type="xs:string"/>
+					<xs:element name="supervisionLevelDescField" nillable="true" type="xs:string"/>
+					<xs:element name="supervisionLevelTCField" nillable="true" type="tns:OLI_LU_SUPERVISIONLEVEL"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="SupervisionLevel_Type" nillable="true" type="tns:SupervisionLevel_Type"/>
+			<xs:complexType name="OLI_LU_SUPERVISIONLEVEL">
+				<xs:sequence>
+					<xs:element name="tcField" nillable="true" type="xs:string"/>
+					<xs:element name="valueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OLI_LU_SUPERVISIONLEVEL" nillable="true" type="tns:OLI_LU_SUPERVISIONLEVEL"/>
+			<xs:complexType name="ArrayOfTransferInfo_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="TransferInfo_Type" nillable="true" type="tns:TransferInfo_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfTransferInfo_Type" nillable="true" type="tns:ArrayOfTransferInfo_Type"/>
+			<xs:complexType name="TransferInfo_Type">
+				<xs:sequence>
+					<xs:element name="carrierAppointmentIDField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="TransferInfo_Type" nillable="true" type="tns:TransferInfo_Type"/>
+			<xs:complexType name="ArrayOfEOCoverageInfo_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="EOCoverageInfo_Type" nillable="true" type="tns:EOCoverageInfo_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfEOCoverageInfo_Type" nillable="true" type="tns:ArrayOfEOCoverageInfo_Type"/>
+			<xs:complexType name="EOCoverageInfo_Type">
+				<xs:sequence>
+					<xs:element name="holdingIDField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="EOCoverageInfo_Type" nillable="true" type="tns:EOCoverageInfo_Type"/>
+			<xs:complexType name="ArrayOfLicence_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="Licence_Type" nillable="true" type="tns:Licence_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfLicence_Type" nillable="true" type="tns:ArrayOfLicence_Type"/>
+			<xs:complexType name="Licence_Type">
+				<xs:sequence>
+					<xs:element name="agencyAffiliationIDField" nillable="true" type="xs:string"/>
+					<xs:element name="expDateField" type="xs:dateTime"/>
+					<xs:element name="expDateFieldSpecified" type="xs:boolean"/>
+					<xs:element name="levelDescField" nillable="true" type="xs:string"/>
+					<xs:element name="licenceInterruptedIndField" nillable="true" type="tns:OLI_LU_BOOLEAN"/>
+					<xs:element name="licenceInterruptedReasonField" nillable="true" type="xs:string"/>
+					<xs:element name="licenceNumField" nillable="true" type="xs:string"/>
+					<xs:element name="licenceStateField" nillable="true" type="tns:OLI_LU_STATE"/>
+					<xs:element name="licenceTypeField" nillable="true" type="tns:OLI_LU_LICENCETYPE"/>
+					<xs:element name="nameOnLicenceField" nillable="true" type="xs:string"/>
+					<xs:element name="originationDateField" type="xs:dateTime"/>
+					<xs:element name="originationDateFieldSpecified" type="xs:boolean"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="Licence_Type" nillable="true" type="tns:Licence_Type"/>
+			<xs:complexType name="OLI_LU_LICENCETYPE">
+				<xs:sequence>
+					<xs:element name="tcField" nillable="true" type="xs:string"/>
+					<xs:element name="valueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OLI_LU_LICENCETYPE" nillable="true" type="tns:OLI_LU_LICENCETYPE"/>
+			<xs:complexType name="ArrayOfNationApproval_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="NationApproval_Type" nillable="true" type="tns:NationApproval_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfNationApproval_Type" nillable="true" type="tns:ArrayOfNationApproval_Type"/>
+			<xs:complexType name="NationApproval_Type">
+				<xs:sequence>
+					<xs:element name="nationField" nillable="true" type="tns:OLI_LU_NATION"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="NationApproval_Type" nillable="true" type="tns:NationApproval_Type"/>
+			<xs:complexType name="OLI_LU_CLIENTLANGUAGES">
+				<xs:sequence>
+					<xs:element name="tcField" nillable="true" type="xs:string"/>
+					<xs:element name="valueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OLI_LU_CLIENTLANGUAGES" nillable="true" type="tns:OLI_LU_CLIENTLANGUAGES"/>
+			<xs:complexType name="ArrayOfRatingAgencyInfo_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="RatingAgencyInfo_Type" nillable="true" type="tns:RatingAgencyInfo_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfRatingAgencyInfo_Type" nillable="true" type="tns:ArrayOfRatingAgencyInfo_Type"/>
+			<xs:complexType name="RatingAgencyInfo_Type">
+				<xs:sequence>
+					<xs:element name="effDateField" type="xs:dateTime"/>
+					<xs:element name="effDateFieldSpecified" type="xs:boolean"/>
+					<xs:element name="ratingDescriptionField" nillable="true" type="xs:string"/>
+					<xs:element name="ratingSourceField" nillable="true" type="tns:OLI_LU_RATINGSRC"/>
+					<xs:element name="ratingValueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="RatingAgencyInfo_Type" nillable="true" type="tns:RatingAgencyInfo_Type"/>
+			<xs:complexType name="OLI_LU_RATINGSRC">
+				<xs:sequence>
+					<xs:element name="tcField" nillable="true" type="xs:string"/>
+					<xs:element name="valueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OLI_LU_RATINGSRC" nillable="true" type="tns:OLI_LU_RATINGSRC"/>
+			<xs:complexType name="Risk_Type">
+				<xs:sequence>
+					<xs:element name="criminalConvictionField" nillable="true" type="tns:ArrayOfCriminalConviction_Type"/>
+					<xs:element name="dateLastUpdatedField" type="xs:dateTime"/>
+					<xs:element name="dateLastUpdatedFieldSpecified" type="xs:boolean"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="Risk_Type" nillable="true" type="tns:Risk_Type"/>
+			<xs:complexType name="ArrayOfCriminalConviction_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="CriminalConviction_Type" nillable="true" type="tns:CriminalConviction_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfCriminalConviction_Type" nillable="true" type="tns:ArrayOfCriminalConviction_Type"/>
+			<xs:complexType name="CriminalConviction_Type">
+				<xs:sequence>
+					<xs:element name="crimeDescriptionField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="CriminalConviction_Type" nillable="true" type="tns:CriminalConviction_Type"/>
+			<xs:complexType name="ArrayOfURL_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="URL_Type" nillable="true" type="tns:URL_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfURL_Type" nillable="true" type="tns:ArrayOfURL_Type"/>
+			<xs:complexType name="URL_Type">
+				<xs:sequence>
+					<xs:element name="uRLAddrField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="URL_Type" nillable="true" type="tns:URL_Type"/>
+			<xs:complexType name="Relation_Type">
+				<xs:sequence>
+					<xs:element name="idField" nillable="true" type="xs:string"/>
+					<xs:element name="interestPercentField" type="xs:double"/>
+					<xs:element name="interestPercentFieldSpecified" type="xs:boolean"/>
+					<xs:element name="originatingObjectIDField" nillable="true" type="xs:string"/>
+					<xs:element name="originatingObjectTypeField" nillable="true" type="tns:OLI_LU_OBJECTTYPE"/>
+					<xs:element name="relatedObjectIDField" nillable="true" type="xs:string"/>
+					<xs:element name="relatedObjectTypeField" nillable="true" type="tns:OLI_LU_OBJECTTYPE"/>
+					<xs:element name="relationRoleCodeField" nillable="true" type="tns:OLI_LU_REL"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="Relation_Type" nillable="true" type="tns:Relation_Type"/>
+			<xs:complexType name="OLI_LU_OBJECTTYPE">
+				<xs:sequence>
+					<xs:element name="tcField" nillable="true" type="xs:string"/>
+					<xs:element name="valueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OLI_LU_OBJECTTYPE" nillable="true" type="tns:OLI_LU_OBJECTTYPE"/>
+			<xs:complexType name="OLI_LU_REL">
+				<xs:sequence>
+					<xs:element name="tcField" nillable="true" type="xs:string"/>
+					<xs:element name="valueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OLI_LU_REL" nillable="true" type="tns:OLI_LU_REL"/>
+			<xs:complexType name="FormInstance_Type">
+				<xs:sequence>
+					<xs:element name="formResponseField" nillable="true" type="tns:ArrayOfFormResponse_Type"/>
+					<xs:element name="idField" nillable="true" type="xs:string"/>
+					<xs:element name="relatedObjectIDField" nillable="true" type="xs:string"/>
+					<xs:element name="relatedObjectTypeField" nillable="true" type="tns:OLI_LU_OBJECTTYPE"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="FormInstance_Type" nillable="true" type="tns:FormInstance_Type"/>
+			<xs:complexType name="ArrayOfFormResponse_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="FormResponse_Type" nillable="true" type="tns:FormResponse_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfFormResponse_Type" nillable="true" type="tns:ArrayOfFormResponse_Type"/>
+			<xs:complexType name="FormResponse_Type">
+				<xs:sequence>
+					<xs:element name="attachmentField" nillable="true" type="tns:ArrayOfAttachment_Type"/>
+					<xs:element name="idField" nillable="true" type="xs:string"/>
+					<xs:element name="questionNumberField" nillable="true" type="xs:string"/>
+					<xs:element name="responseCodeField" nillable="true" type="xs:string"/>
+					<xs:element name="responseDataField" nillable="true" type="xs:string"/>
+					<xs:element name="responseTextField" nillable="true" type="xs:string"/>
+					<xs:element name="sectionIdentifierField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="FormResponse_Type" nillable="true" type="tns:FormResponse_Type"/>
+			<xs:complexType name="Person_Type">
+				<xs:sequence>
+					<xs:element name="birthDateField" type="xs:dateTime"/>
+					<xs:element name="birthDateFieldSpecified" type="xs:boolean"/>
+					<xs:element name="educationField" nillable="true" type="tns:ArrayOfEducation_Type"/>
+					<xs:element name="firstNameField" nillable="true" type="xs:string"/>
+					<xs:element name="highestEducationLevelField" nillable="true" type="tns:OLI_LU_EDULEVEL"/>
+					<xs:element name="lastNameField" nillable="true" type="xs:string"/>
+					<xs:element name="middleNameField" nillable="true" type="xs:string"/>
+					<xs:element name="prefixField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="Person_Type" nillable="true" type="tns:Person_Type"/>
+			<xs:complexType name="ArrayOfEducation_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="Education_Type" nillable="true" type="tns:Education_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfEducation_Type" nillable="true" type="tns:ArrayOfEducation_Type"/>
+			<xs:complexType name="Education_Type">
+				<xs:sequence>
+					<xs:element name="majorField" nillable="true" type="xs:string"/>
+					<xs:element name="providerOrSchoolField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="Education_Type" nillable="true" type="tns:Education_Type"/>
+			<xs:complexType name="OLI_LU_EDULEVEL">
+				<xs:sequence>
+					<xs:element name="tcField" nillable="true" type="xs:string"/>
+					<xs:element name="valueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OLI_LU_EDULEVEL" nillable="true" type="tns:OLI_LU_EDULEVEL"/>
+			<xs:complexType name="Organization_Type">
+				<xs:sequence>
+					<xs:element name="orgFormField" nillable="true" type="tns:OLI_LU_ORGFORM"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="Organization_Type" nillable="true" type="tns:Organization_Type"/>
+			<xs:complexType name="OLI_LU_ORGFORM">
+				<xs:sequence>
+					<xs:element name="tcField" nillable="true" type="xs:string"/>
+					<xs:element name="valueField" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OLI_LU_ORGFORM" nillable="true" type="tns:OLI_LU_ORGFORM"/>
+		</xs:schema>
+		<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+			<xs:complexType name="ArrayOfanyType">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" type="xs:anyType"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfanyType" nillable="true" type="tns:ArrayOfanyType"/>
+		</xs:schema>
+		<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.DataContracts" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.DataContracts">
+			<xs:complexType name="NonCITSRequest">
+				<xs:sequence>
+					<xs:element name="id" nillable="true" type="xs:string"/>
+					<xs:element name="requestType" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="NonCITSRequest" nillable="true" type="tns:NonCITSRequest"/>
+			<xs:complexType name="NonCITSResponse">
+				<xs:sequence>
+					<xs:element name="items" nillable="true" type="tns:ArrayOfResult"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="NonCITSResponse" nillable="true" type="tns:NonCITSResponse"/>
+			<xs:complexType name="ArrayOfResult">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="Result" nillable="true" type="tns:Result"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfResult" nillable="true" type="tns:ArrayOfResult"/>
+			<xs:complexType name="Result">
+				<xs:sequence>
+					<xs:element name="id" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="Result" nillable="true" type="tns:Result"/>
+			<xs:complexType name="FileRequest">
+				<xs:sequence>
+					<xs:element name="items" nillable="true" type="tns:ArrayOfFileURL"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="FileRequest" nillable="true" type="tns:FileRequest"/>
+			<xs:complexType name="ArrayOfFileURL">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="FileURL" nillable="true" type="tns:FileURL"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfFileURL" nillable="true" type="tns:ArrayOfFileURL"/>
+			<xs:complexType name="FileURL">
+				<xs:sequence>
+					<xs:element name="url" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="FileURL" nillable="true" type="tns:FileURL"/>
+			<xs:complexType name="FileResponse">
+				<xs:sequence>
+					<xs:element name="itemsField" nillable="true" type="tns:ArrayOfFile_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="FileResponse" nillable="true" type="tns:FileResponse"/>
+			<xs:complexType name="ArrayOfFile_Type">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="File_Type" nillable="true" type="tns:File_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfFile_Type" nillable="true" type="tns:ArrayOfFile_Type"/>
+			<xs:complexType name="File_Type">
+				<xs:sequence>
+					<xs:element name="byteArray" nillable="true" type="xs:base64Binary"/>
+					<xs:element name="filename" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="File_Type" nillable="true" type="tns:File_Type"/>
+			<xs:complexType name="ContractCodeRequest">
+				<xs:sequence>
+					<xs:element name="action" nillable="true" type="xs:string"/>
+					<xs:element name="carrierAppointmentId" nillable="true" type="xs:string"/>
+					<xs:element name="code" nillable="true" type="xs:string"/>
+					<xs:element name="description" nillable="true" type="xs:string"/>
+					<xs:element name="originalCode" nillable="true" type="xs:string"/>
+					<xs:element name="status" nillable="true" type="xs:string"/>
+					<xs:element name="type" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ContractCodeRequest" nillable="true" type="tns:ContractCodeRequest"/>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="ICITSService_ProcessMessage_InputMessage">
+		<wsdl:part name="parameters" element="tns:ProcessMessage"/>
+	</wsdl:message>
+	<wsdl:message name="ICITSService_ProcessMessage_OutputMessage">
+		<wsdl:part name="parameters" element="tns:ProcessMessageResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ICITSService_ProcessNonCITSMessage_InputMessage">
+		<wsdl:part name="parameters" element="tns:ProcessNonCITSMessage"/>
+	</wsdl:message>
+	<wsdl:message name="ICITSService_ProcessNonCITSMessage_OutputMessage">
+		<wsdl:part name="parameters" element="tns:ProcessNonCITSMessageResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ICITSService_ProcessFileRequests_InputMessage">
+		<wsdl:part name="parameters" element="tns:ProcessFileRequests"/>
+	</wsdl:message>
+	<wsdl:message name="ICITSService_ProcessFileRequests_OutputMessage">
+		<wsdl:part name="parameters" element="tns:ProcessFileRequestsResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ICITSService_ProcessContractCode_InputMessage">
+		<wsdl:part name="parameters" element="tns:ProcessContractCode"/>
+	</wsdl:message>
+	<wsdl:message name="ICITSService_ProcessContractCode_OutputMessage">
+		<wsdl:part name="parameters" element="tns:ProcessContractCodeResponse"/>
+	</wsdl:message>
+	<wsdl:portType name="ICITSService">
+		<wsdl:operation name="ProcessMessage">
+			<wsdl:input wsaw:Action="http://tempuri.org/ICITSService/ProcessMessage" message="tns:ICITSService_ProcessMessage_InputMessage"/>
+			<wsdl:output wsaw:Action="http://tempuri.org/ICITSService/ProcessMessageResponse" message="tns:ICITSService_ProcessMessage_OutputMessage"/>
+		</wsdl:operation>
+		<wsdl:operation name="ProcessNonCITSMessage">
+			<wsdl:input wsaw:Action="http://tempuri.org/ICITSService/ProcessNonCITSMessage" message="tns:ICITSService_ProcessNonCITSMessage_InputMessage"/>
+			<wsdl:output wsaw:Action="http://tempuri.org/ICITSService/ProcessNonCITSMessageResponse" message="tns:ICITSService_ProcessNonCITSMessage_OutputMessage"/>
+		</wsdl:operation>
+		<wsdl:operation name="ProcessFileRequests">
+			<wsdl:input wsaw:Action="http://tempuri.org/ICITSService/ProcessFileRequests" message="tns:ICITSService_ProcessFileRequests_InputMessage"/>
+			<wsdl:output wsaw:Action="http://tempuri.org/ICITSService/ProcessFileRequestsResponse" message="tns:ICITSService_ProcessFileRequests_OutputMessage"/>
+		</wsdl:operation>
+		<wsdl:operation name="ProcessContractCode">
+			<wsdl:input wsaw:Action="http://tempuri.org/ICITSService/ProcessContractCode" message="tns:ICITSService_ProcessContractCode_InputMessage"/>
+			<wsdl:output wsaw:Action="http://tempuri.org/ICITSService/ProcessContractCodeResponse" message="tns:ICITSService_ProcessContractCode_OutputMessage"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="WSHttpBinding_ICITSService" type="tns:ICITSService">
+		<wsp:PolicyReference URI="#WSHttpBinding_ICITSService_policy"/>
+		<soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="ProcessMessage">
+			<soap12:operation soapAction="http://tempuri.org/ICITSService/ProcessMessage" style="document"/>
+			<wsdl:input>
+				<soap12:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ProcessNonCITSMessage">
+			<soap12:operation soapAction="http://tempuri.org/ICITSService/ProcessNonCITSMessage" style="document"/>
+			<wsdl:input>
+				<soap12:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ProcessFileRequests">
+			<soap12:operation soapAction="http://tempuri.org/ICITSService/ProcessFileRequests" style="document"/>
+			<wsdl:input>
+				<soap12:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ProcessContractCode">
+			<soap12:operation soapAction="http://tempuri.org/ICITSService/ProcessContractCode" style="document"/>
+			<wsdl:input>
+				<soap12:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="CITSService">
+		<wsdl:port name="WSHttpBinding_ICITSService" binding="tns:WSHttpBinding_ICITSService">
+			<soap12:address location="https://localhost:44300/v1/CITSService.svc"/>
+			<wsa10:EndpointReference>
+				<wsa10:Address>https://localhost:44300/v1/CITSService.svc</wsa10:Address>
+			</wsa10:EndpointReference>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
