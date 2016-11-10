@@ -12,63 +12,40 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CITSService.ICITSService")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://ACORD.org/Standards/Life/2", ConfigurationName="CITSService.ICITSService")]
     public interface ICITSService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessMessage", ReplyAction="http://tempuri.org/ICITSService/ProcessMessageResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ACORD.org/Standards/Life/2/ICITSService/ProcessMessage", ReplyAction="http://ACORD.org/Standards/Life/2/ICITSService/ProcessMessageResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        Apexa.CITS.WCF.Test.CITSService.TXLife_Type ProcessMessage(Apexa.CITS.WCF.Test.CITSService.TXLife_Type TXLife);
+        Apexa.CITS.WCF.Test.CITSService.ProcessMessageResponse ProcessMessage(Apexa.CITS.WCF.Test.CITSService.ProcessMessageRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessMessage", ReplyAction="http://tempuri.org/ICITSService/ProcessMessageResponse")]
-        System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.TXLife_Type> ProcessMessageAsync(Apexa.CITS.WCF.Test.CITSService.TXLife_Type TXLife);
+        // CODEGEN: Generating message contract since the operation has multiple return values.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ACORD.org/Standards/Life/2/ICITSService/ProcessMessage", ReplyAction="http://ACORD.org/Standards/Life/2/ICITSService/ProcessMessageResponse")]
+        System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessMessageResponse> ProcessMessageAsync(Apexa.CITS.WCF.Test.CITSService.ProcessMessageRequest request);
         
         // CODEGEN: Parameter 'ProcessNonCITSMessageResult' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessNonCITSMessage", ReplyAction="http://tempuri.org/ICITSService/ProcessNonCITSMessageResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ACORD.org/Standards/Life/2/ICITSService/ProcessNonCITSMessage", ReplyAction="http://ACORD.org/Standards/Life/2/ICITSService/ProcessNonCITSMessageResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         Apexa.CITS.WCF.Test.CITSService.ProcessNonCITSMessageResponse ProcessNonCITSMessage(Apexa.CITS.WCF.Test.CITSService.ProcessNonCITSMessageRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessNonCITSMessage", ReplyAction="http://tempuri.org/ICITSService/ProcessNonCITSMessageResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ACORD.org/Standards/Life/2/ICITSService/ProcessNonCITSMessage", ReplyAction="http://ACORD.org/Standards/Life/2/ICITSService/ProcessNonCITSMessageResponse")]
         System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessNonCITSMessageResponse> ProcessNonCITSMessageAsync(Apexa.CITS.WCF.Test.CITSService.ProcessNonCITSMessageRequest request);
         
         // CODEGEN: Parameter 'ProcessFileRequestsResult' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessFileRequests", ReplyAction="http://tempuri.org/ICITSService/ProcessFileRequestsResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ACORD.org/Standards/Life/2/ICITSService/ProcessFileRequests", ReplyAction="http://ACORD.org/Standards/Life/2/ICITSService/ProcessFileRequestsResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         Apexa.CITS.WCF.Test.CITSService.ProcessFileRequestsResponse ProcessFileRequests(Apexa.CITS.WCF.Test.CITSService.ProcessFileRequestsRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessFileRequests", ReplyAction="http://tempuri.org/ICITSService/ProcessFileRequestsResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ACORD.org/Standards/Life/2/ICITSService/ProcessFileRequests", ReplyAction="http://ACORD.org/Standards/Life/2/ICITSService/ProcessFileRequestsResponse")]
         System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessFileRequestsResponse> ProcessFileRequestsAsync(Apexa.CITS.WCF.Test.CITSService.ProcessFileRequestsRequest request);
         
-        // CODEGEN: Parameter 'code' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessContractCode", ReplyAction="http://tempuri.org/ICITSService/ProcessContractCodeResponse")]
+        // CODEGEN: Parameter 'request' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ACORD.org/Standards/Life/2/ICITSService/ProcessContractCode", ReplyAction="http://ACORD.org/Standards/Life/2/ICITSService/ProcessContractCodeResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         Apexa.CITS.WCF.Test.CITSService.ProcessContractCodeResponse ProcessContractCode(Apexa.CITS.WCF.Test.CITSService.ProcessContractCodeRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessContractCode", ReplyAction="http://tempuri.org/ICITSService/ProcessContractCodeResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ACORD.org/Standards/Life/2/ICITSService/ProcessContractCode", ReplyAction="http://ACORD.org/Standards/Life/2/ICITSService/ProcessContractCodeResponse")]
         System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessContractCodeResponse> ProcessContractCodeAsync(Apexa.CITS.WCF.Test.CITSService.ProcessContractCodeRequest request);
-        
-        // CODEGEN: Parameter 'debt' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessDebt", ReplyAction="http://tempuri.org/ICITSService/ProcessDebtResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        Apexa.CITS.WCF.Test.CITSService.ProcessDebtResponse ProcessDebt(Apexa.CITS.WCF.Test.CITSService.ProcessDebtRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessDebt", ReplyAction="http://tempuri.org/ICITSService/ProcessDebtResponse")]
-        System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessDebtResponse> ProcessDebtAsync(Apexa.CITS.WCF.Test.CITSService.ProcessDebtRequest request);
-        
-        // CODEGEN: Parameter 'supervision' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessSupervision", ReplyAction="http://tempuri.org/ICITSService/ProcessSupervisionResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        Apexa.CITS.WCF.Test.CITSService.ProcessSupervisionResponse ProcessSupervision(Apexa.CITS.WCF.Test.CITSService.ProcessSupervisionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessSupervision", ReplyAction="http://tempuri.org/ICITSService/ProcessSupervisionResponse")]
-        System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessSupervisionResponse> ProcessSupervisionAsync(Apexa.CITS.WCF.Test.CITSService.ProcessSupervisionRequest request);
-        
-        // CODEGEN: Parameter 'tag' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessTag", ReplyAction="http://tempuri.org/ICITSService/ProcessTagResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        Apexa.CITS.WCF.Test.CITSService.ProcessTagResponse ProcessTag(Apexa.CITS.WCF.Test.CITSService.ProcessTagRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICITSService/ProcessTag", ReplyAction="http://tempuri.org/ICITSService/ProcessTagResponse")]
-        System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessTagResponse> ProcessTagAsync(Apexa.CITS.WCF.Test.CITSService.ProcessTagRequest request);
     }
     
     /// <remarks/>
@@ -130,6 +107,14 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         private OLI_LU_TRANS_TYPE_CODES transTypeField;
         
+        private System.DateTime transExeDateField;
+        
+        private bool transExeDateFieldSpecified;
+        
+        private System.DateTime transExeTimeField;
+        
+        private bool transExeTimeFieldSpecified;
+        
         private INQUIRY_LEVEL_CODES inquiryLevelField;
         
         private InquiryView_Type inquiryViewField;
@@ -177,7 +162,55 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=2)]
+        public System.DateTime TransExeDate {
+            get {
+                return this.transExeDateField;
+            }
+            set {
+                this.transExeDateField = value;
+                this.RaisePropertyChanged("TransExeDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool TransExeDateSpecified {
+            get {
+                return this.transExeDateFieldSpecified;
+            }
+            set {
+                this.transExeDateFieldSpecified = value;
+                this.RaisePropertyChanged("TransExeDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="time", Order=3)]
+        public System.DateTime TransExeTime {
+            get {
+                return this.transExeTimeField;
+            }
+            set {
+                this.transExeTimeField = value;
+                this.RaisePropertyChanged("TransExeTime");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool TransExeTimeSpecified {
+            get {
+                return this.transExeTimeFieldSpecified;
+            }
+            set {
+                this.transExeTimeFieldSpecified = value;
+                this.RaisePropertyChanged("TransExeTimeSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         public INQUIRY_LEVEL_CODES InquiryLevel {
             get {
                 return this.inquiryLevelField;
@@ -189,7 +222,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         public InquiryView_Type InquiryView {
             get {
                 return this.inquiryViewField;
@@ -201,7 +234,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=6)]
         public System.DateTime StartDate {
             get {
                 return this.startDateField;
@@ -225,7 +258,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="time", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="time", Order=7)]
         public System.DateTime StartTime {
             get {
                 return this.startTimeField;
@@ -249,7 +282,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=8)]
         public System.DateTime EndDate {
             get {
                 return this.endDateField;
@@ -273,7 +306,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="time", Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="time", Order=9)]
         public System.DateTime EndTime {
             get {
                 return this.endTimeField;
@@ -297,7 +330,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
         public OLifE_Type OLifE {
             get {
                 return this.oLifEField;
@@ -369,510 +402,18 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.Inbound")]
-    public partial class Tag : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.DataContracts")]
+    public partial class ContractCodeRequest : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string contractApexaIdField;
+        private string actionField;
         
-        private string entityTypeField;
-        
-        private string valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string ContractApexaId {
-            get {
-                return this.contractApexaIdField;
-            }
-            set {
-                this.contractApexaIdField = value;
-                this.RaisePropertyChanged("ContractApexaId");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string EntityType {
-            get {
-                return this.entityTypeField;
-            }
-            set {
-                this.entityTypeField = value;
-                this.RaisePropertyChanged("EntityType");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
-        public string Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-                this.RaisePropertyChanged("Value");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.Inbound")]
-    public partial class Supervision : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string contractApexaIdField;
-        
-        private System.DateTime effectiveDateField;
-        
-        private bool effectiveDateFieldSpecified;
-        
-        private bool isDeletedField;
-        
-        private bool isDeletedFieldSpecified;
-        
-        private string reasonField;
-        
-        private System.DateTime reminderDateField;
-        
-        private bool reminderDateFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string ContractApexaId {
-            get {
-                return this.contractApexaIdField;
-            }
-            set {
-                this.contractApexaIdField = value;
-                this.RaisePropertyChanged("ContractApexaId");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public System.DateTime EffectiveDate {
-            get {
-                return this.effectiveDateField;
-            }
-            set {
-                this.effectiveDateField = value;
-                this.RaisePropertyChanged("EffectiveDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool EffectiveDateSpecified {
-            get {
-                return this.effectiveDateFieldSpecified;
-            }
-            set {
-                this.effectiveDateFieldSpecified = value;
-                this.RaisePropertyChanged("EffectiveDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public bool IsDeleted {
-            get {
-                return this.isDeletedField;
-            }
-            set {
-                this.isDeletedField = value;
-                this.RaisePropertyChanged("IsDeleted");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool IsDeletedSpecified {
-            get {
-                return this.isDeletedFieldSpecified;
-            }
-            set {
-                this.isDeletedFieldSpecified = value;
-                this.RaisePropertyChanged("IsDeletedSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
-        public string Reason {
-            get {
-                return this.reasonField;
-            }
-            set {
-                this.reasonField = value;
-                this.RaisePropertyChanged("Reason");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public System.DateTime ReminderDate {
-            get {
-                return this.reminderDateField;
-            }
-            set {
-                this.reminderDateField = value;
-                this.RaisePropertyChanged("ReminderDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool ReminderDateSpecified {
-            get {
-                return this.reminderDateFieldSpecified;
-            }
-            set {
-                this.reminderDateFieldSpecified = value;
-                this.RaisePropertyChanged("ReminderDateSpecified");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.Inbound")]
-    public partial class Debt : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private decimal amountField;
-        
-        private bool amountFieldSpecified;
-        
-        private string contractApexaIdField;
-        
-        private string debtApexaIdField;
-        
-        private string descriptionField;
-        
-        private System.DateTime effectiveDateField;
-        
-        private bool effectiveDateFieldSpecified;
-        
-        private bool isPublicField;
-        
-        private bool isPublicFieldSpecified;
-        
-        private decimal lastPaymentAmountField;
-        
-        private bool lastPaymentAmountFieldSpecified;
-        
-        private System.Nullable<System.DateTime> lastPaymentDateField;
-        
-        private bool lastPaymentDateFieldSpecified;
-        
-        private System.Nullable<System.DateTime> publicDateField;
-        
-        private bool publicDateFieldSpecified;
-        
-        private System.DateTime reminderDateField;
-        
-        private bool reminderDateFieldSpecified;
-        
-        private string statusField;
-        
-        private System.DateTime statusDateField;
-        
-        private bool statusDateFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public decimal Amount {
-            get {
-                return this.amountField;
-            }
-            set {
-                this.amountField = value;
-                this.RaisePropertyChanged("Amount");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool AmountSpecified {
-            get {
-                return this.amountFieldSpecified;
-            }
-            set {
-                this.amountFieldSpecified = value;
-                this.RaisePropertyChanged("AmountSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string ContractApexaId {
-            get {
-                return this.contractApexaIdField;
-            }
-            set {
-                this.contractApexaIdField = value;
-                this.RaisePropertyChanged("ContractApexaId");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
-        public string DebtApexaId {
-            get {
-                return this.debtApexaIdField;
-            }
-            set {
-                this.debtApexaIdField = value;
-                this.RaisePropertyChanged("DebtApexaId");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
-        public string Description {
-            get {
-                return this.descriptionField;
-            }
-            set {
-                this.descriptionField = value;
-                this.RaisePropertyChanged("Description");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public System.DateTime EffectiveDate {
-            get {
-                return this.effectiveDateField;
-            }
-            set {
-                this.effectiveDateField = value;
-                this.RaisePropertyChanged("EffectiveDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool EffectiveDateSpecified {
-            get {
-                return this.effectiveDateFieldSpecified;
-            }
-            set {
-                this.effectiveDateFieldSpecified = value;
-                this.RaisePropertyChanged("EffectiveDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
-        public bool IsPublic {
-            get {
-                return this.isPublicField;
-            }
-            set {
-                this.isPublicField = value;
-                this.RaisePropertyChanged("IsPublic");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool IsPublicSpecified {
-            get {
-                return this.isPublicFieldSpecified;
-            }
-            set {
-                this.isPublicFieldSpecified = value;
-                this.RaisePropertyChanged("IsPublicSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
-        public decimal LastPaymentAmount {
-            get {
-                return this.lastPaymentAmountField;
-            }
-            set {
-                this.lastPaymentAmountField = value;
-                this.RaisePropertyChanged("LastPaymentAmount");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool LastPaymentAmountSpecified {
-            get {
-                return this.lastPaymentAmountFieldSpecified;
-            }
-            set {
-                this.lastPaymentAmountFieldSpecified = value;
-                this.RaisePropertyChanged("LastPaymentAmountSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
-        public System.Nullable<System.DateTime> LastPaymentDate {
-            get {
-                return this.lastPaymentDateField;
-            }
-            set {
-                this.lastPaymentDateField = value;
-                this.RaisePropertyChanged("LastPaymentDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool LastPaymentDateSpecified {
-            get {
-                return this.lastPaymentDateFieldSpecified;
-            }
-            set {
-                this.lastPaymentDateFieldSpecified = value;
-                this.RaisePropertyChanged("LastPaymentDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=8)]
-        public System.Nullable<System.DateTime> PublicDate {
-            get {
-                return this.publicDateField;
-            }
-            set {
-                this.publicDateField = value;
-                this.RaisePropertyChanged("PublicDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool PublicDateSpecified {
-            get {
-                return this.publicDateFieldSpecified;
-            }
-            set {
-                this.publicDateFieldSpecified = value;
-                this.RaisePropertyChanged("PublicDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
-        public System.DateTime ReminderDate {
-            get {
-                return this.reminderDateField;
-            }
-            set {
-                this.reminderDateField = value;
-                this.RaisePropertyChanged("ReminderDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool ReminderDateSpecified {
-            get {
-                return this.reminderDateFieldSpecified;
-            }
-            set {
-                this.reminderDateFieldSpecified = value;
-                this.RaisePropertyChanged("ReminderDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=10)]
-        public string Status {
-            get {
-                return this.statusField;
-            }
-            set {
-                this.statusField = value;
-                this.RaisePropertyChanged("Status");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
-        public System.DateTime StatusDate {
-            get {
-                return this.statusDateField;
-            }
-            set {
-                this.statusDateField = value;
-                this.RaisePropertyChanged("StatusDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool StatusDateSpecified {
-            get {
-                return this.statusDateFieldSpecified;
-            }
-            set {
-                this.statusDateFieldSpecified = value;
-                this.RaisePropertyChanged("StatusDateSpecified");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.Inbound")]
-    public partial class ContractCode : object, System.ComponentModel.INotifyPropertyChanged {
+        private string carrierAppointmentIdField;
         
         private string codeField;
         
-        private string contractApexaIdField;
-        
         private string descriptionField;
         
-        private bool isDeletedField;
-        
-        private bool isDeletedFieldSpecified;
-        
-        private bool notApplicableField;
-        
-        private bool notApplicableFieldSpecified;
+        private string originalCodeField;
         
         private string statusField;
         
@@ -880,109 +421,85 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string Code {
+        public string action {
             get {
-                return this.codeField;
+                return this.actionField;
             }
             set {
-                this.codeField = value;
-                this.RaisePropertyChanged("Code");
+                this.actionField = value;
+                this.RaisePropertyChanged("action");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string ContractApexaId {
+        public string carrierAppointmentId {
             get {
-                return this.contractApexaIdField;
+                return this.carrierAppointmentIdField;
             }
             set {
-                this.contractApexaIdField = value;
-                this.RaisePropertyChanged("ContractApexaId");
+                this.carrierAppointmentIdField = value;
+                this.RaisePropertyChanged("carrierAppointmentId");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
-        public string Description {
+        public string code {
+            get {
+                return this.codeField;
+            }
+            set {
+                this.codeField = value;
+                this.RaisePropertyChanged("code");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
+        public string description {
             get {
                 return this.descriptionField;
             }
             set {
                 this.descriptionField = value;
-                this.RaisePropertyChanged("Description");
+                this.RaisePropertyChanged("description");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public bool IsDeleted {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
+        public string originalCode {
             get {
-                return this.isDeletedField;
+                return this.originalCodeField;
             }
             set {
-                this.isDeletedField = value;
-                this.RaisePropertyChanged("IsDeleted");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool IsDeletedSpecified {
-            get {
-                return this.isDeletedFieldSpecified;
-            }
-            set {
-                this.isDeletedFieldSpecified = value;
-                this.RaisePropertyChanged("IsDeletedSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public bool NotApplicable {
-            get {
-                return this.notApplicableField;
-            }
-            set {
-                this.notApplicableField = value;
-                this.RaisePropertyChanged("NotApplicable");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool NotApplicableSpecified {
-            get {
-                return this.notApplicableFieldSpecified;
-            }
-            set {
-                this.notApplicableFieldSpecified = value;
-                this.RaisePropertyChanged("NotApplicableSpecified");
+                this.originalCodeField = value;
+                this.RaisePropertyChanged("originalCode");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
-        public string Status {
+        public string status {
             get {
                 return this.statusField;
             }
             set {
                 this.statusField = value;
-                this.RaisePropertyChanged("Status");
+                this.RaisePropertyChanged("status");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
-        public string Type {
+        public string type {
             get {
                 return this.typeField;
             }
             set {
                 this.typeField = value;
-                this.RaisePropertyChanged("Type");
+                this.RaisePropertyChanged("type");
             }
         }
         
@@ -1823,6 +1340,8 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
     public partial class FormInstance_Type : object, System.ComponentModel.INotifyPropertyChanged {
         
+        private string formNameField;
+        
         private OLI_LU_OBJECTTYPE relatedObjectTypeField;
         
         private FormResponse_Type[] formResponseField;
@@ -1833,6 +1352,18 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string FormName {
+            get {
+                return this.formNameField;
+            }
+            set {
+                this.formNameField = value;
+                this.RaisePropertyChanged("FormName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         public OLI_LU_OBJECTTYPE RelatedObjectType {
             get {
                 return this.relatedObjectTypeField;
@@ -1844,7 +1375,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("FormResponse", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute("FormResponse", Order=2)]
         public FormResponse_Type[] FormResponse {
             get {
                 return this.formResponseField;
@@ -1951,10 +1482,6 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         private string responseTextField;
         
-        private string sectionIdentifierField;
-        
-        private Attachment_Type[] attachmentField;
-        
         private string idField;
         
         /// <remarks/>
@@ -2006,19 +1533,87 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public string SectionIdentifier {
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="ID")]
+        public string id {
             get {
-                return this.sectionIdentifierField;
+                return this.idField;
             }
             set {
-                this.sectionIdentifierField = value;
-                this.RaisePropertyChanged("SectionIdentifier");
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
+    public partial class Holding_Type : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private PERSISTKEY holdingKeyField;
+        
+        private OLI_LU_HOLDTYPE holdingTypeCodeField;
+        
+        private Policy_Type policyField;
+        
+        private Attachment_Type[] attachmentField;
+        
+        private Loan_Type[] loanField;
+        
+        private Banking_Type bankingField;
+        
+        private string idField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public PERSISTKEY HoldingKey {
+            get {
+                return this.holdingKeyField;
+            }
+            set {
+                this.holdingKeyField = value;
+                this.RaisePropertyChanged("HoldingKey");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Attachment", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public OLI_LU_HOLDTYPE HoldingTypeCode {
+            get {
+                return this.holdingTypeCodeField;
+            }
+            set {
+                this.holdingTypeCodeField = value;
+                this.RaisePropertyChanged("HoldingTypeCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public Policy_Type Policy {
+            get {
+                return this.policyField;
+            }
+            set {
+                this.policyField = value;
+                this.RaisePropertyChanged("Policy");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Attachment", Order=3)]
         public Attachment_Type[] Attachment {
             get {
                 return this.attachmentField;
@@ -2026,6 +1621,30 @@ namespace Apexa.CITS.WCF.Test.CITSService {
             set {
                 this.attachmentField = value;
                 this.RaisePropertyChanged("Attachment");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Loan", Order=4)]
+        public Loan_Type[] Loan {
+            get {
+                return this.loanField;
+            }
+            set {
+                this.loanField = value;
+                this.RaisePropertyChanged("Loan");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public Banking_Type Banking {
+            get {
+                return this.bankingField;
+            }
+            set {
+                this.bankingField = value;
+                this.RaisePropertyChanged("Banking");
             }
         }
         
@@ -2038,6 +1657,418 @@ namespace Apexa.CITS.WCF.Test.CITSService {
             set {
                 this.idField = value;
                 this.RaisePropertyChanged("id");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
+    public partial class PERSISTKEY : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string persistField;
+        
+        private string systemCodeField;
+        
+        private string vendorCodeField;
+        
+        private string valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="NMTOKEN")]
+        public string Persist {
+            get {
+                return this.persistField;
+            }
+            set {
+                this.persistField = value;
+                this.RaisePropertyChanged("Persist");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string SystemCode {
+            get {
+                return this.systemCodeField;
+            }
+            set {
+                this.systemCodeField = value;
+                this.RaisePropertyChanged("SystemCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string VendorCode {
+            get {
+                return this.vendorCodeField;
+            }
+            set {
+                this.vendorCodeField = value;
+                this.RaisePropertyChanged("VendorCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+                this.RaisePropertyChanged("Value");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
+    public partial class OLI_LU_HOLDTYPE : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string tcField;
+        
+        private string valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="nonNegativeInteger")]
+        public string tc {
+            get {
+                return this.tcField;
+            }
+            set {
+                this.tcField = value;
+                this.RaisePropertyChanged("tc");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+                this.RaisePropertyChanged("Value");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
+    public partial class Policy_Type : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string polNumberField;
+        
+        private string certificateNoField;
+        
+        private OLI_LU_POLPROD productTypeField;
+        
+        private OLI_LU_POLSTAT policyStatusField;
+        
+        private decimal policyValueField;
+        
+        private bool policyValueFieldSpecified;
+        
+        private System.DateTime effDateField;
+        
+        private bool effDateFieldSpecified;
+        
+        private System.DateTime termDateField;
+        
+        private bool termDateFieldSpecified;
+        
+        private System.DateTime renewalDateField;
+        
+        private bool renewalDateFieldSpecified;
+        
+        private string carrierPartyIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string PolNumber {
+            get {
+                return this.polNumberField;
+            }
+            set {
+                this.polNumberField = value;
+                this.RaisePropertyChanged("PolNumber");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string CertificateNo {
+            get {
+                return this.certificateNoField;
+            }
+            set {
+                this.certificateNoField = value;
+                this.RaisePropertyChanged("CertificateNo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public OLI_LU_POLPROD ProductType {
+            get {
+                return this.productTypeField;
+            }
+            set {
+                this.productTypeField = value;
+                this.RaisePropertyChanged("ProductType");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public OLI_LU_POLSTAT PolicyStatus {
+            get {
+                return this.policyStatusField;
+            }
+            set {
+                this.policyStatusField = value;
+                this.RaisePropertyChanged("PolicyStatus");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public decimal PolicyValue {
+            get {
+                return this.policyValueField;
+            }
+            set {
+                this.policyValueField = value;
+                this.RaisePropertyChanged("PolicyValue");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool PolicyValueSpecified {
+            get {
+                return this.policyValueFieldSpecified;
+            }
+            set {
+                this.policyValueFieldSpecified = value;
+                this.RaisePropertyChanged("PolicyValueSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=5)]
+        public System.DateTime EffDate {
+            get {
+                return this.effDateField;
+            }
+            set {
+                this.effDateField = value;
+                this.RaisePropertyChanged("EffDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool EffDateSpecified {
+            get {
+                return this.effDateFieldSpecified;
+            }
+            set {
+                this.effDateFieldSpecified = value;
+                this.RaisePropertyChanged("EffDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=6)]
+        public System.DateTime TermDate {
+            get {
+                return this.termDateField;
+            }
+            set {
+                this.termDateField = value;
+                this.RaisePropertyChanged("TermDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool TermDateSpecified {
+            get {
+                return this.termDateFieldSpecified;
+            }
+            set {
+                this.termDateFieldSpecified = value;
+                this.RaisePropertyChanged("TermDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=7)]
+        public System.DateTime RenewalDate {
+            get {
+                return this.renewalDateField;
+            }
+            set {
+                this.renewalDateField = value;
+                this.RaisePropertyChanged("RenewalDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool RenewalDateSpecified {
+            get {
+                return this.renewalDateFieldSpecified;
+            }
+            set {
+                this.renewalDateFieldSpecified = value;
+                this.RaisePropertyChanged("RenewalDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
+        public string CarrierPartyID {
+            get {
+                return this.carrierPartyIDField;
+            }
+            set {
+                this.carrierPartyIDField = value;
+                this.RaisePropertyChanged("CarrierPartyID");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
+    public partial class OLI_LU_POLPROD : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string tcField;
+        
+        private string valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="nonNegativeInteger")]
+        public string tc {
+            get {
+                return this.tcField;
+            }
+            set {
+                this.tcField = value;
+                this.RaisePropertyChanged("tc");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+                this.RaisePropertyChanged("Value");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
+    public partial class OLI_LU_POLSTAT : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string tcField;
+        
+        private string valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="nonNegativeInteger")]
+        public string tc {
+            get {
+                return this.tcField;
+            }
+            set {
+                this.tcField = value;
+                this.RaisePropertyChanged("tc");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+                this.RaisePropertyChanged("Value");
             }
         }
         
@@ -2359,6 +2390,8 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
     public partial class SignatureInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
         
+        private PERSISTKEY signatureInfoKeyField;
+        
         private System.DateTime signatureDateField;
         
         private bool signatureDateFieldSpecified;
@@ -2372,7 +2405,19 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         private string delegatedSignerPartyIDField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public PERSISTKEY SignatureInfoKey {
+            get {
+                return this.signatureInfoKeyField;
+            }
+            set {
+                this.signatureInfoKeyField = value;
+                this.RaisePropertyChanged("SignatureInfoKey");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=1)]
         public System.DateTime SignatureDate {
             get {
                 return this.signatureDateField;
@@ -2396,7 +2441,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="time", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="time", Order=2)]
         public System.DateTime SignatureTime {
             get {
                 return this.signatureTimeField;
@@ -2459,433 +2504,6 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
-    public partial class Holding_Type : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private OLI_LU_HOLDTYPE holdingTypeCodeField;
-        
-        private Policy_Type policyField;
-        
-        private Attachment_Type[] attachmentField;
-        
-        private Loan_Type[] loanField;
-        
-        private Banking_Type bankingField;
-        
-        private string idField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public OLI_LU_HOLDTYPE HoldingTypeCode {
-            get {
-                return this.holdingTypeCodeField;
-            }
-            set {
-                this.holdingTypeCodeField = value;
-                this.RaisePropertyChanged("HoldingTypeCode");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public Policy_Type Policy {
-            get {
-                return this.policyField;
-            }
-            set {
-                this.policyField = value;
-                this.RaisePropertyChanged("Policy");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Attachment", Order=2)]
-        public Attachment_Type[] Attachment {
-            get {
-                return this.attachmentField;
-            }
-            set {
-                this.attachmentField = value;
-                this.RaisePropertyChanged("Attachment");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Loan", Order=3)]
-        public Loan_Type[] Loan {
-            get {
-                return this.loanField;
-            }
-            set {
-                this.loanField = value;
-                this.RaisePropertyChanged("Loan");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public Banking_Type Banking {
-            get {
-                return this.bankingField;
-            }
-            set {
-                this.bankingField = value;
-                this.RaisePropertyChanged("Banking");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="ID")]
-        public string id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("id");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
-    public partial class OLI_LU_HOLDTYPE : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string tcField;
-        
-        private string valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="nonNegativeInteger")]
-        public string tc {
-            get {
-                return this.tcField;
-            }
-            set {
-                this.tcField = value;
-                this.RaisePropertyChanged("tc");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public string Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-                this.RaisePropertyChanged("Value");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
-    public partial class Policy_Type : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string polNumberField;
-        
-        private string certificateNoField;
-        
-        private OLI_LU_POLPROD productTypeField;
-        
-        private OLI_LU_POLSTAT policyStatusField;
-        
-        private decimal policyValueField;
-        
-        private bool policyValueFieldSpecified;
-        
-        private object itemField;
-        
-        private System.DateTime termDateField;
-        
-        private bool termDateFieldSpecified;
-        
-        private System.DateTime renewalDateField;
-        
-        private bool renewalDateFieldSpecified;
-        
-        private string carrierPartyIDField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string PolNumber {
-            get {
-                return this.polNumberField;
-            }
-            set {
-                this.polNumberField = value;
-                this.RaisePropertyChanged("PolNumber");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string CertificateNo {
-            get {
-                return this.certificateNoField;
-            }
-            set {
-                this.certificateNoField = value;
-                this.RaisePropertyChanged("CertificateNo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public OLI_LU_POLPROD ProductType {
-            get {
-                return this.productTypeField;
-            }
-            set {
-                this.productTypeField = value;
-                this.RaisePropertyChanged("ProductType");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public OLI_LU_POLSTAT PolicyStatus {
-            get {
-                return this.policyStatusField;
-            }
-            set {
-                this.policyStatusField = value;
-                this.RaisePropertyChanged("PolicyStatus");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public decimal PolicyValue {
-            get {
-                return this.policyValueField;
-            }
-            set {
-                this.policyValueField = value;
-                this.RaisePropertyChanged("PolicyValue");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool PolicyValueSpecified {
-            get {
-                return this.policyValueFieldSpecified;
-            }
-            set {
-                this.policyValueFieldSpecified = value;
-                this.RaisePropertyChanged("PolicyValueSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("EffDate", typeof(System.DateTime), DataType="date", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute("EffPartialDate", typeof(string), Order=5)]
-        public object Item {
-            get {
-                return this.itemField;
-            }
-            set {
-                this.itemField = value;
-                this.RaisePropertyChanged("Item");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=6)]
-        public System.DateTime TermDate {
-            get {
-                return this.termDateField;
-            }
-            set {
-                this.termDateField = value;
-                this.RaisePropertyChanged("TermDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool TermDateSpecified {
-            get {
-                return this.termDateFieldSpecified;
-            }
-            set {
-                this.termDateFieldSpecified = value;
-                this.RaisePropertyChanged("TermDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=7)]
-        public System.DateTime RenewalDate {
-            get {
-                return this.renewalDateField;
-            }
-            set {
-                this.renewalDateField = value;
-                this.RaisePropertyChanged("RenewalDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool RenewalDateSpecified {
-            get {
-                return this.renewalDateFieldSpecified;
-            }
-            set {
-                this.renewalDateFieldSpecified = value;
-                this.RaisePropertyChanged("RenewalDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
-        public string CarrierPartyID {
-            get {
-                return this.carrierPartyIDField;
-            }
-            set {
-                this.carrierPartyIDField = value;
-                this.RaisePropertyChanged("CarrierPartyID");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
-    public partial class OLI_LU_POLPROD : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string tcField;
-        
-        private string valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="nonNegativeInteger")]
-        public string tc {
-            get {
-                return this.tcField;
-            }
-            set {
-                this.tcField = value;
-                this.RaisePropertyChanged("tc");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public string Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-                this.RaisePropertyChanged("Value");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
-    public partial class OLI_LU_POLSTAT : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string tcField;
-        
-        private string valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="nonNegativeInteger")]
-        public string tc {
-            get {
-                return this.tcField;
-            }
-            set {
-                this.tcField = value;
-                this.RaisePropertyChanged("tc");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public string Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-                this.RaisePropertyChanged("Value");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
     public partial class Loan_Type : object, System.ComponentModel.INotifyPropertyChanged {
         
         private OLI_LU_LOANREASON loanReasonField;
@@ -2895,10 +2513,6 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         private decimal loanAmtField;
         
         private bool loanAmtFieldSpecified;
-        
-        private System.DateTime loanDefaultDateField;
-        
-        private bool loanDefaultDateFieldSpecified;
         
         private string financialInstitutionPartyIDField;
         
@@ -2947,30 +2561,6 @@ namespace Apexa.CITS.WCF.Test.CITSService {
             set {
                 this.loanAmtFieldSpecified = value;
                 this.RaisePropertyChanged("LoanAmtSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=3)]
-        public System.DateTime LoanDefaultDate {
-            get {
-                return this.loanDefaultDateField;
-            }
-            set {
-                this.loanDefaultDateField = value;
-                this.RaisePropertyChanged("LoanDefaultDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool LoanDefaultDateSpecified {
-            get {
-                return this.loanDefaultDateFieldSpecified;
-            }
-            set {
-                this.loanDefaultDateFieldSpecified = value;
-                this.RaisePropertyChanged("LoanDefaultDateSpecified");
             }
         }
         
@@ -3052,9 +2642,9 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         private string accountNumberField;
         
-        private string transitNumberField;
-        
         private string institutionNumberField;
+        
+        private string transitNumberField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -3070,18 +2660,6 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string TransitNumber {
-            get {
-                return this.transitNumberField;
-            }
-            set {
-                this.transitNumberField = value;
-                this.RaisePropertyChanged("TransitNumber");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         public string InstitutionNumber {
             get {
                 return this.institutionNumberField;
@@ -3089,6 +2667,18 @@ namespace Apexa.CITS.WCF.Test.CITSService {
             set {
                 this.institutionNumberField = value;
                 this.RaisePropertyChanged("InstitutionNumber");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string TransitNumber {
+            get {
+                return this.transitNumberField;
+            }
+            set {
+                this.transitNumberField = value;
+                this.RaisePropertyChanged("TransitNumber");
             }
         }
         
@@ -3112,6 +2702,8 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         private OLI_LU_PARTY partyTypeCodeField;
         
+        private PERSISTKEY partyKeyField;
+        
         private string fullNameField;
         
         private string govtIDField;
@@ -3130,8 +2722,6 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         private EMailAddress_Type[] eMailAddressField;
         
-        private URL_Type[] uRLField;
-        
         private PriorName_Type[] priorNameField;
         
         private Risk_Type riskField;
@@ -3141,8 +2731,6 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         private GovtIDInfo_Type[] govtIDInfoField;
         
         private RatingAgencyInfo_Type[] ratingAgencyInfoField;
-        
-        private DesignationInfo_Type[] designationInfoField;
         
         private string idField;
         
@@ -3160,6 +2748,18 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public PERSISTKEY PartyKey {
+            get {
+                return this.partyKeyField;
+            }
+            set {
+                this.partyKeyField = value;
+                this.RaisePropertyChanged("PartyKey");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         public string FullName {
             get {
                 return this.fullNameField;
@@ -3171,7 +2771,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         public string GovtID {
             get {
                 return this.govtIDField;
@@ -3183,7 +2783,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         public OLI_LU_GOVTIDTC GovtIDTC {
             get {
                 return this.govtIDTCField;
@@ -3195,8 +2795,8 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Organization", typeof(Organization_Type), Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute("Person", typeof(Person_Type), Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute("Organization", typeof(Organization_Type), Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute("Person", typeof(Person_Type), Order=5)]
         public object Item {
             get {
                 return this.itemField;
@@ -3208,7 +2808,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Address", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute("Address", Order=6)]
         public Address_Type[] Address {
             get {
                 return this.addressField;
@@ -3220,7 +2820,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Phone", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute("Phone", Order=7)]
         public Phone_Type[] Phone {
             get {
                 return this.phoneField;
@@ -3232,7 +2832,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Attachment", Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute("Attachment", Order=8)]
         public Attachment_Type[] Attachment {
             get {
                 return this.attachmentField;
@@ -3244,7 +2844,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
         public Producer_Type Producer {
             get {
                 return this.producerField;
@@ -3256,7 +2856,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("EMailAddress", Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute("EMailAddress", Order=10)]
         public EMailAddress_Type[] EMailAddress {
             get {
                 return this.eMailAddressField;
@@ -3264,18 +2864,6 @@ namespace Apexa.CITS.WCF.Test.CITSService {
             set {
                 this.eMailAddressField = value;
                 this.RaisePropertyChanged("EMailAddress");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("URL", Order=10)]
-        public URL_Type[] URL {
-            get {
-                return this.uRLField;
-            }
-            set {
-                this.uRLField = value;
-                this.RaisePropertyChanged("URL");
             }
         }
         
@@ -3336,18 +2924,6 @@ namespace Apexa.CITS.WCF.Test.CITSService {
             set {
                 this.ratingAgencyInfoField = value;
                 this.RaisePropertyChanged("RatingAgencyInfo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DesignationInfo", Order=16)]
-        public DesignationInfo_Type[] DesignationInfo {
-            get {
-                return this.designationInfoField;
-            }
-            set {
-                this.designationInfoField = value;
-                this.RaisePropertyChanged("DesignationInfo");
             }
         }
         
@@ -3773,6 +3349,8 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
     public partial class Address_Type : object, System.ComponentModel.INotifyPropertyChanged {
         
+        private PERSISTKEY addressKeyField;
+        
         private OLI_LU_ADTYPE addressTypeCodeField;
         
         private string line1Field;
@@ -3809,6 +3387,18 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public PERSISTKEY AddressKey {
+            get {
+                return this.addressKeyField;
+            }
+            set {
+                this.addressKeyField = value;
+                this.RaisePropertyChanged("AddressKey");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         public OLI_LU_ADTYPE AddressTypeCode {
             get {
                 return this.addressTypeCodeField;
@@ -3820,7 +3410,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         public string Line1 {
             get {
                 return this.line1Field;
@@ -3832,7 +3422,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         public string Line2 {
             get {
                 return this.line2Field;
@@ -3844,7 +3434,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         public string City {
             get {
                 return this.cityField;
@@ -3856,7 +3446,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         public string AddressState {
             get {
                 return this.addressStateField;
@@ -3868,7 +3458,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
         public OLI_LU_STATE AddressStateTC {
             get {
                 return this.addressStateTCField;
@@ -3880,7 +3470,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
         public string Zip {
             get {
                 return this.zipField;
@@ -3892,7 +3482,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
         public string AddressCountry {
             get {
                 return this.addressCountryField;
@@ -3904,7 +3494,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
         public OLI_LU_NATION AddressCountryTC {
             get {
                 return this.addressCountryTCField;
@@ -3916,7 +3506,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
         public OLI_LU_BOOLEAN PrefAddr {
             get {
                 return this.prefAddrField;
@@ -3928,7 +3518,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=11)]
         public System.DateTime EndDate {
             get {
                 return this.endDateField;
@@ -3952,7 +3542,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=11)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=12)]
         public System.DateTime StartDate {
             get {
                 return this.startDateField;
@@ -3976,7 +3566,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
         public double YearsAtAddress {
             get {
                 return this.yearsAtAddressField;
@@ -4351,7 +3941,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         private EOCoverageInfo_Type[] eOCoverageInfoField;
         
-        private Licence_Type[] licenceField;
+        private License_Type[] licenseField;
         
         private CarrierAppointment_Type[] carrierAppointmentField;
         
@@ -4388,14 +3978,14 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Licence", Order=2)]
-        public Licence_Type[] Licence {
+        [System.Xml.Serialization.XmlElementAttribute("License", Order=2)]
+        public License_Type[] License {
             get {
-                return this.licenceField;
+                return this.licenseField;
             }
             set {
-                this.licenceField = value;
-                this.RaisePropertyChanged("Licence");
+                this.licenseField = value;
+                this.RaisePropertyChanged("License");
             }
         }
         
@@ -4523,7 +4113,35 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
     public partial class EOCoverageInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
         
+        private string polNumberField;
+        
+        private string idField;
+        
         private string holdingIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string PolNumber {
+            get {
+                return this.polNumberField;
+            }
+            set {
+                this.polNumberField = value;
+                this.RaisePropertyChanged("PolNumber");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="ID")]
+        public string id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
@@ -4553,13 +4171,13 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
-    public partial class Licence_Type : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class License_Type : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string licenceNumField;
+        private string licenseNumField;
         
-        private OLI_LU_STATE licenceStateField;
+        private OLI_LU_STATE licenseStateField;
         
-        private OLI_LU_LICENCETYPE licenceTypeField;
+        private OLI_LU_LICENSETYPE licenseTypeField;
         
         private System.DateTime expDateField;
         
@@ -4569,49 +4187,47 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         private bool originationDateFieldSpecified;
         
-        private OLI_LU_BOOLEAN licenceInterruptedIndField;
-        
-        private string licenceInterruptedReasonField;
-        
-        private string nameOnLicenceField;
+        private string nameOnLicenseField;
         
         private string levelDescField;
+        
+        private Attachment_Type[] attachmentField;
         
         private string agencyAffiliationIDField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string LicenceNum {
+        public string LicenseNum {
             get {
-                return this.licenceNumField;
+                return this.licenseNumField;
             }
             set {
-                this.licenceNumField = value;
-                this.RaisePropertyChanged("LicenceNum");
+                this.licenseNumField = value;
+                this.RaisePropertyChanged("LicenseNum");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public OLI_LU_STATE LicenceState {
+        public OLI_LU_STATE LicenseState {
             get {
-                return this.licenceStateField;
+                return this.licenseStateField;
             }
             set {
-                this.licenceStateField = value;
-                this.RaisePropertyChanged("LicenceState");
+                this.licenseStateField = value;
+                this.RaisePropertyChanged("LicenseState");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public OLI_LU_LICENCETYPE LicenceType {
+        public OLI_LU_LICENSETYPE LicenseType {
             get {
-                return this.licenceTypeField;
+                return this.licenseTypeField;
             }
             set {
-                this.licenceTypeField = value;
-                this.RaisePropertyChanged("LicenceType");
+                this.licenseTypeField = value;
+                this.RaisePropertyChanged("LicenseType");
             }
         }
         
@@ -4665,42 +4281,18 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=5)]
-        public OLI_LU_BOOLEAN LicenceInterruptedInd {
+        public string NameOnLicense {
             get {
-                return this.licenceInterruptedIndField;
+                return this.nameOnLicenseField;
             }
             set {
-                this.licenceInterruptedIndField = value;
-                this.RaisePropertyChanged("LicenceInterruptedInd");
+                this.nameOnLicenseField = value;
+                this.RaisePropertyChanged("NameOnLicense");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=6)]
-        public string LicenceInterruptedReason {
-            get {
-                return this.licenceInterruptedReasonField;
-            }
-            set {
-                this.licenceInterruptedReasonField = value;
-                this.RaisePropertyChanged("LicenceInterruptedReason");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
-        public string NameOnLicence {
-            get {
-                return this.nameOnLicenceField;
-            }
-            set {
-                this.nameOnLicenceField = value;
-                this.RaisePropertyChanged("NameOnLicence");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
         public string LevelDesc {
             get {
                 return this.levelDescField;
@@ -4708,6 +4300,18 @@ namespace Apexa.CITS.WCF.Test.CITSService {
             set {
                 this.levelDescField = value;
                 this.RaisePropertyChanged("LevelDesc");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Attachment", Order=7)]
+        public Attachment_Type[] Attachment {
+            get {
+                return this.attachmentField;
+            }
+            set {
+                this.attachmentField = value;
+                this.RaisePropertyChanged("Attachment");
             }
         }
         
@@ -4739,7 +4343,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
-    public partial class OLI_LU_LICENCETYPE : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class OLI_LU_LICENSETYPE : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string tcField;
         
@@ -4787,11 +4391,9 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
     public partial class CarrierAppointment_Type : object, System.ComponentModel.INotifyPropertyChanged {
         
+        private PERSISTKEY carrierAppointmentKeyField;
+        
         private string companyProducerIDField;
-        
-        private OLI_LU_PRODUCERIDSOURCE companyProducerIDSourceField;
-        
-        private string companyProducerIDSourceDescField;
         
         private System.DateTime effDateField;
         
@@ -4831,6 +4433,18 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public PERSISTKEY CarrierAppointmentKey {
+            get {
+                return this.carrierAppointmentKeyField;
+            }
+            set {
+                this.carrierAppointmentKeyField = value;
+                this.RaisePropertyChanged("CarrierAppointmentKey");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         public string CompanyProducerID {
             get {
                 return this.companyProducerIDField;
@@ -4842,31 +4456,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public OLI_LU_PRODUCERIDSOURCE CompanyProducerIDSource {
-            get {
-                return this.companyProducerIDSourceField;
-            }
-            set {
-                this.companyProducerIDSourceField = value;
-                this.RaisePropertyChanged("CompanyProducerIDSource");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public string CompanyProducerIDSourceDesc {
-            get {
-                return this.companyProducerIDSourceDescField;
-            }
-            set {
-                this.companyProducerIDSourceDescField = value;
-                this.RaisePropertyChanged("CompanyProducerIDSourceDesc");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=2)]
         public System.DateTime EffDate {
             get {
                 return this.effDateField;
@@ -4890,7 +4480,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=3)]
         public System.DateTime ExpDate {
             get {
                 return this.expDateField;
@@ -4914,7 +4504,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         public OLI_LU_PROSTAT CarrierApptStatus {
             get {
                 return this.carrierApptStatusField;
@@ -4926,7 +4516,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DistributionAgreementInfo", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute("DistributionAgreementInfo", Order=5)]
         public DistributionAgreementInfo_Type[] DistributionAgreementInfo {
             get {
                 return this.distributionAgreementInfoField;
@@ -4938,7 +4528,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ConsolidationInfo", Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute("ConsolidationInfo", Order=6)]
         public ConsolidationInfo_Type[] ConsolidationInfo {
             get {
                 return this.consolidationInfoField;
@@ -4950,7 +4540,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DebtInfo", Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute("DebtInfo", Order=7)]
         public DebtInfo_Type[] DebtInfo {
             get {
                 return this.debtInfoField;
@@ -4962,7 +4552,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ReferralInfo", Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute("ReferralInfo", Order=8)]
         public ReferralInfo_Type[] ReferralInfo {
             get {
                 return this.referralInfoField;
@@ -4974,7 +4564,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("GovtIDInfo", Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute("GovtIDInfo", Order=9)]
         public GovtIDInfo_Type[] GovtIDInfo {
             get {
                 return this.govtIDInfoField;
@@ -4986,7 +4576,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("TransferInfo", Order=11)]
+        [System.Xml.Serialization.XmlElementAttribute("TransferInfo", Order=10)]
         public TransferInfo_Type[] TransferInfo {
             get {
                 return this.transferInfoField;
@@ -4998,7 +4588,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DistributionLevel", Order=12)]
+        [System.Xml.Serialization.XmlElementAttribute("DistributionLevel", Order=11)]
         public DistributionLevel_Type[] DistributionLevel {
             get {
                 return this.distributionLevelField;
@@ -5010,7 +4600,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("RequirementInfo", Order=13)]
+        [System.Xml.Serialization.XmlElementAttribute("RequirementInfo", Order=12)]
         public RequirementInfo_Type[] RequirementInfo {
             get {
                 return this.requirementInfoField;
@@ -5022,7 +4612,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("SupervisionLevel", Order=14)]
+        [System.Xml.Serialization.XmlElementAttribute("SupervisionLevel", Order=13)]
         public SupervisionLevel_Type[] SupervisionLevel {
             get {
                 return this.supervisionLevelField;
@@ -5034,7 +4624,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("AssocCarrierApptInfo", Order=15)]
+        [System.Xml.Serialization.XmlElementAttribute("AssocCarrierApptInfo", Order=14)]
         public AssocCarrierApptInfo_Type[] AssocCarrierApptInfo {
             get {
                 return this.assocCarrierApptInfoField;
@@ -5078,52 +4668,6 @@ namespace Apexa.CITS.WCF.Test.CITSService {
             set {
                 this.agencyAffiliationIDField = value;
                 this.RaisePropertyChanged("AgencyAffiliationID");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
-    public partial class OLI_LU_PRODUCERIDSOURCE : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string tcField;
-        
-        private string valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="nonNegativeInteger")]
-        public string tc {
-            get {
-                return this.tcField;
-            }
-            set {
-                this.tcField = value;
-                this.RaisePropertyChanged("tc");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public string Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-                this.RaisePropertyChanged("Value");
             }
         }
         
@@ -5297,7 +4841,35 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
     public partial class ConsolidationInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
         
+        private PERSISTKEY consolidationInfoKeyField;
+        
+        private string idField;
+        
         private string carrierAppointmentIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public PERSISTKEY ConsolidationInfoKey {
+            get {
+                return this.consolidationInfoKeyField;
+            }
+            set {
+                this.consolidationInfoKeyField = value;
+                this.RaisePropertyChanged("ConsolidationInfoKey");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="ID")]
+        public string id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
@@ -5329,7 +4901,21 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
     public partial class DebtInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
         
+        private string idField;
+        
         private string holdingIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="ID")]
+        public string id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
@@ -5361,7 +4947,21 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
     public partial class ReferralInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
         
+        private string idField;
+        
         private string partyIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="ID")]
+        public string id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
@@ -5439,7 +5039,21 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
     public partial class TransferInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
         
+        private PERSISTKEY transferInfoKeyField;
+        
         private string carrierAppointmentIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public PERSISTKEY TransferInfoKey {
+            get {
+                return this.transferInfoKeyField;
+            }
+            set {
+                this.transferInfoKeyField = value;
+                this.RaisePropertyChanged("TransferInfoKey");
+            }
+        }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
@@ -5473,6 +5087,8 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         private string distributionLevelValueField;
         
+        private string idField;
+        
         private string partyIDField;
         
         /// <remarks/>
@@ -5484,6 +5100,18 @@ namespace Apexa.CITS.WCF.Test.CITSService {
             set {
                 this.distributionLevelValueField = value;
                 this.RaisePropertyChanged("DistributionLevelValue");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="ID")]
+        public string id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
             }
         }
         
@@ -5679,17 +5307,13 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
     public partial class SupervisionLevel_Type : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private OLI_LU_SUPERVISIONLEVEL supervisionLevelTCField;
+        private PERSISTKEY supervisionLevelKeyField;
         
-        private string supervisionLevelDescField;
+        private OLI_LU_SUPERVISIONLEVEL supervisionLevelTCField;
         
         private System.DateTime effDateField;
         
         private bool effDateFieldSpecified;
-        
-        private System.DateTime expDateField;
-        
-        private bool expDateFieldSpecified;
         
         private System.DateTime followUpDateField;
         
@@ -5699,6 +5323,18 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public PERSISTKEY SupervisionLevelKey {
+            get {
+                return this.supervisionLevelKeyField;
+            }
+            set {
+                this.supervisionLevelKeyField = value;
+                this.RaisePropertyChanged("SupervisionLevelKey");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         public OLI_LU_SUPERVISIONLEVEL SupervisionLevelTC {
             get {
                 return this.supervisionLevelTCField;
@@ -5706,18 +5342,6 @@ namespace Apexa.CITS.WCF.Test.CITSService {
             set {
                 this.supervisionLevelTCField = value;
                 this.RaisePropertyChanged("SupervisionLevelTC");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string SupervisionLevelDesc {
-            get {
-                return this.supervisionLevelDescField;
-            }
-            set {
-                this.supervisionLevelDescField = value;
-                this.RaisePropertyChanged("SupervisionLevelDesc");
             }
         }
         
@@ -5747,30 +5371,6 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=3)]
-        public System.DateTime ExpDate {
-            get {
-                return this.expDateField;
-            }
-            set {
-                this.expDateField = value;
-                this.RaisePropertyChanged("ExpDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool ExpDateSpecified {
-            get {
-                return this.expDateFieldSpecified;
-            }
-            set {
-                this.expDateFieldSpecified = value;
-                this.RaisePropertyChanged("ExpDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=4)]
         public System.DateTime FollowUpDate {
             get {
                 return this.followUpDateField;
@@ -5869,6 +5469,8 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
     public partial class AssocCarrierApptInfo_Type : object, System.ComponentModel.INotifyPropertyChanged {
         
+        private PERSISTKEY assocCarrierApptInfoKeyField;
+        
         private string companyProducerIDField;
         
         private OLI_LU_PRODUCERIDSOURCE companyProducerIDSourceField;
@@ -5877,12 +5479,26 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         private OLI_LU_PROSTAT carrierApptStatusField;
         
+        private string idField;
+        
         private string carrierAppointmentIDField;
         
         private string partyIDField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public PERSISTKEY AssocCarrierApptInfoKey {
+            get {
+                return this.assocCarrierApptInfoKeyField;
+            }
+            set {
+                this.assocCarrierApptInfoKeyField = value;
+                this.RaisePropertyChanged("AssocCarrierApptInfoKey");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         public string CompanyProducerID {
             get {
                 return this.companyProducerIDField;
@@ -5894,7 +5510,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         public OLI_LU_PRODUCERIDSOURCE CompanyProducerIDSource {
             get {
                 return this.companyProducerIDSourceField;
@@ -5906,7 +5522,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         public string CompanyProducerIDSourceDesc {
             get {
                 return this.companyProducerIDSourceDescField;
@@ -5918,7 +5534,7 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         public OLI_LU_PROSTAT CarrierApptStatus {
             get {
                 return this.carrierApptStatusField;
@@ -5926,6 +5542,18 @@ namespace Apexa.CITS.WCF.Test.CITSService {
             set {
                 this.carrierApptStatusField = value;
                 this.RaisePropertyChanged("CarrierApptStatus");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="ID")]
+        public string id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
             }
         }
         
@@ -5950,6 +5578,52 @@ namespace Apexa.CITS.WCF.Test.CITSService {
             set {
                 this.partyIDField = value;
                 this.RaisePropertyChanged("PartyID");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
+    public partial class OLI_LU_PRODUCERIDSOURCE : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string tcField;
+        
+        private string valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="nonNegativeInteger")]
+        public string tc {
+            get {
+                return this.tcField;
+            }
+            set {
+                this.tcField = value;
+                this.RaisePropertyChanged("tc");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+                this.RaisePropertyChanged("Value");
             }
         }
         
@@ -6120,38 +5794,6 @@ namespace Apexa.CITS.WCF.Test.CITSService {
             set {
                 this.addrLineField = value;
                 this.RaisePropertyChanged("AddrLine");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
-    public partial class URL_Type : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string uRLAddrField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string URLAddr {
-            get {
-                return this.uRLAddrField;
-            }
-            set {
-                this.uRLAddrField = value;
-                this.RaisePropertyChanged("URLAddr");
             }
         }
         
@@ -6399,10 +6041,70 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ACORD.org/Standards/Life/2")]
     public partial class Employment_Type : object, System.ComponentModel.INotifyPropertyChanged {
         
+        private System.DateTime hireDateField;
+        
+        private bool hireDateFieldSpecified;
+        
+        private System.DateTime terminationDateField;
+        
+        private bool terminationDateFieldSpecified;
+        
         private string employerNameField;
         
+        private string idField;
+        
+        private string employerPartyIDField;
+        
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=0)]
+        public System.DateTime HireDate {
+            get {
+                return this.hireDateField;
+            }
+            set {
+                this.hireDateField = value;
+                this.RaisePropertyChanged("HireDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool HireDateSpecified {
+            get {
+                return this.hireDateFieldSpecified;
+            }
+            set {
+                this.hireDateFieldSpecified = value;
+                this.RaisePropertyChanged("HireDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=1)]
+        public System.DateTime TerminationDate {
+            get {
+                return this.terminationDateField;
+            }
+            set {
+                this.terminationDateField = value;
+                this.RaisePropertyChanged("TerminationDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool TerminationDateSpecified {
+            get {
+                return this.terminationDateFieldSpecified;
+            }
+            set {
+                this.terminationDateFieldSpecified = value;
+                this.RaisePropertyChanged("TerminationDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         public string EmployerName {
             get {
                 return this.employerNameField;
@@ -6410,6 +6112,30 @@ namespace Apexa.CITS.WCF.Test.CITSService {
             set {
                 this.employerNameField = value;
                 this.RaisePropertyChanged("EmployerName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="ID")]
+        public string id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
+        public string EmployerPartyID {
+            get {
+                return this.employerPartyIDField;
+            }
+            set {
+                this.employerPartyIDField = value;
+                this.RaisePropertyChanged("EmployerPartyID");
             }
         }
         
@@ -6735,11 +6461,43 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessMessage", WrapperNamespace="http://ACORD.org/Standards/Life/2", IsWrapped=true)]
+    public partial class ProcessMessageRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ACORD.org/Standards/Life/2", Order=0)]
+        public Apexa.CITS.WCF.Test.CITSService.TXLife_Type TXLife;
+        
+        public ProcessMessageRequest() {
+        }
+        
+        public ProcessMessageRequest(Apexa.CITS.WCF.Test.CITSService.TXLife_Type TXLife) {
+            this.TXLife = TXLife;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessMessageResponse", WrapperNamespace="http://ACORD.org/Standards/Life/2", IsWrapped=true)]
+    public partial class ProcessMessageResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ACORD.org/Standards/Life/2", Order=0)]
+        public Apexa.CITS.WCF.Test.CITSService.TXLife_Type TXLife;
+        
+        public ProcessMessageResponse() {
+        }
+        
+        public ProcessMessageResponse(Apexa.CITS.WCF.Test.CITSService.TXLife_Type TXLife) {
+            this.TXLife = TXLife;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessNonCITSMessage", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessNonCITSMessage", WrapperNamespace="http://ACORD.org/Standards/Life/2", IsWrapped=true)]
     public partial class ProcessNonCITSMessageRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ACORD.org/Standards/Life/2", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public Apexa.CITS.WCF.Test.CITSService.NonCITSRequest request;
         
@@ -6754,10 +6512,10 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessNonCITSMessageResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessNonCITSMessageResponse", WrapperNamespace="http://ACORD.org/Standards/Life/2", IsWrapped=true)]
     public partial class ProcessNonCITSMessageResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ACORD.org/Standards/Life/2", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public Apexa.CITS.WCF.Test.CITSService.NonCITSResponse ProcessNonCITSMessageResult;
         
@@ -6772,10 +6530,10 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessFileRequests", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessFileRequests", WrapperNamespace="http://ACORD.org/Standards/Life/2", IsWrapped=true)]
     public partial class ProcessFileRequestsRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ACORD.org/Standards/Life/2", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public Apexa.CITS.WCF.Test.CITSService.FileRequest request;
         
@@ -6790,10 +6548,10 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessFileRequestsResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessFileRequestsResponse", WrapperNamespace="http://ACORD.org/Standards/Life/2", IsWrapped=true)]
     public partial class ProcessFileRequestsResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ACORD.org/Standards/Life/2", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public Apexa.CITS.WCF.Test.CITSService.FileResponse ProcessFileRequestsResult;
         
@@ -6808,33 +6566,28 @@ namespace Apexa.CITS.WCF.Test.CITSService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessContractCode", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessContractCode", WrapperNamespace="http://ACORD.org/Standards/Life/2", IsWrapped=true)]
     public partial class ProcessContractCodeRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ACORD.org/Standards/Life/2", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public Apexa.CITS.WCF.Test.CITSService.ContractCode code;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string action;
+        public Apexa.CITS.WCF.Test.CITSService.ContractCodeRequest request;
         
         public ProcessContractCodeRequest() {
         }
         
-        public ProcessContractCodeRequest(Apexa.CITS.WCF.Test.CITSService.ContractCode code, string action) {
-            this.code = code;
-            this.action = action;
+        public ProcessContractCodeRequest(Apexa.CITS.WCF.Test.CITSService.ContractCodeRequest request) {
+            this.request = request;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessContractCodeResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessContractCodeResponse", WrapperNamespace="http://ACORD.org/Standards/Life/2", IsWrapped=true)]
     public partial class ProcessContractCodeResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ACORD.org/Standards/Life/2", Order=0)]
         public bool ProcessContractCodeResult;
         
         public ProcessContractCodeResponse() {
@@ -6842,126 +6595,6 @@ namespace Apexa.CITS.WCF.Test.CITSService {
         
         public ProcessContractCodeResponse(bool ProcessContractCodeResult) {
             this.ProcessContractCodeResult = ProcessContractCodeResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessDebt", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
-    public partial class ProcessDebtRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public Apexa.CITS.WCF.Test.CITSService.Debt debt;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string action;
-        
-        public ProcessDebtRequest() {
-        }
-        
-        public ProcessDebtRequest(Apexa.CITS.WCF.Test.CITSService.Debt debt, string action) {
-            this.debt = debt;
-            this.action = action;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessDebtResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
-    public partial class ProcessDebtResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
-        public bool ProcessDebtResult;
-        
-        public ProcessDebtResponse() {
-        }
-        
-        public ProcessDebtResponse(bool ProcessDebtResult) {
-            this.ProcessDebtResult = ProcessDebtResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessSupervision", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
-    public partial class ProcessSupervisionRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public Apexa.CITS.WCF.Test.CITSService.Supervision supervision;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string action;
-        
-        public ProcessSupervisionRequest() {
-        }
-        
-        public ProcessSupervisionRequest(Apexa.CITS.WCF.Test.CITSService.Supervision supervision, string action) {
-            this.supervision = supervision;
-            this.action = action;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessSupervisionResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
-    public partial class ProcessSupervisionResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
-        public bool ProcessSupervisionResult;
-        
-        public ProcessSupervisionResponse() {
-        }
-        
-        public ProcessSupervisionResponse(bool ProcessSupervisionResult) {
-            this.ProcessSupervisionResult = ProcessSupervisionResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessTag", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
-    public partial class ProcessTagRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public Apexa.CITS.WCF.Test.CITSService.Tag tag;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string action;
-        
-        public ProcessTagRequest() {
-        }
-        
-        public ProcessTagRequest(Apexa.CITS.WCF.Test.CITSService.Tag tag, string action) {
-            this.tag = tag;
-            this.action = action;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessTagResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
-    public partial class ProcessTagResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
-        public bool ProcessTagResult;
-        
-        public ProcessTagResponse() {
-        }
-        
-        public ProcessTagResponse(bool ProcessTagResult) {
-            this.ProcessTagResult = ProcessTagResult;
         }
     }
     
@@ -6992,12 +6625,20 @@ namespace Apexa.CITS.WCF.Test.CITSService {
                 base(binding, remoteAddress) {
         }
         
-        public Apexa.CITS.WCF.Test.CITSService.TXLife_Type ProcessMessage(Apexa.CITS.WCF.Test.CITSService.TXLife_Type TXLife) {
-            return base.Channel.ProcessMessage(TXLife);
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Apexa.CITS.WCF.Test.CITSService.ProcessMessageResponse Apexa.CITS.WCF.Test.CITSService.ICITSService.ProcessMessage(Apexa.CITS.WCF.Test.CITSService.ProcessMessageRequest request) {
+            return base.Channel.ProcessMessage(request);
         }
         
-        public System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.TXLife_Type> ProcessMessageAsync(Apexa.CITS.WCF.Test.CITSService.TXLife_Type TXLife) {
-            return base.Channel.ProcessMessageAsync(TXLife);
+        public void ProcessMessage(ref Apexa.CITS.WCF.Test.CITSService.TXLife_Type TXLife) {
+            Apexa.CITS.WCF.Test.CITSService.ProcessMessageRequest inValue = new Apexa.CITS.WCF.Test.CITSService.ProcessMessageRequest();
+            inValue.TXLife = TXLife;
+            Apexa.CITS.WCF.Test.CITSService.ProcessMessageResponse retVal = ((Apexa.CITS.WCF.Test.CITSService.ICITSService)(this)).ProcessMessage(inValue);
+            TXLife = retVal.TXLife;
+        }
+        
+        public System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessMessageResponse> ProcessMessageAsync(Apexa.CITS.WCF.Test.CITSService.ProcessMessageRequest request) {
+            return base.Channel.ProcessMessageAsync(request);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7051,10 +6692,9 @@ namespace Apexa.CITS.WCF.Test.CITSService {
             return base.Channel.ProcessContractCode(request);
         }
         
-        public bool ProcessContractCode(Apexa.CITS.WCF.Test.CITSService.ContractCode code, string action) {
+        public bool ProcessContractCode(Apexa.CITS.WCF.Test.CITSService.ContractCodeRequest request) {
             Apexa.CITS.WCF.Test.CITSService.ProcessContractCodeRequest inValue = new Apexa.CITS.WCF.Test.CITSService.ProcessContractCodeRequest();
-            inValue.code = code;
-            inValue.action = action;
+            inValue.request = request;
             Apexa.CITS.WCF.Test.CITSService.ProcessContractCodeResponse retVal = ((Apexa.CITS.WCF.Test.CITSService.ICITSService)(this)).ProcessContractCode(inValue);
             return retVal.ProcessContractCodeResult;
         }
@@ -7064,86 +6704,10 @@ namespace Apexa.CITS.WCF.Test.CITSService {
             return base.Channel.ProcessContractCodeAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessContractCodeResponse> ProcessContractCodeAsync(Apexa.CITS.WCF.Test.CITSService.ContractCode code, string action) {
+        public System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessContractCodeResponse> ProcessContractCodeAsync(Apexa.CITS.WCF.Test.CITSService.ContractCodeRequest request) {
             Apexa.CITS.WCF.Test.CITSService.ProcessContractCodeRequest inValue = new Apexa.CITS.WCF.Test.CITSService.ProcessContractCodeRequest();
-            inValue.code = code;
-            inValue.action = action;
+            inValue.request = request;
             return ((Apexa.CITS.WCF.Test.CITSService.ICITSService)(this)).ProcessContractCodeAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Apexa.CITS.WCF.Test.CITSService.ProcessDebtResponse Apexa.CITS.WCF.Test.CITSService.ICITSService.ProcessDebt(Apexa.CITS.WCF.Test.CITSService.ProcessDebtRequest request) {
-            return base.Channel.ProcessDebt(request);
-        }
-        
-        public bool ProcessDebt(Apexa.CITS.WCF.Test.CITSService.Debt debt, string action) {
-            Apexa.CITS.WCF.Test.CITSService.ProcessDebtRequest inValue = new Apexa.CITS.WCF.Test.CITSService.ProcessDebtRequest();
-            inValue.debt = debt;
-            inValue.action = action;
-            Apexa.CITS.WCF.Test.CITSService.ProcessDebtResponse retVal = ((Apexa.CITS.WCF.Test.CITSService.ICITSService)(this)).ProcessDebt(inValue);
-            return retVal.ProcessDebtResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessDebtResponse> Apexa.CITS.WCF.Test.CITSService.ICITSService.ProcessDebtAsync(Apexa.CITS.WCF.Test.CITSService.ProcessDebtRequest request) {
-            return base.Channel.ProcessDebtAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessDebtResponse> ProcessDebtAsync(Apexa.CITS.WCF.Test.CITSService.Debt debt, string action) {
-            Apexa.CITS.WCF.Test.CITSService.ProcessDebtRequest inValue = new Apexa.CITS.WCF.Test.CITSService.ProcessDebtRequest();
-            inValue.debt = debt;
-            inValue.action = action;
-            return ((Apexa.CITS.WCF.Test.CITSService.ICITSService)(this)).ProcessDebtAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Apexa.CITS.WCF.Test.CITSService.ProcessSupervisionResponse Apexa.CITS.WCF.Test.CITSService.ICITSService.ProcessSupervision(Apexa.CITS.WCF.Test.CITSService.ProcessSupervisionRequest request) {
-            return base.Channel.ProcessSupervision(request);
-        }
-        
-        public bool ProcessSupervision(Apexa.CITS.WCF.Test.CITSService.Supervision supervision, string action) {
-            Apexa.CITS.WCF.Test.CITSService.ProcessSupervisionRequest inValue = new Apexa.CITS.WCF.Test.CITSService.ProcessSupervisionRequest();
-            inValue.supervision = supervision;
-            inValue.action = action;
-            Apexa.CITS.WCF.Test.CITSService.ProcessSupervisionResponse retVal = ((Apexa.CITS.WCF.Test.CITSService.ICITSService)(this)).ProcessSupervision(inValue);
-            return retVal.ProcessSupervisionResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessSupervisionResponse> Apexa.CITS.WCF.Test.CITSService.ICITSService.ProcessSupervisionAsync(Apexa.CITS.WCF.Test.CITSService.ProcessSupervisionRequest request) {
-            return base.Channel.ProcessSupervisionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessSupervisionResponse> ProcessSupervisionAsync(Apexa.CITS.WCF.Test.CITSService.Supervision supervision, string action) {
-            Apexa.CITS.WCF.Test.CITSService.ProcessSupervisionRequest inValue = new Apexa.CITS.WCF.Test.CITSService.ProcessSupervisionRequest();
-            inValue.supervision = supervision;
-            inValue.action = action;
-            return ((Apexa.CITS.WCF.Test.CITSService.ICITSService)(this)).ProcessSupervisionAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Apexa.CITS.WCF.Test.CITSService.ProcessTagResponse Apexa.CITS.WCF.Test.CITSService.ICITSService.ProcessTag(Apexa.CITS.WCF.Test.CITSService.ProcessTagRequest request) {
-            return base.Channel.ProcessTag(request);
-        }
-        
-        public bool ProcessTag(Apexa.CITS.WCF.Test.CITSService.Tag tag, string action) {
-            Apexa.CITS.WCF.Test.CITSService.ProcessTagRequest inValue = new Apexa.CITS.WCF.Test.CITSService.ProcessTagRequest();
-            inValue.tag = tag;
-            inValue.action = action;
-            Apexa.CITS.WCF.Test.CITSService.ProcessTagResponse retVal = ((Apexa.CITS.WCF.Test.CITSService.ICITSService)(this)).ProcessTag(inValue);
-            return retVal.ProcessTagResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessTagResponse> Apexa.CITS.WCF.Test.CITSService.ICITSService.ProcessTagAsync(Apexa.CITS.WCF.Test.CITSService.ProcessTagRequest request) {
-            return base.Channel.ProcessTagAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Apexa.CITS.WCF.Test.CITSService.ProcessTagResponse> ProcessTagAsync(Apexa.CITS.WCF.Test.CITSService.Tag tag, string action) {
-            Apexa.CITS.WCF.Test.CITSService.ProcessTagRequest inValue = new Apexa.CITS.WCF.Test.CITSService.ProcessTagRequest();
-            inValue.tag = tag;
-            inValue.action = action;
-            return ((Apexa.CITS.WCF.Test.CITSService.ICITSService)(this)).ProcessTagAsync(inValue);
         }
     }
 }

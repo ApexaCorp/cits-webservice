@@ -80,19 +80,13 @@
     <None Include="Service References\CITSService\Apexa.CITS.WCF.Test.CITSService.ProcessContractCodeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\CITSService\Apexa.CITS.WCF.Test.CITSService.ProcessDebtResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Service References\CITSService\Apexa.CITS.WCF.Test.CITSService.ProcessFileRequestsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\CITSService\Apexa.CITS.WCF.Test.CITSService.ProcessMessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\CITSService\Apexa.CITS.WCF.Test.CITSService.ProcessNonCITSMessageResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\CITSService\Apexa.CITS.WCF.Test.CITSService.ProcessSupervisionResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\CITSService\Apexa.CITS.WCF.Test.CITSService.ProcessTagResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\CITSService\Apexa.CITS.WCF.Test.CITSService.TXLife_Type.datasource">
@@ -107,6 +101,7 @@
     <None Include="Service References\CITSService\CITSService.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\CITSService\CITSService1.wsdl" />
     <None Include="Service References\CITSService\CITSService1.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -117,15 +112,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\CITSService\CITSService22.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CITSService\CITSService3.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CITSService\CITSService4.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CITSService\CITSService41.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\CITSService\configuration91.svcinfo" />
