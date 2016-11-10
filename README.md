@@ -49,3 +49,20 @@ Most terminology, values and enumerations are defined in the ACORD and CLIEDIS d
 
 ## Inbound API
 - Add, update, and delete a Selling Code based on CarrierAppointmentId (AKA Application ID in the APEXA UI)
+
+
+## Changelog
+
+#### 2016-11-10
+### Changed
+- The web service binding has been changed from WSHttp to BasicHttp, to simplify connection from non-Microsoft implementations.
+
+#### 2016-07-22
+### Added
+- The @id of each element is now a unique identifier within the entire TXLife object (including multiple TXLifeResponse objects within a TXLife object), and will only persist within the TXLife object that the @id is returned with.
+- Advisor employment history records are now included in the feed.
+
+### Changed
+- The permanent APEXA ID for each advisor and organization is now included in the Party/PartyKey element. Previously this APEXA ID was included in the @id element.
+- The permanent Contract ID that is associated with contracts in APEXA is now included in the CarrierAppointment/CarrierAppointmentKey element.
+- Permanent Coverage ID and Debt ID values are now included in the Holding/HoldingKey element.
