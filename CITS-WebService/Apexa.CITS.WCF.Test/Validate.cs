@@ -456,7 +456,6 @@ namespace Apexa.CITS.WCF.Test
                     if (string.IsNullOrWhiteSpace(coverage.Policy.PolNumber)) { errors.Add("contractor coverage PolNumber"); }
                     if (LUObjNotValid(coverage.Policy.ProductType)) { errors.Add("contractor coverage productType"); }
                     if (coverage.Policy.PolicyValueSpecified && coverage.Policy.PolicyValue == 0) { errors.Add("contractor coverage PolicyValue"); }
-                    if (coverage.Policy.Item == null) { errors.Add("contractor coverage Item"); }
                     if (LUObjNotValid(coverage.Policy.PolicyStatus)) { errors.Add("contractor coverage PolicyStatus"); }
 
                     var coverageHolder = response.Items.OfType<Party_Type>().FirstOrDefault(p => p.id == coverage.Policy.CarrierPartyID);
@@ -489,9 +488,9 @@ namespace Apexa.CITS.WCF.Test
         internal static IEnumerable<string> Education(Party_Type contractor)
         {
             List<string> errors = new List<string>();
-            if (contractor.DesignationInfo != null)
+            if (contractor.Producer.DesignationInfo != null)
             {
-                foreach (var designation in contractor.DesignationInfo)
+                foreach (var designation in contractor.Producer.DesignationInfo)
                 {
                     if (LUObjNotValid(designation.DesignationType)) { errors.Add("contractor education designationType"); }
                     if (string.IsNullOrWhiteSpace(designation.DesignationYear)) { errors.Add("contractor education DesignationYear"); }
@@ -534,9 +533,9 @@ namespace Apexa.CITS.WCF.Test
         {
             List<string> errors = new List<string>();
 
-            if (contractor.Producer.Licence != null)
+            if (contractor.Producer.License != null)
             {
-                foreach (var licence in contractor.Producer.Licence)
+                foreach (var licence in contractor.Producer.License)
                 {
                     if (string.IsNullOrWhiteSpace(licence.AgencyAffiliationID)) { errors.Add("contractor licence AgencyAffiliationID"); }
                     else
@@ -550,9 +549,9 @@ namespace Apexa.CITS.WCF.Test
                             if (string.IsNullOrWhiteSpace(sponsor.FullName)) { errors.Add("contractor licence sponsor Item"); }
                         }
                     }
-                    if (string.IsNullOrWhiteSpace(licence.LicenceNum)) { errors.Add("contractor licence LicenceNum"); }
-                    if (LUObjNotValid(licence.LicenceType)) { errors.Add("contractor licence LicenceType"); }
-                    if (LUObjNotValid(licence.LicenceState)) { errors.Add("contractor licence LicenceState"); }
+                    if (string.IsNullOrWhiteSpace(licence.LicenseNum)) { errors.Add("contractor licence LicenceNum"); }
+                    if (LUObjNotValid(licence.LicenseType)) { errors.Add("contractor licence LicenceType"); }
+                    if (LUObjNotValid(licence.LicenseState)) { errors.Add("contractor licence LicenceState"); }
                     if (string.IsNullOrWhiteSpace(licence.LevelDesc)) { errors.Add("contractor licence LevelDesc"); }
                 }
             }
