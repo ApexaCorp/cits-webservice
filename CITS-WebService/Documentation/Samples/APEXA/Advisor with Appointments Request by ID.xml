@@ -1,15 +1,15 @@
 <TXLife Version="2.35.00" xmlns="http://ACORD.org/Standards/Life/2">
 	<TXLifeRequest>
-		<TransRefGUID>9ea65cb7-37fa-49b6-a396-aba58ab27136</TransRefGUID>
+		<TransRefGUID>a351ef19-c576-48d9-a482-08a2a994fb72</TransRefGUID>
 		<TransType tc="228">Producer Inquiry</TransType>
 		<TransExeDate>2016-07-25</TransExeDate>
-		<TransExeTime>15:18:47.3003460-04:00</TransExeTime>
+		<TransExeTime>15:22:03.2343460-04:00</TransExeTime>
 		<InquiryView>
-			<InquiryViewCode>FullProducerWithAppointments</InquiryViewCode>
+			<InquiryViewCode>ProducerWithAppointments</InquiryViewCode>
 		</InquiryView>
 		<OLifE>
 			<Party id="ID_1">
-				<PartyKey Persist="Session">6</PartyKey>
+				<PartyKey Persist="Session">14</PartyKey>
 			</Party>
 		</OLifE>
 	</TXLifeRequest>

@@ -1,9 +1,9 @@
 <TXLife Version="2.35.00" xmlns="http://ACORD.org/Standards/Life/2">
 	<TXLifeResponse PrimaryObjectID="ID_1">
-		<TransRefGUID>96b49f45-b147-406a-a744-2b6ef4cdc016</TransRefGUID>
+		<TransRefGUID>5827ce11-f687-4c67-9a49-9fcf01531007</TransRefGUID>
 		<TransType tc="228">Producer Inquiry</TransType>
 		<TransExeDate>2016-07-25</TransExeDate>
-		<TransExeTime>15:32:05.4973460-04:00</TransExeTime>
+		<TransExeTime>15:31:08.5353460-04:00</TransExeTime>
 		<InquiryView>
 			<InquiryViewCode>ProducerAndRelated</InquiryViewCode>
 		</InquiryView>
@@ -12,97 +12,6 @@
 		</TransResult>
 		<OLifE>
 			<Party id="ID_1">
-				<PartyTypeCode tc="2">Organization</PartyTypeCode>
-				<PartyKey Persist="Permanent">6</PartyKey>
-				<FullName>BlueSun MGA Corp.</FullName>
-				<GovtID>123456789</GovtID>
-				<GovtIDTC tc="11">Canadian Business Number</GovtIDTC>
-				<Organization>
-					<OrgForm tc="4">Private Corporation</OrgForm>
-				</Organization>
-				<Address id="ID_2">
-					<AddressKey Persist="Permanent">17</AddressKey>
-					<AddressTypeCode tc="2">Business</AddressTypeCode>
-					<Line1>456 Corporation Way</Line1>
-					<Line2>Suite 1000</Line2>
-					<City>Calgary</City>
-					<AddressStateTC tc="101">Alberta</AddressStateTC>
-					<Zip>T0E 1H4</Zip>
-					<AddressCountryTC tc="2">Canada</AddressCountryTC>
-					<StartDate>2010-01-01</StartDate>
-				</Address>
-				<Address id="ID_3">
-					<AddressKey Persist="Permanent">18</AddressKey>
-					<AddressTypeCode tc="17">Mailing</AddressTypeCode>
-					<Line1>1 Post Offce Way</Line1>
-					<Line2>Box 99</Line2>
-					<City>Calgary</City>
-					<AddressStateTC tc="101">Alberta</AddressStateTC>
-					<Zip>T0T 3M3</Zip>
-					<AddressCountryTC tc="2">Canada</AddressCountryTC>
-				</Address>
-				<Phone>
-					<PhoneTypeCode tc="26">Primary Phone</PhoneTypeCode>
-					<AreaCode>905</AreaCode>
-					<DialNumber>5554321</DialNumber>
-					<Ext>100</Ext>
-				</Phone>
-				<Phone>
-					<PhoneTypeCode tc="19">Fax</PhoneTypeCode>
-					<AreaCode>905</AreaCode>
-					<DialNumber>5554200</DialNumber>
-				</Phone>
-				<Attachment>
-					<AttachmentBasicType tc="3">File</AttachmentBasicType>
-					<AttachmentData tc="8">http://hostname:12345/documents/company/8bda1fb6-714f-e611-9fb6-00090ffe0001</AttachmentData>
-					<AttachmentType tc="361">Contracting - Broker Business Entity</AttachmentType>
-					<AttachmentLocation tc="2">URL Reference</AttachmentLocation>
-					<FileName>Articles.pdf</FileName>
-				</Attachment>
-				<Producer>
-					<EOCoverageInfo HoldingID="ID_4"/>
-				</Producer>
-			</Party>
-			<Holding id="ID_4">
-				<HoldingKey Persist="Permanent">9</HoldingKey>
-				<HoldingTypeCode tc="2">Policy</HoldingTypeCode>
-				<Policy CarrierPartyID="ID_5">
-					<PolNumber>XYZ987</PolNumber>
-					<CertificateNo>AAA12345</CertificateNo>
-					<ProductType tc="40">Errors and Omissions Coverage</ProductType>
-					<PolicyStatus tc="1">Active</PolicyStatus>
-					<PolicyValue>10000000.00</PolicyValue>
-					<RenewalDate>2016-12-31</RenewalDate>
-				</Policy>
-				<Attachment>
-					<AttachmentBasicType tc="3">File</AttachmentBasicType>
-					<AttachmentData tc="8">http://hostname:12345/documents/eocoverage/8dda1fb6-714f-e611-9fb6-00090ffe0001</AttachmentData>
-					<AttachmentType tc="364">Contraction - E&amp;O Certificate</AttachmentType>
-					<AttachmentLocation tc="2">URL Reference</AttachmentLocation>
-					<FileName>Coverage.pdf</FileName>
-				</Attachment>
-			</Holding>
-			<Party id="ID_5">
-				<PartyTypeCode tc="2">Organization</PartyTypeCode>
-				<FullName>Ace Ina Insurance</FullName>
-				<Organization/>
-			</Party>
-			<Party id="ID_6">
-				<PartyTypeCode tc="1">Person</PartyTypeCode>
-				<PartyKey Persist="Permanent">10</PartyKey>
-				<FullName>Harold Harold</FullName>
-				<Person/>
-				<EMailAddress>
-					<AddrLine>hthirdly@sample.ca</AddrLine>
-				</EMailAddress>
-			</Party>
-			<Relation id="ID_7" OriginatingObjectID="ID_1" RelatedObjectID="ID_6">
-				<OriginatingObjectType tc="6">Party</OriginatingObjectType>
-				<RelatedObjectType tc="6">Party</RelatedObjectType>
-				<RelationRoleCode tc="8">Owner</RelationRoleCode>
-				<InterestPercent>15</InterestPercent>
-			</Relation>
-			<Party id="ID_8">
 				<PartyTypeCode tc="1">Person</PartyTypeCode>
 				<PartyKey Persist="Permanent">17</PartyKey>
 				<Person>
@@ -116,7 +25,7 @@
 						<ProviderOrSchool>University of Alberta</ProviderOrSchool>
 					</Education>
 				</Person>
-				<Address id="ID_9">
+				<Address id="ID_2">
 					<AddressKey Persist="Permanent">23</AddressKey>
 					<AddressTypeCode tc="1">Residence</AddressTypeCode>
 					<Line1>751 South Street</Line1>
@@ -126,7 +35,7 @@
 					<AddressCountryTC tc="2">Canada</AddressCountryTC>
 					<StartDate>2010-01-01</StartDate>
 				</Address>
-				<Address id="ID_10">
+				<Address id="ID_3">
 					<AddressKey Persist="Permanent">23</AddressKey>
 					<AddressTypeCode tc="2">Business</AddressTypeCode>
 					<Line1>751 South Street</Line1>
@@ -136,7 +45,7 @@
 					<AddressCountryTC tc="2">Canada</AddressCountryTC>
 					<StartDate>2010-01-01</StartDate>
 				</Address>
-				<Address id="ID_11">
+				<Address id="ID_4">
 					<AddressKey Persist="Permanent">24</AddressKey>
 					<AddressTypeCode tc="17">Mailing</AddressTypeCode>
 					<Line1>75 Yonge St.</Line1>
@@ -158,7 +67,7 @@
 				</Phone>
 				<Producer>
 					<PrefLanguage tc="9">English</PrefLanguage>
-					<EOCoverageInfo HoldingID="ID_13"/>
+					<EOCoverageInfo HoldingID="ID_6"/>
 					<DesignationInfo>
 						<DesignationType tc="1">CFP</DesignationType>
 						<DesignationYear>2012</DesignationYear>
@@ -183,7 +92,7 @@
 					<EffDate>2016-07-01</EffDate>
 				</RatingAgencyInfo>
 			</Party>
-			<FormInstance id="ID_12" RelatedObjectID="ID_8">
+			<FormInstance id="ID_5" RelatedObjectID="ID_1">
 				<FormName>CLHIA</FormName>
 				<RelatedObjectType tc="6">Party</RelatedObjectType>
 				<FormResponse>
@@ -322,10 +231,10 @@
 					<ResponseText>yes</ResponseText>
 				</FormResponse>
 			</FormInstance>
-			<Holding id="ID_13">
+			<Holding id="ID_6">
 				<HoldingKey Persist="Permanent">12</HoldingKey>
 				<HoldingTypeCode tc="2">Policy</HoldingTypeCode>
-				<Policy CarrierPartyID="ID_14">
+				<Policy CarrierPartyID="ID_7">
 					<PolNumber>WWW987</PolNumber>
 					<CertificateNo>BBB12345</CertificateNo>
 					<ProductType tc="40">Errors and Omissions Coverage</ProductType>
@@ -341,12 +250,12 @@
 					<FileName>Coverage.pdf</FileName>
 				</Attachment>
 			</Holding>
-			<Party id="ID_14">
+			<Party id="ID_7">
 				<PartyTypeCode tc="2">Organization</PartyTypeCode>
 				<FullName>Ace Ina Insurance</FullName>
 				<Organization/>
 			</Party>
-			<Party id="ID_15">
+			<Party id="ID_8">
 				<PartyTypeCode tc="1">Person</PartyTypeCode>
 				<FullName>Eunice Huang</FullName>
 				<Person/>
@@ -359,12 +268,12 @@
 					<AddrLine>ehuang@sample.com</AddrLine>
 				</EMailAddress>
 			</Party>
-			<Relation id="ID_16" OriginatingObjectID="ID_8" RelatedObjectID="ID_15">
+			<Relation id="ID_9" OriginatingObjectID="ID_1" RelatedObjectID="ID_8">
 				<OriginatingObjectType tc="6">Party</OriginatingObjectType>
 				<RelatedObjectType tc="6">Party</RelatedObjectType>
 				<RelationRoleCode tc="289">Reference</RelationRoleCode>
 			</Relation>
-			<Party id="ID_17">
+			<Party id="ID_10">
 				<PartyTypeCode tc="1">Person</PartyTypeCode>
 				<FullName>James Rideau</FullName>
 				<Person/>
@@ -377,12 +286,12 @@
 					<AddrLine>jrideau@sample.com</AddrLine>
 				</EMailAddress>
 			</Party>
-			<Relation id="ID_18" OriginatingObjectID="ID_8" RelatedObjectID="ID_17">
+			<Relation id="ID_11" OriginatingObjectID="ID_1" RelatedObjectID="ID_10">
 				<OriginatingObjectType tc="6">Party</OriginatingObjectType>
 				<RelatedObjectType tc="6">Party</RelatedObjectType>
 				<RelationRoleCode tc="289">Reference</RelationRoleCode>
 			</Relation>
-			<Party id="ID_19">
+			<Party id="ID_12">
 				<PartyTypeCode tc="1">Person</PartyTypeCode>
 				<FullName>William Secondly</FullName>
 				<Person/>
@@ -395,15 +304,34 @@
 					<AddrLine>wsecondly@sample.com</AddrLine>
 				</EMailAddress>
 			</Party>
-			<Relation id="ID_20" OriginatingObjectID="ID_8" RelatedObjectID="ID_19">
+			<Relation id="ID_13" OriginatingObjectID="ID_1" RelatedObjectID="ID_12">
 				<OriginatingObjectType tc="6">Party</OriginatingObjectType>
 				<RelatedObjectType tc="6">Party</RelatedObjectType>
 				<RelationRoleCode tc="289">Reference</RelationRoleCode>
 			</Relation>
-			<Relation id="ID_21" OriginatingObjectID="ID_1" RelatedObjectID="ID_8">
+			<Party id="ID_14">
+				<PartyTypeCode tc="2">Organization</PartyTypeCode>
+				<PartyKey Persist="Permanent">15</PartyKey>
+				<FullName>Venture Enterprises Inc.</FullName>
+				<Organization/>
+			</Party>
+			<Relation id="ID_15" OriginatingObjectID="ID_14" RelatedObjectID="ID_1">
 				<OriginatingObjectType tc="6">Party</OriginatingObjectType>
 				<RelatedObjectType tc="6">Party</RelatedObjectType>
-				<RelationRoleCode tc="8">Owner</RelationRoleCode>
+				<RelationRoleCode tc="25">Owned By</RelationRoleCode>
+				<InterestPercent>50</InterestPercent>
+			</Relation>
+			<Party id="ID_16">
+				<PartyTypeCode tc="2">Organization</PartyTypeCode>
+				<PartyKey Persist="Permanent">6</PartyKey>
+				<FullName>BlueSun MGA Corp.</FullName>
+				<Organization/>
+			</Party>
+			<Relation id="ID_17" OriginatingObjectID="ID_16" RelatedObjectID="ID_1">
+				<OriginatingObjectType tc="6">Party</OriginatingObjectType>
+				<RelatedObjectType tc="6">Party</RelatedObjectType>
+				<RelationRoleCode tc="25">Owned By</RelationRoleCode>
+				<InterestPercent>85</InterestPercent>
 			</Relation>
 		</OLifE>
 	</TXLifeResponse>

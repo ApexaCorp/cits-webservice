@@ -1,13 +1,16 @@
-<?xml version="1.0" encoding="utf-16"?>
-<TXLife_Type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.35.00" xmlns="CITS">
-  <TXLifeRequest xmlns="http://ACORD.org/Standards/Life/2">
-    <TransRefGUID>79abdf2b-bc0d-4ff7-95f9-bd67b80c3765</TransRefGUID>
-    <TransType tc="228">Producer Inquiry</TransType>
-    <InquiryView>
-      <InquiryViewCode>ProducerAndRelated</InquiryViewCode>
-    </InquiryView>
-    <OLifE>
-      <Party id="C22" />
-    </OLifE>
-  </TXLifeRequest>
-</TXLife_Type>
+<TXLife Version="2.35.00" xmlns="http://ACORD.org/Standards/Life/2">
+	<TXLifeRequest>
+		<TransRefGUID>96b49f45-b147-406a-a744-2b6ef4cdc016</TransRefGUID>
+		<TransType tc="228">Producer Inquiry</TransType>
+		<TransExeDate>2016-07-25</TransExeDate>
+		<TransExeTime>15:32:03.6393460-04:00</TransExeTime>
+		<InquiryView>
+			<InquiryViewCode>ProducerAndRelated</InquiryViewCode>
+		</InquiryView>
+		<OLifE>
+			<Party id="ID_1">
+				<PartyKey Persist="Session">6</PartyKey>
+			</Party>
+		</OLifE>
+	</TXLifeRequest>
+</TXLife>

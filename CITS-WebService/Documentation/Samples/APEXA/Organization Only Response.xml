@@ -1,0 +1,92 @@
+<TXLife Version="2.35.00" xmlns="http://ACORD.org/Standards/Life/2">
+	<TXLifeResponse PrimaryObjectID="ID_1">
+		<TransRefGUID>67e6ccd2-c495-4e93-bc55-137c54862663</TransRefGUID>
+		<TransType tc="228">Producer Inquiry</TransType>
+		<TransExeDate>2016-07-25</TransExeDate>
+		<TransExeTime>15:25:14.3983460-04:00</TransExeTime>
+		<InquiryView>
+			<InquiryViewCode>ProducerOnly</InquiryViewCode>
+		</InquiryView>
+		<TransResult>
+			<ResultCode tc="1">Success</ResultCode>
+		</TransResult>
+		<OLifE>
+			<Party id="ID_1">
+				<PartyTypeCode tc="2">Organization</PartyTypeCode>
+				<PartyKey Persist="Permanent">6</PartyKey>
+				<FullName>BlueSun MGA Corp.</FullName>
+				<GovtID>123456789</GovtID>
+				<GovtIDTC tc="11">Canadian Business Number</GovtIDTC>
+				<Organization>
+					<OrgForm tc="4">Private Corporation</OrgForm>
+				</Organization>
+				<Address id="ID_2">
+					<AddressKey Persist="Permanent">17</AddressKey>
+					<AddressTypeCode tc="2">Business</AddressTypeCode>
+					<Line1>456 Corporation Way</Line1>
+					<Line2>Suite 1000</Line2>
+					<City>Calgary</City>
+					<AddressStateTC tc="101">Alberta</AddressStateTC>
+					<Zip>T0E 1H4</Zip>
+					<AddressCountryTC tc="2">Canada</AddressCountryTC>
+					<StartDate>2010-01-01</StartDate>
+				</Address>
+				<Address id="ID_3">
+					<AddressKey Persist="Permanent">18</AddressKey>
+					<AddressTypeCode tc="17">Mailing</AddressTypeCode>
+					<Line1>1 Post Offce Way</Line1>
+					<Line2>Box 99</Line2>
+					<City>Calgary</City>
+					<AddressStateTC tc="101">Alberta</AddressStateTC>
+					<Zip>T0T 3M3</Zip>
+					<AddressCountryTC tc="2">Canada</AddressCountryTC>
+				</Address>
+				<Phone>
+					<PhoneTypeCode tc="26">Primary Phone</PhoneTypeCode>
+					<AreaCode>905</AreaCode>
+					<DialNumber>5554321</DialNumber>
+					<Ext>100</Ext>
+				</Phone>
+				<Phone>
+					<PhoneTypeCode tc="19">Fax</PhoneTypeCode>
+					<AreaCode>905</AreaCode>
+					<DialNumber>5554200</DialNumber>
+				</Phone>
+				<Attachment>
+					<AttachmentBasicType tc="3">File</AttachmentBasicType>
+					<AttachmentData tc="8">http://hostname:12345/documents/company/8bda1fb6-714f-e611-9fb6-00090ffe0001</AttachmentData>
+					<AttachmentType tc="361">Contracting - Broker Business Entity</AttachmentType>
+					<AttachmentLocation tc="2">URL Reference</AttachmentLocation>
+					<FileName>Articles.pdf</FileName>
+				</Attachment>
+				<Producer>
+					<EOCoverageInfo HoldingID="ID_4"/>
+				</Producer>
+			</Party>
+			<Holding id="ID_4">
+				<HoldingKey Persist="Permanent">9</HoldingKey>
+				<HoldingTypeCode tc="2">Policy</HoldingTypeCode>
+				<Policy CarrierPartyID="ID_5">
+					<PolNumber>XYZ987</PolNumber>
+					<CertificateNo>AAA12345</CertificateNo>
+					<ProductType tc="40">Errors and Omissions Coverage</ProductType>
+					<PolicyStatus tc="1">Active</PolicyStatus>
+					<PolicyValue>10000000.00</PolicyValue>
+					<RenewalDate>2016-12-31</RenewalDate>
+				</Policy>
+				<Attachment>
+					<AttachmentBasicType tc="3">File</AttachmentBasicType>
+					<AttachmentData tc="8">http://hostname:12345/documents/eocoverage/8dda1fb6-714f-e611-9fb6-00090ffe0001</AttachmentData>
+					<AttachmentType tc="364">Contraction - E&amp;O Certificate</AttachmentType>
+					<AttachmentLocation tc="2">URL Reference</AttachmentLocation>
+					<FileName>Coverage.pdf</FileName>
+				</Attachment>
+			</Holding>
+			<Party id="ID_5">
+				<PartyTypeCode tc="2">Organization</PartyTypeCode>
+				<FullName>Ace Ina Insurance</FullName>
+				<Organization/>
+			</Party>
+		</OLifE>
+	</TXLifeResponse>
+</TXLife>

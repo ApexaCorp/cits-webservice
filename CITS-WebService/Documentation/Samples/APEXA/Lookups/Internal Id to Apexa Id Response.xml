@@ -3,7 +3,7 @@
   <ProcessNonCITSMessageResult>
     <items xmlns="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.DataContracts">
       <Result>
-        <id>C21</id>
+        <id>21</id>
       </Result>
     </items>
   </ProcessNonCITSMessageResult>

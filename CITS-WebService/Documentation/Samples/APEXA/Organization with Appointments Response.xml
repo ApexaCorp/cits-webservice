@@ -1,288 +1,251 @@
-<?xml version="1.0" encoding="utf-16"?>
-<TXLife_Type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.35.00" xmlns="CITS">
-  <TXLifeResponse PrimaryObjectID="C22" xmlns="http://ACORD.org/Standards/Life/2">
-    <TransRefGUID>fe7e679d-12bf-42ba-a4ee-534a000c5155</TransRefGUID>
-    <TransType tc="228">Producer Inquiry</TransType>
-    <TransExeDate>2016-04-29</TransExeDate>
-    <TransExeTime>12:59:23.4730073-04:00</TransExeTime>
-    <TransResult>
-      <ResultCode tc="1">Success</ResultCode>
-    </TransResult>
-    <OLifE>
-      <Party id="C22">
-        <PartyTypeCode tc="2">Organization</PartyTypeCode>
-        <FullName>Venture Enterprises Inc.</FullName>
-        <GovtID>123456789</GovtID>
-        <GovtIDTC tc="11">Canadian Business Number</GovtIDTC>
-        <Organization>
-          <OrgForm tc="4">Private Corporation</OrgForm>
-        </Organization>
-        <Address id="ADRBUS1">
-          <AddressTypeCode tc="2">Business</AddressTypeCode>
-          <Line1>5500 Apexa Drive</Line1>
-          <Line2>Suite 123</Line2>
-          <City>Burlington</City>
-          <AddressStateTC tc="108">Ontario</AddressStateTC>
-          <Zip>L4L 5J5</Zip>
-          <AddressCountryTC tc="2">Canada</AddressCountryTC>
-          <StartDate>2015-01-06</StartDate>
-        </Address>
-        <Address id="ADR2">
-          <AddressTypeCode tc="17">Mailing</AddressTypeCode>
-          <Line1>123 Mailing Address Street</Line1>
-          <Line2>#789</Line2>
-          <City>Toronto</City>
-          <AddressStateTC tc="108">Ontario</AddressStateTC>
-          <Zip>M2M 1M4</Zip>
-          <AddressCountryTC tc="2">Canada</AddressCountryTC>
-        </Address>
-        <Address id="ADRBUS3">
-          <AddressTypeCode tc="12">Previous</AddressTypeCode>
-          <Line1>1 Historical Lane</Line1>
-          <Line2 />
-          <City>Oakville</City>
-          <AddressStateTC tc="108">Ontario</AddressStateTC>
-          <Zip>L1L 5M5</Zip>
-          <AddressCountryTC tc="2">Canada</AddressCountryTC>
-          <EndDate>2016-02-29</EndDate>
-          <StartDate>2000-03-09</StartDate>
-        </Address>
-        <Phone>
-          <PhoneTypeCode tc="26">Primary Phone</PhoneTypeCode>
-          <AreaCode>905</AreaCode>
-          <DialNumber>5551234</DialNumber>
-          <Ext>55</Ext>
-        </Phone>
-        <Attachment>
-          <AttachmentBasicType tc="3">File</AttachmentBasicType>
-          <AttachmentData tc="8">http://host:12345//documents/company/ABCDEFGH-1234-ABCD-1234-000000000001</AttachmentData>
-          <AttachmentType tc="361">Contracting - Broker</AttachmentType>
-          <AttachmentLocation tc="2">URL Reference</AttachmentLocation>
-          <FileName>ID_Document.pdf</FileName>
-        </Attachment>
-        <Producer>
-          <EOCoverageInfo HoldingID="EO4" />
-          <Licence AgencyAffiliationID="LS1">
-            <LicenceNum>123456</LicenceNum>
-            <LicenceState tc="107">Nova Scotia</LicenceState>
-            <LicenceType tc="4">Health Producer Licence</LicenceType>
-            <ExpDate>2016-05-28</ExpDate>
-            <OriginationDate>2016-02-23</OriginationDate>
-            <NameOnLicence>Sample Licence Name</NameOnLicence>
-          </Licence>
-          <CarrierAppointment id="CON288" PartyID="C8">
-            <CompanyProducerID>123</CompanyProducerID>
-            <CarrierApptStatus tc="3">Pending approval</CarrierApptStatus>
-            <DistributionAgreementInfo BankingInfoID="EFT288">
-              <PaymentForm tc="7">Electronic Funds Transfer</PaymentForm>
-            </DistributionAgreementInfo>
-            <ReferralInfo PartyID="REF288" />
-            <DistributionLevel PartyID="C8">
-              <DistributionLevelValue>carrier</DistributionLevelValue>
-            </DistributionLevel>
-            <RequirementInfo>
-              <ReqCode tc="936">Placement of Initial Business</ReqCode>
-            </RequirementInfo>
-          </CarrierAppointment>
-          <CarrierAppointment id="CON295" PartyID="C8">
-            <CompanyProducerID>123</CompanyProducerID>
-            <EffDate>2016-04-29</EffDate>
-            <CarrierApptStatus tc="1">Active</CarrierApptStatus>
-            <DistributionAgreementInfo BankingInfoID="EFT295">
-              <PaymentForm tc="7">Electronic Funds Transfer</PaymentForm>
-            </DistributionAgreementInfo>
-            <DebtInfo HoldingID="DEBT3" />
-            <ReferralInfo PartyID="REF295" />
-            <DistributionLevel PartyID="C8">
-              <DistributionLevelValue>carrier</DistributionLevelValue>
-            </DistributionLevel>
-            <RequirementInfo>
-              <ReqCode tc="936">Placement of Initial Business</ReqCode>
-            </RequirementInfo>
-            <RequirementInfo FulfillerPartyID="C8">
-              <FulfilledDate>2016-04-29</FulfilledDate>
-              <FulfilledTime>13:35:32.2562265-04:00</FulfilledTime>
-              <Attachment>
-                <AttachmentBasicType tc="3">File</AttachmentBasicType>
-               <AttachmentData tc="8">http://localhost:61144/documents/fulfillment/ABCDEFGH-1234-ABCD-1234-000000000001</AttachmentData>
-                <AttachmentType tc="1">Document</AttachmentType>
-                <AttachmentLocation tc="2">URL Reference</AttachmentLocation>
-                <FileName>Apexa# 295 Signed.pdf</FileName>
-                <SignatureInfo SignaturePartyID="carrier@bluesun.ca" DelegatedSignerPartyID="SIGN3">
-                  <SignatureDate>2016-04-29</SignatureDate>
-                  <SignatureTime>09:35:29.9530000-04:00</SignatureTime>
-                </SignatureInfo>
-                <SignatureInfo SignaturePartyID="advisoremployee@bluesun.ca" DelegatedSignerPartyID="SIGN4">
-                  <SignatureDate>2016-04-29</SignatureDate>
-                  <SignatureTime>09:33:42.7330000-04:00</SignatureTime>
-                </SignatureInfo>
-              </Attachment>
-            </RequirementInfo>
-            <AssocCarrierApptInfo CarrierAppointmentID="CON295" PartyID="C8">
-              <CompanyProducerID>555</CompanyProducerID>
-              <CarrierApptStatus tc="1">Active</CarrierApptStatus>
-            </AssocCarrierApptInfo>
-          </CarrierAppointment>
-          <SupervisionLevel IssuingPartyID="C8">
-            <SupervisionLevelTC tc="3">Coaching</SupervisionLevelTC>
-            <EffDate>2016-04-29</EffDate>
-            <FollowUpDate>2016-05-04</FollowUpDate>
-          </SupervisionLevel>
-        </Producer>
-      </Party>
-      <Holding id="EO4">
-        <Policy CarrierPartyID="EOP4">
-          <PolNumber>123</PolNumber>
-          <CertificateNo>123</CertificateNo>
-          <ProductType tc="40">Errors and Omissions Coverage</ProductType>
-          <PolicyStatus tc="1">Active</PolicyStatus>
-          <PolicyValue>10000000.00</PolicyValue>
-          <EffDate>2016-03-01</EffDate>
-          <RenewalDate>2016-12-31</RenewalDate>
-        </Policy>
-        <Attachment>
-          <AttachmentBasicType tc="3">File</AttachmentBasicType>
-          <AttachmentData tc="8">http://localhost:61144/documents/eocoverage/ABCDEFGH-1234-ABCD-1234-000000000001</AttachmentData>
-          <AttachmentType tc="364">Contraction - E&amp;O Certificate</AttachmentType>
-          <AttachmentLocation tc="2">URL Reference</AttachmentLocation>
-          <FileName>CoverageDocument.pdf</FileName>
-        </Attachment>
-      </Holding>
-      <Party id="EOP4">
-        <PartyTypeCode tc="2">Organization</PartyTypeCode>
-        <FullName>Ace Ina Insurance</FullName>
-        <Organization />
-      </Party>
-      <Holding id="DEBT3">
-        <HoldingTypeCode tc="1">Asset/Liability</HoldingTypeCode>
-        <Loan FinancialInstitutionPartyID="DEBTHOLDER3">
-          <LoanReason tc="2147483647">Other</LoanReason>
-          <LoanReasonDesc>Sample Debt</LoanReasonDesc>
-          <LoanAmt>5000.00</LoanAmt>
-        </Loan>
-      </Holding>
-      <Party id="DEBTHOLDER3">
-        <PartyTypeCode tc="2">Organization</PartyTypeCode>
-        <FullName>BlueSun Carrier Limited</FullName>
-        <Organization />
-      </Party>
-      <Relation id="DEBTREL_DEBT3_C22" OriginatingObjectID="DEBT3" RelatedObjectID="C22">
-        <OriginatingObjectType tc="4">Holding</OriginatingObjectType>
-        <RelatedObjectType tc="6">Party</RelatedObjectType>
-        <RelationRoleCode tc="8">Owner</RelationRoleCode>
-      </Relation>
-      <Party id="C24">
-        <PartyTypeCode tc="1">Person</PartyTypeCode>
-        <FullName>Advisor Employee Account</FullName>
-        <Person />
-        <EMailAddress>
-          <AddrLine>advisoremployee@bluesun.ca</AddrLine>
-        </EMailAddress>
-      </Party>
-      <Relation id="OWNERREL_C22_C24" OriginatingObjectID="C22" RelatedObjectID="C24">
-        <OriginatingObjectType tc="6">Party</OriginatingObjectType>
-        <RelatedObjectType tc="6">Party</RelatedObjectType>
-        <RelationRoleCode tc="8">Owner</RelationRoleCode>
-        <InterestPercent>50</InterestPercent>
-      </Relation>
-      <Party id="C32">
-        <PartyTypeCode tc="1">Person</PartyTypeCode>
-        <FullName>Ernest Kim</FullName>
-        <Person />
-        <EMailAddress>
-          <AddrLine>ernest.kim@bluesun.ca</AddrLine>
-        </EMailAddress>
-      </Party>
-      <Relation id="OWNERREL_C22_C32" OriginatingObjectID="C22" RelatedObjectID="C32">
-        <OriginatingObjectType tc="6">Party</OriginatingObjectType>
-        <RelatedObjectType tc="6">Party</RelatedObjectType>
-        <RelationRoleCode tc="8">Owner</RelationRoleCode>
-        <InterestPercent>20</InterestPercent>
-      </Relation>
-      <Party id="LS1">
-        <PartyTypeCode tc="2">Organization</PartyTypeCode>
-        <FullName>Robert Murray</FullName>
-        <Organization />
-      </Party>
-      <Party id="C8">
-        <PartyTypeCode tc="2">Organization</PartyTypeCode>
-        <FullName>BlueSun Carrier Limited</FullName>
-        <Organization />
-      </Party>
-      <Party id="REF288">
-        <PartyTypeCode tc="1">Person</PartyTypeCode>
-        <FullName>Robert Murray</FullName>
-        <Person />
-      </Party>
-      <Holding id="EFT288">
-        <Attachment>
-          <AttachmentBasicType tc="2">Image</AttachmentBasicType>
-          <AttachmentData tc="8">http://host:12345//documents/banking/ABCDEFGH-1234-ABCD-1234-000000000001</AttachmentData>
-          <AttachmentType tc="183">Void Cheque</AttachmentType>
-          <AttachmentLocation tc="2">URL Reference</AttachmentLocation>
-          <FileName>EFT.jpg</FileName>
-        </Attachment>
-        <Banking>
-          <AccountNumber>123</AccountNumber>
-          <TransitNumber>123</TransitNumber>
-          <InstitutionNumber>123</InstitutionNumber>
-        </Banking>
-      </Holding>
-      <FormInstance id="CQ288" RelatedObjectID="CON288">
-        <RelatedObjectType tc="11">Carrier Appointment</RelatedObjectType>
-        <FormResponse>
-          <QuestionNumber>PRIVACY</QuestionNumber>
-          <ResponseData />
-          <ResponseText>Yes</ResponseText>
-        </FormResponse>
-      </FormInstance>
-      <Party id="REF295">
-        <PartyTypeCode tc="1">Person</PartyTypeCode>
-        <FullName>Robert Murray</FullName>
-        <Person />
-      </Party>
-      <Holding id="EFT295">
-        <Attachment>
-          <AttachmentBasicType tc="2">Image</AttachmentBasicType>
-          <AttachmentData tc="8">http://localhost:61144/documents/banking/ABCDEFGH-1234-ABCD-1234-000000000001</AttachmentData>
-          <AttachmentType tc="183">Void Cheque</AttachmentType>
-          <AttachmentLocation tc="2">URL Reference</AttachmentLocation>
-          <FileName>EFT.jpg</FileName>
-        </Attachment>
-        <Banking>
-          <AccountNumber>123</AccountNumber>
-          <TransitNumber>123</TransitNumber>
-          <InstitutionNumber>123</InstitutionNumber>
-        </Banking>
-      </Holding>
-      <Party id="SIGN3">
-        <PartyTypeCode tc="1">Person</PartyTypeCode>
-        <Person>
-          <FirstName>Carrier</FirstName>
-          <LastName>Account </LastName>
-        </Person>
-        <EMailAddress>
-          <AddrLine>carrier@bluesun.ca</AddrLine>
-        </EMailAddress>
-      </Party>
-      <Party id="SIGN4">
-        <PartyTypeCode tc="1">Person</PartyTypeCode>
-        <Person>
-          <FirstName>James</FirstName>
-          <LastName>Franki</LastName>
-        </Person>
-        <EMailAddress>
-          <AddrLine>advisoremployee@bluesun.ca</AddrLine>
-        </EMailAddress>
-      </Party>
-      <FormInstance id="CQ295" RelatedObjectID="CON295">
-        <RelatedObjectType tc="11">Carrier Appointment</RelatedObjectType>
-        <FormResponse>
-          <QuestionNumber>PRIVACY</QuestionNumber>
-          <ResponseData />
-          <ResponseText>Yes</ResponseText>
-        </FormResponse>
-      </FormInstance>
-    </OLifE>
-  </TXLifeResponse>
-</TXLife_Type>
+<TXLife Version="2.35.00" xmlns="http://ACORD.org/Standards/Life/2">
+	<TXLifeResponse PrimaryObjectID="ID_1">
+		<TransRefGUID>07e72bd7-19a3-4e51-9ed5-8907c1ba6cd1</TransRefGUID>
+		<TransType tc="228">Producer Inquiry</TransType>
+		<TransExeDate>2016-07-25</TransExeDate>
+		<TransExeTime>15:23:38.4963460-04:00</TransExeTime>
+		<InquiryView>
+			<InquiryViewCode>ProducerWithAppointments</InquiryViewCode>
+		</InquiryView>
+		<TransResult>
+			<ResultCode tc="1">Success</ResultCode>
+		</TransResult>
+		<OLifE>
+			<Party id="ID_1">
+				<PartyTypeCode tc="2">Organization</PartyTypeCode>
+				<PartyKey Persist="Permanent">6</PartyKey>
+				<FullName>BlueSun MGA Corp.</FullName>
+				<GovtID>123456789</GovtID>
+				<GovtIDTC tc="11">Canadian Business Number</GovtIDTC>
+				<Organization>
+					<OrgForm tc="4">Private Corporation</OrgForm>
+				</Organization>
+				<Address id="ID_2">
+					<AddressKey Persist="Permanent">17</AddressKey>
+					<AddressTypeCode tc="2">Business</AddressTypeCode>
+					<Line1>456 Corporation Way</Line1>
+					<Line2>Suite 1000</Line2>
+					<City>Calgary</City>
+					<AddressStateTC tc="101">Alberta</AddressStateTC>
+					<Zip>T0E 1H4</Zip>
+					<AddressCountryTC tc="2">Canada</AddressCountryTC>
+					<StartDate>2010-01-01</StartDate>
+				</Address>
+				<Address id="ID_3">
+					<AddressKey Persist="Permanent">18</AddressKey>
+					<AddressTypeCode tc="17">Mailing</AddressTypeCode>
+					<Line1>1 Post Offce Way</Line1>
+					<Line2>Box 99</Line2>
+					<City>Calgary</City>
+					<AddressStateTC tc="101">Alberta</AddressStateTC>
+					<Zip>T0T 3M3</Zip>
+					<AddressCountryTC tc="2">Canada</AddressCountryTC>
+				</Address>
+				<Phone>
+					<PhoneTypeCode tc="26">Primary Phone</PhoneTypeCode>
+					<AreaCode>905</AreaCode>
+					<DialNumber>5554321</DialNumber>
+					<Ext>100</Ext>
+				</Phone>
+				<Phone>
+					<PhoneTypeCode tc="19">Fax</PhoneTypeCode>
+					<AreaCode>905</AreaCode>
+					<DialNumber>5554200</DialNumber>
+				</Phone>
+				<Attachment>
+					<AttachmentBasicType tc="3">File</AttachmentBasicType>
+					<AttachmentData tc="8">http://hostname:12345/documents/company/8bda1fb6-714f-e611-9fb6-00090ffe0001</AttachmentData>
+					<AttachmentType tc="361">Contracting - Broker Business Entity</AttachmentType>
+					<AttachmentLocation tc="2">URL Reference</AttachmentLocation>
+					<FileName>Articles.pdf</FileName>
+				</Attachment>
+				<Producer>
+					<EOCoverageInfo HoldingID="ID_4"/>
+					<CarrierAppointment id="ID_6" PartyID="ID_7" AgencyAffiliationID="ID_1">
+						<CarrierAppointmentKey Persist="Permanent">375</CarrierAppointmentKey>
+						<CompanyProducerID>Selling1</CompanyProducerID>
+						<EffDate>2016-07-21</EffDate>
+						<CarrierApptStatus tc="1">Active</CarrierApptStatus>
+						<DistributionAgreementInfo BankingInfoID="ID_13">
+							<PaymentForm tc="7">Electronic Funds Transfer</PaymentForm>
+						</DistributionAgreementInfo>
+						<ConsolidationInfo CarrierAppointmentID="ID_14">
+							<ConsolidationInfoKey Persist="Permanent">377</ConsolidationInfoKey>
+						</ConsolidationInfo>
+						<ReferralInfo PartyID="ID_12"/>
+						<DistributionLevel PartyID="ID_7">
+							<DistributionLevelValue>carrier</DistributionLevelValue>
+						</DistributionLevel>
+						<DistributionLevel PartyID="ID_1">
+							<DistributionLevelValue>mga</DistributionLevelValue>
+						</DistributionLevel>
+						<DistributionLevel PartyID="ID_8">
+							<DistributionLevelValue>advisor</DistributionLevelValue>
+						</DistributionLevel>
+						<RequirementInfo FulfillerPartyID="ID_7">
+							<ReqCode tc="2147483647">Other</ReqCode>
+							<FulfilledDate>2016-07-21</FulfilledDate>
+							<FulfilledTime>19:05:31.7115029-04:00</FulfilledTime>
+							<Attachment>
+								<AttachmentBasicType tc="3">File</AttachmentBasicType>
+								<AttachmentData tc="8">http://hostname:12345/documents/fulfillment/3ECA9513-764F-E611-9FB6-00090FFE0001</AttachmentData>
+								<AttachmentType tc="1">Document</AttachmentType>
+								<AttachmentLocation tc="2">URL Reference</AttachmentLocation>
+								<FileName>Apexa# 375 Signed.pdf</FileName>
+								<SignatureInfo SignaturePartyID="ID_15" DelegatedSignerPartyID="ID_16">
+									<SignatureDate>2016-07-21</SignatureDate>
+									<SignatureTime>15:05:27.8230000-04:00</SignatureTime>
+								</SignatureInfo>
+								<SignatureInfo SignaturePartyID="ID_17" DelegatedSignerPartyID="ID_18">
+									<SignatureDate>2016-07-21</SignatureDate>
+									<SignatureTime>15:01:22.5270000-04:00</SignatureTime>
+								</SignatureInfo>
+							</Attachment>
+						</RequirementInfo>
+						<AssocCarrierApptInfo id="ID_9" CarrierAppointmentID="ID_6" PartyID="ID_7">
+							<CompanyProducerID>Selling1</CompanyProducerID>
+							<CompanyProducerIDSource tc="1">Carrier</CompanyProducerIDSource>
+							<CompanyProducerIDSourceDesc>Selling</CompanyProducerIDSourceDesc>
+							<CarrierApptStatus tc="1">Active</CarrierApptStatus>
+						</AssocCarrierApptInfo>
+						<AssocCarrierApptInfo id="ID_10" CarrierAppointmentID="ID_6" PartyID="ID_7">
+							<CompanyProducerID>Branch1</CompanyProducerID>
+							<CompanyProducerIDSource tc="1">Carrier</CompanyProducerIDSource>
+							<CompanyProducerIDSourceDesc>Branch</CompanyProducerIDSourceDesc>
+							<CarrierApptStatus tc="1">Active</CarrierApptStatus>
+						</AssocCarrierApptInfo>
+						<AssocCarrierApptInfo id="ID_11" CarrierAppointmentID="ID_6" PartyID="ID_7">
+							<CompanyProducerID>Corporate1</CompanyProducerID>
+							<CompanyProducerIDSource tc="1">Carrier</CompanyProducerIDSource>
+							<CompanyProducerIDSourceDesc>Corporate</CompanyProducerIDSourceDesc>
+							<CarrierApptStatus tc="3">Pending approval</CarrierApptStatus>
+						</AssocCarrierApptInfo>
+					</CarrierAppointment>
+					<CarrierAppointment id="ID_14" PartyID="ID_7" AgencyAffiliationID="ID_1">
+						<CarrierAppointmentKey Persist="Permanent">377</CarrierAppointmentKey>
+						<ExpDate>2016-07-21</ExpDate>
+						<CarrierApptStatus tc="2">Inactive</CarrierApptStatus>
+						<ReferralInfo PartyID="ID_20"/>
+						<DistributionLevel PartyID="ID_7">
+							<DistributionLevelValue>carrier</DistributionLevelValue>
+						</DistributionLevel>
+						<DistributionLevel PartyID="ID_1">
+							<DistributionLevelValue>mga</DistributionLevelValue>
+						</DistributionLevel>
+					</CarrierAppointment>
+				</Producer>
+			</Party>
+			<Holding id="ID_4">
+				<HoldingKey Persist="Permanent">9</HoldingKey>
+				<HoldingTypeCode tc="2">Policy</HoldingTypeCode>
+				<Policy CarrierPartyID="ID_5">
+					<PolNumber>XYZ987</PolNumber>
+					<CertificateNo>AAA12345</CertificateNo>
+					<ProductType tc="40">Errors and Omissions Coverage</ProductType>
+					<PolicyStatus tc="1">Active</PolicyStatus>
+					<PolicyValue>10000000.00</PolicyValue>
+					<RenewalDate>2016-12-31</RenewalDate>
+				</Policy>
+				<Attachment>
+					<AttachmentBasicType tc="3">File</AttachmentBasicType>
+					<AttachmentData tc="8">http://hostname:12345/documents/eocoverage/8dda1fb6-714f-e611-9fb6-00090ffe0001</AttachmentData>
+					<AttachmentType tc="364">Contraction - E&amp;O Certificate</AttachmentType>
+					<AttachmentLocation tc="2">URL Reference</AttachmentLocation>
+					<FileName>Coverage.pdf</FileName>
+				</Attachment>
+			</Holding>
+			<Party id="ID_5">
+				<PartyTypeCode tc="2">Organization</PartyTypeCode>
+				<FullName>Ace Ina Insurance</FullName>
+				<Organization/>
+			</Party>
+			<Party id="ID_7">
+				<PartyTypeCode tc="2">Organization</PartyTypeCode>
+				<PartyKey Persist="Permanent">44</PartyKey>
+				<FullName>Ontlife</FullName>
+				<Organization/>
+			</Party>
+			<Party id="ID_8">
+				<PartyTypeCode tc="1">Person</PartyTypeCode>
+				<PartyKey Persist="Permanent">14</PartyKey>
+				<Person>
+					<FirstName>Blake</FirstName>
+					<MiddleName>Jason</MiddleName>
+					<LastName>Roberts</LastName>
+					<Prefix>Mr.</Prefix>
+				</Person>
+			</Party>
+			<Party id="ID_12">
+				<PartyTypeCode tc="1">Person</PartyTypeCode>
+				<FullName>Tom Archer</FullName>
+				<Person/>
+			</Party>
+			<Holding id="ID_13">
+				<HoldingKey Persist="Permanent">375</HoldingKey>
+				<HoldingTypeCode tc="7">Banking</HoldingTypeCode>
+				<Attachment>
+					<AttachmentBasicType tc="2">Image</AttachmentBasicType>
+					<AttachmentData tc="8">http://hostname:12345/documents/banking/8EDA1FB6-714F-E611-9FB6-00090FFE0001</AttachmentData>
+					<AttachmentType tc="183">Void Cheque</AttachmentType>
+					<AttachmentLocation tc="2">URL Reference</AttachmentLocation>
+					<FileName>EFT.pdf</FileName>
+				</Attachment>
+				<Banking>
+					<AccountNumber>1234567</AccountNumber>
+					<InstitutionNumber>003</InstitutionNumber>
+					<TransitNumber>11111</TransitNumber>
+				</Banking>
+			</Holding>
+			<Party id="ID_15">
+				<EMailAddress>
+					<AddrLine>carrier5@bluesun.ca</AddrLine>
+				</EMailAddress>
+			</Party>
+			<Party id="ID_16">
+				<PartyTypeCode tc="1">Person</PartyTypeCode>
+				<PartyKey Persist="Permanent">59</PartyKey>
+				<Person>
+					<FirstName>Carrier</FirstName>
+					<LastName>Account 5 </LastName>
+				</Person>
+				<EMailAddress>
+					<AddrLine>carrier5@bluesun.ca</AddrLine>
+				</EMailAddress>
+			</Party>
+			<Party id="ID_17">
+				<EMailAddress>
+					<AddrLine>mga@bluesun.ca</AddrLine>
+				</EMailAddress>
+			</Party>
+			<Party id="ID_18">
+				<PartyTypeCode tc="1">Person</PartyTypeCode>
+				<PartyKey Persist="Permanent">8</PartyKey>
+				<Person>
+					<FirstName>MGA</FirstName>
+					<LastName>Account </LastName>
+				</Person>
+				<EMailAddress>
+					<AddrLine>mga@bluesun.ca</AddrLine>
+				</EMailAddress>
+			</Party>
+			<FormInstance id="ID_19" RelatedObjectID="ID_6">
+				<FormName>CUSTOM_QUESTION</FormName>
+				<RelatedObjectType tc="11">Carrier Appointment</RelatedObjectType>
+				<FormResponse>
+					<QuestionNumber>I represent that I have reviewed my Advisor Screening Questionnaire (the 'ASQ') form, as stored on the Web-based system (the 'APEXA System') that APEXA Corp. generally makes available to life insurance companies, managing general agents and advisors, and confirm that the information in my ASQ is accurate, correct and up to date. Further, I acknowledge that a breach of the foregoing term is a breach of the Terms of Use of the APEXA System and is grounds for termination of my APEXA account. I have read the foregoing representation, understand it, and agree further to be bound by it. </QuestionNumber>
+					<ResponseText>I Agree</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>Do you agree?</QuestionNumber>
+					<ResponseData>I do not agree.</ResponseData>
+					<ResponseText>No</ResponseText>
+				</FormResponse>
+			</FormInstance>
+			<Party id="ID_20">
+				<PartyTypeCode tc="1">Person</PartyTypeCode>
+				<FullName>Judith Winn</FullName>
+				<Person/>
+			</Party>
+		</OLifE>
+	</TXLifeResponse>
+</TXLife>

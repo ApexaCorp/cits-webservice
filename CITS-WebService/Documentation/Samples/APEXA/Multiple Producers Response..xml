@@ -1,0 +1,997 @@
+<TXLife Version="2.35.00" xmlns="http://ACORD.org/Standards/Life/2">
+	<TXLifeResponse PrimaryObjectID="ID_1">
+		<TransRefGUID>82d8db0f-97df-4c52-b630-b3463843bb32</TransRefGUID>
+		<TransType tc="228">Producer Inquiry</TransType>
+		<TransExeDate>2016-07-25</TransExeDate>
+		<TransExeTime>15:13:35.7827460-04:00</TransExeTime>
+		<InquiryView>
+			<InquiryViewCode>ProducerOnly</InquiryViewCode>
+		</InquiryView>
+		<TransResult>
+			<ResultCode tc="1">Success</ResultCode>
+		</TransResult>
+		<OLifE>
+			<Party id="ID_1">
+				<PartyTypeCode tc="2">Organization</PartyTypeCode>
+				<PartyKey Persist="Permanent">15</PartyKey>
+				<FullName>Venture Enterprises Inc.</FullName>
+				<GovtID>123456789</GovtID>
+				<GovtIDTC tc="11">Canadian Business Number</GovtIDTC>
+				<Organization>
+					<OrgForm tc="4">Private Corporation</OrgForm>
+				</Organization>
+				<Address id="ID_2">
+					<AddressKey Persist="Permanent">22</AddressKey>
+					<AddressTypeCode tc="2">Business</AddressTypeCode>
+					<Line1>1 Toronto St</Line1>
+					<Line2>Suite 3400</Line2>
+					<City>Toronto</City>
+					<AddressStateTC tc="108">Ontario</AddressStateTC>
+					<Zip>M7P 1J4</Zip>
+					<AddressCountryTC tc="2">Canada</AddressCountryTC>
+					<StartDate>2010-01-01</StartDate>
+				</Address>
+				<Phone>
+					<PhoneTypeCode tc="26">Primary Phone</PhoneTypeCode>
+					<AreaCode>416</AreaCode>
+					<DialNumber>9891111</DialNumber>
+				</Phone>
+				<Phone>
+					<PhoneTypeCode tc="17">Business Toll-Free</PhoneTypeCode>
+					<AreaCode>800</AreaCode>
+					<DialNumber>4563210</DialNumber>
+				</Phone>
+				<Attachment>
+					<AttachmentBasicType tc="3">File</AttachmentBasicType>
+					<AttachmentData tc="8">http://hostname:12345/documents/company/92da1fb6-714f-e611-9fb6-00090ffe0001</AttachmentData>
+					<AttachmentType tc="361">Contracting - Broker Business Entity</AttachmentType>
+					<AttachmentLocation tc="2">URL Reference</AttachmentLocation>
+					<FileName>Articles.pdf</FileName>
+				</Attachment>
+				<Producer>
+					<EOCoverageInfo HoldingID="ID_3"/>
+				</Producer>
+			</Party>
+			<Holding id="ID_3">
+				<HoldingKey Persist="Permanent">11</HoldingKey>
+				<HoldingTypeCode tc="2">Policy</HoldingTypeCode>
+				<Policy CarrierPartyID="ID_4">
+					<PolNumber>VVV987</PolNumber>
+					<CertificateNo>CCC12345</CertificateNo>
+					<ProductType tc="40">Errors and Omissions Coverage</ProductType>
+					<PolicyStatus tc="1">Active</PolicyStatus>
+					<PolicyValue>10000000.00</PolicyValue>
+					<RenewalDate>2016-12-31</RenewalDate>
+				</Policy>
+				<Attachment>
+					<AttachmentBasicType tc="3">File</AttachmentBasicType>
+					<AttachmentData tc="8">http://hostname:12345/documents/eocoverage/94da1fb6-714f-e611-9fb6-00090ffe0001</AttachmentData>
+					<AttachmentType tc="364">Contraction - E&amp;O Certificate</AttachmentType>
+					<AttachmentLocation tc="2">URL Reference</AttachmentLocation>
+					<FileName>Coverage.pdf</FileName>
+				</Attachment>
+			</Holding>
+			<Party id="ID_4">
+				<PartyTypeCode tc="2">Organization</PartyTypeCode>
+				<FullName>Ace Ina Insurance</FullName>
+				<Organization/>
+			</Party>
+		</OLifE>
+	</TXLifeResponse>
+	<TXLifeResponse PrimaryObjectID="ID_5">
+		<TransRefGUID>11bd8fa4-0d75-4809-b39f-4b02a1816914</TransRefGUID>
+		<TransType tc="228">Producer Inquiry</TransType>
+		<TransExeDate>2016-07-25</TransExeDate>
+		<TransExeTime>15:14:59.0037460-04:00</TransExeTime>
+		<InquiryView>
+			<InquiryViewCode>FullProducerWithAppointments</InquiryViewCode>
+		</InquiryView>
+		<TransResult>
+			<ResultCode tc="1">Success</ResultCode>
+		</TransResult>
+		<OLifE>
+			<Party id="ID_5">
+				<PartyTypeCode tc="1">Person</PartyTypeCode>
+				<PartyKey Persist="Permanent">14</PartyKey>
+				<Person>
+					<FirstName>Blake</FirstName>
+					<MiddleName>Jason</MiddleName>
+					<LastName>Robert</LastName>
+					<Prefix>Mr.</Prefix>
+					<BirthDate>1965-01-12</BirthDate>
+					<HighestEducationLevel tc="3">3 year degree / 4 year diploma</HighestEducationLevel>
+					<Education>
+						<Major>B.Sc.</Major>
+						<ProviderOrSchool>University of Toronto</ProviderOrSchool>
+					</Education>
+				</Person>
+				<Address id="ID_6">
+					<AddressKey Persist="Permanent">19</AddressKey>
+					<AddressTypeCode tc="2">Business</AddressTypeCode>
+					<Line1>123 North Service Road</Line1>
+					<Line2>Suite 100</Line2>
+					<City>Oakville</City>
+					<AddressStateTC tc="108">Ontario</AddressStateTC>
+					<Zip>L1M 0N4</Zip>
+					<AddressCountryTC tc="2">Canada</AddressCountryTC>
+					<StartDate>2010-01-01</StartDate>
+				</Address>
+				<Address id="ID_7">
+					<AddressKey Persist="Permanent">20</AddressKey>
+					<AddressTypeCode tc="2">Business</AddressTypeCode>
+					<Line1>55 Town Way</Line1>
+					<City>Mississauga</City>
+					<AddressStateTC tc="108">Ontario</AddressStateTC>
+					<Zip>L0L 5M5</Zip>
+					<AddressCountryTC tc="2">Canada</AddressCountryTC>
+					<StartDate>2010-07-01</StartDate>
+				</Address>
+				<Address id="ID_8">
+					<AddressKey Persist="Permanent">21</AddressKey>
+					<AddressTypeCode tc="17">Mailing</AddressTypeCode>
+					<Line1>1400 Postmaster Blvd</Line1>
+					<Line2>Box 201</Line2>
+					<City>Oakville</City>
+					<AddressStateTC tc="108">Ontario</AddressStateTC>
+					<Zip>L8F 5Y5</Zip>
+					<AddressCountryTC tc="2">Canada</AddressCountryTC>
+				</Address>
+				<Phone>
+					<PhoneTypeCode tc="26">Primary Phone</PhoneTypeCode>
+					<AreaCode>647</AreaCode>
+					<DialNumber>4567890</DialNumber>
+				</Phone>
+				<Phone>
+					<PhoneTypeCode tc="12">Mobile</PhoneTypeCode>
+					<AreaCode>416</AreaCode>
+					<DialNumber>8101234</DialNumber>
+				</Phone>
+				<Producer>
+					<PrefLanguage tc="9">English</PrefLanguage>
+					<EOCoverageInfo HoldingID="ID_18"/>
+					<CarrierAppointment id="ID_28" PartyID="ID_29" AgencyAffiliationID="ID_10">
+						<CarrierAppointmentKey Persist="Permanent">376</CarrierAppointmentKey>
+						<CompanyProducerID>FundServ1</CompanyProducerID>
+						<EffDate>2016-07-21</EffDate>
+						<CarrierApptStatus tc="1">Active</CarrierApptStatus>
+						<DistributionAgreementInfo BankingInfoID="ID_31">
+							<PaymentForm tc="7">Electronic Funds Transfer</PaymentForm>
+						</DistributionAgreementInfo>
+						<DistributionLevel PartyID="ID_29">
+							<DistributionLevelValue>carrier</DistributionLevelValue>
+						</DistributionLevel>
+						<DistributionLevel PartyID="ID_10">
+							<DistributionLevelValue>mga</DistributionLevelValue>
+						</DistributionLevel>
+						<DistributionLevel PartyID="ID_5">
+							<DistributionLevelValue>advisor</DistributionLevelValue>
+						</DistributionLevel>
+						<RequirementInfo FulfillerPartyID="ID_29">
+							<ReqCode tc="2147483647">Other</ReqCode>
+							<FulfilledDate>2016-07-21</FulfilledDate>
+							<FulfilledTime>19:08:44.2105739-04:00</FulfilledTime>
+							<Attachment>
+								<AttachmentBasicType tc="3">File</AttachmentBasicType>
+								<AttachmentData tc="8">http://hostname:12345/documents/fulfillment/51183C89-764F-E611-9FB6-00090FFE0001</AttachmentData>
+								<AttachmentType tc="1">Document</AttachmentType>
+								<AttachmentLocation tc="2">URL Reference</AttachmentLocation>
+								<FileName>Apexa# 376 Signed.pdf</FileName>
+								<SignatureInfo SignaturePartyID="ID_32" DelegatedSignerPartyID="ID_33">
+									<SignatureDate>2016-07-21</SignatureDate>
+									<SignatureTime>15:08:40.9500000-04:00</SignatureTime>
+								</SignatureInfo>
+								<SignatureInfo SignaturePartyID="ID_34" DelegatedSignerPartyID="ID_35">
+									<SignatureDate>2016-07-21</SignatureDate>
+									<SignatureTime>15:07:52.8070000-04:00</SignatureTime>
+								</SignatureInfo>
+								<SignatureInfo SignaturePartyID="ID_36">
+									<SignatureDate>2016-07-21</SignatureDate>
+									<SignatureTime>15:06:53.5270000-04:00</SignatureTime>
+								</SignatureInfo>
+							</Attachment>
+						</RequirementInfo>
+						<AssocCarrierApptInfo id="ID_30" CarrierAppointmentID="ID_28" PartyID="ID_29">
+							<CompanyProducerID>FundServ1</CompanyProducerID>
+							<CompanyProducerIDSource tc="2">FundServ</CompanyProducerIDSource>
+							<CompanyProducerIDSourceDesc>FundServ</CompanyProducerIDSourceDesc>
+							<CarrierApptStatus tc="1">Active</CarrierApptStatus>
+						</AssocCarrierApptInfo>
+					</CarrierAppointment>
+					<DesignationInfo>
+						<DesignationType tc="1">CFP</DesignationType>
+						<DesignationYear>2011</DesignationYear>
+					</DesignationInfo>
+					<NationApproval>
+						<Nation tc="2">Canada</Nation>
+					</NationApproval>
+					<SupervisionLevel IssuingPartyID="ID_10">
+						<SupervisionLevelTC tc="1">New Advisor</SupervisionLevelTC>
+						<EffDate>2016-07-20</EffDate>
+						<FollowUpDate>2016-08-20</FollowUpDate>
+					</SupervisionLevel>
+				</Producer>
+				<EMailAddress>
+					<AddrLine>advisor@bluesun.ca</AddrLine>
+				</EMailAddress>
+				<Risk>
+					<DateLastUpdated>2016-07-21</DateLastUpdated>
+					<CriminalConviction>
+						<CrimeDescription>Not Clear - Inaccurate</CrimeDescription>
+					</CriminalConviction>
+				</Risk>
+				<RatingAgencyInfo>
+					<RatingSource tc="9">Equifax</RatingSource>
+					<RatingValue>700</RatingValue>
+					<RatingDescription>Credit Score</RatingDescription>
+					<EffDate>2016-07-01</EffDate>
+				</RatingAgencyInfo>
+			</Party>
+			<FormInstance id="ID_9" RelatedObjectID="ID_5">
+				<FormName>CLHIA</FormName>
+				<RelatedObjectType tc="6">Party</RelatedObjectType>
+				<FormResponse>
+					<QuestionNumber>OtherBusinessAssociation</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>OtherOfficerAssociation</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>OtherEmployment</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>LegalOrderMonetary</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>WagesGarnished</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>InDebt</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>PersBankrupt</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>PersVolBankrupt</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>PersConsumerPropoposalBankrupt</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>PersUndischargedBankrupt</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>PersCondDischargedBankrupt</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>EODeclined</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>ComplianceProcedures</QuestionNumber>
+					<ResponseCode>1</ResponseCode>
+					<ResponseText>yes</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>CorpBankruptcy</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>CorpLegalGuilty</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>PersLegalGuilty</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>PersLegalCharged</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>LicenceRegistrationViolation</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>RegulatorDisciplined</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>Investigated</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>RegulationViolation</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>LegalRestrictions</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>ClientCompliants</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>EOCoverage</QuestionNumber>
+					<ResponseCode>1</ResponseCode>
+					<ResponseText>yes</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>AntiMoneyLaunderingPolicy</QuestionNumber>
+					<ResponseCode>1</ResponseCode>
+					<ResponseText>yes</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>StdAdvisorDisclosure</QuestionNumber>
+					<ResponseCode>1</ResponseCode>
+					<ResponseText>yes</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>NeedsBasedSales</QuestionNumber>
+					<ResponseCode>1</ResponseCode>
+					<ResponseText>yes</ResponseText>
+				</FormResponse>
+			</FormInstance>
+			<Party id="ID_10">
+				<PartyTypeCode tc="2">Organization</PartyTypeCode>
+				<PartyKey Persist="Permanent">6</PartyKey>
+				<FullName>BlueSun MGA Corp.</FullName>
+				<Organization/>
+			</Party>
+			<Holding id="ID_11">
+				<HoldingKey Persist="Permanent">1</HoldingKey>
+				<HoldingTypeCode tc="1">Asset/Liability</HoldingTypeCode>
+				<Loan FinancialInstitutionPartyID="ID_10">
+					<LoanReason tc="2147483647">Other</LoanReason>
+					<LoanReasonDesc>Sample debt</LoanReasonDesc>
+					<LoanAmt>5000.00</LoanAmt>
+				</Loan>
+			</Holding>
+			<Relation id="ID_12" OriginatingObjectID="ID_11" RelatedObjectID="ID_5">
+				<OriginatingObjectType tc="4">Holding</OriginatingObjectType>
+				<RelatedObjectType tc="6">Party</RelatedObjectType>
+				<RelationRoleCode tc="8">Owner</RelationRoleCode>
+			</Relation>
+			<Party id="ID_13">
+				<PartyTypeCode tc="2">Organization</PartyTypeCode>
+				<PartyKey Persist="Permanent">1</PartyKey>
+				<FullName>BlueSun Carrier Limited</FullName>
+				<Organization/>
+			</Party>
+			<Holding id="ID_14">
+				<HoldingKey Persist="Permanent">2</HoldingKey>
+				<HoldingTypeCode tc="1">Asset/Liability</HoldingTypeCode>
+				<Loan FinancialInstitutionPartyID="ID_13">
+					<LoanReason tc="2147483647">Other</LoanReason>
+					<LoanReasonDesc>Sample debt</LoanReasonDesc>
+					<LoanAmt>5000.00</LoanAmt>
+				</Loan>
+			</Holding>
+			<Relation id="ID_15" OriginatingObjectID="ID_14" RelatedObjectID="ID_5">
+				<OriginatingObjectType tc="4">Holding</OriginatingObjectType>
+				<RelatedObjectType tc="6">Party</RelatedObjectType>
+				<RelationRoleCode tc="8">Owner</RelationRoleCode>
+			</Relation>
+			<Holding id="ID_16">
+				<HoldingKey Persist="Permanent">5</HoldingKey>
+				<HoldingTypeCode tc="1">Asset/Liability</HoldingTypeCode>
+				<Loan FinancialInstitutionPartyID="ID_10">
+					<LoanReason tc="2147483647">Other</LoanReason>
+					<LoanReasonDesc>Sample debt</LoanReasonDesc>
+					<LoanAmt>50000.00</LoanAmt>
+				</Loan>
+			</Holding>
+			<Relation id="ID_17" OriginatingObjectID="ID_16" RelatedObjectID="ID_5">
+				<OriginatingObjectType tc="4">Holding</OriginatingObjectType>
+				<RelatedObjectType tc="6">Party</RelatedObjectType>
+				<RelationRoleCode tc="8">Owner</RelationRoleCode>
+			</Relation>
+			<Holding id="ID_18">
+				<HoldingKey Persist="Permanent">10</HoldingKey>
+				<HoldingTypeCode tc="2">Policy</HoldingTypeCode>
+				<Policy CarrierPartyID="ID_19">
+					<PolNumber>WWW987</PolNumber>
+					<CertificateNo>BBB12345</CertificateNo>
+					<ProductType tc="40">Errors and Omissions Coverage</ProductType>
+					<PolicyStatus tc="1">Active</PolicyStatus>
+					<PolicyValue>10000000.00</PolicyValue>
+					<RenewalDate>2016-12-31</RenewalDate>
+				</Policy>
+				<Attachment>
+					<AttachmentBasicType tc="3">File</AttachmentBasicType>
+					<AttachmentData tc="8">http://hostname:12345/documents/eocoverage/90da1fb6-714f-e611-9fb6-00090ffe0001</AttachmentData>
+					<AttachmentType tc="364">Contraction - E&amp;O Certificate</AttachmentType>
+					<AttachmentLocation tc="2">URL Reference</AttachmentLocation>
+					<FileName>Coverage.pdf</FileName>
+				</Attachment>
+			</Holding>
+			<Party id="ID_19">
+				<PartyTypeCode tc="2">Organization</PartyTypeCode>
+				<FullName>Ace Ina Insurance</FullName>
+				<Organization/>
+			</Party>
+			<Party id="ID_20">
+				<PartyTypeCode tc="1">Person</PartyTypeCode>
+				<FullName>James Rideau</FullName>
+				<Person/>
+				<Phone>
+					<PhoneTypeCode tc="26">Primary Phone</PhoneTypeCode>
+					<AreaCode>905</AreaCode>
+					<DialNumber>8881234</DialNumber>
+				</Phone>
+				<EMailAddress>
+					<AddrLine>jrideau@sample.com</AddrLine>
+				</EMailAddress>
+			</Party>
+			<Relation id="ID_21" OriginatingObjectID="ID_5" RelatedObjectID="ID_20">
+				<OriginatingObjectType tc="6">Party</OriginatingObjectType>
+				<RelatedObjectType tc="6">Party</RelatedObjectType>
+				<RelationRoleCode tc="289">Reference</RelationRoleCode>
+			</Relation>
+			<Party id="ID_22">
+				<PartyTypeCode tc="1">Person</PartyTypeCode>
+				<FullName>Beth Saunders</FullName>
+				<Person/>
+				<Phone>
+					<PhoneTypeCode tc="26">Primary Phone</PhoneTypeCode>
+					<AreaCode>647</AreaCode>
+					<DialNumber>8763234</DialNumber>
+				</Phone>
+				<EMailAddress>
+					<AddrLine>bsaunders@sample.com</AddrLine>
+				</EMailAddress>
+			</Party>
+			<Relation id="ID_23" OriginatingObjectID="ID_5" RelatedObjectID="ID_22">
+				<OriginatingObjectType tc="6">Party</OriginatingObjectType>
+				<RelatedObjectType tc="6">Party</RelatedObjectType>
+				<RelationRoleCode tc="289">Reference</RelationRoleCode>
+			</Relation>
+			<Party id="ID_24">
+				<PartyTypeCode tc="1">Person</PartyTypeCode>
+				<FullName>Eunice Huang</FullName>
+				<Person/>
+				<Phone>
+					<PhoneTypeCode tc="26">Primary Phone</PhoneTypeCode>
+					<AreaCode>905</AreaCode>
+					<DialNumber>9876543</DialNumber>
+				</Phone>
+				<EMailAddress>
+					<AddrLine>ehuang@sample.com</AddrLine>
+				</EMailAddress>
+			</Party>
+			<Relation id="ID_25" OriginatingObjectID="ID_5" RelatedObjectID="ID_24">
+				<OriginatingObjectType tc="6">Party</OriginatingObjectType>
+				<RelatedObjectType tc="6">Party</RelatedObjectType>
+				<RelationRoleCode tc="289">Reference</RelationRoleCode>
+			</Relation>
+			<Party id="ID_26">
+				<PartyTypeCode tc="2">Organization</PartyTypeCode>
+				<PartyKey Persist="Permanent">15</PartyKey>
+				<FullName>Venture Enterprises Inc.</FullName>
+				<Organization/>
+			</Party>
+			<Relation id="ID_27" OriginatingObjectID="ID_26" RelatedObjectID="ID_5">
+				<OriginatingObjectType tc="6">Party</OriginatingObjectType>
+				<RelatedObjectType tc="6">Party</RelatedObjectType>
+				<RelationRoleCode tc="25">Owned By</RelationRoleCode>
+				<InterestPercent>50</InterestPercent>
+			</Relation>
+			<Party id="ID_29">
+				<PartyTypeCode tc="2">Organization</PartyTypeCode>
+				<PartyKey Persist="Permanent">44</PartyKey>
+				<FullName>Ontlife</FullName>
+				<Organization/>
+			</Party>
+			<Holding id="ID_31">
+				<HoldingKey Persist="Permanent">376</HoldingKey>
+				<HoldingTypeCode tc="7">Banking</HoldingTypeCode>
+				<Attachment>
+					<AttachmentBasicType tc="2">Image</AttachmentBasicType>
+					<AttachmentData tc="8">http://hostname:12345/documents/banking/91DA1FB6-714F-E611-9FB6-00090FFE0001</AttachmentData>
+					<AttachmentType tc="183">Void Cheque</AttachmentType>
+					<AttachmentLocation tc="2">URL Reference</AttachmentLocation>
+					<FileName>EFT.pdf</FileName>
+				</Attachment>
+				<Banking>
+					<AccountNumber>234587</AccountNumber>
+					<InstitutionNumber>005</InstitutionNumber>
+					<TransitNumber>09800</TransitNumber>
+				</Banking>
+			</Holding>
+			<Party id="ID_32">
+				<EMailAddress>
+					<AddrLine>carrier5@bluesun.ca</AddrLine>
+				</EMailAddress>
+			</Party>
+			<Party id="ID_33">
+				<PartyTypeCode tc="1">Person</PartyTypeCode>
+				<PartyKey Persist="Permanent">59</PartyKey>
+				<Person>
+					<FirstName>Carrier</FirstName>
+					<LastName>Account 5 </LastName>
+				</Person>
+				<EMailAddress>
+					<AddrLine>carrier5@bluesun.ca</AddrLine>
+				</EMailAddress>
+			</Party>
+			<Party id="ID_34">
+				<EMailAddress>
+					<AddrLine>mga@bluesun.ca</AddrLine>
+				</EMailAddress>
+			</Party>
+			<Party id="ID_35">
+				<PartyTypeCode tc="1">Person</PartyTypeCode>
+				<PartyKey Persist="Permanent">8</PartyKey>
+				<Person>
+					<FirstName>MGA</FirstName>
+					<LastName>Account </LastName>
+				</Person>
+				<EMailAddress>
+					<AddrLine>mga@bluesun.ca</AddrLine>
+				</EMailAddress>
+			</Party>
+			<Party id="ID_36">
+				<EMailAddress>
+					<AddrLine>advisor@bluesun.ca</AddrLine>
+				</EMailAddress>
+			</Party>
+			<FormInstance id="ID_37" RelatedObjectID="ID_28">
+				<FormName>CUSTOM_QUESTION</FormName>
+				<RelatedObjectType tc="11">Carrier Appointment</RelatedObjectType>
+				<FormResponse>
+					<QuestionNumber>I represent that I have reviewed my Advisor Screening Questionnaire (the 'ASQ') form, as stored on the Web-based system (the 'APEXA System') that APEXA Corp. generally makes available to life insurance companies, managing general agents and advisors, and confirm that the information in my ASQ is accurate, correct and up to date. Further, I acknowledge that a breach of the foregoing term is a breach of the Terms of Use of the APEXA System and is grounds for termination of my APEXA account. I have read the foregoing representation, understand it, and agree further to be bound by it. </QuestionNumber>
+					<ResponseText>I Agree</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>Do you agree?</QuestionNumber>
+					<ResponseText>Yes</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>Is this a custom question?</QuestionNumber>
+					<ResponseText>Yes</ResponseText>
+				</FormResponse>
+			</FormInstance>
+		</OLifE>
+	</TXLifeResponse>
+	<TXLifeResponse PrimaryObjectID="ID_38">
+		<TransRefGUID>74d0d310-4449-4c28-baf9-7d78b010d77c</TransRefGUID>
+		<TransType tc="228">Producer Inquiry</TransType>
+		<TransExeDate>2016-07-25</TransExeDate>
+		<TransExeTime>15:14:59.9657460-04:00</TransExeTime>
+		<InquiryView>
+			<InquiryViewCode>ProducerAndRelated</InquiryViewCode>
+		</InquiryView>
+		<TransResult>
+			<ResultCode tc="1">Success</ResultCode>
+		</TransResult>
+		<OLifE>
+			<Party id="ID_38">
+				<PartyTypeCode tc="2">Organization</PartyTypeCode>
+				<PartyKey Persist="Permanent">6</PartyKey>
+				<FullName>BlueSun MGA Corp.</FullName>
+				<GovtID>123456789</GovtID>
+				<GovtIDTC tc="11">Canadian Business Number</GovtIDTC>
+				<Organization>
+					<OrgForm tc="4">Private Corporation</OrgForm>
+				</Organization>
+				<Address id="ID_39">
+					<AddressKey Persist="Permanent">17</AddressKey>
+					<AddressTypeCode tc="2">Business</AddressTypeCode>
+					<Line1>456 Corporation Way</Line1>
+					<Line2>Suite 1000</Line2>
+					<City>Calgary</City>
+					<AddressStateTC tc="101">Alberta</AddressStateTC>
+					<Zip>T0E 1H4</Zip>
+					<AddressCountryTC tc="2">Canada</AddressCountryTC>
+					<StartDate>2010-01-01</StartDate>
+				</Address>
+				<Address id="ID_40">
+					<AddressKey Persist="Permanent">18</AddressKey>
+					<AddressTypeCode tc="17">Mailing</AddressTypeCode>
+					<Line1>1 Post Offce Way</Line1>
+					<Line2>Box 99</Line2>
+					<City>Calgary</City>
+					<AddressStateTC tc="101">Alberta</AddressStateTC>
+					<Zip>T0T 3M3</Zip>
+					<AddressCountryTC tc="2">Canada</AddressCountryTC>
+				</Address>
+				<Phone>
+					<PhoneTypeCode tc="26">Primary Phone</PhoneTypeCode>
+					<AreaCode>905</AreaCode>
+					<DialNumber>5554321</DialNumber>
+					<Ext>100</Ext>
+				</Phone>
+				<Phone>
+					<PhoneTypeCode tc="19">Fax</PhoneTypeCode>
+					<AreaCode>905</AreaCode>
+					<DialNumber>5554200</DialNumber>
+				</Phone>
+				<Attachment>
+					<AttachmentBasicType tc="3">File</AttachmentBasicType>
+					<AttachmentData tc="8">http://hostname:12345/documents/company/8bda1fb6-714f-e611-9fb6-00090ffe0001</AttachmentData>
+					<AttachmentType tc="361">Contracting - Broker Business Entity</AttachmentType>
+					<AttachmentLocation tc="2">URL Reference</AttachmentLocation>
+					<FileName>Articles.pdf</FileName>
+				</Attachment>
+				<Producer>
+					<EOCoverageInfo HoldingID="ID_41"/>
+				</Producer>
+			</Party>
+			<Holding id="ID_41">
+				<HoldingKey Persist="Permanent">9</HoldingKey>
+				<HoldingTypeCode tc="2">Policy</HoldingTypeCode>
+				<Policy CarrierPartyID="ID_42">
+					<PolNumber>XYZ987</PolNumber>
+					<CertificateNo>AAA12345</CertificateNo>
+					<ProductType tc="40">Errors and Omissions Coverage</ProductType>
+					<PolicyStatus tc="1">Active</PolicyStatus>
+					<PolicyValue>10000000.00</PolicyValue>
+					<RenewalDate>2016-12-31</RenewalDate>
+				</Policy>
+				<Attachment>
+					<AttachmentBasicType tc="3">File</AttachmentBasicType>
+					<AttachmentData tc="8">http://hostname:12345/documents/eocoverage/8dda1fb6-714f-e611-9fb6-00090ffe0001</AttachmentData>
+					<AttachmentType tc="364">Contraction - E&amp;O Certificate</AttachmentType>
+					<AttachmentLocation tc="2">URL Reference</AttachmentLocation>
+					<FileName>Coverage.pdf</FileName>
+				</Attachment>
+			</Holding>
+			<Party id="ID_42">
+				<PartyTypeCode tc="2">Organization</PartyTypeCode>
+				<FullName>Ace Ina Insurance</FullName>
+				<Organization/>
+			</Party>
+			<Party id="ID_43">
+				<PartyTypeCode tc="1">Person</PartyTypeCode>
+				<PartyKey Persist="Permanent">10</PartyKey>
+				<FullName>Harold Harold</FullName>
+				<Person/>
+				<EMailAddress>
+					<AddrLine>hthirdly@sample.ca</AddrLine>
+				</EMailAddress>
+			</Party>
+			<Relation id="ID_44" OriginatingObjectID="ID_38" RelatedObjectID="ID_43">
+				<OriginatingObjectType tc="6">Party</OriginatingObjectType>
+				<RelatedObjectType tc="6">Party</RelatedObjectType>
+				<RelationRoleCode tc="8">Owner</RelationRoleCode>
+				<InterestPercent>15</InterestPercent>
+			</Relation>
+			<Party id="ID_45">
+				<PartyTypeCode tc="1">Person</PartyTypeCode>
+				<PartyKey Persist="Permanent">17</PartyKey>
+				<Person>
+					<FirstName>Riley</FirstName>
+					<LastName>Johanson</LastName>
+					<Prefix>Ms.</Prefix>
+					<BirthDate>1980-05-01</BirthDate>
+					<HighestEducationLevel tc="3">3 year degree / 4 year diploma</HighestEducationLevel>
+					<Education>
+						<Major>B.Sc.</Major>
+						<ProviderOrSchool>University of Alberta</ProviderOrSchool>
+					</Education>
+				</Person>
+				<Address id="ID_46">
+					<AddressKey Persist="Permanent">23</AddressKey>
+					<AddressTypeCode tc="1">Residence</AddressTypeCode>
+					<Line1>751 South Street</Line1>
+					<City>Thornhill</City>
+					<AddressStateTC tc="108">Ontario</AddressStateTC>
+					<Zip>L7X 0M4</Zip>
+					<AddressCountryTC tc="2">Canada</AddressCountryTC>
+					<StartDate>2010-01-01</StartDate>
+				</Address>
+				<Address id="ID_47">
+					<AddressKey Persist="Permanent">23</AddressKey>
+					<AddressTypeCode tc="2">Business</AddressTypeCode>
+					<Line1>751 South Street</Line1>
+					<City>Thornhill</City>
+					<AddressStateTC tc="108">Ontario</AddressStateTC>
+					<Zip>L7X 0M4</Zip>
+					<AddressCountryTC tc="2">Canada</AddressCountryTC>
+					<StartDate>2010-01-01</StartDate>
+				</Address>
+				<Address id="ID_48">
+					<AddressKey Persist="Permanent">24</AddressKey>
+					<AddressTypeCode tc="17">Mailing</AddressTypeCode>
+					<Line1>75 Yonge St.</Line1>
+					<Line2>Box 7490</Line2>
+					<City>Toronto</City>
+					<AddressStateTC tc="108">Ontario</AddressStateTC>
+					<Zip>M4B 2X8</Zip>
+					<AddressCountryTC tc="2">Canada</AddressCountryTC>
+				</Address>
+				<Phone>
+					<PhoneTypeCode tc="26">Primary Phone</PhoneTypeCode>
+					<AreaCode>647</AreaCode>
+					<DialNumber>5551200</DialNumber>
+				</Phone>
+				<Phone>
+					<PhoneTypeCode tc="12">Mobile</PhoneTypeCode>
+					<AreaCode>647</AreaCode>
+					<DialNumber>5551234</DialNumber>
+				</Phone>
+				<Producer>
+					<PrefLanguage tc="9">English</PrefLanguage>
+					<EOCoverageInfo HoldingID="ID_50"/>
+					<DesignationInfo>
+						<DesignationType tc="1">CFP</DesignationType>
+						<DesignationYear>2012</DesignationYear>
+					</DesignationInfo>
+					<NationApproval>
+						<Nation tc="2">Canada</Nation>
+					</NationApproval>
+				</Producer>
+				<EMailAddress>
+					<AddrLine>advisoremployee@bluesun.ca</AddrLine>
+				</EMailAddress>
+				<Risk>
+					<DateLastUpdated>2016-07-21</DateLastUpdated>
+					<CriminalConviction>
+						<CrimeDescription>Not Clear - Inaccurate</CrimeDescription>
+					</CriminalConviction>
+				</Risk>
+				<RatingAgencyInfo>
+					<RatingSource tc="9">Equifax</RatingSource>
+					<RatingValue>700</RatingValue>
+					<RatingDescription>Credit Score</RatingDescription>
+					<EffDate>2016-07-01</EffDate>
+				</RatingAgencyInfo>
+			</Party>
+			<FormInstance id="ID_49" RelatedObjectID="ID_45">
+				<FormName>CLHIA</FormName>
+				<RelatedObjectType tc="6">Party</RelatedObjectType>
+				<FormResponse>
+					<QuestionNumber>OtherBusinessAssociation</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>OtherOfficerAssociation</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>OtherEmployment</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>LegalOrderMonetary</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>WagesGarnished</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>InDebt</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>PersBankrupt</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>PersVolBankrupt</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>PersConsumerPropoposalBankrupt</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>PersUndischargedBankrupt</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>PersCondDischargedBankrupt</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>EODeclined</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>ComplianceProcedures</QuestionNumber>
+					<ResponseCode>1</ResponseCode>
+					<ResponseText>yes</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>CorpBankruptcy</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>CorpLegalGuilty</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>PersLegalGuilty</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>PersLegalCharged</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>LicenceRegistrationViolation</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>RegulatorDisciplined</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>Investigated</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>RegulationViolation</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>LegalRestrictions</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>ClientCompliants</QuestionNumber>
+					<ResponseCode>0</ResponseCode>
+					<ResponseText>no</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>EOCoverage</QuestionNumber>
+					<ResponseCode>1</ResponseCode>
+					<ResponseText>yes</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>AntiMoneyLaunderingPolicy</QuestionNumber>
+					<ResponseCode>1</ResponseCode>
+					<ResponseText>yes</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>StdAdvisorDisclosure</QuestionNumber>
+					<ResponseCode>1</ResponseCode>
+					<ResponseText>yes</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>NeedsBasedSales</QuestionNumber>
+					<ResponseCode>1</ResponseCode>
+					<ResponseText>yes</ResponseText>
+				</FormResponse>
+			</FormInstance>
+			<Holding id="ID_50">
+				<HoldingKey Persist="Permanent">12</HoldingKey>
+				<HoldingTypeCode tc="2">Policy</HoldingTypeCode>
+				<Policy CarrierPartyID="ID_51">
+					<PolNumber>WWW987</PolNumber>
+					<CertificateNo>BBB12345</CertificateNo>
+					<ProductType tc="40">Errors and Omissions Coverage</ProductType>
+					<PolicyStatus tc="1">Active</PolicyStatus>
+					<PolicyValue>10000000.00</PolicyValue>
+					<RenewalDate>2016-12-31</RenewalDate>
+				</Policy>
+				<Attachment>
+					<AttachmentBasicType tc="3">File</AttachmentBasicType>
+					<AttachmentData tc="8">http://hostname:12345/documents/eocoverage/97da1fb6-714f-e611-9fb6-00090ffe0001</AttachmentData>
+					<AttachmentType tc="364">Contraction - E&amp;O Certificate</AttachmentType>
+					<AttachmentLocation tc="2">URL Reference</AttachmentLocation>
+					<FileName>Coverage.pdf</FileName>
+				</Attachment>
+			</Holding>
+			<Party id="ID_51">
+				<PartyTypeCode tc="2">Organization</PartyTypeCode>
+				<FullName>Ace Ina Insurance</FullName>
+				<Organization/>
+			</Party>
+			<Party id="ID_52">
+				<PartyTypeCode tc="1">Person</PartyTypeCode>
+				<FullName>Eunice Huang</FullName>
+				<Person/>
+				<Phone>
+					<PhoneTypeCode tc="26">Primary Phone</PhoneTypeCode>
+					<AreaCode>905</AreaCode>
+					<DialNumber>9876543</DialNumber>
+				</Phone>
+				<EMailAddress>
+					<AddrLine>ehuang@sample.com</AddrLine>
+				</EMailAddress>
+			</Party>
+			<Relation id="ID_53" OriginatingObjectID="ID_45" RelatedObjectID="ID_52">
+				<OriginatingObjectType tc="6">Party</OriginatingObjectType>
+				<RelatedObjectType tc="6">Party</RelatedObjectType>
+				<RelationRoleCode tc="289">Reference</RelationRoleCode>
+			</Relation>
+			<Party id="ID_54">
+				<PartyTypeCode tc="1">Person</PartyTypeCode>
+				<FullName>James Rideau</FullName>
+				<Person/>
+				<Phone>
+					<PhoneTypeCode tc="26">Primary Phone</PhoneTypeCode>
+					<AreaCode>905</AreaCode>
+					<DialNumber>8881234</DialNumber>
+				</Phone>
+				<EMailAddress>
+					<AddrLine>jrideau@sample.com</AddrLine>
+				</EMailAddress>
+			</Party>
+			<Relation id="ID_55" OriginatingObjectID="ID_45" RelatedObjectID="ID_54">
+				<OriginatingObjectType tc="6">Party</OriginatingObjectType>
+				<RelatedObjectType tc="6">Party</RelatedObjectType>
+				<RelationRoleCode tc="289">Reference</RelationRoleCode>
+			</Relation>
+			<Party id="ID_56">
+				<PartyTypeCode tc="1">Person</PartyTypeCode>
+				<FullName>William Secondly</FullName>
+				<Person/>
+				<Phone>
+					<PhoneTypeCode tc="26">Primary Phone</PhoneTypeCode>
+					<AreaCode>416</AreaCode>
+					<DialNumber>5551234</DialNumber>
+				</Phone>
+				<EMailAddress>
+					<AddrLine>wsecondly@sample.com</AddrLine>
+				</EMailAddress>
+			</Party>
+			<Relation id="ID_57" OriginatingObjectID="ID_45" RelatedObjectID="ID_56">
+				<OriginatingObjectType tc="6">Party</OriginatingObjectType>
+				<RelatedObjectType tc="6">Party</RelatedObjectType>
+				<RelationRoleCode tc="289">Reference</RelationRoleCode>
+			</Relation>
+			<Relation id="ID_58" OriginatingObjectID="ID_38" RelatedObjectID="ID_45">
+				<OriginatingObjectType tc="6">Party</OriginatingObjectType>
+				<RelatedObjectType tc="6">Party</RelatedObjectType>
+				<RelationRoleCode tc="8">Owner</RelationRoleCode>
+			</Relation>
+		</OLifE>
+	</TXLifeResponse>
+</TXLife>

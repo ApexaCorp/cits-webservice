@@ -1,0 +1,13 @@
+<TXLife Version="2.35.00" xmlns="http://ACORD.org/Standards/Life/2">
+	<TXLifeRequest>
+		<TransRefGUID>f88fdce4-8c49-43f3-ab78-9547a20ddd6a</TransRefGUID>
+		<TransType tc="228">Producer Inquiry</TransType>
+		<TransExeDate>2016-07-25</TransExeDate>
+		<TransExeTime>15:20:33.4133460-04:00</TransExeTime>
+		<InquiryView>
+			<InquiryViewCode>ChangedProducerListing</InquiryViewCode>
+		</InquiryView>
+		<StartDate>2016-07-19</StartDate>
+		<EndDate>2016-07-26</EndDate>
+	</TXLifeRequest>
+</TXLife>

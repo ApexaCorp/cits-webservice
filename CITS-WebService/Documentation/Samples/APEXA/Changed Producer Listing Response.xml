@@ -1,0 +1,41 @@
+<TXLife Version="2.35.00" xmlns="http://ACORD.org/Standards/Life/2">
+	<TXLifeResponse>
+		<TransRefGUID>f88fdce4-8c49-43f3-ab78-9547a20ddd6a</TransRefGUID>
+		<TransType tc="228">Producer Inquiry</TransType>
+		<TransExeDate>2016-07-25</TransExeDate>
+		<TransExeTime>15:20:35.7413460-04:00</TransExeTime>
+		<InquiryView>
+			<InquiryViewCode>ChangedProducerListing</InquiryViewCode>
+		</InquiryView>
+		<TransResult>
+			<ResultCode tc="1">Success</ResultCode>
+		</TransResult>
+		<OLifE>
+			<Party id="ID_1">
+				<PartyTypeCode tc="2">Organization</PartyTypeCode>
+				<PartyKey Persist="Permanent">6</PartyKey>
+				<Organization/>
+			</Party>
+			<Party id="ID_2">
+				<PartyTypeCode tc="1">Person</PartyTypeCode>
+				<PartyKey Persist="Permanent">14</PartyKey>
+				<Person/>
+			</Party>
+			<Party id="ID_3">
+				<PartyTypeCode tc="2">Organization</PartyTypeCode>
+				<PartyKey Persist="Permanent">15</PartyKey>
+				<Organization/>
+			</Party>
+			<Party id="ID_4">
+				<PartyTypeCode tc="1">Person</PartyTypeCode>
+				<PartyKey Persist="Permanent">17</PartyKey>
+				<Person/>
+			</Party>
+			<Party id="ID_5">
+				<PartyTypeCode tc="2">Organization</PartyTypeCode>
+				<PartyKey Persist="Permanent">70</PartyKey>
+				<Organization/>
+			</Party>
+		</OLifE>
+	</TXLifeResponse>
+</TXLife>

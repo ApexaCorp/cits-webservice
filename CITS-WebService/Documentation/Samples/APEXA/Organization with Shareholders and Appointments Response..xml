@@ -1,11 +1,11 @@
 <TXLife Version="2.35.00" xmlns="http://ACORD.org/Standards/Life/2">
 	<TXLifeResponse PrimaryObjectID="ID_1">
-		<TransRefGUID>96b49f45-b147-406a-a744-2b6ef4cdc016</TransRefGUID>
+		<TransRefGUID>9ea65cb7-37fa-49b6-a396-aba58ab27136</TransRefGUID>
 		<TransType tc="228">Producer Inquiry</TransType>
 		<TransExeDate>2016-07-25</TransExeDate>
-		<TransExeTime>15:32:05.4973460-04:00</TransExeTime>
+		<TransExeTime>15:18:50.0893460-04:00</TransExeTime>
 		<InquiryView>
-			<InquiryViewCode>ProducerAndRelated</InquiryViewCode>
+			<InquiryViewCode>FullProducerWithAppointments</InquiryViewCode>
 		</InquiryView>
 		<TransResult>
 			<ResultCode tc="1">Success</ResultCode>
@@ -61,6 +61,78 @@
 				</Attachment>
 				<Producer>
 					<EOCoverageInfo HoldingID="ID_4"/>
+					<CarrierAppointment id="ID_22" PartyID="ID_23" AgencyAffiliationID="ID_1">
+						<CarrierAppointmentKey Persist="Permanent">375</CarrierAppointmentKey>
+						<CompanyProducerID>Selling1</CompanyProducerID>
+						<EffDate>2016-07-21</EffDate>
+						<CarrierApptStatus tc="1">Active</CarrierApptStatus>
+						<DistributionAgreementInfo BankingInfoID="ID_29">
+							<PaymentForm tc="7">Electronic Funds Transfer</PaymentForm>
+						</DistributionAgreementInfo>
+						<ConsolidationInfo CarrierAppointmentID="ID_30">
+							<ConsolidationInfoKey Persist="Permanent">377</ConsolidationInfoKey>
+						</ConsolidationInfo>
+						<ReferralInfo PartyID="ID_28"/>
+						<DistributionLevel PartyID="ID_23">
+							<DistributionLevelValue>carrier</DistributionLevelValue>
+						</DistributionLevel>
+						<DistributionLevel PartyID="ID_1">
+							<DistributionLevelValue>mga</DistributionLevelValue>
+						</DistributionLevel>
+						<DistributionLevel PartyID="ID_24">
+							<DistributionLevelValue>advisor</DistributionLevelValue>
+						</DistributionLevel>
+						<RequirementInfo FulfillerPartyID="ID_23">
+							<ReqCode tc="2147483647">Other</ReqCode>
+							<FulfilledDate>2016-07-21</FulfilledDate>
+							<FulfilledTime>19:05:31.7115029-04:00</FulfilledTime>
+							<Attachment>
+								<AttachmentBasicType tc="3">File</AttachmentBasicType>
+								<AttachmentData tc="8">http://hostname:12345/documents/fulfillment/3ECA9513-764F-E611-9FB6-00090FFE0001</AttachmentData>
+								<AttachmentType tc="1">Document</AttachmentType>
+								<AttachmentLocation tc="2">URL Reference</AttachmentLocation>
+								<FileName>Apexa# 375 Signed.pdf</FileName>
+								<SignatureInfo SignaturePartyID="ID_31" DelegatedSignerPartyID="ID_32">
+									<SignatureDate>2016-07-21</SignatureDate>
+									<SignatureTime>15:05:27.8230000-04:00</SignatureTime>
+								</SignatureInfo>
+								<SignatureInfo SignaturePartyID="ID_33" DelegatedSignerPartyID="ID_34">
+									<SignatureDate>2016-07-21</SignatureDate>
+									<SignatureTime>15:01:22.5270000-04:00</SignatureTime>
+								</SignatureInfo>
+							</Attachment>
+						</RequirementInfo>
+						<AssocCarrierApptInfo id="ID_25" CarrierAppointmentID="ID_22" PartyID="ID_23">
+							<CompanyProducerID>Selling1</CompanyProducerID>
+							<CompanyProducerIDSource tc="1">Carrier</CompanyProducerIDSource>
+							<CompanyProducerIDSourceDesc>Selling</CompanyProducerIDSourceDesc>
+							<CarrierApptStatus tc="1">Active</CarrierApptStatus>
+						</AssocCarrierApptInfo>
+						<AssocCarrierApptInfo id="ID_26" CarrierAppointmentID="ID_22" PartyID="ID_23">
+							<CompanyProducerID>Branch1</CompanyProducerID>
+							<CompanyProducerIDSource tc="1">Carrier</CompanyProducerIDSource>
+							<CompanyProducerIDSourceDesc>Branch</CompanyProducerIDSourceDesc>
+							<CarrierApptStatus tc="1">Active</CarrierApptStatus>
+						</AssocCarrierApptInfo>
+						<AssocCarrierApptInfo id="ID_27" CarrierAppointmentID="ID_22" PartyID="ID_23">
+							<CompanyProducerID>Corporate1</CompanyProducerID>
+							<CompanyProducerIDSource tc="1">Carrier</CompanyProducerIDSource>
+							<CompanyProducerIDSourceDesc>Corporate</CompanyProducerIDSourceDesc>
+							<CarrierApptStatus tc="3">Pending approval</CarrierApptStatus>
+						</AssocCarrierApptInfo>
+					</CarrierAppointment>
+					<CarrierAppointment id="ID_30" PartyID="ID_23" AgencyAffiliationID="ID_1">
+						<CarrierAppointmentKey Persist="Permanent">377</CarrierAppointmentKey>
+						<ExpDate>2016-07-21</ExpDate>
+						<CarrierApptStatus tc="2">Inactive</CarrierApptStatus>
+						<ReferralInfo PartyID="ID_36"/>
+						<DistributionLevel PartyID="ID_23">
+							<DistributionLevelValue>carrier</DistributionLevelValue>
+						</DistributionLevel>
+						<DistributionLevel PartyID="ID_1">
+							<DistributionLevelValue>mga</DistributionLevelValue>
+						</DistributionLevel>
+					</CarrierAppointment>
 				</Producer>
 			</Party>
 			<Holding id="ID_4">
@@ -336,7 +408,7 @@
 				<Attachment>
 					<AttachmentBasicType tc="3">File</AttachmentBasicType>
 					<AttachmentData tc="8">http://hostname:12345/documents/eocoverage/97da1fb6-714f-e611-9fb6-00090ffe0001</AttachmentData>
-					<AttachmentType tc="364">Contraction - E&amp;O Certificate</AttachmentType>
+					<AttachmentType tc="364">Contraction - E&amp;]O Certificate</AttachmentType>
 					<AttachmentLocation tc="2">URL Reference</AttachmentLocation>
 					<FileName>Coverage.pdf</FileName>
 				</Attachment>
@@ -405,6 +477,93 @@
 				<RelatedObjectType tc="6">Party</RelatedObjectType>
 				<RelationRoleCode tc="8">Owner</RelationRoleCode>
 			</Relation>
+			<Party id="ID_23">
+				<PartyTypeCode tc="2">Organization</PartyTypeCode>
+				<PartyKey Persist="Permanent">44</PartyKey>
+				<FullName>Ontlife</FullName>
+				<Organization/>
+			</Party>
+			<Party id="ID_24">
+				<PartyTypeCode tc="1">Person</PartyTypeCode>
+				<PartyKey Persist="Permanent">14</PartyKey>
+				<Person>
+					<FirstName>Blake</FirstName>
+					<MiddleName>Jason</MiddleName>
+					<LastName>Roberts</LastName>
+					<Prefix>Mr.</Prefix>
+				</Person>
+			</Party>
+			<Party id="ID_28">
+				<PartyTypeCode tc="1">Person</PartyTypeCode>
+				<FullName>Tom Archer</FullName>
+				<Person/>
+			</Party>
+			<Holding id="ID_29">
+				<HoldingKey Persist="Permanent">375</HoldingKey>
+				<HoldingTypeCode tc="7">Banking</HoldingTypeCode>
+				<Attachment>
+					<AttachmentBasicType tc="2">Image</AttachmentBasicType>
+					<AttachmentData tc="8">http://hostname:12345/documents/banking/8EDA1FB6-714F-E611-9FB6-00090FFE0001</AttachmentData>
+					<AttachmentType tc="183">Void Cheque</AttachmentType>
+					<AttachmentLocation tc="2">URL Reference</AttachmentLocation>
+					<FileName>EFT.pdf</FileName>
+				</Attachment>
+				<Banking>
+					<AccountNumber>1234567</AccountNumber>
+					<InstitutionNumber>003</InstitutionNumber>
+					<TransitNumber>11111</TransitNumber>
+				</Banking>
+			</Holding>
+			<Party id="ID_31">
+				<EMailAddress>
+					<AddrLine>carrier5@bluesun.ca</AddrLine>
+				</EMailAddress>
+			</Party>
+			<Party id="ID_32">
+				<PartyTypeCode tc="1">Person</PartyTypeCode>
+				<PartyKey Persist="Permanent">59</PartyKey>
+				<Person>
+					<FirstName>Carrier</FirstName>
+					<LastName>Account 5 </LastName>
+				</Person>
+				<EMailAddress>
+					<AddrLine>carrier5@bluesun.ca</AddrLine>
+				</EMailAddress>
+			</Party>
+			<Party id="ID_33">
+				<EMailAddress>
+					<AddrLine>mga@bluesun.ca</AddrLine>
+				</EMailAddress>
+			</Party>
+			<Party id="ID_34">
+				<PartyTypeCode tc="1">Person</PartyTypeCode>
+				<PartyKey Persist="Permanent">8</PartyKey>
+				<Person>
+					<FirstName>MGA</FirstName>
+					<LastName>Account </LastName>
+				</Person>
+				<EMailAddress>
+					<AddrLine>mga@bluesun.ca</AddrLine>
+				</EMailAddress>
+			</Party>
+			<FormInstance id="ID_35" RelatedObjectID="ID_22">
+				<FormName>CUSTOM_QUESTION</FormName>
+				<RelatedObjectType tc="11">Carrier Appointment</RelatedObjectType>
+				<FormResponse>
+					<QuestionNumber>I represent that I have reviewed my Advisor Screening Questionnaire (the 'ASQ') form, as stored on the Web-based system (the 'APEXA System') that APEXA Corp. generally makes available to life insurance companies, managing general agents and advisors, and confirm that the information in my ASQ is accurate, correct and up to date. Further, I acknowledge that a breach of the foregoing term is a breach of the Terms of Use of the APEXA System and is grounds for termination of my APEXA account. I have read the foregoing representation, understand it, and agree further to be bound by it. </QuestionNumber>
+					<ResponseText>I Agree</ResponseText>
+				</FormResponse>
+				<FormResponse>
+					<QuestionNumber>Do you agree?</QuestionNumber>
+					<ResponseData>I do not agree.</ResponseData>
+					<ResponseText>No</ResponseText>
+				</FormResponse>
+			</FormInstance>
+			<Party id="ID_36">
+				<PartyTypeCode tc="1">Person</PartyTypeCode>
+				<FullName>Judith Winn</FullName>
+				<Person/>
+			</Party>
 		</OLifE>
 	</TXLifeResponse>
 </TXLife>
