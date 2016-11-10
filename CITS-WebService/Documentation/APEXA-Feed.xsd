@@ -340,6 +340,18 @@ enter whatever information is called for, if any, and click on "Accept".
 			</xsd:simpleType>
 		</xsd:union>
 	</xsd:simpleType>
+  <xsd:simpleType name="Persist_Types">
+    <xsd:restriction base="xsd:NMTOKEN"/>
+  </xsd:simpleType>
+  <xsd:complexType name="PERSISTKEY">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="Persist" type="Persist_Types"/>
+        <xsd:attribute name="SystemCode" type="xsd:string"/>
+        <xsd:attribute name="VendorCode" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
 	<xsd:complexType name="RESULT_CODES">
 		<xsd:simpleContent>
 			<xsd:extension base="xsd:string">
@@ -400,6 +412,7 @@ enter whatever information is called for, if any, and click on "Accept".
 	<xsd:element name="Address" type="Address_Type"/>
 	<xsd:complexType name="Address_Type">
 		<xsd:sequence>
+      <xsd:element ref="AddressKey" minOccurs="0"/>
 			<xsd:element ref="AddressTypeCode" minOccurs="0"/>
 			<xsd:element ref="Line1" minOccurs="0"/>
 			<xsd:element ref="Line2" minOccurs="0"/>
@@ -409,7 +422,7 @@ enter whatever information is called for, if any, and click on "Accept".
 			<xsd:element ref="Zip" minOccurs="0"/>
 			<xsd:element ref="AddressCountry" minOccurs="0"/>
 			<xsd:element ref="AddressCountryTC" minOccurs="0"/>
-			<xsd:element ref="PrefAddr" minOccurs="0"/>
+      <xsd:element ref="PrefAddr" minOccurs="0"/>
 			<xsd:element ref="EndDate" minOccurs="0"/>
 			<xsd:element ref="StartDate" minOccurs="0"/>
 			<xsd:element ref="YearsAtAddress" minOccurs="0"/>
@@ -419,6 +432,7 @@ enter whatever information is called for, if any, and click on "Accept".
   <xsd:element name="AssocCarrierApptInfo" type="AssocCarrierApptInfo_Type"/>
   <xsd:complexType name="AssocCarrierApptInfo_Type">
     <xsd:sequence>
+      <xsd:element ref="AssocCarrierApptInfoKey" minOccurs="0"/>
       <xsd:element ref="CompanyProducerID" minOccurs="0"/>
       <xsd:element ref="CompanyProducerIDSource" minOccurs="0"/>
       <xsd:element ref="CompanyProducerIDSourceDesc" minOccurs="0"/>
@@ -451,9 +465,8 @@ enter whatever information is called for, if any, and click on "Accept".
 	<xsd:element name="CarrierAppointment" type="CarrierAppointment_Type"/>
 	<xsd:complexType name="CarrierAppointment_Type">
 		<xsd:sequence>
-			<xsd:element ref="CompanyProducerID" minOccurs="0"/>
-      <xsd:element ref="CompanyProducerIDSource" minOccurs="0"/>
-      <xsd:element ref="CompanyProducerIDSourceDesc" minOccurs="0"/>
+      <xsd:element ref="CarrierAppointmentKey" minOccurs="0"/>
+      <xsd:element ref="CompanyProducerID" minOccurs="0"/>
       <xsd:element ref="EffDate" minOccurs="0"/>
       <xsd:element ref="ExpDate" minOccurs="0"/>
       <xsd:element ref="CarrierApptStatus" minOccurs="0"/>
@@ -474,6 +487,9 @@ enter whatever information is called for, if any, and click on "Accept".
 	</xsd:complexType>
 	<xsd:element name="ConsolidationInfo" type="ConsolidationInfo_Type"/>
 	<xsd:complexType name="ConsolidationInfo_Type">
+    <xsd:sequence>
+      <xsd:element ref="ConsolidationInfoKey" minOccurs="0"/>
+    </xsd:sequence>
     <xsd:attribute name="id" type="xsd:ID"/>
     <xsd:attribute name="CarrierAppointmentID" type="xsd:IDREF"/>
 	</xsd:complexType>
@@ -536,12 +552,17 @@ enter whatever information is called for, if any, and click on "Accept".
 	<xsd:element name="Employment" type="Employment_Type"/>
 	<xsd:complexType name="Employment_Type">
 		<xsd:sequence>
+      <xsd:element ref="HireDate" minOccurs="0"/>
+      <xsd:element ref="TerminationDate" minOccurs="0"/>
 			<xsd:element ref="EmployerName" minOccurs="0"/>
 		</xsd:sequence>
+    <xsd:attribute name="id" type="xsd:ID"/>
+    <xsd:attribute name="EmployerPartyID" type="xsd:IDREF"/>
 	</xsd:complexType>
 	<xsd:element name="FormInstance" type="FormInstance_Type"/>
 	<xsd:complexType name="FormInstance_Type">
 		<xsd:sequence>
+      <xsd:element ref="FormName" minOccurs="0"/>
 			<xsd:element ref="RelatedObjectType" minOccurs="0"/>
 			<xsd:element ref="FormResponse" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
@@ -555,8 +576,6 @@ enter whatever information is called for, if any, and click on "Accept".
 			<xsd:element ref="ResponseCode" minOccurs="0"/>
 			<xsd:element ref="ResponseData" minOccurs="0"/>
 			<xsd:element ref="ResponseText" minOccurs="0"/>
-			<xsd:element ref="SectionIdentifier" minOccurs="0"/>
-			<xsd:element ref="Attachment" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 		<xsd:attribute name="id" type="xsd:ID"/>
 	</xsd:complexType>
@@ -570,6 +589,7 @@ enter whatever information is called for, if any, and click on "Accept".
 	<xsd:element name="Holding" type="Holding_Type"/>
 	<xsd:complexType name="Holding_Type">
 		<xsd:sequence>
+      <xsd:element ref="HoldingKey" minOccurs="0"/>
 			<xsd:element ref="HoldingTypeCode" minOccurs="0"/>
 			<xsd:element ref="Policy" minOccurs="0"/>
 			<xsd:element ref="Attachment" minOccurs="0" maxOccurs="unbounded"/>
@@ -594,9 +614,8 @@ enter whatever information is called for, if any, and click on "Accept".
 			<xsd:element ref="ExpDate" minOccurs="0"/>
 			<xsd:element ref="OriginationDate" minOccurs="0"/>
       <xsd:element ref="NameOnLicense" minOccurs="0"/>
-      <xsd:element ref="LicenseInterruptedInd" minOccurs="0"/>
-      <xsd:element ref="LicenseInterruptedReason" minOccurs="0"/>
       <xsd:element ref="LevelDesc" minOccurs="0"/>
+      <xsd:element ref="Attachment" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
 		<xsd:attribute name="AgencyAffiliationID" type="xsd:IDREF"/>
 	</xsd:complexType>
@@ -606,7 +625,6 @@ enter whatever information is called for, if any, and click on "Accept".
 			<xsd:element ref="LoanReason" minOccurs="0"/>
 			<xsd:element ref="LoanReasonDesc" minOccurs="0"/>
 			<xsd:element ref="LoanAmt" minOccurs="0"/>
-			<xsd:element ref="LoanDefaultDate" minOccurs="0"/>
 		</xsd:sequence>
 		<xsd:attribute name="FinancialInstitutionPartyID" type="xsd:IDREF"/>
 	</xsd:complexType>
@@ -626,6 +644,7 @@ enter whatever information is called for, if any, and click on "Accept".
 	<xsd:complexType name="Party_Type">
 		<xsd:sequence>
 			<xsd:element ref="PartyTypeCode" minOccurs="0"/>
+      <xsd:element ref="PartyKey" minOccurs="0"/>
 			<xsd:element ref="FullName" minOccurs="0"/>
 			<xsd:element ref="GovtID" minOccurs="0"/>
 			<xsd:element ref="GovtIDTC" minOccurs="0"/>
@@ -638,13 +657,11 @@ enter whatever information is called for, if any, and click on "Accept".
 			<xsd:element ref="Attachment" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="Producer" minOccurs="0"/>
 			<xsd:element ref="EMailAddress" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="URL" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="PriorName" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="Risk" minOccurs="0"/>
-			<xsd:element ref="Employment" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="Employment" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="GovtIDInfo" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="RatingAgencyInfo" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="DesignationInfo" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 		<xsd:attribute name="id" use="required" type="xsd:ID"/>
 	</xsd:complexType>
@@ -760,6 +777,7 @@ enter whatever information is called for, if any, and click on "Accept".
 	<xsd:element name="SignatureInfo" type="SignatureInfo_Type"/>
 	<xsd:complexType name="SignatureInfo_Type">
 		<xsd:sequence>
+      <xsd:element ref="SignatureInfoKey" minOccurs="0"/>
 			<xsd:element ref="SignatureDate" minOccurs="0"/>
 			<xsd:element ref="SignatureTime" minOccurs="0"/>
 		</xsd:sequence>
@@ -769,17 +787,18 @@ enter whatever information is called for, if any, and click on "Accept".
   <xsd:element name="SupervisionLevel" type="SupervisionLevel_Type"/>
   <xsd:complexType name="SupervisionLevel_Type">
     <xsd:sequence>
+      <xsd:element ref="SupervisionLevelKey" minOccurs="0"/>
       <xsd:element ref="SupervisionLevelTC" minOccurs="0"/>
-      <xsd:element ref="SupervisionLevelDesc" minOccurs="0"/>
       <xsd:element ref="EffDate" minOccurs="0"/>
-      <xsd:element ref="ExpDate" minOccurs="0"/>
       <xsd:element ref="FollowUpDate" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="id" type="xsd:ID"/>
     <xsd:attribute name="IssuingPartyID" type="xsd:IDREF"/>
   </xsd:complexType>
   <xsd:element name="TransferInfo" type="TransferInfo_Type"/>
 	<xsd:complexType name="TransferInfo_Type">
+    <xsd:sequence>
+      <xsd:element ref="TransferInfoKey" minOccurs="0"/>
+    </xsd:sequence>
 		<xsd:attribute name="CarrierAppointmentID" use="required" type="xsd:IDREF"/>
 	</xsd:complexType>
 	<xsd:element name="TransResult" type="TransResult_Type"/>
@@ -794,6 +813,8 @@ enter whatever information is called for, if any, and click on "Accept".
 		<xsd:sequence>
 			<xsd:element ref="TransRefGUID"/>
 			<xsd:element ref="TransType"/>
+      <xsd:element ref="TransExeDate" minOccurs="0"/>
+      <xsd:element ref="TransExeTime" minOccurs="0"/>
       <xsd:element ref="InquiryLevel" minOccurs="0"/>
       <xsd:element ref="InquiryView" minOccurs="0"/>
       <xsd:element ref="StartDate" minOccurs="0"/>
@@ -832,22 +853,26 @@ enter whatever information is called for, if any, and click on "Accept".
 	<xsd:element name="AccountNumber" type="xsd:string"/>
 	<xsd:element name="AddressCountry" type="xsd:string"/>
 	<xsd:element name="AddressCountryTC" type="OLI_LU_NATION"/>
+  <xsd:element name="AddressKey" type="PERSISTKEY"/>
 	<xsd:element name="AddressState" type="xsd:string"/>
 	<xsd:element name="AddressStateTC" type="OLI_LU_STATE"/>
 	<xsd:element name="AddressTypeCode" type="OLI_LU_ADTYPE"/>
 	<xsd:element name="AddrLine" type="xsd:string"/>
 	<xsd:element name="AreaCode" type="xsd:string"/>
+  <xsd:element name="AssocCarrierApptInfoKey" type="PERSISTKEY"/>
 	<xsd:element name="AttachmentBasicType" type="OLI_LU_BASICATTACHMENTTYPE"/>
 	<xsd:element name="AttachmentData" type="OLI_LU_VARIANT"/>
 	<xsd:element name="AttachmentLocation" type="OLI_LU_ATTACHLOCATION"/>
 	<xsd:element name="AttachmentType" type="OLI_LU_ATTACHMENTTYPE"/>
 	<xsd:element name="BirthDate" type="xsd:date"/>
+  <xsd:element name="CarrierAppointmentKey" type="PERSISTKEY"/>
 	<xsd:element name="CarrierApptStatus" type="OLI_LU_PROSTAT"/>
 	<xsd:element name="CertificateNo" type="xsd:string"/>
 	<xsd:element name="City" type="xsd:string"/>
 	<xsd:element name="CompanyProducerID" type="xsd:string"/>
   <xsd:element name="CompanyProducerIDSource" type="OLI_LU_PRODUCERIDSOURCE"/>
   <xsd:element name="CompanyProducerIDSourceDesc" type="xsd:string"/>
+  <xsd:element name="ConsolidationInfoKey" type="PERSISTKEY"/>
   <xsd:element name="CountryCode" type="xsd:string"/>
 	<xsd:element name="CrimeDescription" type="xsd:string"/>
 	<xsd:element name="DateLastUpdated" type="xsd:date"/>
@@ -866,20 +891,21 @@ enter whatever information is called for, if any, and click on "Accept".
 	<xsd:element name="FileName" type="xsd:string"/>
 	<xsd:element name="FirstName" type="xsd:string"/>
   <xsd:element name="FollowUpDate" type="xsd:date"/>
+  <xsd:element name="FormName" type="xsd:string"/>
   <xsd:element name="FulfilledDate" type="xsd:date"/>
 	<xsd:element name="FulfilledTime" type="xsd:time"/>
 	<xsd:element name="FullName" type="xsd:string"/>
 	<xsd:element name="GovtID" type="xsd:string"/>
 	<xsd:element name="GovtIDTC" type="OLI_LU_GOVTIDTC"/>
 	<xsd:element name="HighestEducationLevel" type="OLI_LU_EDULEVEL"/>
+  <xsd:element name="HireDate" type="xsd:date"/>
+  <xsd:element name="HoldingKey" type="PERSISTKEY"/>
 	<xsd:element name="HoldingTypeCode" type="OLI_LU_HOLDTYPE"/>
   <xsd:element name="InquiryLevel" type="INQUIRY_LEVEL_CODES"/>
   <xsd:element name="InquiryViewCode" type="xsd:string"/>
   <xsd:element name="InstitutionNumber" type="xsd:string"/>
 	<xsd:element name="InterestPercent" type="xsd:double"/>
 	<xsd:element name="LastName" type="xsd:string"/>
-	<xsd:element name="LicenseInterruptedInd" type="OLI_LU_BOOLEAN"/>
-	<xsd:element name="LicenseInterruptedReason" type="xsd:string"/>
 	<xsd:element name="LevelDesc" type="xsd:string"/>
 	<xsd:element name="LicenseNum" type="xsd:string"/>
 	<xsd:element name="LicenseState" type="OLI_LU_STATE"/>
@@ -898,6 +924,7 @@ enter whatever information is called for, if any, and click on "Accept".
 	<xsd:element name="OrgForm" type="OLI_LU_ORGFORM"/>
 	<xsd:element name="OriginatingObjectType" type="OLI_LU_OBJECTTYPE"/>
 	<xsd:element name="OriginationDate" type="xsd:date"/>
+  <xsd:element name="PartyKey" type="PERSISTKEY"/>
 	<xsd:element name="PartyTypeCode" type="OLI_LU_PARTY"/>
 	<xsd:element name="PaymentForm" type="OLI_LU_PAYMENTFORM"/>
 	<xsd:element name="PhoneTypeCode" type="OLI_LU_PHONETYPE"/>
@@ -924,15 +951,18 @@ enter whatever information is called for, if any, and click on "Accept".
 	<xsd:element name="ResultInfoCode" type="RESULT_INFO_CODES"/>
 	<xsd:element name="ResultInfoDesc" type="xsd:string"/>
 	<xsd:element name="SectionIdentifier" type="xsd:string"/>
+  <xsd:element name="SignatureInfoKey" type="PERSISTKEY"/>
 	<xsd:element name="SignatureDate" type="xsd:date"/>
 	<xsd:element name="SignatureTime" type="xsd:time"/>
 	<xsd:element name="StartDate" type="xsd:date"/>
   <xsd:element name="StartTime" type="xsd:time"/>
+  <xsd:element name="SupervisionLevelKey" type="PERSISTKEY"/>
   <xsd:element name="SupervisionLevelTC" type="OLI_LU_SUPERVISIONLEVEL"/>
-  <xsd:element name="SupervisionLevelDesc" type="xsd:string"/>
   <xsd:element name="TermDate" type="xsd:date"/>
+  <xsd:element name="TerminationDate" type="xsd:date"/>
 	<xsd:element name="TransExeDate" type="xsd:date"/>
 	<xsd:element name="TransExeTime" type="xsd:time"/>
+  <xsd:element name="TransferInfoKey" type="PERSISTKEY"/>
 	<xsd:element name="TransRefGUID" type="xsd:string"/>
 	<xsd:element name="TransSubType" type="TRANS_SUBTYPE_CODES"/>
 	<xsd:element name="TransType" type="OLI_LU_TRANS_TYPE_CODES"/>
