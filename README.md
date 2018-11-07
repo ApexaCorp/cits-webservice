@@ -11,7 +11,7 @@ This is a Visual Studio 2015 project that tests the basic interactions with APEX
 - Example XML responses
 
 ## Background
-APEXA implements the [Advisor Screening] (http://www.cliediscair.ca/ViewTag.aspx?tag=TXLife&spec=2.34.00&view=36) specification published by CLIEDIS.  We have worked with CLIEDIS in order to enhance the underlying ACORD specification and this project includes the version of the ACORD specification that includes all of the changes APEXA and CLIEDIS requested.  With the exception of changes related to the additional user stories that are currently pending sign off and minor fixes (related to bugs and the CLIEDIS certification process), this version now represents the API that will be available when the next version of APEXA is deployed.
+APEXA implements the CITS API specification published by CLIEDIS (http://www.cliediscair.ca/ViewTag.aspx?tag=TXLife&spec=2.34.00&view=36). We have worked with CLIEDIS in order to enhance the underlying ACORD specification and this project includes the version of the ACORD specification that includes all of the changes APEXA and CLIEDIS requested.  With the exception of changes related to the additional user stories that are currently pending sign off and minor fixes (related to bugs and the CLIEDIS certification process), this version now represents the API that will be available when the next version of APEXA is deployed.
 
 ## Timeline
 - May 2016
