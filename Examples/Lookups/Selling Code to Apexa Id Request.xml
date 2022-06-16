@@ -1,0 +1,23 @@
+<soapenv:Envelope xmlns:apex="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.DataContracts"
+  xmlns:ns="http://ACORD.org/Standards/Life/2"
+  xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Header>
+    <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+      xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+      <wsse:UsernameToken wsu:Id="UsernameToken-58C7E4AD6FAB7DD487165479844942718">
+        <wsse:Username>INSERT_USERNAME</wsse:Username>
+        <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">INSERT_PASSWORD</wsse:Password>
+        <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">4//SBdf/n4YrKaWrxLWx7g==</wsse:Nonce>
+        <wsu:Created>2022-06-09T18:14:09.427Z</wsu:Created>
+      </wsse:UsernameToken>
+    </wsse:Security>
+  </soapenv:Header>
+  <soapenv:Body>
+    <ns:ProcessNonCITSMessage>
+      <ns:request>
+        <apex:id>123</apex:id>
+        <apex:requestType>RequestContractorApexaIdsBySellingCode</apex:requestType>
+      </ns:request>
+    </ns:ProcessNonCITSMessage>
+  </soapenv:Body>
+</soapenv:Envelope>

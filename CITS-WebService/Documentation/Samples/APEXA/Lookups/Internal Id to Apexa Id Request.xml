@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-16"?>
-<NonCITSRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="GenericType">
-  <id xmlns="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.DataContracts">xyz2015</id>
-  <requestType xmlns="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.DataContracts">RequestContractorApexaIds</requestType>
-</NonCITSRequest>

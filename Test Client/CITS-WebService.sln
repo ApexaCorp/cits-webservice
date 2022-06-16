@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32630.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apexa.CITS.WCF.Test", "Apexa.CITS.WCF.Test\Apexa.CITS.WCF.Test.csproj", "{E425C86E-466E-432C-BCBC-5B43510FF2A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E425C86E-466E-432C-BCBC-5B43510FF2A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E425C86E-466E-432C-BCBC-5B43510FF2A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E425C86E-466E-432C-BCBC-5B43510FF2A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E425C86E-466E-432C-BCBC-5B43510FF2A0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7DE8CCC2-6CB8-4D93-97E3-532F215546D1}
+	EndGlobalSection
+EndGlobal

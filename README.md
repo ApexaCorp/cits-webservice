@@ -67,3 +67,12 @@ Most terminology, values and enumerations are defined in the ACORD and CLIEDIS d
 - The permanent APEXA ID for each advisor and organization is now included in the Party/PartyKey element. Previously this APEXA ID was included in the @id element.
 - The permanent Contract ID that is associated with contracts in APEXA is now included in the CarrierAppointment/CarrierAppointmentKey element.
 - Permanent Coverage ID and Debt ID values are now included in the Holding/HoldingKey element.
+
+#### 2022-06-15
+### Changed
+- The Documentation/Samples now include the full SOAP tags and attributes for requests and responses.
+- ChangedProducerListing should only be called with a maximum of 1 day interval.
+- Replaced all references of 'bluesun' with 'apexa'.
+- Updated and added test cases.
+- Re-organized project folder structure.
+- Added SoapUI project xml for import; Added documentation on how to add UAT/Prod credentials to SoapUI
