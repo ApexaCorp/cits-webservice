@@ -76,7 +76,7 @@ namespace Apexa.CITS.WCF.Test.Tests.Contractor
 
                 var response = await client.ProcessNonCITSMessageAsync(request);
 
-                if (response.ProcessNonCITSMessageResult.items != null)
+                if (response?.ProcessNonCITSMessageResult?.items != null)
                 {
                     var results = new List<Result>(response.ProcessNonCITSMessageResult.items);
                     Assert.IsNotNull(results.Find(n => n.id == contractorCode));

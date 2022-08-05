@@ -33,7 +33,7 @@ namespace Apexa.CITS.WCF.Test.Tests.ContractCodes
                 var request = new ContractCodeRequest()
                 {
                     action = "Add",
-                    code = "ABCXYZ",
+                    code = Guid.NewGuid().ToString(),
                     carrierAppointmentId = "1000040",
                     type = "selling",
                     status = "active",
@@ -53,6 +53,33 @@ namespace Apexa.CITS.WCF.Test.Tests.ContractCodes
         [TestMethod]
         public async Task UpdateContractCode()
         {
+            #region Arrange
+
+            //Arrange
+            var contractToUpdate = Guid.NewGuid().ToString();
+            using (var client = GetServiceClient())
+            {
+                var request = new ContractCodeRequest()
+                {
+                    action = "Add",
+                    code = contractToUpdate,
+                    carrierAppointmentId = "1000040",
+                    type = "selling",
+                    status = "active",
+                    description = "Sample Contract Code"
+                };
+
+                client.InnerChannel.OperationTimeout = new TimeSpan(1, 0, 0);
+                var response = await client.ProcessContractCodeAsync(request);
+
+                if (!response.ProcessContractCodeResult)
+                {
+                    Assert.Fail("Add ContractCode failed.");
+                }
+            }
+
+            #endregion
+
             using (var client = GetServiceClient())
             {
                 var request = new ContractCodeRequest()
@@ -60,7 +87,7 @@ namespace Apexa.CITS.WCF.Test.Tests.ContractCodes
                     action = "Update",
                     originalCode = "ABCXYZ",
                     carrierAppointmentId = "1000040",
-                    code = "DEFGHI",
+                    code = contractToUpdate,
                     type = "selling",
                     status = "active",
                     description = "Updated Sample Contract Code"
@@ -79,13 +106,40 @@ namespace Apexa.CITS.WCF.Test.Tests.ContractCodes
         [TestMethod]
         public async Task DeleteContractCode()
         {
+            #region Arrange
+
+            //Arrange
+            var contractToDelete = Guid.NewGuid().ToString();
+            using (var client = GetServiceClient())
+            {
+                var request = new ContractCodeRequest()
+                {
+                    action = "Add",
+                    code = contractToDelete,
+                    carrierAppointmentId = "1000040",
+                    type = "selling",
+                    status = "active",
+                    description = "Sample Contract Code"
+                };
+
+                client.InnerChannel.OperationTimeout = new TimeSpan(1, 0, 0);
+                var response = await client.ProcessContractCodeAsync(request);
+
+                if (!response.ProcessContractCodeResult)
+                {
+                    Assert.Fail("Add ContractCode failed.");
+                }
+            }
+
+            #endregion
+
             using (var client = GetServiceClient())
             {
                 var request = new ContractCodeRequest()
                 {
                     action = "Delete",
                     carrierAppointmentId = "1000040",
-                    code = "DEFGHI",
+                    code = contractToDelete,
                 };
 
                 client.InnerChannel.OperationTimeout = new TimeSpan(1, 0, 0);
