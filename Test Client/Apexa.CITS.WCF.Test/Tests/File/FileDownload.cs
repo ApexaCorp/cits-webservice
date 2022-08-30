@@ -15,11 +15,11 @@ namespace Apexa.CITS.WCF.Test.Tests.File_Request
     {
         #region Fields
 
-        private static readonly string endpointConfigurationName = "BasicHttpBinding_ICITSService";
-        private readonly string username = CITSCredentials.Get(ConfigurationManager.AppSettings["env"])?.Username;
-        private readonly string password = CITSCredentials.Get(ConfigurationManager.AppSettings["env"])?.Password;
-        private readonly string clientId = CITSCredentials.Get(ConfigurationManager.AppSettings["env"])?.ClientId;
-        private readonly string endpoint = CITSEnvironment.Get(ConfigurationManager.AppSettings["env"])?.Uri;
+        private const string EndpointConfigurationName = "BasicHttpBinding_ICITSService";
+        private readonly string _username = CITSCredentials.Get(ConfigurationManager.AppSettings["env"])?.Username;
+        private readonly string _password = CITSCredentials.Get(ConfigurationManager.AppSettings["env"])?.Password;
+        private readonly string _contractorId = CITSCredentials.Get(ConfigurationManager.AppSettings["env"])?.ContractorId;
+        private readonly string _endpoint = CITSEnvironment.Get(ConfigurationManager.AppSettings["env"])?.Uri;
 
         #endregion
 
@@ -40,7 +40,7 @@ namespace Apexa.CITS.WCF.Test.Tests.File_Request
                 {
                     items = new FileURL[]
                     {
-                        new FileURL() { url = $"{client.Endpoint.Address}/documents/eocoverage/clientId/{eoCoverageUid}" }
+                        new FileURL() { url = $"{client.Endpoint.Address}/documents/eocoverage/{_contractorId}/{eoCoverageUid}" }
                     }
                 };
 
@@ -72,9 +72,9 @@ namespace Apexa.CITS.WCF.Test.Tests.File_Request
 
         private CITSServiceClient GetServiceClient()
         {
-            var client = new CITSServiceClient(endpointConfigurationName, new EndpointAddress(endpoint));
-            client.ClientCredentials.UserName.UserName = username;
-            client.ClientCredentials.UserName.Password = password;
+            var client = new CITSServiceClient(EndpointConfigurationName, new EndpointAddress(_endpoint));
+            client.ClientCredentials.UserName.UserName = _username;
+            client.ClientCredentials.UserName.Password = _password;
 
             return client;
         }

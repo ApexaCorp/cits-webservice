@@ -16,7 +16,7 @@ namespace Apexa.CITS.WCF
 		/// </summary>
 		/// <param name="message">The message.</param>
 		/// <returns>The serialized message.</returns>
-		public static string SerializeMessage<T>(T message)
+		public static void SerializeMessage<T>(T message)
         {
             var serializer = new XmlSerializer(typeof(T), "GenericType");
             var sb = new StringBuilder();
@@ -32,7 +32,8 @@ namespace Apexa.CITS.WCF
                 }
             }
             var result = sb.ToString();
-            return result;
+            Console.WriteLine(result);
+            Console.WriteLine();
         }
     }
 }

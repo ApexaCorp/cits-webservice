@@ -72,7 +72,6 @@ Most terminology, values and enumerations are defined in the ACORD and CLIEDIS d
 ### Changed
 - The Documentation/Samples now include the full SOAP tags and attributes for requests and responses.
 - ChangedProducerListing should only be called with a maximum of 1 day interval.
-- Replaced all references of 'bluesun' with 'apexa'.
 - Updated and added test cases.
 - Re-organized project folder structure.
 - Added SoapUI project xml for import; Added documentation on how to add UAT/Prod credentials to SoapUI

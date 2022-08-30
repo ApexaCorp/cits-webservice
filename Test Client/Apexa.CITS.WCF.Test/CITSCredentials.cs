@@ -22,10 +22,10 @@ namespace Apexa.CITS.WCF.Test
             get { return (string)this["name"]; }
         }
 
-        [ConfigurationProperty("clientId", IsRequired = true)]
-        public string ClientId
+        [ConfigurationProperty("contractorId", IsRequired = true)]
+        public string ContractorId
         {
-            get { return (string)this["clientId"]; }
+            get { return (string)this["contractorId"]; }
         }
 
 

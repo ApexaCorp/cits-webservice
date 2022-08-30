@@ -15,11 +15,11 @@ namespace Apexa.CITS.WCF.Test.Tests.Contractor
     {
         #region Fields
 
-        private static readonly string endpointConfigurationName = "BasicHttpBinding_ICITSService";
-        private readonly string username = CITSCredentials.Get(ConfigurationManager.AppSettings["env"])?.Username;
-        private readonly string password = CITSCredentials.Get(ConfigurationManager.AppSettings["env"])?.Password;
-        private readonly string clientId = CITSCredentials.Get(ConfigurationManager.AppSettings["env"])?.ClientId;
-        private readonly string endpoint = CITSEnvironment.Get(ConfigurationManager.AppSettings["env"])?.Uri;
+        private const string EndpointConfigurationName = "BasicHttpBinding_ICITSService";
+        private readonly string _username = CITSCredentials.Get(ConfigurationManager.AppSettings["env"])?.Username;
+        private readonly string _password = CITSCredentials.Get(ConfigurationManager.AppSettings["env"])?.Password;
+        private readonly string _contractorId = CITSCredentials.Get(ConfigurationManager.AppSettings["env"])?.ContractorId;
+        private readonly string _endpoint = CITSEnvironment.Get(ConfigurationManager.AppSettings["env"])?.Uri;
 
         #endregion
 
@@ -88,7 +88,7 @@ namespace Apexa.CITS.WCF.Test.Tests.Contractor
                             OLifE = new OLifE_Type() {
                                 Items = new object[] {
                                     new Party_Type() {
-                                        PartyKey = new PERSISTKEY() { Value = clientId, Persist = "Session" } // Value must be producer's APEXA ID
+                                        PartyKey = new PERSISTKEY() { Value = _contractorId, Persist = "Session" } // Value must be producer's APEXA ID
                                     }
                                 }
                             },
@@ -130,7 +130,7 @@ namespace Apexa.CITS.WCF.Test.Tests.Contractor
                             OLifE = new OLifE_Type() {
                                 Items = new object[] {
                                     new Party_Type() {
-                                        PartyKey = new PERSISTKEY() { Value = clientId, Persist = "Session" } // Value must be producer's APEXA ID
+                                        PartyKey = new PERSISTKEY() { Value = _contractorId, Persist = "Session" } // Value must be producer's APEXA ID
                                     }
                                 }
                             },
@@ -172,7 +172,7 @@ namespace Apexa.CITS.WCF.Test.Tests.Contractor
                         OLifE = new OLifE_Type() {
                             Items = new object[] {
                                 new Party_Type() {
-                                    PartyKey = new PERSISTKEY() { Value = clientId, Persist = "Session" }, // Value must be producer's APEXA ID
+                                    PartyKey = new PERSISTKEY() { Value = _contractorId, Persist = "Session" }, // Value must be producer's APEXA ID
                                     Item = new Person_Type() { FirstName = "Johnny Doe", HighestEducationLevel = new OLI_LU_EDULEVEL() {tc = "TMU"}}
                                 },
                                 //new Person_Type()
@@ -220,7 +220,7 @@ namespace Apexa.CITS.WCF.Test.Tests.Contractor
                             OLifE = new OLifE_Type() {
                                 Items = new object[] {
                                     new Party_Type() {
-                                        PartyKey = new PERSISTKEY() { Value = clientId, Persist = "Session" } // Value must be producer's APEXA ID
+                                        PartyKey = new PERSISTKEY() { Value = _contractorId, Persist = "Session" } // Value must be producer's APEXA ID
                                     }
                                 }
                             },
@@ -244,9 +244,9 @@ namespace Apexa.CITS.WCF.Test.Tests.Contractor
 
         private CITSServiceClient GetServiceClient()
         {
-            var client = new CITSServiceClient(endpointConfigurationName, new EndpointAddress(endpoint));
-            client.ClientCredentials.UserName.UserName = username;
-            client.ClientCredentials.UserName.Password = password;
+            var client = new CITSServiceClient(EndpointConfigurationName, new EndpointAddress(_endpoint));
+            client.ClientCredentials.UserName.UserName = _username;
+            client.ClientCredentials.UserName.Password = _password;
 
             return client;
         }
