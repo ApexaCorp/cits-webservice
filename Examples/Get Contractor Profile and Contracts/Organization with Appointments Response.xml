@@ -1,0 +1,269 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+	<s:Header>
+		<o:Security s:mustUnderstand="1"
+			xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+			<u:Timestamp u:Id="_0">
+				<u:Created>2022-06-07T18:25:52.582Z</u:Created>
+				<u:Expires>2022-06-07T18:30:52.582Z</u:Expires>
+			</u:Timestamp>
+		</o:Security>
+	</s:Header>
+	<s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<ProcessMessageResponse xmlns="http://ACORD.org/Standards/Life/2">
+			<TXLife Version="2.35.00">
+				<TXLifeResponse PrimaryObjectID="ID_1">
+					<TransRefGUID>5827ce11-f687-4c67-9a49-9fcf01531007</TransRefGUID>
+					<TransType tc="228">Producer Inquiry</TransType>
+					<TransExeDate>2022-06-07</TransExeDate>
+					<TransExeTime>14:25:52.5791105-04:00</TransExeTime>
+					<InquiryView>
+						<InquiryViewCode>ProducerWithAppointments</InquiryViewCode>
+					</InquiryView>
+					<TransResult>
+						<ResultCode tc="1">Success</ResultCode>
+					</TransResult>
+
+					<OLifE>
+						<Party id="ID_1">
+							<PartyTypeCode tc="2">Organization</PartyTypeCode>
+							<PartyKey Persist="Permanent">6</PartyKey>
+							<FullName>Apexa MGA Corp.</FullName>
+							<GovtID>123456789</GovtID>
+							<GovtIDTC tc="11">Canadian Business Number</GovtIDTC>
+							<Organization>
+								<OrgForm tc="4">Private Corporation</OrgForm>
+							</Organization>
+							<Address id="ID_2">
+								<AddressKey Persist="Permanent">17</AddressKey>
+								<AddressTypeCode tc="2">Business</AddressTypeCode>
+								<Line1>456 Corporation Way</Line1>
+								<Line2>Suite 1000</Line2>
+								<City>Calgary</City>
+								<AddressStateTC tc="101">Alberta</AddressStateTC>
+								<Zip>T0E 1H4</Zip>
+								<AddressCountryTC tc="2">Canada</AddressCountryTC>
+								<StartDate>2010-01-01</StartDate>
+							</Address>
+							<Address id="ID_3">
+								<AddressKey Persist="Permanent">18</AddressKey>
+								<AddressTypeCode tc="17">Mailing</AddressTypeCode>
+								<Line1>1 Post Offce Way</Line1>
+								<Line2>Box 99</Line2>
+								<City>Calgary</City>
+								<AddressStateTC tc="101">Alberta</AddressStateTC>
+								<Zip>T0T 3M3</Zip>
+								<AddressCountryTC tc="2">Canada</AddressCountryTC>
+							</Address>
+							<Phone>
+								<PhoneTypeCode tc="26">Primary Phone</PhoneTypeCode>
+								<AreaCode>905</AreaCode>
+								<DialNumber>5554321</DialNumber>
+								<Ext>100</Ext>
+							</Phone>
+							<Phone>
+								<PhoneTypeCode tc="19">Fax</PhoneTypeCode>
+								<AreaCode>905</AreaCode>
+								<DialNumber>5554200</DialNumber>
+							</Phone>
+							<Attachment>
+								<AttachmentBasicType tc="3">File</AttachmentBasicType>
+								<AttachmentData tc="8">http://hostname:12345/documents/company/8bda1fb6-714f-e611-9fb6-00090ffe0001</AttachmentData>
+								<AttachmentType tc="361">Contracting - Broker Business Entity</AttachmentType>
+								<AttachmentLocation tc="2">URL Reference</AttachmentLocation>
+								<FileName>Articles.pdf</FileName>
+							</Attachment>
+							<Producer>
+								<EOCoverageInfo HoldingID="ID_4"/>
+								<CarrierAppointment id="ID_6" PartyID="ID_7" AgencyAffiliationID="ID_1">
+									<CarrierAppointmentKey Persist="Permanent">375</CarrierAppointmentKey>
+									<CompanyProducerID>Selling1</CompanyProducerID>
+									<EffDate>2016-07-21</EffDate>
+									<CarrierApptStatus tc="1">Active</CarrierApptStatus>
+									<DistributionAgreementInfo BankingInfoID="ID_13">
+										<PaymentForm tc="7">Electronic Funds Transfer</PaymentForm>
+									</DistributionAgreementInfo>
+									<ConsolidationInfo CarrierAppointmentID="ID_14">
+										<ConsolidationInfoKey Persist="Permanent">377</ConsolidationInfoKey>
+									</ConsolidationInfo>
+									<ReferralInfo PartyID="ID_12"/>
+									<DistributionLevel PartyID="ID_7">
+										<DistributionLevelValue>carrier</DistributionLevelValue>
+									</DistributionLevel>
+									<DistributionLevel PartyID="ID_1">
+										<DistributionLevelValue>mga</DistributionLevelValue>
+									</DistributionLevel>
+									<DistributionLevel PartyID="ID_8">
+										<DistributionLevelValue>advisor</DistributionLevelValue>
+									</DistributionLevel>
+									<RequirementInfo FulfillerPartyID="ID_7">
+										<ReqCode tc="2147483647">Other</ReqCode>
+										<FulfilledDate>2016-07-21</FulfilledDate>
+										<FulfilledTime>19:05:31.7115029-04:00</FulfilledTime>
+										<Attachment>
+											<AttachmentBasicType tc="3">File</AttachmentBasicType>
+											<AttachmentData tc="8">http://hostname:12345/documents/fulfillment/3ECA9513-764F-E611-9FB6-00090FFE0001</AttachmentData>
+											<AttachmentType tc="1">Document</AttachmentType>
+											<AttachmentLocation tc="2">URL Reference</AttachmentLocation>
+											<FileName>Apexa# 375 Signed.pdf</FileName>
+											<SignatureInfo SignaturePartyID="ID_15" DelegatedSignerPartyID="ID_16">
+												<SignatureDate>2016-07-21</SignatureDate>
+												<SignatureTime>15:05:27.8230000-04:00</SignatureTime>
+											</SignatureInfo>
+											<SignatureInfo SignaturePartyID="ID_17" DelegatedSignerPartyID="ID_18">
+												<SignatureDate>2016-07-21</SignatureDate>
+												<SignatureTime>15:01:22.5270000-04:00</SignatureTime>
+											</SignatureInfo>
+										</Attachment>
+									</RequirementInfo>
+									<AssocCarrierApptInfo id="ID_9" CarrierAppointmentID="ID_6" PartyID="ID_7">
+										<CompanyProducerID>Selling1</CompanyProducerID>
+										<CompanyProducerIDSource tc="1">Carrier</CompanyProducerIDSource>
+										<CompanyProducerIDSourceDesc>Selling</CompanyProducerIDSourceDesc>
+										<CarrierApptStatus tc="1">Active</CarrierApptStatus>
+									</AssocCarrierApptInfo>
+									<AssocCarrierApptInfo id="ID_10" CarrierAppointmentID="ID_6" PartyID="ID_7">
+										<CompanyProducerID>Branch1</CompanyProducerID>
+										<CompanyProducerIDSource tc="1">Carrier</CompanyProducerIDSource>
+										<CompanyProducerIDSourceDesc>Branch</CompanyProducerIDSourceDesc>
+										<CarrierApptStatus tc="1">Active</CarrierApptStatus>
+									</AssocCarrierApptInfo>
+									<AssocCarrierApptInfo id="ID_11" CarrierAppointmentID="ID_6" PartyID="ID_7">
+										<CompanyProducerID>Corporate1</CompanyProducerID>
+										<CompanyProducerIDSource tc="1">Carrier</CompanyProducerIDSource>
+										<CompanyProducerIDSourceDesc>Corporate</CompanyProducerIDSourceDesc>
+										<CarrierApptStatus tc="3">Pending approval</CarrierApptStatus>
+									</AssocCarrierApptInfo>
+								</CarrierAppointment>
+								<CarrierAppointment id="ID_14" PartyID="ID_7" AgencyAffiliationID="ID_1">
+									<CarrierAppointmentKey Persist="Permanent">377</CarrierAppointmentKey>
+									<ExpDate>2016-07-21</ExpDate>
+									<CarrierApptStatus tc="2">Inactive</CarrierApptStatus>
+									<ReferralInfo PartyID="ID_20"/>
+									<DistributionLevel PartyID="ID_7">
+										<DistributionLevelValue>carrier</DistributionLevelValue>
+									</DistributionLevel>
+									<DistributionLevel PartyID="ID_1">
+										<DistributionLevelValue>mga</DistributionLevelValue>
+									</DistributionLevel>
+								</CarrierAppointment>
+							</Producer>
+						</Party>
+						<Holding id="ID_4">
+							<HoldingKey Persist="Permanent">9</HoldingKey>
+							<HoldingTypeCode tc="2">Policy</HoldingTypeCode>
+							<Policy CarrierPartyID="ID_5">
+								<PolNumber>XYZ987</PolNumber>
+								<CertificateNo>AAA12345</CertificateNo>
+								<ProductType tc="40">Errors and Omissions Coverage</ProductType>
+								<PolicyStatus tc="1">Active</PolicyStatus>
+								<PolicyValue>10000000.00</PolicyValue>
+								<RenewalDate>2016-12-31</RenewalDate>
+							</Policy>
+							<Attachment>
+								<AttachmentBasicType tc="3">File</AttachmentBasicType>
+								<AttachmentData tc="8">http://hostname:12345/documents/eocoverage/8dda1fb6-714f-e611-9fb6-00090ffe0001</AttachmentData>
+								<AttachmentType tc="364">Contraction - E&amp;O Certificate</AttachmentType>
+								<AttachmentLocation tc="2">URL Reference</AttachmentLocation>
+								<FileName>Coverage.pdf</FileName>
+							</Attachment>
+						</Holding>
+						<Party id="ID_5">
+							<PartyTypeCode tc="2">Organization</PartyTypeCode>
+							<FullName>Ace Ina Insurance</FullName>
+							<Organization/>
+						</Party>
+						<Party id="ID_7">
+							<PartyTypeCode tc="2">Organization</PartyTypeCode>
+							<PartyKey Persist="Permanent">44</PartyKey>
+							<FullName>Ontlife</FullName>
+							<Organization/>
+						</Party>
+						<Party id="ID_8">
+							<PartyTypeCode tc="1">Person</PartyTypeCode>
+							<PartyKey Persist="Permanent">14</PartyKey>
+							<Person>
+								<FirstName>Blake</FirstName>
+								<MiddleName>Jason</MiddleName>
+								<LastName>Roberts</LastName>
+								<Prefix>Mr.</Prefix>
+							</Person>
+						</Party>
+						<Party id="ID_12">
+							<PartyTypeCode tc="1">Person</PartyTypeCode>
+							<FullName>Tom Archer</FullName>
+							<Person/>
+						</Party>
+						<Holding id="ID_13">
+							<HoldingKey Persist="Permanent">375</HoldingKey>
+							<HoldingTypeCode tc="7">Banking</HoldingTypeCode>
+							<Attachment>
+								<AttachmentBasicType tc="2">Image</AttachmentBasicType>
+								<AttachmentData tc="8">http://hostname:12345/documents/banking/8EDA1FB6-714F-E611-9FB6-00090FFE0001</AttachmentData>
+								<AttachmentType tc="183">Void Cheque</AttachmentType>
+								<AttachmentLocation tc="2">URL Reference</AttachmentLocation>
+								<FileName>EFT.pdf</FileName>
+							</Attachment>
+							<Banking>
+								<AccountNumber>1234567</AccountNumber>
+								<InstitutionNumber>003</InstitutionNumber>
+								<TransitNumber>11111</TransitNumber>
+							</Banking>
+						</Holding>
+						<Party id="ID_15">
+							<EMailAddress>
+								<AddrLine>carrier5@apexa.ca</AddrLine>
+							</EMailAddress>
+						</Party>
+						<Party id="ID_16">
+							<PartyTypeCode tc="1">Person</PartyTypeCode>
+							<PartyKey Persist="Permanent">59</PartyKey>
+							<Person>
+								<FirstName>Carrier</FirstName>
+								<LastName>Account 5 </LastName>
+							</Person>
+							<EMailAddress>
+								<AddrLine>carrier5@apexa.ca</AddrLine>
+							</EMailAddress>
+						</Party>
+						<Party id="ID_17">
+							<EMailAddress>
+								<AddrLine>mga@apexa.ca</AddrLine>
+							</EMailAddress>
+						</Party>
+						<Party id="ID_18">
+							<PartyTypeCode tc="1">Person</PartyTypeCode>
+							<PartyKey Persist="Permanent">8</PartyKey>
+							<Person>
+								<FirstName>MGA</FirstName>
+								<LastName>Account </LastName>
+							</Person>
+							<EMailAddress>
+								<AddrLine>mga@apexa.ca</AddrLine>
+							</EMailAddress>
+						</Party>
+						<FormInstance id="ID_19" RelatedObjectID="ID_6">
+							<FormName>CUSTOM_QUESTION</FormName>
+							<RelatedObjectType tc="11">Carrier Appointment</RelatedObjectType>
+							<FormResponse>
+								<QuestionNumber>I represent that I have reviewed my Advisor Screening Questionnaire (the 'ASQ') form, as stored on the Web-based system (the 'APEXA System') that APEXA Corp. generally makes available to life insurance companies, managing general agents and advisors, and confirm that the information in my ASQ is accurate, correct and up to date. Further, I acknowledge that a breach of the foregoing term is a breach of the Terms of Use of the APEXA System and is grounds for termination of my APEXA account. I have read the foregoing representation, understand it, and agree further to be bound by it. </QuestionNumber>
+								<ResponseText>I Agree</ResponseText>
+							</FormResponse>
+							<FormResponse>
+								<QuestionNumber>Do you agree?</QuestionNumber>
+								<ResponseData>I do not agree.</ResponseData>
+								<ResponseText>No</ResponseText>
+							</FormResponse>
+						</FormInstance>
+						<Party id="ID_20">
+							<PartyTypeCode tc="1">Person</PartyTypeCode>
+							<FullName>Judith Winn</FullName>
+							<Person/>
+						</Party>
+					</OLifE>
+				</TXLifeResponse>
+			</TXLife>
+		</ProcessMessageResponse>
+	</s:Body>
+</s:Envelope>

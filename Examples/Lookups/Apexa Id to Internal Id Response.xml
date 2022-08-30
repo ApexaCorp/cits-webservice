@@ -1,0 +1,25 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+  <s:Header>
+    <o:Security s:mustUnderstand="1"
+      xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+      <u:Timestamp u:Id="_0">
+        <u:Created>2022-06-09T17:30:48.961Z</u:Created>
+        <u:Expires>2022-06-09T17:35:48.961Z</u:Expires>
+      </u:Timestamp>
+    </o:Security>
+  </s:Header>
+  <s:Body>
+    <ProcessNonCITSMessageResponse xmlns="http://ACORD.org/Standards/Life/2">
+      <ProcessNonCITSMessageResult i:nil="true"
+        xmlns:a="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.DataContracts"
+        xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+        <items xmlns="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.DataContracts">
+          <Result>
+            <id>xyz2015</id>
+          </Result>
+        </items>
+      </ProcessNonCITSMessageResult>
+    </ProcessNonCITSMessageResponse>
+  </s:Body>
+</s:Envelope>

@@ -1,0 +1,29 @@
+<soapenv:Envelope xmlns:apex="http://schemas.datacontract.org/2004/07/Apexa.CITS.WCF.DataContracts"
+  xmlns:ns="http://ACORD.org/Standards/Life/2"
+  xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Header>
+    <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+      xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+      <wsse:UsernameToken wsu:Id="UsernameToken-AC8611BBCEA42E6D86165852082175530">
+        <wsse:Username>INSERT_USERNAME</wsse:Username>
+        <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">INSERT_PASSWORD</wsse:Password>
+        <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">6BMD9Mjo5utfP7ebQJhTAQ==</wsse:Nonce>
+        <wsu:Created>2022-07-22T20:13:41.755Z</wsu:Created>
+      </wsse:UsernameToken>
+    </wsse:Security>
+  </soapenv:Header>
+  <soapenv:Body>
+    <ns:ProcessFileRequests>
+      <ns:request>
+        <apex:items>
+          <apex:FileURL>
+            <apex:url>http://host:12345//documents/fulfillment/ABCDEFGH-1234-ABCD-1234-000000000001</apex:url>
+          </apex:FileURL>
+          <apex:FileURL>
+            <apex:url>http://host:12345//documents/eocoverage/ABCDEFGH-1234-ABCD-1234-000000000001</apex:url>
+          </apex:FileURL>
+        </apex:items>
+      </ns:request>
+    </ns:ProcessFileRequests>
+  </soapenv:Body>
+</soapenv:Envelope>

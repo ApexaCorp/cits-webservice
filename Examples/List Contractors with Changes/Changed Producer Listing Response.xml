@@ -1,0 +1,58 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"
+   xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+   <s:Header>
+      <o:Security s:mustUnderstand="1"
+         xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+         <u:Timestamp u:Id="_0">
+            <u:Created>2022-06-07T14:14:56.190Z</u:Created>
+            <u:Expires>2022-06-07T14:19:56.190Z</u:Expires>
+         </u:Timestamp>
+      </o:Security>
+   </s:Header>
+   <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ProcessMessageResponse xmlns="http://ACORD.org/Standards/Life/2">
+         <TXLife Version="2.35.00">
+            <TXLifeResponse>
+               <TransRefGUID>5827ce11-f687-4c67-9a49-9fcf01531007</TransRefGUID>
+               <TransType tc="228">Producer Inquiry</TransType>
+               <TransExeDate>2022-06-07</TransExeDate>
+               <TransExeTime>10:14:56.1858808-04:00</TransExeTime>
+               <InquiryView>
+                  <InquiryViewCode>ChangedProducerListing</InquiryViewCode>
+               </InquiryView>
+               <TransResult>
+                  <ResultCode tc="1">Success</ResultCode>
+               </TransResult>
+               <OLifE>
+                  <Party id="ID_1">
+                     <PartyTypeCode tc="2">Organization</PartyTypeCode>
+                     <PartyKey Persist="Permanent">6</PartyKey>
+                     <Organization/>
+                  </Party>
+                  <Party id="ID_2">
+                     <PartyTypeCode tc="1">Person</PartyTypeCode>
+                     <PartyKey Persist="Permanent">14</PartyKey>
+                     <Person/>
+                  </Party>
+                  <Party id="ID_3">
+                     <PartyTypeCode tc="2">Organization</PartyTypeCode>
+                     <PartyKey Persist="Permanent">15</PartyKey>
+                     <Organization/>
+                  </Party>
+                  <Party id="ID_4">
+                     <PartyTypeCode tc="1">Person</PartyTypeCode>
+                     <PartyKey Persist="Permanent">17</PartyKey>
+                     <Person/>
+                  </Party>
+                  <Party id="ID_5">
+                     <PartyTypeCode tc="2">Organization</PartyTypeCode>
+                     <PartyKey Persist="Permanent">70</PartyKey>
+                     <Organization/>
+                  </Party>
+               </OLifE>
+            </TXLifeResponse>
+         </TXLife>
+      </ProcessMessageResponse>
+   </s:Body>
+</s:Envelope>

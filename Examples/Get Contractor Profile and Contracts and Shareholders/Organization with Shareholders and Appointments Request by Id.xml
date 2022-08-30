@@ -1,0 +1,34 @@
+<soapenv:Envelope xmlns:ns="http://ACORD.org/Standards/Life/2"
+	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+	<soapenv:Header>
+		<wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+			xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+			<wsse:UsernameToken wsu:Id="UsernameToken-5C625D67933A87CBF9165462673425432">
+				<wsse:Username>INSERT_USERNAME</wsse:Username>
+				<wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">INSERT_PASSWORD</wsse:Password>
+				<wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">vrQc1j3kXQjFfPWlULZQDw==</wsse:Nonce>
+				<wsu:Created>2022-06-07T18:32:14.254Z</wsu:Created>
+			</wsse:UsernameToken>
+		</wsse:Security>
+	</soapenv:Header>
+	<soapenv:Body>
+		<ns:ProcessMessage>
+			<ns:TXLife Version="1">
+				<ns:TXLifeRequest>
+					<ns:TransRefGUID>5827ce11-f687-4c67-9a49-9fcf01531007</ns:TransRefGUID>
+					<ns:TransType tc="228">Producer Inquiry</ns:TransType>
+					<ns:TransExeDate>2016-07-25</ns:TransExeDate>
+					<ns:TransExeTime>15:31:06.5393460-04:00</ns:TransExeTime>
+					<ns:InquiryView id="1">
+						<ns:InquiryViewCode>FullProducerWithAppointments</ns:InquiryViewCode>
+					</ns:InquiryView>
+					<ns:OLifE>
+						<ns:Party id="ID_1">
+							<ns:PartyKey>6</ns:PartyKey>
+						</ns:Party>
+					</ns:OLifE>
+				</ns:TXLifeRequest>
+			</ns:TXLife>
+		</ns:ProcessMessage>
+	</soapenv:Body>
+</soapenv:Envelope>
