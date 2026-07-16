@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="9638f786-369b-4240-b497-f950159da839" activeEnvironment="Default" name="CITSService" resourceRoot="${projectDir}" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="cfb62af2-be1f-4bdc-8a2c-35135c58a4e2" wsaVersion="NONE" name="BasicHttpBinding_ICITSService" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_ICITSService" soapVersion="1_1" anonymous="optional" definition="https://uportal.apexa.ca:4433/v1/CITSService.svc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://localhost:44300/v1/CITSService.svc?wsdl"><con:part><con:url>https://localhost:44300/v1/CITSService.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="CITSService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:i0="http://ACORD.org/Standards/Life/2" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+<con:soapui-project id="9638f786-369b-4240-b497-f950159da839" activeEnvironment="Default" name="CITSService" resourceRoot="${projectDir}" soapui-version="5.10.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="cfb62af2-be1f-4bdc-8a2c-35135c58a4e2" wsaVersion="NONE" name="BasicHttpBinding_ICITSService" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_ICITSService" soapVersion="1_1" anonymous="optional" definition="https://uportal.apexa.ca:4433/v1/CITSService.svc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://localhost:44300/v1/CITSService.svc?wsdl"><con:part><con:url>https://localhost:44300/v1/CITSService.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="CITSService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:i0="http://ACORD.org/Standards/Life/2" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
   <wsp:Policy wsu:Id="BasicHttpBinding_ICITSService_policy">
     <wsp:ExactlyOne>
       <wsp:All>
@@ -2998,56 +2998,6 @@
 				</ns:Party>
  			</ns:OLifE> 
             </ns:TXLifeRequest>              
-         </ns:TXLife>
-      </ns:ProcessMessage>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ACORD.org/Standards/Life/2/ICITSService/ProcessMessage"/><con:wsrmConfig version="1.2"/></con:call><con:call id="ca5bcffb-aa57-4134-a163-2e039c55c6a3" name="MultipleProducers"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://uportal.apexa.ca:4433/v1/CITSService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://ACORD.org/Standards/Life/2">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ns:ProcessMessage>         
-         <ns:TXLife Version="1">            
-            <ns:TXLifeRequest>
-               <ns:TransRefGUID>5827ce11-f687-4c67-9a49-9fcf01531007</ns:TransRefGUID>  
-               <ns:TransType tc="228">Producer Inquiry</ns:TransType>               
-               <ns:TransExeDate>2016-07-25</ns:TransExeDate>               
-               <ns:TransExeTime>15:31:06.5393460-04:00</ns:TransExeTime>                                     
-               <ns:InquiryView id="1">                  
-                  <ns:InquiryViewCode>ProducerOnly</ns:InquiryViewCode>
-               </ns:InquiryView>               
-               <ns:OLifE>
-                	<ns:Party id="ID_1">	                  
-	                     <ns:PartyKey>1130950</ns:PartyKey>	                    
-				</ns:Party>
- 			</ns:OLifE>    
-            </ns:TXLifeRequest>
-            <ns:TXLifeRequest>
-               <ns:TransRefGUID>5827ce11-f687-4c67-9a49-9fcf01531007</ns:TransRefGUID>  
-               <ns:TransType tc="228">Producer Inquiry</ns:TransType>               
-               <ns:TransExeDate>2016-07-25</ns:TransExeDate>               
-               <ns:TransExeTime>15:31:06.5393460-04:00</ns:TransExeTime>                                     
-               <ns:InquiryView id="1">                  
-                  <ns:InquiryViewCode>FullProducerWithAppointments</ns:InquiryViewCode>
-               </ns:InquiryView>               
-               <ns:OLifE>
-                	<ns:Party id="ID_1">	                  
-	                     <ns:PartyKey>1130950</ns:PartyKey>	                    
-				</ns:Party>
- 			</ns:OLifE>    
-            </ns:TXLifeRequest>
-            <ns:TXLifeRequest>
-               <ns:TransRefGUID>5827ce11-f687-4c67-9a49-9fcf01531007</ns:TransRefGUID>  
-               <ns:TransType tc="228">Producer Inquiry</ns:TransType>               
-               <ns:TransExeDate>2016-07-25</ns:TransExeDate>               
-               <ns:TransExeTime>15:31:06.5393460-04:00</ns:TransExeTime>                                     
-               <ns:InquiryView id="1">                  
-                  <ns:InquiryViewCode>ProducerAndRelated</ns:InquiryViewCode>
-               </ns:InquiryView>               
-               <ns:OLifE>
-                	<ns:Party id="ID_1">	                  
-	                     <ns:PartyKey>1130950</ns:PartyKey>	                    
-				</ns:Party>
- 			</ns:OLifE>    
-            </ns:TXLifeRequest>             
          </ns:TXLife>
       </ns:ProcessMessage>
    </soapenv:Body>
