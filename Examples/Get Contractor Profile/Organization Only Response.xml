@@ -101,6 +101,19 @@
 							<FullName>Ace Ina Insurance</FullName>
 							<Organization/>
 						</Party>
+						<Party id="ID_6">
+							<PartyTypeCode tc="2">Organization</PartyTypeCode>
+							<PartyKey Persist="Permanent">44</PartyKey>
+							<FullName>Ontlife</FullName>
+							<Organization/>
+						</Party>
+						<Relation id="ID_7" OriginatingObjectID="ID_6" RelatedObjectID="ID_1">
+							<OriginatingObjectType tc="6">Party</OriginatingObjectType>
+							<RelatedObjectType tc="6">Party</RelatedObjectType>
+							<RelationRoleCode tc="365">Contracted Party</RelationRoleCode>
+							<RelationStatus tc="1">Active</RelationStatus>
+							<StartDate>2016-07-21</StartDate>
+						</Relation>
 					</OLifE>
 				</TXLifeResponse>
 			</TXLife>

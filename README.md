@@ -75,3 +75,11 @@ Most terminology, values and enumerations are defined in the ACORD and CLIEDIS d
 - Updated and added test cases.
 - Re-organized project folder structure.
 - Added SoapUI project xml for import; Added documentation on how to add UAT/Prod credentials to SoapUI
+
+#### 2026-11-13
+### Added
+- Post-Termination Access and Relationship Status support in CITS contractor responses:
+  - Added `RelationStatus` (`OLI_LU_RELSTAT`: `1` = `Active`, `2` = `Terminated`), `StartDate`, and `EndDate` to `Relation_Type` in `APEXA-Feed.xsd`, `APEXA-CITS.xsd`, and `APEXA-CITS.wsdl`.
+  - Contractor responses now include a `Contracted Party` (`RelationRoleCode` `tc="365"`) `Relation` between the API consumer organization and the contractor for both active and terminated relationships.
+  - For terminated relationships, an additional contractor `Party` containing current contact details (name, addresses, phones, and email) is included—reflecting live data during the post-termination access period (until December 31 of the following year) and data as of the last post-termination access date afterward—while the primary contractor `Party` (`ID_1`) retains historical data as of termination.
+  - Updated `APEXA CITS Documentation.xlsx`, `APEXA Outbound API Summary.docx`, and XML response examples (including a new terminated advisor response example).
