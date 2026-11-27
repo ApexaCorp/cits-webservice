@@ -420,6 +420,19 @@
 							<RelatedObjectType tc="6">Party</RelatedObjectType>
 							<RelationRoleCode tc="8">Owner</RelationRoleCode>
 						</Relation>
+						<Party id="ID_22">
+							<PartyTypeCode tc="2">Organization</PartyTypeCode>
+							<PartyKey Persist="Permanent">44</PartyKey>
+							<FullName>Ontlife</FullName>
+							<Organization/>
+						</Party>
+						<Relation id="ID_23" OriginatingObjectID="ID_22" RelatedObjectID="ID_1">
+							<OriginatingObjectType tc="6">Party</OriginatingObjectType>
+							<RelatedObjectType tc="6">Party</RelatedObjectType>
+							<RelationRoleCode tc="365">Contracted Party</RelationRoleCode>
+							<RelationStatus tc="1">Active</RelationStatus>
+							<StartDate>2016-07-21</StartDate>
+						</Relation>
 					</OLifE>
 				</TXLifeResponse>
 			</TXLife>

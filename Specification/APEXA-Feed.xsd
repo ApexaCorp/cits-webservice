@@ -283,6 +283,16 @@ enter whatever information is called for, if any, and click on "Accept".
 	<xsd:simpleType name="OLI_LU_REL_TC">
 		<xsd:restriction base="ACORD_TYPE_CODE"/>
 	</xsd:simpleType>
+	<xsd:complexType name="OLI_LU_RELSTAT">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="tc" use="required" type="OLI_LU_RELSTAT_TC"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="OLI_LU_RELSTAT_TC">
+		<xsd:restriction base="ACORD_TYPE_CODE"/>
+	</xsd:simpleType>
 	<xsd:complexType name="OLI_LU_REQCODE">
 		<xsd:simpleContent>
 			<xsd:extension base="xsd:string">
@@ -765,6 +775,9 @@ enter whatever information is called for, if any, and click on "Accept".
 			<xsd:element ref="RelatedObjectType" minOccurs="0"/>
 			<xsd:element ref="RelationRoleCode" minOccurs="0"/>
 			<xsd:element ref="InterestPercent" minOccurs="0"/>
+			<xsd:element ref="RelationStatus" minOccurs="0"/>
+			<xsd:element ref="StartDate" minOccurs="0"/>
+			<xsd:element ref="EndDate" minOccurs="0"/>
 		</xsd:sequence>
 		<xsd:attribute name="id" use="required" type="xsd:ID"/>
 		<xsd:attribute name="OriginatingObjectID" use="required" type="xsd:IDREF"/>
@@ -967,6 +980,7 @@ enter whatever information is called for, if any, and click on "Accept".
 	<xsd:element name="RatingValue" type="xsd:string"/>
 	<xsd:element name="RelatedObjectType" type="OLI_LU_OBJECTTYPE"/>
 	<xsd:element name="RelationRoleCode" type="OLI_LU_REL"/>
+	<xsd:element name="RelationStatus" type="OLI_LU_RELSTAT"/>
 	<xsd:element name="RenewalDate" type="xsd:date"/>
 	<xsd:element name="ReqCode" type="OLI_LU_REQCODE"/>
 	<xsd:element name="ResponseCode" type="xsd:integer"/>

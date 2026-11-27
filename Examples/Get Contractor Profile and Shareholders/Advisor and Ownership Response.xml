@@ -347,6 +347,19 @@
 							<RelationRoleCode tc="25">Owned By</RelationRoleCode>
 							<InterestPercent>85</InterestPercent>
 						</Relation>
+						<Party id="ID_18">
+							<PartyTypeCode tc="2">Organization</PartyTypeCode>
+							<PartyKey Persist="Permanent">44</PartyKey>
+							<FullName>Ontlife</FullName>
+							<Organization/>
+						</Party>
+						<Relation id="ID_19" OriginatingObjectID="ID_18" RelatedObjectID="ID_1">
+							<OriginatingObjectType tc="6">Party</OriginatingObjectType>
+							<RelatedObjectType tc="6">Party</RelatedObjectType>
+							<RelationRoleCode tc="365">Contracted Party</RelationRoleCode>
+							<RelationStatus tc="1">Active</RelationStatus>
+							<StartDate>2016-07-21</StartDate>
+						</Relation>
 					</OLifE>
 				</TXLifeResponse>
 			</TXLife>

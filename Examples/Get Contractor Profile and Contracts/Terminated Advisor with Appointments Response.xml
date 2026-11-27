@@ -1,0 +1,148 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+	<s:Header>
+		<o:Security s:mustUnderstand="1"
+			xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+			<u:Timestamp u:Id="_0">
+				<u:Created>2026-11-12T18:04:03.117Z</u:Created>
+				<u:Expires>2026-11-12T18:09:03.117Z</u:Expires>
+			</u:Timestamp>
+		</o:Security>
+	</s:Header>
+	<s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<ProcessMessageResponse xmlns="http://ACORD.org/Standards/Life/2">
+			<TXLife Version="2.35.00">
+				<TXLifeResponse PrimaryObjectID="ID_1">
+					<TransRefGUID>5827ce11-f687-4c67-9a49-9fcf01531007</TransRefGUID>
+					<TransType tc="228">Producer Inquiry</TransType>
+					<TransExeDate>2026-11-12</TransExeDate>
+					<TransExeTime>14:04:03.1143108-05:00</TransExeTime>
+					<InquiryView>
+						<InquiryViewCode>ProducerWithAppointments</InquiryViewCode>
+					</InquiryView>
+					<TransResult>
+						<ResultCode tc="1">Success</ResultCode>
+					</TransResult>
+					<OLifE>
+						<!-- Historical advisor profile as of termination -->
+						<Party id="ID_1">
+							<PartyTypeCode tc="1">Person</PartyTypeCode>
+							<PartyKey Persist="Permanent">14</PartyKey>
+							<Person>
+								<FirstName>Blake</FirstName>
+								<MiddleName>Jason</MiddleName>
+								<LastName>Robert</LastName>
+								<Prefix>Mr.</Prefix>
+								<BirthDate>1965-01-12</BirthDate>
+							</Person>
+							<Address id="ID_2">
+								<AddressKey Persist="Permanent">19</AddressKey>
+								<AddressTypeCode tc="2">Business</AddressTypeCode>
+								<Line1>123 North Service Road</Line1>
+								<Line2>Suite 100</Line2>
+								<City>Oakville</City>
+								<AddressStateTC tc="108">Ontario</AddressStateTC>
+								<Zip>L1M 0N4</Zip>
+								<AddressCountryTC tc="2">Canada</AddressCountryTC>
+								<StartDate>2010-01-01</StartDate>
+							</Address>
+							<Address id="ID_3">
+								<AddressKey Persist="Permanent">20</AddressKey>
+								<AddressTypeCode tc="1">Residence</AddressTypeCode>
+								<Line1>55 Town Way</Line1>
+								<City>Mississauga</City>
+								<AddressStateTC tc="108">Ontario</AddressStateTC>
+								<Zip>L0L 5M5</Zip>
+								<AddressCountryTC tc="2">Canada</AddressCountryTC>
+								<StartDate>2010-07-01</StartDate>
+							</Address>
+							<Phone>
+								<PhoneTypeCode tc="26">Primary Phone</PhoneTypeCode>
+								<AreaCode>647</AreaCode>
+								<DialNumber>4567890</DialNumber>
+							</Phone>
+							<Producer>
+								<PrefLanguage tc="9">English</PrefLanguage>
+								<CarrierAppointment id="ID_4" PartyID="ID_5">
+									<CarrierAppointmentKey Persist="Permanent">376</CarrierAppointmentKey>
+									<CompanyProducerID>FundServ1</CompanyProducerID>
+									<EffDate>2016-07-21</EffDate>
+									<TermDate>2026-11-12</TermDate>
+									<CarrierApptStatus tc="2">Terminated</CarrierApptStatus>
+									<DistributionLevel PartyID="ID_5">
+										<DistributionLevelValue>carrier</DistributionLevelValue>
+									</DistributionLevel>
+									<DistributionLevel PartyID="ID_1">
+										<DistributionLevelValue>advisor</DistributionLevelValue>
+									</DistributionLevel>
+								</CarrierAppointment>
+							</Producer>
+							<EMailAddress>
+								<AddrLine>blake.robert@old-email.example.com</AddrLine>
+							</EMailAddress>
+						</Party>
+						<!-- API Consumer (Contract Holder) Organization -->
+						<Party id="ID_5">
+							<PartyTypeCode tc="2">Organization</PartyTypeCode>
+							<PartyKey Persist="Permanent">44</PartyKey>
+							<FullName>Ontlife</FullName>
+							<Organization/>
+						</Party>
+						<!-- Current Contact Details (live during post-termination access period; frozen as of last access date after expiration) -->
+						<Party id="ID_6">
+							<PartyTypeCode tc="1">Person</PartyTypeCode>
+							<PartyKey Persist="Permanent">14</PartyKey>
+							<Person>
+								<FirstName>Blake</FirstName>
+								<MiddleName>Jason</MiddleName>
+								<LastName>Roberts</LastName>
+								<Prefix>Mr.</Prefix>
+							</Person>
+							<Address id="ID_7">
+								<AddressKey Persist="Permanent">101</AddressKey>
+								<AddressTypeCode tc="2">Business</AddressTypeCode>
+								<Line1>500 Bay Street</Line1>
+								<City>Toronto</City>
+								<AddressStateTC tc="108">Ontario</AddressStateTC>
+								<Zip>M5G 2C2</Zip>
+								<AddressCountryTC tc="2">Canada</AddressCountryTC>
+							</Address>
+							<Address id="ID_8">
+								<AddressKey Persist="Permanent">102</AddressKey>
+								<AddressTypeCode tc="1">Residence</AddressTypeCode>
+								<Line1>88 Harbour Street</Line1>
+								<City>Toronto</City>
+								<AddressStateTC tc="108">Ontario</AddressStateTC>
+								<Zip>M5J 0B7</Zip>
+								<AddressCountryTC tc="2">Canada</AddressCountryTC>
+							</Address>
+							<Phone>
+								<PhoneTypeCode tc="26">Primary Phone</PhoneTypeCode>
+								<AreaCode>416</AreaCode>
+								<DialNumber>5550199</DialNumber>
+							</Phone>
+							<Phone>
+								<PhoneTypeCode tc="12">Mobile</PhoneTypeCode>
+								<AreaCode>416</AreaCode>
+								<DialNumber>5550142</DialNumber>
+							</Phone>
+							<EMailAddress>
+								<AddrLine>blake.roberts@current-email.example.com</AddrLine>
+							</EMailAddress>
+						</Party>
+						<!-- Contracted Party Relation linking API Consumer to Current Contact Details Party -->
+						<Relation id="ID_9" OriginatingObjectID="ID_5" RelatedObjectID="ID_6">
+							<OriginatingObjectType tc="6">Party</OriginatingObjectType>
+							<RelatedObjectType tc="6">Party</RelatedObjectType>
+							<RelationRoleCode tc="365">Contracted Party</RelationRoleCode>
+							<RelationStatus tc="2">Terminated</RelationStatus>
+							<StartDate>2016-07-21</StartDate>
+							<EndDate>2026-11-12</EndDate>
+						</Relation>
+					</OLifE>
+				</TXLifeResponse>
+			</TXLife>
+		</ProcessMessageResponse>
+	</s:Body>
+</s:Envelope>

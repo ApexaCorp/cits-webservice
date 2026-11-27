@@ -617,12 +617,22 @@
 			<xs:element minOccurs="0" maxOccurs="1" name="RelatedObjectType" type="tns:OLI_LU_OBJECTTYPE"/>
 			<xs:element minOccurs="0" maxOccurs="1" name="RelationRoleCode" type="tns:OLI_LU_REL"/>
 			<xs:element minOccurs="0" maxOccurs="1" name="InterestPercent" type="xs:double"/>
+			<xs:element minOccurs="0" maxOccurs="1" name="RelationStatus" type="tns:OLI_LU_RELSTAT"/>
+			<xs:element minOccurs="0" maxOccurs="1" name="StartDate" type="xs:date"/>
+			<xs:element minOccurs="0" maxOccurs="1" name="EndDate" type="xs:date"/>
 		</xs:sequence>
 		<xs:attribute name="id" type="xs:ID"/>
 		<xs:attribute name="OriginatingObjectID" type="xs:IDREF"/>
 		<xs:attribute name="RelatedObjectID" type="xs:IDREF"/>
 	</xs:complexType>
 	<xs:complexType name="OLI_LU_REL">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="OLI_LU_RELSTAT">
 		<xs:simpleContent>
 			<xs:extension base="xs:string">
 				<xs:attribute name="tc" type="xs:nonNegativeInteger"/>
